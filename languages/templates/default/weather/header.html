@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>沭阳天气频道-{$SEO['site_title']}</title>
+<meta name="keywords" content="沭阳天气,宿迁天气,沭阳天气预报,沭阳即时天气查询,沭阳天气在线,沭阳气候,沭阳气象,沭阳一周天气预报查询,沭阳景点天气">
+<meta name="description" content="沭阳网天气频道为您提供全国3000多个城市和大多数国际城市的最及时全面的天气预报,即时天气预报,灾害预警、气象云图、旅游天气、台风、暴雨雪等气象信息，历史气候查询,未来三天预报,天气预报7天查询,重大天气新闻,气象知识,气象视频,为您提供全面精准的气象服">
+<link href="{CSS_PATH}weather/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.js"></script>
+<meta name="applicable-device" content="pc">
+<meta name="mobile-agent" content="format=html5;url=https://wap.05273.cn/weather.html">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="https://wap.05273.cn/weather.html">
+<script type="text/javascript">
+if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+  if(window.location.href.indexOf("?mobile")<0){
+    try{
+      if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+        window.location.href="https://wap.05273.cn/weather.html";
+      }else if(/iPad/i.test(navigator.userAgent)){
+      }else{
+        window.location.href="https://wap.05273.cn/weather.html"
+      }
+    }catch(e){}
+  }
+}
+</script>
+</head>
+<style>
+#header { width:100%; height:45px; min-width:1000px; background:url({IMG_PATH}weather/top.gif) repeat-x;}
+#header .top { margin:0px auto; width:1000px; height:45px; min-width:1000px;}
+#header .top .login { height:45px; overflow:hidden;}
+#header .top .top-nav { line-height:45px; font-family:"宋体";}
+#header .top .top-nav .line { padding:0 5px; color:#fff;}
+#header .top .top-nav a { color:#fff;}
+#header .top .top-nav a:hover { color:#F60; text-decoration:underline;}
+.input_bn{background:url(//statics.05273.cn/statics/images/bn/login.gif) no-repeat 0px 0px; width:39px; height:18px; border:none; cursor:pointer}
+</style>
+<body>
+<div id="header">
+  <div class="top">
+    <div class="w">
+      <div class="top-nav fl">
+        <a href="https://www.05273.cn/">沭阳网首页</a>
+        <span class="line">|</span>
+        <a href="https://www.05273.cn/sitemap.html">网站地图</a>
+      </div>
+    <div class="mininavRight" id="logkey">
+      <div id="loginAll" class="top-nav fr">
+    <form class="login-form" id="page_loginForm"  action="//www.05273.cn/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+        <input type="hidden" name="logintype" value="page" />
+        <input type="hidden" name="forward" id="forward"  value="https://www.05273.cn"/>
+         沭阳网通行证&nbsp;&nbsp;用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+      密&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+      <input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+         <a href="https://passport.05273.cn/member-register.html" target="_blank">注册账户</a> | <a href="https://passport.05273.cn/member-public_forget_password.html" target="_blank">找回密码</a>
+      </form>
+      <script type="text/javascript">Login.isLogin('//www.05273.cn/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>

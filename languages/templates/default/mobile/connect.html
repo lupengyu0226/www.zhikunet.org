@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="dns-prefetch" href="https://statics.05273.cn">
+<link rel="dns-prefetch" href="https://upload.05273.cn">
+<link rel="dns-prefetch" href="https://account.05273.cn">
+<link rel="dns-prefetch" href="https://img1.05273.cn">
+<link rel="dns-prefetch" href="https://img2.05273.cn">
+<link rel="dns-prefetch" href="https://img3.05273.cn">
+<link rel="dns-prefetch" href="https://wap.05273.cn">
+<link rel="dns-prefetch" href="https://www.05273.cn">
+<title>注册_沭阳网手机版会员中心</title>
+<meta name="author" content="wap.05273.cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="applicable-device" content="mobile">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/base2013.css?v={CSS_VERSION}" charset="gbk"/>
+<link rel="apple-touch-icon" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone-retina.png" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/member_common.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/common.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/spin.min.js?v={JS_VERSION}"></script>
+<script type="text/javascript">
+    try{
+        if(/Macintosh|Mac_PowerPC|Windows NT|Windows XP/i.test(navigator.userAgent)){
+          window.location.href="https://passport.05273.cn/member-register.html";
+        }
+    }catch(e){};
+</script>
+</head>
+<body id="body">
+<style>
+.btn-disabled {
+background: #e2e2e2;
+cursor: default;
+color: #bdbdbd;
+}
+.pop-bg {
+position: absolute;
+top: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+background: #000;
+opacity: .75;
+filter: alpha(opacity=75);
+}
+.pop {
+position: absolute;
+left: 50%;
+top: 50%;
+z-index: 2;
+width: 218px;
+height: 113px;
+border-radius: 8px;
+margin: -64px 0 0 -114px;
+background: #f8f8f8;
+line-height: 1.5;
+text-align: center;
+font-size: 16px;
+color: #686868;
+}
+.pop1 p {
+padding-top: 35px;
+color: #686868;
+}
+
+</style>
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+							<h2><div id="myforms"></div>登录成功！完善一下信息</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span></span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="https://wap.05273.cn/" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="https://wap.05273.cn/index.php?controller=search" class="new-tbl-cell">
+                	<span class="icon2">搜索</span>
+					<p style="color:#6e6e6e;">搜索</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=comment" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">我的评论</span>
+					<p style="color:#6e6e6e;">我的评论</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index" class="new-tbl-cell">
+                	<span class="icon4">我的帐号</span>
+					<p style="color:#6e6e6e;">我的帐号</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/base.css?v={CSS_VERSION}" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/login.css?v={CSS_VERSION}" charset="utf-8"/>
+<link href="https://statics.05273.cn/statics/css/table_form.css?v={CSS_VERSION}" rel="stylesheet" type="text/css" />
+{if !isset($_GET['t'])}
+<form method="post" action="index.php?app=waplogin&controller=index&view=register" id="myform">
+<input type="hidden" name="siteid" value="1" />
+<div class="common-wrapper" style="min-height:300px;">
+	<div class="main">
+		<div class="item item-phone">
+			<input id="username" name="username" class="txt-input txt-captcha" type="text" value="{$connect_username}" maxlength="15"/>
+			<b id="usernameclose" class="input-close" onClick="usernameclose();" style="display: none;"></b>
+		</div>
+		<div class="item item-phone">
+			<input id="password" name="password" class="txt-input txt-captcha" type="password" placeholder="密码" maxlength="36"/>
+			<b id="passwordclose" class="input-close" onClick="passwordclose();" style="display: none;"></b>
+		</div>
+		<div class="item item-phone">
+			<input id="pwdconfirm" name="pwdconfirm" class="txt-input txt-captcha" type="password" placeholder="确认密码" maxlength="36"/>
+			<b id="pwdconfirmclose" class="input-close" onClick="pwdconfirmclose();" style="display: none;"></b>
+		</div>
+		<div class="item item-phone">
+			<input id="email" name="email" class="txt-input txt-captcha" type="text" placeholder="邮箱" maxlength="36"/>
+			<b id="emailclose" class="input-close" onClick="emailclose();" style="display: none;"></b>
+		</div>
+		<div class="item item-phone">
+			<input id="nickname" name="nickname" class="txt-input txt-captcha" type="text" value="{$connect_username}" maxlength="36"/>
+			<b id="nicknameclose" class="input-close" onClick="nicknameclose();" style="display: none;"></b>
+		</div>
+		<div class="item item-captcha">
+			<div class="input-info">
+				<input id="code" class="txt-input txt-captcha" type="text" size="11" maxlength="20" autocomplete="off" placeholder="验证码"/>
+					 <span id="captcha-img">{form::checkcode('code_img', '5', '14', 120, 26)}</span>
+						 <input type="hidden" name="code" id="code">
+			</div>
+			<div class="item item-phone">
+				<input id="mobile" name="mobile" class="txt-input txt-captcha" type="text" placeholder="手机号码" maxlength="15"/>
+				<span id="captcha-img"><button onclick="get_verify()" type="button" class="btn xs-register-btn">获取校验码</button></span>
+				<span id="mobile_send" style="display:none">，短信已发送成功，请查收，短信如在10分钟内没有收到，请重试其他方法</span>
+			</div>			
+
+			<div id="mobile_send_div" style="display:none">此服务免费,验证码已发送到<span id="mobile_send"></span>，<span id="edit_mobile" style="display:none"><a href="javascript:void();" onclick="edit_mobile()">修改号码</a>，</span> 如果超过120秒未收到验证码，您可以免费重新获取。<br><br>
+			<div class="submit"><button type="button" id="GetVerify" onclick="get_verify()" class="hqyz">重获短信验证码</button></div> <br><br></div> 
+			<script language="JavaScript">
+			<!--
+				var times = 120;
+				var isinerval;
+				function get_verify() {
+					var session_code = $('#code').val();
+					if(session_code=='') {
+						alert('请输入验证码');
+						$('#code').focus();
+						return false;
+					}
+					var mobile = $("#mobile").val();
+					var partten = /^1[3-9]\d{9}$/;
+					if(!partten.test(mobile)){
+						alert("请输入正确的手机号码");
+						$('#mobile').focus();
+						return false;
+					}
+					
+					$.get("index.php?app=api&controller=index&op=sms",{ mobile: mobile,session_code:session_code,random:Math.random()}, function(data){
+						if(data=="0") {
+							$("#mobile_send").html(mobile);
+							$("#mobile_div").css("display","none");
+							$("#mobile_send_div").css("display","");
+							times = 120;
+							$("#GetVerify").attr("disabled", true);
+							isinerval = setInterval("CountDown()", 1000);
+						} else if(data=="-1") {
+							alert("你今天获取验证码次数已达到上限");
+						} else if(data=="-100") {
+							$('#code').val('');
+							alert("验证码已失效，请点击图片验证码获取新的验证码！");
+							$('#code').focus();
+						} else if(data=="-101") {
+							alert("验证码错误！");
+							$('#code').focus();
+						} else {
+							alert("短信发送失败");
+						}
+					});
+					
+				}
+				function CountDown() {
+					if (times < 1) {
+						$("#GetVerify").html("获取短信验证码").attr("disabled", false);
+						$("#edit_mobile").css("display","");
+						clearInterval(isinerval);
+						return;
+					}
+					$("#GetVerify").html(times+"秒后重获验证码");
+					times--;
+				}
+				function edit_mobile() {
+					$("#mobile_div").css("display","");
+					$("#mobile_send_div").css("display","none");
+				}
+			//-->
+			</script>
+		  
+				<div class="item item-phone">
+					<input id="mobile_verify" name="mobile_verify" class="txt-input txt-captcha" type="text" placeholder="请输入短信验证码" maxlength="15"/>
+					<b id="usernameclose" class="input-close" onClick="usernameclose();" style="display: none;"></b>
+				</div>
+		<div class="item item-captcha">
+			<div class="err-tips">
+				注册即视为同意<a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=register&protocol=1" target="_blank">沭阳网注册协议</a>
+			</div></div>
+		<div class="item item-btns">
+		     <input class="btn-next btn" type="submit" name="dosubmit" value="提交注册">
+		</div>
+		</form>
+    	<h5><a href="javascript:;" onclick="show();" class="blue">已有了账号?与我的账号绑定 </a></h5>
+        <div id="e-login" style="display:none">
+        <form method="post" action="index.php?app=waplogin&controller=index&view=login">
+            <div class="item item-phone">
+			<input id="username" name="username" class="txt-input txt-captcha" type="text" placeholder="用户名" maxlength="15"/>
+		</div>
+		<div class="item item-phone">
+			<input id="password" name="password" class="txt-input txt-captcha" type="password" placeholder="密码" maxlength="36"/>
+			<b id="passwordclose" class="input-close" onClick="passwordclose();" style="display: none;"></b>
+		</div>
+         <div class="item item-btns">
+         <input type="submit" name="dosubmit" id="dosubmit" value="{L('login')}">
+            </div>
+        </form>
+
+
+        </div>
+		<div style="text-align:right;">
+		<a style="font-size: 14px; color: rgb(37, 37, 37); text-decoration: underline;" href='https://www.05273.cn/index.php?app=waplogin&controller=index&view=public_get_password_type'>找回密码
+		</a>
+		</div>
+	</div>
+</div>
+{elseif isset($_GET['t']) && $_GET['t']==2}
+<div class="common-wrapper" style="min-height:300px;">
+	<div class="main">
+		<div class="item item-captcha">
+			<div class="err-tips">
+				{php $emailurl = param::get_cookie('email') ? str_replace('@', '',strstr(param::get_cookie('email'), '@')) : '';}
+{param::get_cookie('_username')} {L('hellow')}，{L('login_email_authentication')} {if $emailurl} {L('please_click')}<a href="http://mail.{$emailurl}" target="_blank">{L('login_email')}</a><br><br>
+如果没有收到邮件，请点击<a onclick="$('#send_newemail').show()"><font color="red">这里</font></a>更换邮箱试试<br><br>
+<div style="display:none" id="send_newemail">
+		<div class="item item-captcha">
+			<div class="input-info">
+				<input id="newemail" name="newemail" class="txt-input txt-captcha" type="text" size="11" maxlength="20" autocomplete="off" placeholder="输入新邮箱"/>
+					 <span id="captcha-sj"><button onclick="javascript:send_newmail();" type="button" class="txt-input txt-captcha">重新发送</button>
+    				  </span>
+			</div></div>
+</div>
+<script language="JavaScript">
+function send_newmail() {
+	//var mail_type = $('input[checkbox=mail_type][checked]').val();
+	var newemail = $('#newemail').val();
+ $.post('https://www.05273.cn/index.php?app=waplogin&controller=index&view=send_newmail&newemail='+newemail,{},function(data){
+ 	if(data=='1'){alert('发送成功，请查看验证！');}else if(data=='-1'){alert('邮箱已被占用！');}else{alert('发送错误，请联系管理员！');}
+	});
+} 
+</script>
+{/if}
+			</div></div></div></div>
+{elseif isset($_GET['t']) && $_GET['t']==3}
+<div class="common-wrapper" style="min-height:300px;">
+	<div class="main">
+		<div class="item item-captcha">
+{param::get_cookie('_username')} {L('hellow')}，{L('please_wait_administrator_verify')}
+			</div></div>
+</div>
+{else}
+<script language="JavaScript">
+<!--
+	redirect("{APP_PATH}index.php?app=waplogin&controller=index&view=login");
+//-->
+</script>
+{/if}
+<div id="dialogbg" class="pop-bg" style="display: none"></div>
+<div id="dialog1" class="pop pop1" style="display: none">
+	<p id="errormsg">验证码错误请重新输入</p>
+</div>
+	</form>
+	<div id="autoLoginHeight"></div>
+<script src="//statics.05273.cn/waplogin/js/autoHeight.js?v={JS_VERSION}" type="text/javascript"></script>
+    <footer>
+		<div class="login-area" id="footer">
+        	<div class="login">
+			<span  class="new-fr"><a href="#top">回到顶部</a></span>
+   <a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=login&forward=//wap.05273.cn/">登录</a><span class="layout-lg-bar"> | </span><a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=register">注册</a>
+            </div>
+        	<div class="version"><a href="https://wap.05273.cn/" class="on">手机版</a><a href="https://www.05273.cn/?mobile" id="toPcHome">电脑版</a></div>
+            <div class="copyright">Copyright &copy; 2007-2019 05273.cn 版权所有</div>
+        </div>
+    </footer>
+<script>
+	$().ready(function() {
+		var username = $('#username').val();
+		cleantxt("usernameclose", username);
+		var password = $('#password').val();
+		cleantxt("passwordclose", password);
+		var pwdconfirm = $('#pwdconfirm').val();
+		cleantxt("pwdconfirmclose", pwdconfirm);
+		var email = $('#email').val();
+		cleantxt("emailclose", email);
+		var nickname = $('#nickname').val();
+		cleantxt("nicknameclose", nickname);
+	});
+
+	 $('#nickname').bind('input',function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+
+		cleantxt("nicknameclose", nickname);
+		checkinput(nickname,username,password,pwdconfirm,email);
+	 });
+	 $('#email').bind('input',function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+		
+		cleantxt("emailclose", email);
+		checkinput(nickname,username,password,pwdconfirm,email);
+	 });
+	 $('#pwdconfirm').bind('input',function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+		
+		cleantxt("pwdconfirmclose", pwdconfirm);
+		checkinput(nickname,username,password,pwdconfirm,email);
+	 });
+	 $('#password').bind('input',function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+		
+		cleantxt("passwordclose", password);
+		checkinput(nickname,username,password,pwdconfirm,email);
+	 });
+	 $('#username').bind('input',function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+		
+		cleantxt("usernameclose", username);
+		checkinput(nickname,username,password,pwdconfirm,email);
+	 });
+	 function checkinput(nickname,username,password,pwdconfirm,email){
+		if(nickname.length > 1 && username.length > 1 && password.length > 1 && pwdconfirm.length > 1&& email.length > 1){
+				$('.btn-next').removeClass('btn-disabled');
+		}else{
+				$('.btn-next').addClass('btn-disabled');
+		}
+	 }
+	 function cleantxt(n, v){
+	 	if(v && v.trim()!="")
+			$('#'+n).show();
+		else
+			$('#'+n).hide();
+	 }
+	$('.btn-next').click(function(){
+	 	var nickname = $('#nickname').val().trim();
+		var password = $('#password').val().trim();
+		var pwdconfirm = $('#pwdconfirm').val().trim();
+		var email = $('#email').val().trim();
+		var username = $('#username').val().trim();
+		var emailreg =  /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;;
+
+		if(username.length < 2 || username.length > 20){			
+			$('#username').val('');
+			alertshow("用户名应该为2-20位之间");
+			return false;
+		}
+		if(password.length < 6 || password.length > 20){			
+			$('#password').val('');
+			$('#pwdconfirm').val('');
+			alertshow("密码应该为6-20位之间");
+			return false;
+		}
+		if(password != pwdconfirm){			
+			$('#password').val('');
+			$('#pwdconfirm').val('');
+			alertshow("两次密码不一致!");
+			return false;
+		}
+		if(email.length < 7 || email.length > 32){			
+			$('#email').val('');
+			alertshow("邮箱应该为7-32位之间");
+			return false;
+		}
+		if(!emailreg.test($("#email").val())){			
+			$('#email').val('');
+			alertshow("邮箱格式错误");
+			return false;
+		}
+		if(nickname.length < 2 || nickname.length > 20){			
+			$('#nickname').val('');
+			alertshow("用户名应该为2-20位之间");
+			return false;
+		}
+		var cname = false;
+		var cemail = false;
+		var cnickname = false;
+		$.ajax({
+		  url: "index.php?app=waplogin&controller=index&view=public_checkname_ajax",
+		  data: {username: username, time:Math.random()},
+		  dataType: "html",
+		  async:false,
+		  success :function(data){
+			if(data == "1" ) {
+				cname = true;
+				return true;
+			} else {
+				return false;
+			}
+		  },
+		});
+		if(!cname){
+			alertshow("禁止注册或用户已存在。");
+			return false;
+		}
+		$.ajax({
+		  url: "index.php?app=waplogin&controller=index&view=public_checkemail_ajax",
+		  data: {email: email, time:Math.random()},
+		  dataType: "html",
+		  async:false,
+		  success : function(data){
+			if( data == "1" ) {
+				cemail = true;
+				return true;
+			} else {
+				return false;
+			}
+		  },
+		});
+		if(!cemail){
+			alertshow("禁止注册或邮箱已存在。");
+			return false;
+		}
+		$.ajax({
+		  url: "index.php?app=waplogin&controller=index&view=public_checknickname_ajax",
+		  data: {nickname: nickname, time:Math.random()},
+		  dataType: "html",
+		  async:false,
+		  success : function(data){
+			if( data == "1" ) {
+				cnickname = true;
+				return true;
+			} else {
+				return false;
+			}
+		  },
+		});
+		if(!cnickname){
+			alertshow("昵称已经存在。");
+			return false;
+		}
+	});
+	function alertshow(msg){
+		$("#dialogbg").show();
+		$("#dialog1").show();
+		$("#errormsg").text(msg);
+		setTimeout("alerthide()",3000);
+	}
+	 function alerthide(){
+		$("#dialogbg").hide();
+		$("#dialog1").hide();
+		$("#dialog2").hide();
+	
+	 }
+	function show(){
+		var t = $("#e-login");
+		if(t.css("display") == "none"){
+			t.show();
+		}else{
+			t.hide();
+		}
+	}
+	function nicknameclose(){
+		 $("#nickname").val("");
+		 $('#nicknameclose').hide();
+
+	 }
+	function passwordclose(){
+		 $("#password").val("");
+		 $('#passwordclose').hide();
+
+	 }
+	function pwdconfirmclose(){
+		 $("#pwdconfirm").val("");
+		 $('#pwdconfirmclose').hide();
+
+	 }
+	function usernameclose(){
+		 $("#username").val("");
+		 $('#usernameclose').hide();
+
+	 }
+	function emailclose(){
+		 $("#email").val("");
+		 $('#emailclose').hide();
+	 }
+</script>
+</body>
+</html>

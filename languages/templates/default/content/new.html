@@ -1,0 +1,140 @@
+{template "content","header"}
+{template "content","header_top"}
+{template "content","header_logo"}
+{template "content","header_nav"}
+<!--/顶部导航-->
+
+<div class="ss">
+    <div class="ss_left">
+          <form action="//www.zhikunet.org/index.php" method="get">
+          <ul>
+          <li class="t_text02">站内搜索：</li>
+          <li>
+                <input type="hidden" name="app" value="search"/>
+                <input type="hidden" name="controller" value="index"/>
+                <input type="hidden" name="view" value="init"/>
+                <input type="hidden" name="typeid" value="1" id="typeid"/>
+                <input type="hidden" name="siteid" value="1" id="siteid"/>
+                <input size="60" class="int12" type="text" value="" id="q" name="q" />
+                <input class="search_bn" type="submit" value=" "/>
+          </li>
+        </ul>
+        </form>
+        <ul>
+            <li class="t_text02 ss_left_text01">热词：</li>
+            <li class="ss_left_text">
+            <!--#include virtual="/caches/posid/remenhot.html"--> 
+            </li>
+        </ul>
+    </div>
+    <div class="ss_right">
+      <!--#include virtual="/caches/posid/35.html"--> 
+    </div>
+</div>
+<!--main-->
+<div class="hxNewsTop">
+<div class="hntContent clearfix">
+<div class="ldContainer clearfix">
+<div class="ldContent wmgContent ufl">
+<div class="wmgmore mb20">
+<div class="h2title ufl" ><h2>智库网24小时滚动新闻</h2></div>
+<div class="d-code" ><p>手机扫一扫，随时获取最新资讯</p>
+  <div class="d-code-box">
+      <i class="tips"></i>
+      <img width="132" height="132" alt="" src="//statics.zhikunet.org/images/index/gundongewm.png">
+      <p>微信扫一扫 分享更精彩</p>
+  </div>
+</div>
+</div>
+<div class=wmgbox>
+<div class=wmgwhitebg></div>
+{edi:content action="stats" num="100" order="id DESC"}
+{loop $data $r}
+<?php $space_userid = zhuanlan_memberinfo($r['username'],'domain');?>
+<div class=wmgitems>
+<div class=wmginfo>
+<h3><a href="{$r[rurl]}" target=_blank>{$r['title']}</h3>
+{if $r[data][thumb]}<div class="list-li"><img alt="{$r['title']}" src="//statics.zhikunet.org/statics/images/grey.gif" data-original="{$r[data][thumb]}">{else}<div>{/if}</A>
+<P class=wmgsp>{trim_indent($r[data][description])}<span class="rt">来自: <a class=desc href="https://{$space_userid}.shuyanghao.com/" target="_blank" rel="nofollow">{$r['username']}</a> 发布在 <a class=desc href="{$CATEGORYS[$r['catid']][url]}" target="_blank">{$CATEGORYS[$r['catid']]['catname']}</a> 栏目  <a class=desc href="{$r[rurl]}" target="_blank">查看详情</A></span></P></div></div>
+<div class=wmgsTime>
+<div class=wtinner>{inputtime_zone($r[inputtime])}</div></div></div>
+{/loop}
+{/edi}
+</div>
+<!--<div class=wmgwbmore><a href="#">查看更多…</A></div>-->
+</div>
+<div class="ldsideBox ufr" style="PADDING-TOP: 0px">
+<h3 class=moremar><span class=h3title>热门视频</span> <a class=more 
+href="https://www.zhikunet.org/video/" target=_blank>更多&gt;&gt;</A> 
+</h3>
+<div class="mrbox mb15">
+{edi:content action="lists" catid="3366" num="4" order="id DESC" thumb="1"}
+<UL class="mrlist clearfix">
+{loop $data $r}
+  <LI><img alt="{$r[title]}" src="{thumb($r[thumb],128,92)}"> 
+  <span class=blackbg8></span>
+  <a class=vedionews href="{$r[url]}" target=_blank>
+  <span class=vediobtn></span>
+  <span class=vediotitle>{str_cut($r[title],27,'')}</span> 
+  </A>
+  </LI>
+  {/loop}
+  {/edi}
+</UL></div>
+<h3 class=newRate><span class=h3title>新闻排行</span></h3>
+<div class="nrbox mb15">
+<div class=rateBox>
+{edi:content action="hits" catid="6" num="12" order="monthviews DESC" cache="3600"}
+<UL id=day class="numList clearfix">
+{loop $data $r}
+  <LI class=on><a href="{$r[url]}" target=_blank>{str_cut($r[title], 75, '')}</A> </LI>
+{/loop}
+</UL>
+{/edi}
+</div></div>
+<h3 class=newRate><span class=h3title>微信分享排行</span></h3>
+<div class="nrbox mb15">
+<div class=rateBox>
+{edi:content action="hits_weixin" num="12" order="weixinview DESC" cache="3600"}
+<UL id=day class="numList clearfix">
+{loop $data $r}
+  <LI class=on><a href="{$r[url]}" target=_blank>{str_cut($r[title], 75, '')}</A> </LI>
+{/loop}
+</UL>
+{/edi}
+</div></div>
+</div></div></div>
+<div class="kx"><span id="kx_text"></span><a href="#" class="close"></a></div>
+<link rel="stylesheet" href="https://statics.zhikunet.org/statics/css/kx.css" type="text/css" />
+<script type="text/javascript" src="//www.zhikunet.org/caches/kuaixun.js"></script>
+<script type="text/javascript" src="//statics.zhikunet.org/statics/js/kx.js"></script>
+<script type="text/javascript">
+$("img").lazyload({ 
+  skip_invisible : false, 
+    effect : "fadeIn",
+    failure_limit: 20 
+});
+if(navigator.userAgent.indexOf("MSIE 6.0")>0)
+   {
+     $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 90){
+        $('.navs').css('top',stop+'px');
+      }
+      if(stop <= 90){
+        $('.navs').css('top','90px');
+      }
+      });
+   }else{
+    $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 90){
+        $('.navs').css('position','fixed').css('top','0px');
+      }
+      if(stop <= 90){
+        $('.navs').css('position','absolute').css('top','90px');
+      }
+    });
+   }
+</script>
+{template "content","footer"}

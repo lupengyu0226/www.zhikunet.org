@@ -1,0 +1,70 @@
+{template 'search', 'header'}
+<div id=out>
+<div id="header">
+  <div class="top">
+    <div class="logo fl ml20"><a href="index.php?app=search&siteid={$siteid}"><img src="{IMG_PATH}search/logo.png" width="100" height="26" /></a></div>
+    <div id="search" class="fl">
+        {php $j=0}
+        {loop $search_model $k=>$v}
+        {php $j++;}
+          <a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this),{$siteid}, '{$q}');" {if $v['typeid']==$typeid} class="on"{/if}>{$v['name']}</a>
+        {/loop}
+    </div>
+  </div>
+  <div class="head">
+    <form name="search" type="get">
+    <div class="search">
+      <input type="hidden" name="app" value="search"/>
+      <input type="hidden" name="controller" value="index"/>
+      <input type="hidden" name="view" value="init"/>
+      <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+      <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+      <div class="text">
+        <input type="text" name="q" class="input" id="q" value="{$search_q}" autocomplete="off">
+      </div>
+      <input type="submit" class="submit" value="搜 索">
+    </div>
+    </form>
+  </div>
+</div>
+
+<div class="main">
+  <div class="list">
+    <ul>
+        {loop $data $i $r}
+<li class="res-list">
+<h3 class="res-title ">
+<a href="{$r[url]}" target="_blank">{$r[title]}</a></h3>
+{if $r['thumb']}
+<div class="res-rich so-rich-news clearfix"><div class="res-comm-img"><a href="{$r[url]}" target="_blank" data-type="img"><img src="{$r[thumb]}" width="120" height="75"></a></div>
+<div class="res-comm-con">{trim_indent($r[description])}
+<p class="res-linkinfo"><cite>{$r[url]}</cite>{inputtime_zone($r[inputtime])}</p></div></div></li>
+{else}
+<p class="res-desc">{$r[description]}</p>
+<p class="res-linkinfo"><cite>{$r[url]}</cite>{inputtime_zone($r[inputtime])}</p></li>
+{/if}
+        {/loop}
+        {if empty($data)}没有找到你搜索的内容哦，请换个词试试！{/if}
+    </ul>
+  </div>
+  <div id="pages">{$pages}
+  <span class="nums" style="margin-left:20px;">找到相关结果约 {$totalnums} 条,（用时{sprintf("%01.2f", $execute_time)} 秒）</span>
+  </div>
+</div>
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+<div class="footerlist">    
+  {edi:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+    <a href="/" target="_blank">首页</a>
+    {loop $data $r}
+       | <a href="{$r[url]}" target="_blank">{$r[catname]}</a>
+    {/loop}
+  {/edi}
+  <p>© 2007-2016 05273.cn All Rights Reserved.</p>
+</div>
+{$mori}
+</body>
+</html>

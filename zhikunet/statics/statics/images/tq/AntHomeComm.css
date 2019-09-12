@@ -1,0 +1,39 @@
+.Notice,.AntLocaIco{ height:26px; width:999px; margin:0 auto; overflow:hidden; border:solid 1px #c6d8e0; clear:both;margin-bottom:7px; background-position:-75px -18px; margin-bottom:7px; background-color:#FFF;}
+.Notice em,.AntLocaIco em { margin:0px 5px 0px 35px; color:#5f5f5f;}
+/*当前位置*/
+.AntLocaIco { line-height:2.3em; background-position:12px -487px;}
+.AntLocaIco .Time {float:right; line-height:2em; padding-right:10px; color:#0000FF;}
+/** 天气预报 **/
+.services{ height: 305px;border: 0px #c1d1e8 solid;margin: 0 auto;}
+.services .mainBoxh1{margin-bottom: 10px;background: #ccc;height: 30px;padding-left: 15px;line-height: 30px;}
+.services dl{display: block;width: 160px;height: 65px;margin: 0 auto;padding-left: 63px;padding-bottom: 15px;}
+.services dl dt{display: block;line-height: 30px;}
+.services dl dt a{font-weight: bold;}
+.services dl dt strong{color: #3666bb;font-weight: bold;}
+.services dl dd{line-height: 16px;}
+.services dl.s_1{background:url(http://statics.05273.cn/statics/images/tq/ico01.jpg) no-repeat left 13px;border-bottom: 1px solid #CCCCCC;}
+.services dl.s_2{background: url(http://statics.05273.cn/statics/images/tq/ico02.jpg) no-repeat left 13px;border-bottom: 1px solid #CCCCCC;}
+.services dl.s_3{background: url(http://statics.05273.cn/statics/images/tq/ico03.jpg) no-repeat left 13px;}
+.services.copy{text-align: right;width: 100%;font-size: 10px;color: #999;}
+.AntWeather { width:1000px; height:auto; overflow:hidden; margin: 0 auto;}
+.AntWeather .AntLeft { width:260px; float:left;}
+.AntWeather .AntRight { width:720px; height:auto;overflow:hidden; float:right; text-align:center;}
+.AntWeather .AntRight .iframe { width:720px; height:488px; margin-top:-12px; overflow:hidden; margin-left:-1px;}
+.MarBottom15{ margin-bottom:15px;}
+.Margin30{ margin-top:30px; margin-bottom:30px;}
+.Margin60{ margin-top:60px; margin-bottom:60px;}
+.AntTop13 *,.top2_ *{margin: 0;padding: 0;list-style: none;font-size:12px; font-style:normal; border:0; text-decoration:none;}
+.AntTop13 { height:30px; width:auto; overflow:hidden; background-color:#0072bc; font-size:12px;}
+.px960 { width:1000px; margin:auto; color:#FFFFFF;}
+.userq { float:left; line-height:30px;}
+.AntTop13 a { color:#FFFFFF;}
+.AntTop13 .r_ { line-height:30px; float:right;}
+.AntTop13 .r_ a { margin-left:10px;}
+.AntTop13 .userq em { float:left;}
+.AntTop13 .userq .text,.AntTop13 .userq .button { background:url(http://statics.05273.cn/statics/images/tq/Top-1.gif) 0 0 no-repeat;}
+.AntTop13 .userq .text{ float:left; border:none; width:100px; height:16px; line-height:16px; padding-left:3px; border-right:solid 1px #e3e3e3; border-bottom:solid 1px #e3e3e3;color:#666666; margin-right:10px; margin-top:5px;}
+.AntTop13 .userq .button { width:46px; height:19px; border:none; background-position:left -39px; cursor:pointer;
+line-height:normal; /*  对firefox有效*/
+_line-height:1.8em; /* 只对ie6有效 */
+float:left; margin-top:5px; margin-right:5px;}
+.AntTop13 .userq a { margin-left:10px;}.AntTop13 .userq a:hover { text-decoration:underline;}

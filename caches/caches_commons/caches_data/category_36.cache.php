@@ -1,0 +1,36 @@
+<?php
+return array (
+  3370 => 
+  array (
+    'catid' => '3370',
+    'siteid' => '1',
+    'type' => '0',
+    'modelid' => '36',
+    'parentid' => '0',
+    'arrparentid' => '0',
+    'child' => '0',
+    'arrchildid' => '3370',
+    'catname' => '今日话题',
+    'style' => '',
+    'image' => '',
+    'description' => '',
+    'parentdir' => '',
+    'url' => '/huati/',
+    'items' => '192',
+    'hits' => '0',
+    'setting' => '{"workflowid":"","ishtml":"1","content_ishtml":"1","create_to_html_root":"0","template_list":"default","category_template":"category","list_template":"list_huati","show_template":"show_huati","meta_title":"","meta_keywords":"\\u6cad\\u9633\\u4eca\\u65e5\\u8bdd\\u9898,\\u6cad\\u9633\\u4eca\\u65e5\\u8bf4\\u6cd5,\\u6cad\\u9633\\u4eca\\u65e5\\u805a\\u7126","meta_description":"\\u6cad\\u9633\\u4eca\\u65e5\\u8bdd\\u9898 \\u7528\\u5e38\\u8bc6\\u89e3\\u8bfb\\u60a8\\u7684\\u987e\\u8651","presentpoint":"","defaultchargepoint":"","paytype":"0","repeatchargedays":"1","category_ruleid":"1","show_ruleid":"34"}',
+    'mobilesetting' => '{"template_list":"default","category_template":"category","list_template":"list_huati","show_template":"show_huati","ishtml":"0","content_ishtml":"0","meta_title":"沭阳今日话题","meta_keywords":"沭阳今日话题 今日说法 沭阳手机网","meta_description":"沭阳今日话题 今日说法 沭阳手机网","category_ruleid":"35","show_ruleid":"36"}',
+    'listorder' => '1',
+    'ismenu' => '1',
+    'sethtml' => '0',
+    'letter' => 'jinrihuati',
+    'usable_type' => '',
+    'additional' => '',
+    'commenttypeid' => '0',
+    'commenttmalleid' => '0',
+    'meta_title' => '',
+    'meta_keywords' => '沭阳今日话题,沭阳今日说法,沭阳今日聚焦',
+    'meta_description' => '沭阳今日话题 用常识解读您的顾虑',
+  ),
+);
+?>

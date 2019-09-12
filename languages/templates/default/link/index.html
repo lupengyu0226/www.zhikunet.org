@@ -1,0 +1,70 @@
+{template "link","header"}
+<link href="https://statics.zhikunet.org/statics/css/link.css" rel="stylesheet" type="text/css" />
+<!--main-->
+<div class="main">
+	<!--left_bar-->
+	<div class="col-left">
+    <div class="crumbs"><a href="https://www.zhikunet.org/">网站首页</a><span> &gt; </span><a href="https://www.zhikunet.org/links.shtml">友情链接</a></div>
+    <div class="box boxsbg cboxs">
+    <h5>默认分类 <a href="https://www.zhikunet.org/links-list.shtml" class="more">更多>></a></h5>
+     <div class="tag_a">
+        	{edi:link action="lists" typeid="0" siteid="$siteid" linktype="1" order="desc" num="6" return="dat"}
+				{loop $dat $v}
+	       		 <a href="{$v[url]}" title="{$v[name]}" target="_blank"><img src="{$v[logo]}" width="92" height="31" /></a>
+		        {/loop}
+			{/edi}
+      </div>
+      <div class="tag_a">
+      	{edi:link action="lists" typeid="0" siteid="$siteid" linktype="0" order="desc" num="100" return="dat"}
+		{loop $dat $v}
+      		 <a href="{$v[url]}" title="{$v[name]}"  target="_blank">{$v[name]} </a>
+        {/loop}
+		{/edi}
+       </div>
+         
+     {edi:link action="type_lists" listorder="desc" siteid="$siteid"}
+		{loop $data $type_v}
+    	<h5>{$type_v[name]} <a href="https://www.zhikunet.org/links-list.shtml" class="more">更多>></a></h5>
+        <div class="tag_a">
+        	{edi:link action="lists" typeid="$type_v[typeid]" siteid="$siteid" linktype="1" order="desc" num="6" return="dat"}
+				{loop $dat $v}
+	       		 <a href="{$v[url]}" title="{$v[name]}" target="_blank"><img src="{$v[logo]}" width="92" height="31" /></a>
+		        {/loop}
+			{/edi}
+         </div>
+        <div class="tag_a">
+        	{edi:link action="lists" typeid="$type_v[typeid]" siteid="$siteid" linktype="0" order="desc" num="10" return="dat"}
+				{loop $dat $v}
+	       		 <a href="{$v[url]}" title="{$v[name]}"  target="_blank">{$v[name]} </a>
+		        {/loop}
+			{/edi}
+         </div>
+    	{/loop}
+	{/edi}  
+          
+        	<!--pages-->
+         </div>
+    </div>
+    <!--right_bar-->
+    <div class="col-auto">
+    	<!--广告228x90-->
+        <div class="box">
+            <h5 class="title-2">友情链接分类</h5>
+            <div class="tag_a">
+            <a href="https://www.zhikunet.org/links-list.shtml" title="默认分类">默认分类</a>
+            {edi:link action="type_lists" listorder="desc" siteid="$siteid"}
+            {loop $data $type_v}
+            <a href="https://www.zhikunet.org/links-list.shtml" title="{$type_v[name]}">{$type_v[name]}</a>
+            {/loop}
+            {/edi}
+             </div>
+        </div>
+        <div class="bk10"></div>
+        {if $setting[$siteid]['is_post']=='1'}
+         <div class="txt_c">
+            <a href="https://www.zhikunet.org/links-reg.shtml" class="sqlj_btn" target="_blank"></a>
+        </div>
+        {/if}
+     </div>
+</div>
+{template "content","footer"}

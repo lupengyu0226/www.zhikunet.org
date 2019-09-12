@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* Author Deanhuang 20140218 */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;font-weight:normal;}html,body,fieldset,img,iframe,abbr{border:0;}img{display: block;}i,cite,em,var,address,dfn{font-style:normal;}[hidefocus],summary{outline:0;}li{list-style:none; overflow: hidden;}h1,h2,h3,h4,h5,h6,small{font-size:100%;}sup,sub{font-size:83%;}pre,code,kbd,samp{font-family:inherit;}q:before,q:after{content:none;}textarea{overflow:auto;resize:none;}label,summary{cursor:default;}a,button{cursor:pointer;}h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}del,ins,u,s,a,a:hover{text-decoration:none;}.hd:after,.bd:after,.clr:after,.shList dl:after{content:"";display:table;clear:both}.hd,.bd,.clr,.shList dl{*zoom:1}body,textarea,input,button,select,keygen,legend{font:12px/1.14 \5b8b\4f53,arial;color:#333;outline:0;}a{color:#333;}a:hover{ color:#e55110; text-decoration:underline;}.fl{float:left;}.fr{float:right;}.fwb{font-weight:700;}.mb20{margin:0 0 20px 0;}.mb15{margin-bottom: 15px;}.mb10{margin-bottom: 10px;}.red{color:red;}
+body{ font-family: "microsoft yahei" ;background-color: #333;}
+.header{ position: relative; height: 213px; margin-bottom: 5px; background: url(https://statics.05273.cn/statics/huati/img/header.jpg) center -30px no-repeat;}
+.header h1 a{position: absolute; display: block; width: 300px; height: 160px; left: 50%; top: 50px; margin-left: -442px; text-indent: -9999px;}
+.header em {font-size: 20px;color: #FFF;display: block;width: 250px;position: absolute;right: 50%;margin-right: -450px;top: 140px;}
+.header em a{color: #FFF;}
+.wrap{width: 960px; padding: 20px; margin: 0 auto; background-color: #E5E5E5;}
+.wrap .main{width: 720px;padding-left: 240px;overflow: hidden;}
+.hd1{  border-bottom: 1px solid #A10601; margin-bottom: 20px; padding-left: 15px; background: url(https://statics.05273.cn/statics/huati/img/corner.png) 0 5px no-repeat;}
+.hd1 h2{font-size: 36px; color: #A10601; float: left; height: 54px; line-height: 40px;}
+.hd1 .info{float: right;}
+.hd1 .info h3{ height: 24px; line-height: 22px; text-align: right; font-size: 18px; font-weight: 700;}
+.hd1 .info p{ height: 24px; line-height: 24px; font-size: 18px; }
+.hd1 .info p em{font-weight: 400; color: #FFF; padding: 0 3px; background-color: #A10601;}
+.bd{margin-bottom: 40px;}
+.bd .txt{height: 142px; background: url(https://statics.05273.cn/statics/huati/img/tz.png) 0 0 no-repeat; color: #FFF;}
+.bd .txt h4{float: left; width: 150px; height: 142px; font-size: 36px; font-weight: 400; text-align: center; line-height: 142px; margin-right: 20px;}
+.bd .txt p{font-size: 13px; line-height: 28px; padding: 20px 20px 0 0;}
+.hd2{height: 30px; line-height: 30px; padding-bottom: 10px; border-bottom: 1px solid #A10601 ;margin-bottom: 20px;}
+.hd2 h2{font-size: 26px; padding-left: 10px; border-left: 5px solid #A10601; float: left; font-weight: 400;}
+.bd2 p{font-size: 14px; line-height: 24px; margin-bottom: 15px;}
+.bd2 img{padding-top: 10px;}
+.hd3{  border-bottom: 1px solid #A10601; margin-bottom: 20px; padding-left: 15px; background: url(https://statics.05273.cn/statics/huati/img/corner.png) 0 5px no-repeat;}
+.hd3 h2{font-size: 30px; color: #A10601; float: left; height: 48px; line-height: 40px;}
+.hd3 em{float: right; font-size: 14px; margin-top: 20px}
+.hd3 em span{color: #A10601;}
+/*����*/
+#menu{ position: fixed; left: 50%; margin-left: -495px; z-index: 999;_position:absolute;_bottom:auto;}
+.menuTop{ top: 350px;_top:expression(eval(document.documentElement.scrollTop)); _margin-top: 158px;}
+.menuBtm{bottom:700px;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); _margin-bottom:700px;}
+#menu li{ width: 185px; height: 28px; line-height: 28px;zoom:1; background: url(https://statics.05273.cn/statics/huati/img/bg_menu.png) right -36px no-repeat; vertical-align: bottom;padding:0 40px 0 20px; margin-bottom: 8px; cursor: pointer; overflow: hidden;}
+#menu li.current{ background-position: right 0;zoom:1;}
+#menu li a{ display:inline-block;height: 28px; color: #fff; font-size: 14px; cursor: pointer;zoom:1;}
+#menu li a:hover{ color: #fff; text-decoration: none;}
+.mininav{width:100%;height:28px;background:#fdfdfd url(https://statics.05273.cn/statics/css/2014style/img/mininav.png) repeat-x top center;border-bottom:1px solid #ebebeb;}
+.mininavInner{width:1000px;height:28px;margin:0 auto!important;}
+.mininavInner a{color:#666;text-decoration:none;font-family:"宋体";}
+.mininavInner a:hover{color:#2d374b;}
+.mininavInner .mininavLeft{float:left;margin-top:6px;color:#c7c7c7;font-size:12px;}
+.mininavInner .mininavLeft .fl{color:#3b639f;}
+.mininavLeft div{line-height:16px;}
+.mininavRight div{line-height:29px;}
+a.onelogin,a.onelogin:hover{background-image:url(https://statics.05273.cn/statics/css/2014style/img/loginall_1_2.png); background-repeat:no-repeat;}
+a.onelogin{width:70px;height:29px;display:block;float:right;background-position:left -450px;}
+a.onelogin:hover{background-position:left -500px;}
+a.newgundong{width:60px;height:29px;display:block;float:right;}
+a.newgundong:hover{background-position:right -70px;}
+a.shouye{width:60px;height:29px;display:block;float:right;}
+a.shouye:hover{background-position:right -100px;}
+a.gwweibo{width:60px;height:29px;display:block;float:right;}
+a.gwweibo:hover{background-position:right -150px;}
+.input_bn{background:url(https://statics.05273.cn/statics/images/bn/login.gif) no-repeat 0px 0px; width:39px; height:18px; border:none; cursor:pointer}
+/* ͶƱ */
+.bdBox{position: relative; height: 130px;}
+.voteU{overflow:hidden;zoom:1;margin:20px 0 0 -5px;}
+.voteU li{width:100px;height:100px;display:inline; border-radius: 100px; }
+.voteU li span{color:#fff;font-family:arial;font-size:18px;text-align:center;display:block;height:49px;line-height:60px; border-bottom: 1px dotted #fff; margin: 0 15px;}
+.voteU li.xuyao{background-color: #00B8EE; float: left; margin-left: 20px;}
+.voteU li.noxuyao{background-color: #FB4551; float: right; margin-right: 20px;}
+.voteU li input{border:none;width:96px;text-align:center;background:none;height:50px;line-height:26px;color:#fff;font-family:'΢���ź�','����';font-size:14px;cursor:pointer;}
+.colummPicvot .voteCol{display:inline-block;*display:inline;zoom:1;width:337px;background:#8baad0;height:15px;overflow:hidden;border:none;text-align:left;}
+.colummPicvot .voteCol div{display:inline-block;*display:inline;zoom:1;height:15px;background:#dd8250;}
+.colummPicvot{position:relative;padding:0px 40px;margin-top:20px;width:337px;line-height:15px;font-family:arial;font-size:14px;color:#606060;margin-left:90px;}
+.colummPicvot .colL{position:absolute;left:0;top:0}
+.colummPicvot .colR{position:absolute;right:0;top:0}
+.shareWb{text-align:right;padding-top:30px; display: none;}
+.shareWb span{margin-left:20px;}
+.shareWb input{vertical-align:-2px;margin:0 5px 0 10px;}
+.shareWb label{cursor:pointer;}
+.xwlc #wb{vertical-align:-2px;margin:0 5px; }
+#apps_svy_digg2 #optg .tid,#apps_svy_digg2 #optb .tid{background:url(https://statics.05273.cn/statics/huati/img/iconAndBnt.png)}
+#apps_svy_digg2 #optg .tid{background-position:-38px -72px;}
+#apps_svy_digg2 #optb .tid{background-position:-37px -117px;}
+.xwlc .xwlcTit{width:91px;height:95px;position:absolute;top:-1px;left:-1px;background-position:0 -224px;text-indent:-999em;overflow:hidden;}
+.xwlc .bdBox{position:relative;z-index:10;zoom:1;}
+.xwlc .bdBox .gdTit{font-size:24px;font-family:'΢���ź�','����';font-weight:100;height:40px;line-height:40px;text-align:center;}
+#votedraw0{ overflow:hidden; zoom:1; line-height:15px; font-size:14px; color:#606060; width:450px;margin:0 0 0 90px\9;margin:-70px 0 0 148px;}
+#voteline0{ width:337px; background:#FB4551; height:18px; float:left;display:inline;margin-right:15px; }
+#voteline0 div{ height:18px; background:#00B8EE;border-right:2px solid #fff; }
+#votedraw0 span{ float:left; margin:0 15px 0 0px;display:inline; line-height:18px; }
+.voteU{ margin:0; padding:20px 0;}
+.bdBox h2.voteTit{position: absolute;width: 340px;height: 30px;line-height: 30px;font-size: 22px;text-align: center;left: 50%;margin-left: -170px;top: 25px;}
+#voteContainer_0_form .wbState{padding-top:20px;text-align:right; margin:0 50px; display: none; }
+.voteBox{position:relative; zoom:1;}
+.voteBox .voteList li.yes { margin: 0 470px 0 0;}
+.voteBox .voteList li.no { margin: 0}
+.voteBox .voteDraw{ margin:-62px 0 20px 192px!important}
+.voteBox h3.voteTit{ font-family:"΢���ź�"!important; font-size:21px!important}
+.ztpj{position:absolute;top:160px;right:-111px;width:64px;background:#f6f6f6;border:1px solid #e9e9e9;  }
+.ztpj h2{color:#989898;font-size:12px;text-align:center;font-weight:100; height:30px;line-height:30px;  }
+.votLista li input{width:30px;height:30px;margin:10px 0 0 15px; border:none;overflow:hidden;display:block;text-indent:-999em; }
+.votLista {padding-bottom:10px;}
+.votLista li{vertical-align:middle;}
+.votLista li .god{background-position:-71px 0 ;}
+.votLista li .bed{background-position:-71px -41px ;}
+.votLista li .god:hover{background-position:-101px 0 ;}
+.votLista li .bed:hover{background-position:-101px -41px ;}
+.wbsj{position:absolute;top:35px;left:2px}
+#rvotenum1,#lvotenum1{left:30px;}
+.wbsj .pgLt li{width:30px;height:30px;margin:5px 0 0 15px;position:relative; }
+.wbsj .pgLt li.godL{background-position:-103px 0 ;}
+.wbsj .pgLt li.godr{background-position:-103px -36px ;*background-position:-103px -40px ;}
+.wbsj .pgLt li .port{color:#666;position:absolute;top:3px;left:30px;background:#fff;padding:5px;white-space:nowrap; }
+.wbsj .pgLt li .port span{ }
+/*����*/
+.pl{padding: 15px; background-color: #FFF;}
+.namelist{height: 158px; padding: 15px ;background-color: #A40000;line-height: 40px;color: #FFF;font-size: 16px;}
+.namelist a{color:#fff;}
+.namelist .qr{float: right;}
+.namelist .qr p{font-size: 14px; color: #FFF;}
+#goTop {display: block;width: 51px;height: 67px;overflow: hidden;text-indent: -999em;position: fixed;left: 50%;margin-left: 500px;background: url(https://statics.05273.cn/statics/huati/img/bg_gotop.png) 0 0 no-repeat; bottom:130px; _position: absolute;_bottom: auto;}

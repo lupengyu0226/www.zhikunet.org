@@ -1,0 +1,40 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('favorite_list')}</h2>
+                </div>
+                <div class="bd uc-wp-list">
+{if $favoritelist}
+					<ul class="live-list">
+{loop $favoritelist $k $v}
+                    	<li>
+{if $v['thumb']}
+                        	<div class="s-img">
+                                <a href="{$v['url']}" title="{$v['title']}" target="_blank"><img src="{if $v['thumb']}{$v['thumb']}{else}{APP_PATH}style/images/thumb.jpg{/if}" alt="{$r['title']}"></a>
+                            </div>
+{/if}
+                            <div class="s-title">
+                                <h3><a href="{$v['url']}" target="_blank" title="{$v['title']}">{$v['title']}</a></h3>
+                                <p class="live-teacher">{format::date($v['adddate'], 1)}收藏</p>
+                                <p class="row">{str_cut($r[description],420,'...')}</p>
+                                <p><a class="fr" href="index.php?app=member&controller=index&view=favorite&id={$v['id']}">取消收藏</a></p>
+                            </div>
+                        </li>
+{/loop}
+					</ul>
+                    <div class="pagenavi">{$pages}</div>
+{else}
+                	<div class="uc-empty">暂无收藏的文章，赶紧去看看<a href="{APP_PATH}" target="_blank">最新文章</a></div>
+{/if}
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

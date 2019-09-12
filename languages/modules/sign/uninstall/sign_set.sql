@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `shuyang_sign_set`;

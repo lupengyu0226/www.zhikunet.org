@@ -1,0 +1,9 @@
+				function set_site_notice(type) {
+					document.getElementById('site_noticeid').style.display='none';
+			}
+			try {{pc:license action="lists" order="aid DESC" moreinfo="1" num="1"}{loop $data $r}$("#phpcms_notice").html("<div id=\"site_noticeid\" style=\"position:absolute;left:318px;top:176px;width:373px;height:162px;z-index:1;background: #EDF2F8;border:#A4C0F7 solid 5px;color:#000000;padding:8px;\"><span style=\"background: #82A7F4;font-weight:bold;color:#ffffff;padding:2px;\">远程公告</span><br><div style=\"padding:10px 10px 5px;\"><img src=\"http://statics.05273.cn/statics/images/message-warn.png\" style=\"vertical-align: middle\">{$r['title']}<br><br>{$r['content']}<a href=\"{$r['url']}\" target=\"_blank\">&nbsp;&nbsp;&nbsp;&nbsp;点击这里下载</a><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期:{inputtime_zone($r[addtime])}</div><div style=\" text-align:center\"><input type=\'button\' class=\"button\" value=\'确定\' onclick=\'set_site_notice(0)\'></div></div>");
+{/loop}{/pc}$("#phpcms_license").html("已授权({pc:get sql="SELECT * FROM v9_type where typeid=$typeid"  return="type"}
+{loop $type $r}
+{$r['name']}
+{/loop}
+{/pc})");$("#phpcms_sn").html("{$icd} (<a href=\"http://www.05273.cn/index.php?app=license&view=certificate&domain={$domain}\" target=\"_blank\">查看证书</a>)");}catch(e){}

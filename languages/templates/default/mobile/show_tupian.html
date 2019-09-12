@@ -1,0 +1,547 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+<base target="_self" />
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="https://statics.05273.cn">
+<link rel="dns-prefetch" href="https://upload.05273.cn">
+<link rel="dns-prefetch" href="https://account.05273.cn">
+<link rel="dns-prefetch" href="https://img1.05273.cn">
+<link rel="dns-prefetch" href="https://img2.05273.cn">
+<link rel="dns-prefetch" href="https://img3.05273.cn">
+<link rel="dns-prefetch" href="https://wap.05273.cn">
+<link rel="dns-prefetch" href="https://www.05273.cn">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="applicable-device" content="mobile">
+<meta name="location" content="province=江苏;city=宿迁">
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}沭阳手机网</title>
+<meta name="keywords" content="{$SEO['keyword']},沭阳手机网">
+<meta name="description" content="{$SEO['description']},沭阳手机网">  
+<link rel="apple-touch-icon" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone-retina.png" />
+<link rel="canonical" href="{$url}"/>
+<link rel="miphtml" href="https://wap.05273.cn/mip-{$catid}-{$id}-1.html">
+<script type="text/javascript">
+    try{
+        if(/Macintosh|Mac_PowerPC|Windows NT|Windows XP/i.test(navigator.userAgent)){
+          window.location.href="{$url}";
+        }
+    }catch(e){};
+</script>
+<link rel="apple-touch-icon-precomposed" href="https://statics.05273.cn/statics/mobile/img/weblogo.png">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/images/mobile/css/swiper3.08.min.css">
+<link rel="stylesheet" href="https://statics.05273.cn/images/mobile/css/pics_main.min.css">
+<script src="//statics.05273.cn/images/mobile/js/swiper.min.js"></script>
+<script src="//statics.05273.cn/statics/js/jquery.js"></script>
+        <script type="text/javascript">
+            /*统计探针必备变量*/
+            var globalSettings = {
+                "docType": "slide"
+          };
+          var gloableSettings = globalSettings ;
+      </script>
+{php $commentid=id_encode('content_'.$catid,$id,$siteid)}
+{edi:comment action="get_comment" commentid="$commentid"}
+{php $comment = $data;}
+{/edi}
+<script src="//statics.05273.cn/images/mobile/js/mobile_inice_jiaodiantutest.js"></script>     
+<style type="text/css">
+.ad {display:none!important;display:none}
+[class="middle-advert"] {display:none!important;display:none}
+[class="top-advert"] {display:none!important;display:none}</style>
+</head>
+    <body>
+        <div class="picsMain">
+            <!--picsTit-->
+            <div class="picsTit" id="picsTit">
+                <div class="wrap">
+                    <div class="picsTitL">
+                          <a href="https://wap.05273.cn/photo/">
+                                <img src="//statics.05273.cn/images/mobile/piclogo.png" height="21">
+                          </a>
+                    </div>
+                    <h4>图集推荐</h4>
+                    <div class="picsTitR">
+                        <a href="https://wap.05273.cn/index.php?app=mobile&amp;controller=index&amp;view=comment_list&amp;commentid={id_encode('content_'.$catid,$id,$siteid)}" class="picsCmt" id="picsCmt">{if $comment[total]}{$comment[total]}{else}0{/if}</a>
+                        <a class="picsShare" id="picsShare"></a>
+                    </div>
+                </div>
+            </div>
+            <!--picsBox begin-->
+            <div class="picsBox" id="picsBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {loop $pictureurls $pic_k $r}
+                        <div class="swiper-slide"><img src="{$r[url]}" alt="{$r[alt]}" title="{$title}" /></div>
+                        {/loop}
+                        <div class="swiper-slide">  
+{edi:content action="position" posid="8" catid="8" thumb="1" num="3" order="id DESC"}
+<div id="climg" class="clearfix">
+    {loop $data $r}{if $n==1}
+    <a class="add_last_1" href="{$r[url]}" data-id="69" data-href="{$r[url]}"><img src="{thumb($r[thumb],340,292)}" />
+        <p style="text-align:center">{$r[title]}</p>
+    </a>
+    {/if}{/loop}
+    {loop $data $r}{if $n==2}
+    <a class="add_last_2" href="{$r[url]}" data-id="69" data-href="{$r[url]}"><img src="{thumb($r[thumb],120,120)}" />
+        <p style="text-align:center">{$r[title]}</p>
+    </a>
+    {/if}{/loop}
+    {loop $data $r}{if $n==3}
+    <a class="add_last_3" href="{$r[url]}" data-id="69" data-href="{$r[url]}"><img src="{thumb($r[thumb],120,120)}" />
+                <p style="text-align:center">{$r[title]}</p>
+            </a>
+    {/if}{/loop}
+</div>
+{/edi}
+<div id="nextShow"><img src="//statics.05273.cn/images/mobile/nextshow.png" /></div>
+                        </div>
+                        <div class="swiper-slide">
+<div class="lastT" style="position:relative;">
+    <div>
+    </div>
+</div>
+                            {if $next_page[id]}{$next_page[title]}
+                            <div class="lastB">
+                                <a href="{S($next_page[url])}">
+                                    <img src="{thumb($next_page[thumb], 80, 0, 0)}" />
+                                    <div>
+                                        <h3>{$next_page[title]}</h3>
+                                        <p>左滑进入下一图集&gt;&gt;</p>
+                                    </div>
+                                </a>
+                            </div>
+                            {else}
+                            <div class="lastB">
+                                <a href="{S($url)}">
+                                    <img src="//statics.05273.cn/statics/mobile/img/touch-icon-iphone-retina.png" />
+                                    <div>
+                                <h3>最后一篇，没有更多了</h3>
+                                <p>左滑进入栏目首页&gt;&gt;</p>
+                                    </div>
+                                </a>
+                            </div>
+                            {/if} 
+                        </div>
+                    </div>
+                </div>
+                <div class="picTxt clearfix" id="picTxt">
+                    <div class="picPage" id="picPage"><span id="DB_current">0</span><span class="line02">/</span><span id="DB_total">0</span></div>
+                    <ul>
+                        {loop $pictureurls $pic_k $v}
+                        <li>
+                        <h2>{$title}</h2>
+                        <p>{$v[alt]}</p>
+                        </li>
+                        {/loop}
+                    </ul>
+                </div>
+                <div class="lastItems"><p></p><p></p></div>
+            </div>
+            <!--picsBox end-->
+            <div id="black2"></div>
+            <div class="picsShareBox" id="picsShareBox">
+                <a class="picsSina" href="http://service.weibo.com/share/share.php?url={S($url)}%3Fch%3Dshare_weibo&amp;language=zh_cn&amp;title={$title}&amp;pic={$thumb}&amp;searchPic=true" target="_blank"></a>
+                <a class="picsQQ" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={S($url)}%3Fch%3Dshare_qqZone&amp;title={$title}&amp;showcount=0&amp;summary=&amp;pics={$thumb}" target="_blank"></a>
+            </div>
+            <!--end-->
+        </div>
+<script>
+
+        /*
+        * 幻灯切换效果JS
+        * author:cici
+        * updater:chengds
+        */
+        (function() {
+            
+            // var tf = document.getElementById("bw").children[0];
+            // if(tf.style.display == "none"){
+            //     $(".bomBox").hide();    
+            // }
+        
+            var isTime = insertImgTime(1,60),
+            len = $(".swiper-slide").length,
+            imgPosition = parseInt((len / 3) * 2) - 1;
+            var t_img; // 定时器
+            var isLoad = true; // 控制变量
+            var clTB = document.getElementById("clTB");
+            var ssH = document.body.offsetHeight - 100,
+                picsTit = document.getElementById("picsTit"),
+                picsTitH4 = picsTit.getElementsByTagName("h4")[0],
+                picTxt = document.getElementById("picTxt"),
+                picTxtUl = picTxt.getElementsByTagName("ul")[0],
+                picsCmt = document.getElementById("picsCmt"),
+                picPage = document.getElementById("picPage"),
+                picsBox = document.getElementById("picsBox"),
+                picsImg = picsBox.getElementsByTagName("img"),
+                picTxtLi = picTxt.getElementsByTagName("li"),
+                picsTit1L = document.getElementById("picsTit1L"),
+                DB_current=document.getElementById("DB_current"),
+                picsBoxH = document.body.clientHeight - 200;
+            var hasNextDoc = !!globalSettings.nextDataId;   
+            var hasPreDoc = !!globalSettings.preDataId;  
+            var currentPageUrl = window.location.href; //给统计传referer需要
+            var mySwiper = new Swiper(".swiper-container", {
+                loop:false,
+                //autoplay : 5000,
+  
+                onSlideChangeStart: function() {
+                    if(typeof mySwiper=="undefined") return;
+                    var activeIndex = mySwiper.activeIndex;
+                    var h = window.screen.height;
+                    var climgH = $("#climg").height() + 62;
+                    var clh = $("#climg").find("a").eq(0).height();
+                    var clh2 = $("#climg").find("a").eq(2).height();
+                    var cltbh = clh + clh2 + 40 + 62;  
+
+                    var previousIndex = mySwiper.previousIndex;
+                    var previousIndex = mySwiper.previousIndex;
+                    var actIndex = mySwiper.activeIndex;
+                   var slideLength = mySwiper.slides.length - 2;
+
+        
+                    func_animate(activeIndex);
+                    DB_current.innerHTML = activeIndex+1;   
+                    
+                    //change hash
+                    //window.location.hash = "imgnum=" + (activeIndex); //注释 Inku@150730
+                    //滑动图片时发起统计请求
+                    if (typeof sendStaRequestByJs == "function") {
+                        //send static by js.cds add at 2015/7/20
+                        currentPageUrl = window.location.href; //给统计传referer需要
+                        //window.location.hash = "imgnum=" + (activeIndex + 1);
+                        var urlStart = currentPageUrl.split("imgnum=")[0];
+                        history.replaceState(null,'url',urlStart + "imgnum=" + (activeIndex + 1) );
+                        
+                        var param = null;
+                        var ref = currentPageUrl || document.referrer || "";
+                        var _h = window.location.href.split('#');
+                        var suffix = _h[0] + (location.search ? '&' : (_h[0].indexOf('?') > -1 ? '' : '?'));
+                        
+                        var url = [suffix + "srctag=zbs_slide_tj1" +  "#imgnum=" + (activeIndex + 1),
+                                    suffix + "srctag=zbs_slide_tj2" +  "#imgnum=" + (activeIndex + 1)]
+                        
+                        if(activeIndex==slideLenth-2){
+                            param = url[0];
+                        }else if(activeIndex==slideLenth-1){
+                            param = url[1];
+                        }else{
+                            param = window.location.href;
+                        } 
+                        
+                        sendStaRequestByJs({
+                            "imgnum": activeIndex+1,
+                            "ref": ref,
+                            "url": param
+                        });
+                        
+                        dplus.track("交互行为",{"幻灯":"看不够"});
+                    }
+                }
+            });
+            if(hasNextDoc){ /*手指滑动时，判断手指滑动的方向*/
+                gotoPrev();  /*上一篇*/
+                gotoNext();  /*下一篇*/
+            }
+        
+            DB_current.innerHTML = 1;
+            var slideLenth = mySwiper.slides.length;
+            document.getElementById("DB_total").innerHTML = slideLenth-2;
+        
+            var backing=false;
+            /*
+             * 滑到上一篇
+             */
+            function gotoPrev(){
+                var startX, startY, moveEndX, moveEndY, X, Y;
+                $(".swiper-container .swiper-slide:first").on("touchstart", function(e) {
+                   // e.preventDefault();
+                    startX = e.originalEvent.changedTouches[0].pageX,
+                    startY = e.originalEvent.changedTouches[0].pageY;
+                });
+                $(".swiper-container .swiper-slide:first").on("touchmove", function(e) {
+                   // e.preventDefault();
+                    moveEndX = e.originalEvent.changedTouches[0].pageX,
+                    moveEndY = e.originalEvent.changedTouches[0].pageY,
+                    X = moveEndX - startX,
+                    Y = moveEndY - startY;
+        
+                     if (!backing && Math.abs(X) > Math.abs(Y) && X > 0 ) {  //从左侧向右滑动
+                         //console.log("本应跳到上一图集");
+                         if (hasPreDoc) {             
+                            location.href="/" + globalSettings.preDataId + "-1.html";
+                         } else {
+                            location.href="/";
+                         }
+                         backing=true;
+                         return false;
+                    }
+                });  
+            }
+        
+            /*
+             * 滑到下一篇
+             */
+            function gotoNext(){
+                var startX, startY, moveEndX, moveEndY, X, Y;
+                $(".swiper-container .swiper-slide:last").on("touchstart", function(e) {
+                   // e.preventDefault();
+                    startX = e.originalEvent.changedTouches[0].pageX,
+                    startY = e.originalEvent.changedTouches[0].pageY;
+                });
+                $(".swiper-container .swiper-slide:last").on("touchmove", function(e) {
+                   // e.preventDefault();
+                    moveEndX = e.originalEvent.changedTouches[0].pageX,
+                    moveEndY = e.originalEvent.changedTouches[0].pageY,
+                    X = moveEndX - startX,
+                    Y = moveEndY - startY;
+        
+                     if ( Math.abs(X) > Math.abs(Y) && X < 0 ) {  //从右侧向左滑动
+                        //console.log("本应跳到下一图集");
+                        location.href="/" + globalSettings.nextDataId + "-1.html";
+                        return false;
+                    }
+                });  
+            }
+            var sh = document.body.clientHeight,
+                resetH = 192;
+            //picTxt.style.top = sh-resetH-10 + "px";
+            function func_animate(idx) {
+                for (var j = 0; j < picTxtLi.length; j++) {
+                    if (idx == j) {
+                        picTxtLi[j].style.display = "block";
+                    } else {
+                        picTxtLi[j].style.display = "none";
+                    }
+                };
+                if (ifShow == false  && idx != (slideLenth -1)) {
+                    txtShow(0, -60, "picPage picPageOnly", false);
+                } else {
+                    txtShow(102, 0, "picPage", true);
+                }
+                if (idx == slideLenth - 2) {
+                    picTxt.style.background = "rgba(0,0,0,0.5)";
+                    txtShow(102, 0, "picPage", true);
+                    picTxt.style.bottom = -resetH + "px";
+                    picsCmt.style.display="none";
+                    picsShare.style.display="none";
+                    picsTitH4.style.display="block";
+                    $(".picsTitL img").css({"width":"auto"});
+                    firstShow();
+                    lastItems("visible",0);
+                }else if (idx == slideLenth - 1) {
+                    picTxt.style.background = "rgba(0,0,0,0.5)";
+                    txtShow(102, 0, "picPage", true);
+                    picTxt.style.bottom = -resetH + "px";
+                    picsCmt.style.display="none";
+                    picsShare.style.display="none";
+                    picsTitH4.style.display="none";
+                    $(".picsTitL img").css({"opacity":1,"width":"auto"});
+                    lastItems("visible",1);
+                }else{
+                    picTxt.style.bottom = 0 + "px";
+                    picsCmt.style.display="block";
+                    picsShare.style.display="block";
+                    picsTitH4.style.display="none";
+                    $(".picsTitL img").css({"opacity":1,"width":"auto"});
+                    lastItems("hidden",0);
+                }
+            }
+            for (var i = 0; i < picsImg.length; i++) {
+                if(picsImg[i].clientHeight>sh-54){
+                    picsImg[i].style.height = (sh-54) + "px";
+                    picsImg[i].style.width = "auto";
+                }
+                picsImg[i].onclick = function() {
+                    var currentPage=DB_current.innerHTML;
+                    if (ifShow == true && currentPage<(slideLenth-1)) {
+                        picTxt.style.background = "none";
+                        txtShow(0, -60, "picPage picPageOnly", false);
+                    } else {
+                        picTxt.style.background = "rgba(0,0,0,0.5)";
+                        txtShow(102, 0, "picPage", true);
+                    }
+                }
+            }
+            
+            //firstShow
+            var key = true;
+            var iscookie=document.cookie.indexOf("firstVisit=");
+            function firstShow(){
+                if(iscookie==-1){
+                    var exdate=new Date();
+                    exdate.setDate(exdate.getDate()+1);
+                    document.cookie="firstVisit=1;expires="+exdate.toGMTString();
+                    if(key==true){
+                        $("#nextShow").fadeIn(1000).delay(1000).fadeOut(1000);
+                        key=false;
+                    };
+                }
+            }
+            
+            //lastItems
+            function lastItems(fade,obj){
+                $(".lastItems").css("visibility",fade);
+                $(".lastItems p").eq(obj).css("background","#fff").siblings().css("background","#535353");
+            }
+            
+            //txtShow
+            var ifShow = true;
+            function txtShow(picTxtUlH, titT, pageName, ifS ) {
+                picTxtUl.style.height = picTxtUlH + "px";
+                picsTit.style.top = titT + "px";
+                picPage.className = pageName;
+                ifShow = ifS;
+            }
+        
+            //picsShare
+            picsShare = document.getElementById("picsShare");
+            picsShareBox = document.getElementById("picsShareBox");
+            black2 = document.getElementById("black2");
+            picsShare.addEventListener("touchstart", function() {
+                black2.style.display = "block";
+                picsShareBox.style.display = "block";
+            }, false);
+            black2.addEventListener("touchstart", function(e) {
+                black2.style.display = "none";
+                picsShareBox.style.display = "none";
+                event.preventDefault();
+            }, false);
+            function isImgLoad(callback){
+                $('#climg img').each(function(i,v){
+                    if($('#climg img').eq(i).height() === 0){
+                        isLoad = false;
+                        return false;
+                    }
+                });
+                if(isLoad){
+                    clearTimeout(t_img); 
+                    callback();
+                }else{
+                    isLoad = true;
+                    t_img = setTimeout(function(){
+                        isImgLoad(callback); 
+                    },500);
+                }
+            }   
+            function getScript(src,callback){
+                var head=document.getElementsByTagName("head")[0];
+                var js=document.createElement("script");
+                js.setAttribute("src",src);
+                js.onload=js.onreadystatechange=function(){
+                  if(!this.readyState||this.readyState=="loaded"||this.readyState=="complete"){
+                    head.removeChild(js);
+                    if(callback) callback();
+                  }
+                }
+                head.appendChild(js);
+            }
+
+        })();
+        window.onload=function(){
+            var suff=window.location.search;
+            if(suff.indexOf("?ch=zbs_jl_sp")>-1){
+                $('#icon_0').hide();
+                $('.bomBox').hide();
+            }
+        }
+        </script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!--微信分享-->
+      <script>
+      wx.config({
+        debug:false,
+        appId:"{$wxcofig['appId']}",
+        timestamp:"{$wxcofig['timestamp']}",
+        nonceStr:"{$wxcofig['nonceStr']}",
+        signature:"{$wxcofig['signature']}",
+        jsApiList:['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone']
+      });
+var wxData = {
+      'imgUrl': '{$thumb}',
+      'link' : '{S($url)}',
+      'desc' : '{$description}',
+      'title' : '{$title}'
+  };
+var weixin = function (title,link,imgurl,desc){
+      wx.ready(function () {
+          wx.onMenuShareTimeline({
+              title: title,
+              link: link,
+              imgUrl: imgurl
+          });
+          wx.onMenuShareAppMessage({
+              title: title,
+              desc: desc,
+              link: link,
+              imgUrl: imgurl
+          });
+          wx.onMenuShareQQ({
+              title: title,
+              desc: desc,
+              link: link,
+              imgUrl: imgurl
+          });
+          wx.onMenuShareWeibo({
+              title: title,
+              desc: desc,
+              link: link,
+              imgUrl: imgurl
+          });
+          wx.onMenuShareQZone({
+              title: title,
+              desc: desc,
+              link: link,
+              imgUrl: imgurl
+          });
+        wx.checkJsApi({
+            jsApiList: [
+                'getNetworkType',
+                'previewImage'
+            ],
+            success: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
+      var shareObj = {
+      title: '{$title}',
+      desc: '{$description}',
+      link: '{S($url)}',
+      imgUrl: '{$thumb}',
+            success: function (res) {
+            $.ajax({
+              type: "post",  
+              url: '//wap.05273.cn/index.php?app=api&controller=index&op=wxshare&id={$id}&modelid={$modelid}',   
+              });
+            },
+            cancel: function (res) {
+                alert('已取消分享');
+            }
+        };
+        wx.onMenuShareAppMessage(shareObj);
+        wx.onMenuShareTimeline(shareObj);
+      });
+  };
+  weixin(wxData.title,wxData.link,wxData.imgUrl,wxData.desc);  
+      </script>
+  <!--END 微信分享-->
+<script src="https://api.05273.cn/index.php?op=count&amp;id={$id}&amp;modelid={$modelid}" type="text/javascript"></script>
+<script src="https://api.05273.cn/index.php?op=stats&amp;catid={$catid}&amp;edi=mobile" type="text/javascript"></script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+    </body>
+</html>

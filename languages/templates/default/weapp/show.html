@@ -1,0 +1,5 @@
+{php $category=array()}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+    {php $category["article"]=array("id"=>$id,"catid"=>$catid,"title"=>$r[title],"user"=>$username,"source"=>'沭阳网',"description"=>trim_indent($description),"body"=>trim_html($content),"pic"=>trim_weapp($thumb),"pubdate"=>$updatetime,"hits"=>hits_views('c-'.$CATEGORYS[$catid][modelid].'-'.$r['id']));}
+    {php $category["category"]=array("catid"=>$catid,"name"=>$CATEGORYS[$catid][catname]);}
+{php echo json_encode($category)}

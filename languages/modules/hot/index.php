@@ -1,0 +1,83 @@
+<?php
+defined('IN_SHUYANG') or exit('No permission resources.');
+class index {
+	public function __construct(){
+		$this->db = shy_base::load_model('hot_model');
+		$this->db_content = shy_base::load_model('hot_content_model');
+	}
+	public function init(){
+		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
+		$tag = $_GET['tag'];
+		$models = getcache('model', 'commons');
+		$sitelist = getcache('sitelist', 'commons');
+		$i=0;
+		if(isset($_GET['siteid'])) {
+			$siteid = intval($_GET['siteid']);
+		} else {
+			$siteid = 1;
+		}
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		define('SITEID', $siteid);
+		$SEO = seo($siteid);
+		$siteid = intval($_GET['siteid']);
+		$modelid = intval($_GET['modelid']);
+		$orderby = intval($_GET['orderby']);
+		foreach($models as $model_v){
+			$model_arr .= 'model_arr['.$i++.'] = new Array("'.$model_v['modelid'].'","'.$model_v['name'].'","'.$model_v['siteid'].'");'."\n";
+		}
+		$urlrule = '/hot.html~/hot_{$page}.html';
+		$tagdata = $this->db->listinfo('','usetimes desc', $page, 24, '', 10, $urlrule);
+		$pages = $this->db->pages;
+		$total = $this->db->number;
+		include template('hot', 'index',$default_style);
+	}
+	public function show(){
+		$tag = $_GET['tag'];
+		$models = getcache('model', 'commons');
+		$sitelist = getcache('sitelist', 'commons');
+		$i=0;
+		if(isset($_GET['siteid'])) {
+			$siteid = intval($_GET['siteid']);
+		} else {
+			$siteid = 1;
+		}
+		$siteid = $GLOBALS['siteid'] = max($siteid,1);
+		define('SITEID', $siteid);
+		$SEO = seo($siteid);
+		$siteid = intval($_GET['siteid']);
+		$modelid = intval($_GET['modelid']);
+		$orderby = intval($_GET['orderby']);
+		foreach($models as $model_v){
+			$model_arr .= 'model_arr['.$i++.'] = new Array("'.$model_v['modelid'].'","'.$model_v['name'].'","'.$model_v['siteid'].'");'."\n";
+		}
+		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
+			if($this->db->get_one(array('tag'=>$tag))){
+				$sql_arr = array('tag'=>$tag);
+				if($siteid){
+					$sql_arr['siteid'] = $siteid;
+				}
+				if($modelid){
+					$sql_arr['modelid'] = $modelid;
+				}
+				if($orderby){
+					$sql_ord = 'updatetime asc';
+				}else{
+					$sql_ord = 'updatetime desc';
+				}               
+				$urlrule = '/hot/'.urlencode($tag).'.html'.'~/hot/'.urlencode($tag).'-{$page}.html';
+				$tagdata = $this->db_content->listinfo($sql_arr,$sql_ord, $page, 20, '', 10, $urlrule);
+				$datas = $this->db->listinfo($sql_arr,$order = 'tagid DESC');
+				$this->db->update(array('hits'=>'+=1'), array('tag'=>$tag));
+				foreach($datas as $v){
+					$v = $v;
+				}
+				//print_r($v[content]);
+				$pages = $this->db_content->pages;
+				$total = $this->db_content->number;
+			}else{
+				showmessage('标签不存在！');
+			}
+			$CATEGORYS = getcache('category_content_1','commons');
+			include template('hot', 'hot',$default_style);
+	}
+}

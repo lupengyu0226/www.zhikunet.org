@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>{$title}-沭阳网-沭阳论坛网</TITLE> 
+<meta name="keywords" content="{$space_name},{$space_name}的个人主页,沭阳网,沭阳论坛网"> 
+<meta name="description" content="欢迎来到沭阳网{$space_name}的个人主页,在这里你可以了解{$space_name}的动态,欣赏{$space_name}的照片,阅读{$space_name}的微攻略……想了解更多{$space_name}的信息?快来沭阳网关注{$space_name}吧!沭阳网,努力打造沭阳最大网上社区!"> 
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<liNK href="https://statics.05273.cn/statics/images/blog/pho.css" rel="stylesheet" type="text/css">	
+<SCRIPT language=javascript> 
+<!-- 
+window.onerror=function(){return true;} 
+// --> 
+</SCRIPT> 
+</head> 
+<body>   
+        <div id="header">
+            <div class="header_wrap">
+ <h1 class="logo fl"></h1>
+                <ul class="nav fl">
+                  <li ><a target="_blank" href="https://www.05273.cn/">首页</a></li>
+                  <li ><a target="_blank" href="https://bbs.05273.cn/home.php">家园</a></li>
+                  <li ><a target="_blank" href="https://www.05273.cn/news/">资讯</a></li>
+                  <li  class="cur"><a target="_blank" href="https://bbs.05273.cn/">沭阳论坛</a></li>
+                </ul>
+        </div>
+		</div>  	    
+<div id="content" t="3">
+<div class="user_info">
+<div class="user_info_con box_show_border">
+<ul class="user_info_left">
+  <li><a target="_blank" href="https://www.05273.cn/u/{$cuserid}/"><IMG onerror="this.src='//statics.05273.cn/statics/images/blog/nophoto.gif'" alt="{$space_name}的头像" src="{get_memberavatar($cuserid, '1', '180')}"></a></li>
+                	  <li>
+                      	<dl class="user_dl_left">
+                      	  <dt><a  class="dd_gg">{get_memberinfo($cuserid, 'point')}</a></dt>
+                      	  <dd>积分</dd>
+                      	</dl>
+                        <dl>
+                      	  <dt><a  class="dd_gg">{get_memberinfo($cuserid, 'amount')}</a></dt>
+                      	  <dd>金钱</dd>
+                      	</dl>
+                      </li>
+  <li>
+ </li></ul>
+<div class="user_info_right fr">
+<div class="user_right_one"><a target="_blank" class="title2 color1" href="https://www.05273.cn/u/{$cuserid}/">{$space_name}</a>  {if get_memberinfo($cuserid, 'vip')==1}<img src="//statics.05273.cn/statics/images/blog/vip1.gif">{else}<img src="//statics.05273.cn/statics/images/blog/vip0.gif">{/if}
+<div class="user_link"><a class="user_link0 db_bdr">
+{edi:get sql="SELECT jieshao FROM v9_member_detail where userid =$cuserid order by userid desc" num="1" return="data"}
+             {loop $data $v}
+             {if $v[jieshao]}{$v[jieshao]}{else}欢迎来到沭阳网{$space_name}的个人主页,Ta在{date('Y年m月d日',$space_regtime)}注册成为沭阳网会员，在这里你可以了解{$space_name}的动态,欣赏{$space_name}的照片,阅读{$space_name}的微攻略……!{/if}
+{/loop}
+{/edi}
+</a>
+                        <div class="user_link">
+<a target="_blank"  href="https://www.05273.cn/u/{$cuserid}/" class="user_link3 db_bdr">空间地址：https://www.05273.cn/u/{$cuserid}/</a>
+</div>
+
+</div></div></div></div>
+            <div class="pho_main box_show_border">
+            	<ul class="pho_til">
+         <li class="li_nor1 {if $cmodel==news}cur1{/if}"><a href="https://www.05273.cn/u/{$cuserid}/news">新闻</a></li>
+         <li class="li_nor2 {if $cmodel==picture}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/picture">图片</a></li>
+         <li class="li_nor3 {if $cmodel==video}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/video">视频</a></li>
+         <li class="li_nor4 {if $cmodel==jingqu}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/jingqu">景点</a></li>
+         <li class="li_nor5 {if $cmodel==house}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/house">房产</a></li>
+         <li class="li_nor6 {if $cmodel==hr}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/hr">招聘</a></li>
+         <li class="li_nor7 {if $cmodel==yellow}cur3{/if}"><a href="https://www.05273.cn/u/{$cuserid}/yellow">黄页</a></li>
+                </ul>
+<div class="strat_main clear_float fc">               	 
+<div class="strat_main_left fl">
+<div class="top_left_main">
+<div class="bg_time"><SPaN></SPaN><em class="title6">最新</em></div>	       													
+	  {php if(!in_array($cmodel,array('news','picture','video','jingqu','house','hr','yellow',))) die('模型不存在');}
+{edi:get sql="SELECT v9_$cmodel.id,v9_$cmodel.title,v9_$cmodel.username,v9_$cmodel.inputtime,v9_$cmodel.url,v9_$cmodel.thumb,v9_$cmodel.description FROM  v9_$cmodel left join v9_member on v9_$cmodel.username=v9_member.username where v9_member.userid ='$cuserid' and v9_$cmodel.status=99 order by id DESC" num="10" page="$_GET[page]" return="data"}
+    {if $data}
+      {loop $data $val} 
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><SPaN class="title7 no_lh">{date('m-d',$val['inputtime'])}</SPaN><BR><B class="title7">{date('Y',$val['inputtime'])}</B></div>
+<div class="top_mian_r fl clear_float"><SPaN class="tb_bg fl"></SPaN>										 
+<div class="con_main fr box_show_border border_radiu">
+<div class="indivi_center"><SPaN class="fl"><a class="title7" href="https://www.05273.cn/u/{$val['userid']}/">{$val['username']}</a>
+发表了：<a target="_blank" href="{$val['url']}">{$val['title']}</a></SPaN>
+<SPaN class="indivi_center_right fr">{date('Y年m月d日',$val['inputtime'])}</SPaN></div>
+<DL class="indivi_center_top">
+  <DT class="fl">{if $val[thumb]}<a target="_blank" href="{$val['url']}"><img src="{thumb($val['thumb'],400,0)}" alt="{$val['title']}" width="400" ></a>{/if}</DT>
+  <dd class="indivi_centop_right fl">
+  <P>{str_cut($val['description'],300,'...')}</P></dd></DL><SPaN class="indivi_center_cen fr"><a target="_blank" href="{$val['url']}">查看详情</a></SPaN>	
+				</div>
+</div></div>
+      {/loop}
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><SPaN class="title7 no_lh"></SPaN><BR><B class="title7"></B></div>
+<div class="indivi_center"><div id="pages" class="text-c">{$pages}</div>
+</div></div>    
+    {else}
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><SPaN class="title7 no_lh"></SPaN><BR><B class="title7"></B></div>
+<div class="top_mian_r fl clear_float"><SPaN class="tb_bg fl"></SPaN>										 
+<div class="con_main fr box_show_border border_radiu">
+<div class="indivi_center"><SPaN class="fl">对不起，找不到信息</SPaN></div>
+</div></div></div>  	
+    {/if}
+    {/edi}
+</div>	</div>										  								                      
+<div class="strat_main_right fl">
+<div class="strat_right_one clear_float">
+<H4 class="title6"><SPaN>会员登录</SPaN></H4>
+<ul class="label_lists clear_float">
+<form class="login-form" id="page_loginForm"  action="//passport.05273.cn/member-login.html" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="/"/>
+        用户名: <input type="text" id="username" name="username" size="15" class="user_link3 db_bdr"> <br><br>
+	密&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="user_link3 db_bdr"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=""><br><br>
+     <a href="https://passport.05273.cn/member-register.html" target="_blank">注册账号</a> | <a href="https://passport.05273.cn/member-public_forget_password.html" target="_blank">找回密码</a>
+  </form>
+  <script type="text/javascript">Login.isLogin('//passport.05273.cn/member-blog_mini.html','page_loginForm','page');</script>
+		</ul>
+</div>
+<div class="strat_right_one clear_float">
+<H4 class="title6"><SPaN>会员排行</SPaN></H4>
+<ul class="label_lists clear_float">
+{edi:get sql="SELECT * FROM v9_member order by point desc" num="30" cache="3600" return="data"}
+             {loop $data $v}
+  <li><a target="_blank" class="db_bdr btn_lab1" href="https://www.05273.cn/u/{$v['userid']}/">{$v['username']}</a></li>
+        {/loop}
+		</ul>
+        {/edi}
+</div>
+</div></div></div></div></div></div>
+<div id="footer">
+<div class="footer_main">
+<div class="footer_main_left fl">
+<ul class="index_nav">
+ <a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/product/" target="_blank">产品与服务</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/index.php?app=link" target="_blank">友情链接</a></ul>
+<P>Copyright &copy; 2007-2019 沭阳网. All Rights Reserved.  苏ICP备18031647号-1 <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a></P></div>
+<div class="footer_main_right fr"><a href="/"><img src="https://www.05273.cn/images/logo1.gif" alt="沭阳网" /></a></div>
+</div></div>
+<a href="#" target="_self" id="toTop" title="返回顶部" onClick="window.scrollTo(0,0);return false" style="display:none;"></a>
+<style type="text/css">
+#toTop{width:54px;height:54px;display:block;position:fixed;right:25px;bottom:45px;background-position:-59px 0px;opacity:0.3;filter:alpha(opacity=70);background-image:url(//statics.05273.cn/statics/images/qqbg_1_0.png); background-repeat:no-repeat;}
+#toTop:hover{opacity:1;filter:alpha(opacity=100);}
+</style>
+<script type="text/javascript">
+function toTopHide(){
+	if(document.documentElement.scrollTop+document.body.scrollTop > 400){
+		document.getElementById("toTop").style.display = "block";
+	}else{
+		document.getElementById("toTop").style.display = "none";
+
+	}
+}
+window.onscroll = toTopHide;
+</script>
+<!--[if lte IE 6]>
+<style type="text/css">
+#toTop{position:absolute;right:15px;bottom:45px;}
+</style>
+<script type="text/javascript">
+function topFixed(){
+	if(document.documentElement.scrollTop > 400){
+		document.getElementById("toTop").style.display = "block";
+	}else{
+		document.getElementById("toTop").style.display = "none";
+	}
+document.getElementById("toTop").style.top = (document.documentElement.clientHeight + document.documentElement.scrollTop - document.getElementById("toTop").clientHeight - 45) + "px";
+}
+window.onscroll = topFixed;
+window.resize = topFixed;
+topFixed();
+</script>
+<![endif]-->
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</HTML>

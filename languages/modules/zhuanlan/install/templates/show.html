@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<TITLE>{$name}_{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</TITLE> 
+<meta name="keywords" content="{$name},{$name}的个人主页,沭阳网,沭阳论坛网"> 
+<meta name="description" content="欢迎来到沭阳网{$name}的个人主页,在这里你可以了解{$name}的动态,欣赏{$name}的照片,阅读{$name}的微攻略……想了解更多{$name}的信息?快来沭阳网关注{$name}吧!沭阳网,努力打造沭阳最大网上社区!"> 
+<script type="text/javascript" src="http://statics.05273.cn/statics/js/jquery.js"></script>
+<liNK href="http://statics.05273.cn/statics/images/blog/pho.css" rel="stylesheet" type="text/css">  
+</head> 
+<body>   
+<div id="header">
+<div class="header_wrap">
+ <h1 class="logo fl"></h1>
+                <ul class="nav fl">
+                  <li class="cur"><a target="_blank" href="http://www.05273.cn/">首页</a></li>
+                  <li><a target="_blank" href="http://bbs.05273.cn/home.php">家园</a></li>
+                  <li><a target="_blank" href="http://www.05273.cn/news/">资讯</a></li>
+                  <li><a target="_blank" href="http://bbs.05273.cn/">沭阳论坛</a></li>
+                </ul>
+        </div>
+</div>          
+<div id="content" t="3">
+<div class="user_info">
+<div class="user_info_con box_show_border">
+<ul class="user_info_left">
+<li><a target="_blank" href="http://www.05273.cn/u/{$domain}/"><img alt="{$name}的头像" src="{if $thumb}{thumb($thumb,200,195)}{else}{get_memberavatar($cuserid, '1', '180')}{/if}"></a></li>
+<li>
+    <dl class="user_dl_left">
+        <dt><a  class="dd_gg">{get_memberinfo_buyusername($username, 'point')}</a></dt>
+        <dd>积分</dd>
+    </dl>
+    <dl>
+        <dt><a  class="dd_gg">{get_memberinfo_buyusername($username, 'amount')}</a></dt>
+        <dd>金钱</dd>
+    </dl>
+</li>
+<li>
+ </li></ul>
+<div class="user_info_right fr">
+<div class="user_right_one"><a target="_blank" class="title2 color1" href="http://www.05273.cn/u/{$domain}/">{$name}</a>  {if get_memberinfo_buyusername($username, 'vip')==1}<img src="http://statics.05273.cn/statics/images/blog/vip1.gif">{else}<img src="http://statics.05273.cn/statics/images/blog/vip0.gif">{/if}</div>
+<div class="user_link">
+<a class="user_link0 db_bdr">{if $authors}{$authors}{else}欢迎来到沭阳网{$name}的个人主页,Ta在{date('Y年m月d日',$creat_at)}注册成为沭阳网会员，在这里你可以了解{$name}的动态,欣赏{$name}的照片,阅读{$sname}的微攻略……!{/if}</a>
+                        <div class="user_link">
+<a target="_blank"  href="http://www.05273.cn/u/{$domain}/" class="user_link3 db_bdr">空间地址：http://www.05273.cn/u/{$domain}/</a>
+</div>
+
+</div></div></div>
+            <div class="pho_main box_show_border">
+<div class="strat_main clear_float fc">                  
+<div class="strat_main_left fl">
+<div class="top_left_main">
+<div class="bg_time"><span></span><em class="title6">最新</em></div>                                                          
+ {pc:content action="stats" username="$username" num="15" order="id DESC" page="$page"}
+    {if $data}
+      {loop $data $r} 
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><span class="title7 no_lh">{date('m-d',$r['inputtime'])}</span><p><b class="title7">{date('Y',$r['inputtime'])}</b></p></div>
+<div class="top_mian_r fl clear_float"><span class="tb_bg fl"></span>                                        
+<div class="con_main fr box_show_border border_radiu">
+<div class="indivi_center"><span class="fl"><a class="title7" href="http://www.05273.cn/u/{$domain}/">{$r['username']}</a>
+发表了：<a target="_blank" href="{$r[rurl]}">{$r['title']}</a></span>
+<span class="indivi_center_right fr">{date('Y年m月d日',$r['inputtime'])}</span></div>
+<DL class="indivi_center_top">
+  <DT class="fl">{if $r[data][thumb]}<a target="_blank" href="{$r[rurl]}"><img src="{thumb($r[data][thumb],130,0)}" alt="{$r['title']}"></a>{/if}</DT>
+  <dd class="indivi_centop_right fl">
+  <P>{$r[data][description]}</P></dd></dl><span class="indivi_center_cen fr"><a target="_blank" href="{$r[rurl]}">查看详情</a></span>   
+                </div>
+</div></div>
+      {/loop}
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><span class="title7 no_lh"></span></div>
+<div class="indivi_center"><div id="pages" class="text-c">{$pages}</div>
+</div></div>    
+    {else}
+<div class="top_main_con clear_float">
+<div class="top_mian_l fl"><span class="title7 no_lh"></span></div>
+<div class="top_mian_r fl clear_float"><span class="tb_bg fl"></span>                                        
+<div class="con_main fr box_show_border border_radiu">
+<div class="indivi_center"><span class="fl">对不起，找不到信息</span></div>
+</div></div></div>      
+    {/if}
+    {/pc}
+</div>  </div>                                                                                            
+<div class="strat_main_right fl">
+<div class="strat_right_one clear_float">
+<H4 class="title6"><span>会员登录</span></H4>
+<ul class="label_lists clear_float">
+<form class="login-form" id="page_loginForm"  action="//passport.05273.cn/member-login.html" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="/"/>
+        用户名: <input type="text" id="username" name="username" size="15" class="user_link3 db_bdr"> <br><br>
+    密&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="user_link3 db_bdr"> 
+    <input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=""><br><br>
+     <a href="//passport.05273.cn/member-register.html" target="_blank">注册账号</a> | <a href="//passport.05273.cn/member-public_forget_password.html" target="_blank">找回密码</a>
+  </form>
+  <script type="text/javascript">Login.isLogin('//passport.05273.cn/member-blog_mini.html','page_loginForm','page');</script>
+        </ul>
+</div>
+<div class="strat_right_one clear_float">
+<H4 class="title6"><span>会员排行</span></H4>
+<ul class="label_lists clear_float">
+{pc:get sql="SELECT * FROM v9_member order by point desc" num="30" cache="3600" return="data"}
+             {loop $data $v}
+  <li><a target="_blank" class="db_bdr btn_lab1" href="http://www.05273.cn/u/{$v['userid']}/">{$v['username']}</a></li>
+        {/loop}
+        </ul>
+        {/pc}
+</div>
+</div></div></div></div></div></div>
+<div id="footer">
+<div class="footer_main">
+<div class="footer_main_left fl">
+<ul class="index_nav">
+ <a href="http://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="http://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="http://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="http://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="http://www.05273.cn/about/product/" target="_blank">产品与服务</a> |  <a href="http://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="http://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="http://www.05273.cn/index.php?app=link" target="_blank">友情链接</a></ul>
+<P>Copyright &copy; 2007-2017 沭阳网. All Rights Reserved.  苏ICP备11022812号 <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a></P></div>
+<div class="footer_main_right fr"><a href="/"><img src="http://www.05273.cn/images/logo1.gif" alt="沭阳网" /></a></div>
+</div></div>
+<a href="#" target="_self" id="toTop" title="返回顶部" onClick="window.scrollTo(0,0);return false" style="display:none;"></a>
+<style type="text/css">
+#toTop{width:54px;height:54px;display:block;position:fixed;right:25px;bottom:45px;background-position:-59px 0px;opacity:0.3;filter:alpha(opacity=70);background-image:url(http://statics.05273.cn/statics/images/qqbg_1_0.png); background-repeat:no-repeat;}
+#toTop:hover{opacity:1;filter:alpha(opacity=100);}
+</style>
+<script type="text/javascript">
+function toTopHide(){
+    if(document.documentElement.scrollTop+document.body.scrollTop > 400){
+        document.getElementById("toTop").style.display = "block";
+    }else{
+        document.getElementById("toTop").style.display = "none";
+
+    }
+}
+window.onscroll = toTopHide;
+</script>
+<!--[if lte IE 6]>
+<style type="text/css">
+#toTop{position:absolute;right:15px;bottom:45px;}
+</style>
+<script type="text/javascript">
+function topFixed(){
+    if(document.documentElement.scrollTop > 400){
+        document.getElementById("toTop").style.display = "block";
+    }else{
+        document.getElementById("toTop").style.display = "none";
+    }
+document.getElementById("toTop").style.top = (document.documentElement.clientHeight + document.documentElement.scrollTop - document.getElementById("toTop").clientHeight - 45) + "px";
+}
+window.onscroll = topFixed;
+window.resize = topFixed;
+topFixed();
+</script>
+<![endif]-->
+</body>
+</HTML>

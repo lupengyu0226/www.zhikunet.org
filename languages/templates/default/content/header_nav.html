@@ -1,0 +1,32 @@
+	<!--导航 start-->
+<div class="community-nav community-business">
+            		<div class="community-990">
+            			<div class="nav-box">
+            				<ul>
+            					<li class="n-t-2">
+            						<a href="{siteurl($siteid)}" title="智库网" target="_self" class="{if !$catid} current {/if}">首页</a>
+            					</li>
+								{edi:content action="category" catid="0" num="21" siteid="$siteid" order="listorder ASC"}
+									{loop $data $r}
+            					<li class="{if $n < 8} n-t-2  t-2-4 {else} n-t-4 t-4-4{/if}">
+            						<a href="{$r[url]}" title="{if $n >5}在职研究生招生{/if}{$r[catname]}" target="_self" class="{if $r[catid]==$catid} current {/if}">{$r[catname]}{if $n ==7 }<sup style="color: red;font-style: italic;position:absolute;top:-10px;">hot!</sup>{/if}</a>
+            					</li>
+								{/loop}
+								{/edi}
+            					
+            					<li class="n-t-3 t-4-4">
+            						<a href="/" title="在职研究生招生专题" target="_self" class="">专题<sup style="color: yellow;font-style: italic;position:absolute;top:-10px;">new!</sup></a>
+            					</li>
+									
+            					
+            					<!--<li class="n-t-2 t-2-3">
+            						<a href="https://view.1688.com/cms/baike/baike_help/index.html" title="" target="_self" class="">帮助</a>
+            					</li>-->
+            				</ul>
+                          <span class= "last-item"> 
+                        <a href="https://club.zhikunet.org" title="" target="_self" class="">去校友圈看看&nbsp;&nbsp;&gt</a>
+                </span>
+            			</div>
+            		</div>
+            	</div>
+	<!--导航end-->

@@ -1,0 +1,15 @@
+<div id="xihuan">
+{loop $setting $k $v}
+{if $v[pic]}<a id="n{$k}" name="n" onclick="vote({$k})"><img border="0" src="{IMG_PATH}{$v[pic]}" height="23" width="53"></a>{/if}&nbsp;&nbsp;{$data[$v['fields']]}{/loop}
+</div>
+<script type="text/javascript">
+function vote(id) {
+	$.getJSON('{APP_PATH}index.php?app=xihuan&controller=index&view=post&id={$xihuan_id}&k='+id+'&'+Math.random()+'&callback=?', function(data){
+		if(data.status==1)	{
+			$('#xihuan').html(data.data);
+		}else {
+			alert(data.data);
+		}
+	})
+}
+</script>

@@ -1,0 +1,26 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+<view class="container" hidden="{{!hidden}}">
+    <view wx:if="{{article.pic}}" class="article-pic">
+        <image mode="aspectFill" src="{{article.pic}}"></image>
+    </view>
+    <view class="clearfix"></view>
+    <view class="article-wrap">
+        <text class="article-title">{{article.title}}</text>
+        <view class="article-info">
+          <navigator class="navigator-inline" url="../category/category?catid={{article.catid}}">
+            <text class="category-link mr10">{{category.name}}</text>
+          </navigator>
+          <text class="pubdate mr10">{{article.pubdate}}</text>
+          <text wx:if="{{article.source}}" class="source mr10">来源：{{article.source}}</text>
+          <text class="editor">投稿用户：{{article.user}}</text>
+        </view>
+        <view class="clearfix mt10"></view>
+        <view class="article-body">
+          <template is="wxParse" data="{{wxParseData:body.nodes}}" />
+        </view>
+    </view>
+    <template is="foot" />
+</view>
+<loading class="loading" hidden="{{hidden}}">加载中...</loading>

@@ -1,0 +1,19 @@
+/* 今日头条 */
+.w960{ width:960px; margin:0 auto;}
+.mt10{ margin-top:10px;_margin-top:6px;}
+.today{ height:90px;_margin-top:12px;}
+.commontoday{ height:80px; border:1px solid #DADADA; display:inline;}
+.todaytitle{ width:702px;}
+.todayleft{ width:243px;}
+.todayimg{ width:57px; height:62px; background:url(../images/jrtt.png); margin-top:10px; margin-left:10px;display:inline;}
+.todaynews{ width:620px; height:62px;margin-left:80px;_margin-left:96px; text-align:center; margin-top:10px;}
+.todaynews ul{margin:5px auto;width:auto;padding-left:30px;}
+.todaynews h4{ width:100%;}
+.todaynews h4 a{ color:#3A5F96; height:62px;font-weight:bold;font-size:30px}
+.todaynews ul li{ float:left; margin-left:5px;}
+.todaynews ul li a{ color:#3D3D3D;}
+.todayleft ul li a{color:#191919;}
+.todayleft ul li{ margin-top:10px; margin-left:15px; background:url(../images/libg.gif) left center no-repeat; padding-left:10px;}
+.shuyangh1{ font-family:"微软雅黑"; font-size:24px; font-weight:bold;}
+.fl{ float:left;}
+.fr{ float:right;}

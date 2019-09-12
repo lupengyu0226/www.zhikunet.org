@@ -1,0 +1,213 @@
+{template "header","header_daodu"}
+<div class="navs">
+  <div class="nav">
+    <ul>
+	<li class="home"><a href="https://www.05273.cn/">首页</a></li>
+		{edi:content action="category" catid="$top_parentid" num="15" siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<li><a href="{$r[url]}" target="_blank">{$r[catname]}</a></li>
+			{/loop}
+		{/edi}
+    <div class="d-code" >
+      <div class="d-code-box">
+          <i class="tips"></i>
+          <img width="132" height="132" alt="" src="//statics.05273.cn/images/index/gundongewm.png">
+          <p>微信扫一扫 分享更精彩</p>
+      </div>
+    </div>
+    </ul>
+  </div>
+ </div>
+</div>
+<!--#include virtual="/caches/posid/pindaoad.html"-->
+<!--/首页导航--> 
+<div class="main center">
+<div class="clx p1 mb20">
+<div class="mod_focus">
+<div id="focus2" class="fsocus">
+<!--焦点图-->
+    <div id="focus">
+      <div class="focus" id="focus">
+        <div class="fPs">
+          <div class="fix">
+            <div class="fPic" id="D2pic1"> 
+      {edi:content  action="lists" catid="$catid" order="id DESC" thumb="1" num="6"}
+      {loop $data $k $v}
+      <div class="fcon"><a href="{$v[url]}" target="_blank"><img src="{thumb($v[thumb], 600, 325)}" alt="{$v[title]}"></a> <span class="shadow"><a href="{$v[url]}" target="_blank">{str_cut($v[title],160)}</a> </span>
+      </div>
+            {/loop}
+       {/edi}
+           </div>
+          </div>
+        </div>
+        <span id="prev" class="prev"></span> <span id="next" class="next"></span> </div>
+    </div>
+    <div class="fbg">
+      <div id="focusimg" class="focusimg"> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>1</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>2</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>3</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>4</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>5</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>6</i></a> </div>
+    </div></div></div>
+<!-- 首屏焦点图 end --> 
+<div class="headlines">
+<ul>
+{edi:content  action="position" posid="25" catid="$catid" thumb="1" order="id DESC" num="3"}
+{loop $data $v}
+<li>
+<span><a target="_blank" href="{$v[url]}">{str_cut($v[title], 51,'')}</a></span><p>{str_cut(trim_indent($v[description]), 144)}<a target="_blank" href="{$v[url]}">[详细]</a>
+</p>
+</li>
+{/loop}
+{/edi}
+</ul>
+</div>
+</div>
+<!--/首屏-->
+
+<!--图片新闻-->
+<div class="clx p_ygd mb30">
+<div class="hd mb20 clx"><h2>图片新闻</h2><a href="https://www.05273.cn/news/" target="_blank" class="more">更多</a></div>
+<ul class="ygd_list clx">
+{edi:content  action="lists" catid="$catid" order="id DESC" thumb="1" num="4"}
+{loop $data $v}
+<li{if $n==4} style="margin:0"{/if}>
+<a target="_blank" href="{$v[url]}"><img width="280" height="150" alt="{$v[title]}" src="{thumb($v[thumb], 230, 150)}"></a><div class="yl_txt">
+<span>{str_cut($v[title], 42)}</span><p>{str_cut(trim_indent($v[description]), 99)}<a target="_blank" href="{$v[url]}">[详细]</a>
+</p>
+</div>
+</li>
+{/loop}
+{/edi}
+</ul>
+</div>
+<!--/图片新闻-->
+<div class="clx">
+<!--leftSide-->
+<div class="leftSide">
+<!--栏目列表-->
+	{php $j=1;}
+	{loop subcat($catid) $v}
+	{php if($v['type']!=0) continue;}
+<div class="zwjj">
+<div class="hd hdA mb20 clx"><h2>{$v[catname]}</h2><a href="{$v[url]}" target="_blank" class="more">更多</a></div>
+<ul class="artList">
+{edi:content action="lists" catid="$v[catid]" num="3" order="id DESC"}
+{loop $data $v}
+<li>
+<div class="arttxt">
+<div class="ctit"><a target="_blank" href="{$v[url]}">{$v[title]}</a></div>
+<div class="pubTime">{date('Y-m-d',$v[inputtime])}</div>
+<p class="aText f14">{str_cut(trim_indent($v[description]), 330)}</p>
+</div>
+</li>
+{/loop}
+{/edi}
+</ul>
+</div>
+	{$j++}
+	{/loop}
+<!--/栏目列表-->
+</div>
+<!--/leftSide-->
+<!--rightSide -->
+<div class="rightSide">
+<div class="mb10">
+<a href="https://www.05273.cn/about/weixin/" target="_blank">
+<img src="//statics.05273.cn/statics/images/weixin.gif" width="320" /></a>
+</div>
+<div class="mb20">
+<div class="hd hdA mb10"><a href="#" target="_blank"><h2>广告</h2></a></div>
+<div class="bd">
+<ul class="ranking">
+<!--#include virtual="/caches/posid/quanju300250.html"--> 
+</ul>
+</div>
+</div>
+<!--频道本周排行-->
+<div class="mb20">
+<div class="hd hdA mb10"><a href="#" target="_blank"><h2>频道排行</h2></a></div>
+<div class="bd">
+<ul class="ranking">
+            {edi:content action="hits" catid="$catid" num="10" order="monthviews DESC" cache="3600"}
+				{loop $data $v}
+                <li><p><a target="_blank" href="{$v[url]}">{str_cut($v[title],56,'...')}</a></p><span>{number_format($v[monthviews])}</span></li>
+				{/loop}
+			{/edi}
+</ul>
+</div>
+</div>
+<!--/频道本周排行-->
+</div>
+<!--/rightSide-->
+</div>
+</div>
+<script type="text/javascript">  
+        Qfast.add('fx',{path:"//statics.05273.cn/statics/css/2014style/js/plusfx1.0.min.js",type:"js"});
+        Qfast.add('widgets',{path:"//statics.05273.cn/statics/css/2014style/js/Terminator2.2.min.js",type:"js",requires:['fx']});
+        Qfast(false,'widgets',function(){
+        K.tabs({id: 'focus',conId: "D2pic1",tabId: "focusimg",tabTn: "a",conCn: '.fcon',auto: 1,effect: 'fade',vertical: 'left',eType: 'mouseover',pageBt: true,bns: ['.prev', '.next'],interval: 3000})
+    });
+if(navigator.userAgent.indexOf("MSIE 6.0")>0)
+   {
+     $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 80){
+        $('.navs').css('top',stop+'px');
+      }
+      if(stop <= 80){
+        $('.navs').css('top','80px');
+      }
+      });
+   }else{
+    $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 80){
+        $('.navs').css('position','fixed').css('top','0px');
+      }
+      if(stop <= 80){
+        $('.navs').css('position','absolute').css('top','80px');
+      }
+    });
+   }
+$(".focus").hover(
+    function() {
+        $("#prev,#next").css('display', 'block')
+    },
+    function() {
+        $("#prev,#next").css('display', 'none')
+    }
+);
+</script>
+<div id="btm">
+<!--通用底部-->	
+<div id="footer">
+<script src="//www.05273.cn/core/stats/{$catid}/" type="text/javascript"></script>
+<style>
+.tcopyright {width:1000px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright">
+	<div>
+<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a>
+	</div>
+  	<div class="en">Copyright &copy; 2007-2019 05273.cn All Rights Reserved.  </div>
+    <div>
+		 <a href="http://www.miitbeian.gov.cn/" target="_blank">苏ICP备18031647号-1</a> <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" target="_blank">举报</a>
+	</div>
+</div>
+</div>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

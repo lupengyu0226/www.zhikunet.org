@@ -1,0 +1,21 @@
+@charset "gb2312";
+
+.con_navigate{width:100%;height:30px;line-height:34px;text-indent:3em;overflow:hidden;background:url(https://statics.05273.cn/images/hmj/home_r.gif) 10px 12px no-repeat;border-bottom:1px solid #eee;}
+/*content*/
+.content{width:840px;margin:0 auto;padding:20px 60px;font-size:14px;}
+.content h2{font-size:26px;font-weight:800;line-height:30px;color:#000;width:800px;margin:0 auto;}
+.content h4{font-size:12px;height:40px;line-height:40px;width:600px;margin:0 auto;color:#aaa;}
+.content p{display:block;margin:20px 0;}
+.content span{float:right;margin-right:40px;}
+/*list*/
+.list{width:860px;padding:20px 50px;margin:0 auto;}
+.list ul li{font-size:14px;line-height:30px; height:30px;padding-left:15px;background:url(https://statics.05273.cn/images/hmj/list_block.gif) 0px 15px no-repeat;}
+.list ul li:hover{background:url(https://statics.05273.cn/images/hmj/list_block.gif) 0px 15px no-repeat #fafafa;}
+.list span{float:right;color:#aaa;font-size:12px;font-family:Arial;padding-right:10px;}
+.line{height:1px;font:0;line-height:0;overflow:hidden;background:url(line.gif) repeat-x;margin:6px 0;width:860px;_margin-left:-15px;*margin-left:-15px;}
+/*piclist*/
+.piclist{width:960px;padding:30px 0 0;margin:0 auto;}
+.piclist ul li{display:block;float:left;text-align:center;width:190px;height:195px;overflow:hidden;margin:0 0 20px 40px;_display:inline;}
+.piclist ul li img{padding:4px;border:1px solid #ddd;width:180px;height:135px;display:block;}
+.piclist ul li h4{margin-top:5px;}
+/*slider*/

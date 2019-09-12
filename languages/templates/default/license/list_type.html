@@ -1,0 +1,55 @@
+{template "link","header"}
+<link href="https://statics.zhikunet.org/statics/css/link.css" rel="stylesheet" type="text/css" />
+<!--main-->
+<div class="main">
+	<!--left_bar-->
+	{edi:link action="get_type" typeid="$type_id" siteid="$siteid"}
+     {php $type_arr = $data;}
+  	 {/edi}
+	<div class="col-left"> 
+    <div class="crumbs"><a href="https://www.zhikunet.org/">网站首页</a><span> &gt; </span><a href="https://www.zhikunet.org/links.shtml">友情链接</a><span> &gt; </span>{$type_arr[name]}</div>
+    <div class="box boxsbg cboxs">
+     
+ 	 	<h5>{$type_arr[name]} </h5>
+        <div class="tag_a">
+        	{edi:link action="lists" typeid="$type_id" siteid="$siteid" linktype="1" order="desc" num="6" return="dat"}
+				{loop $dat $v}
+	       		 <a href="{$v[url]}" title="{$v[name]}"  target="_blank"><img src="{$v[logo]}" width="92" height="31" /></a>
+		        {/loop}
+			{/edi}
+         </div>
+		 
+		{edi:link action="lists" typeid="$type_id" siteid="$siteid" linktype="0" order="desc" num="50" page="$_GET[page]" return="dat"}
+        <div class="tag_a">
+  				{loop $dat $v}
+	       		 <a href="{$v[url]}" title="{$v[name]}" target="_blank">{$v[name]} </a>
+		        {/loop}
+        </div>
+        {/edi}
+		 <div id="pages">{$pages}</div>
+         </div>
+		 
+    </div>
+    <!--right_bar-->
+    <div class="col-auto">
+    	<!--广告228x90-->
+        <div class="box">
+            <h5 class="title-2">友情链接分类</h5>
+            <div class="tag_a">
+            <a href="https://www.zhikunet.org/links-list.shtml" title="默认分类">默认分类</a>
+            {edi:link action="type_lists" listorder="desc" siteid="$siteid"}
+            {loop $data $type_v}
+            <a href="https://www.zhikunet.org/links-list.shtml" title="{$type_v[name]}">{$type_v[name]}</a>
+            {/loop}
+            {/edi}
+             </div>
+        </div>
+        <div class="bk10"></div>
+         {if $setting[$siteid]['is_post']=='1'}
+        <div class="txt_c">
+            <a href="https://www.zhikunet.org/links-reg.shtml" class="sqlj_btn"></a>
+        </div>
+        {/if}
+    </div>
+</div>
+{template "content","footer"}

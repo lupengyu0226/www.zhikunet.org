@@ -1,0 +1,1 @@
+var __weather_qqindex = {"bi_name": "ËÞÇ¨", "tmax": "16", "wt": "01", "tmin": "7", "tp": "12"};

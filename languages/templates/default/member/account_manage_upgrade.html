@@ -1,0 +1,88 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('member').L('allowupgrade')}</h2>
+                </div>
+                <div class="bd mt20">
+{if $groupid}
+			<div class="content">
+			<form method="post" action="" id="myform" name="myform">
+				<input name="groupid" value="{$groupid}" type="hidden" />
+				<table width="100%" cellspacing="0"  class="table-list">
+					<thead>
+						<tr>
+						<th width="50">{L('member_group')}</th>
+						<th width="100">{L('upgrade_price')}</th>
+						<th width="100">{L('upgrade_date')}</th>
+						<th width="300">{L('cost')}</th>
+						<th width="90">{L('operation')}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td align="left">{$grouplist[$groupid]['name']}</td>
+						<td align="left" style="text-align:left;">
+						<input type="radio" name='upgrade_type' value="0" checked> {$grouplist[$groupid]['price_y']}/{L('year')}<br /><input type="radio" name='upgrade_type' value="1"> {$grouplist[$groupid]['price_m']}/{L('month')}<br /><input type="radio" name='upgrade_type' value="2"> {$grouplist[$groupid]['price_d']}/{L('day')}</td>
+						<td align="center"><input type="text" name="upgrade_date" id="upgrade_date" class="input-text" size="4"> <font color="red" id="unit">{L('year')}</font></td>
+						<td align="center"><span id="cost">0</span> {L('unit_yuan')}<span id="pay" style="display:none">，<a href="pay-pay.html"><font color="red" id="unit">点击充值</font></a></span></td>
+						<td align="center"><input name="dosubmit" type="submit" id="dosubmit" value="{L('buy')}" class="button"></td>
+						</tr>
+					</tbody>
+				</table>			
+			</form>
+			</div>
+<script language="JavaScript">
+<!--
+$(document).ready(function() {
+	$(":input[type='radio']").click(function() {
+		var unitarr = new Array("{L('year')}","{L('month')}","{L('day')}");
+		var key = parseInt($(this).val());
+		$("#unit").html(unitarr[key]);
+		$("#upgrade_date").val('');
+		$("#cost").html('');
+	});
+	$("#upgrade_date").keyup(function() {
+		var prices = Array();
+		prices['0'] = {$grouplist[$groupid]['price_y']};
+		prices['1'] = {$grouplist[$groupid]['price_m']};
+		prices['2'] = {$grouplist[$groupid]['price_d']};
+		$(this).val($(this).val().replace(/[^\d]/g,''));
+		var unit = parseInt($("input[name=upgrade_type]:checked").val());
+		var price = prices[unit];
+		if({$memberinfo[amount]} < price*$(this).val()) {
+			$("#cost").html('{L('not_sufficient_funds')}'+price*$(this).val());
+			$("#pay").show();
+		} else {
+			$("#cost").html(price*$(this).val());
+		}
+	});
+});
+//-->
+</script>
+{else}
+			<div class="content">
+			<form method="post" action="" id="myform" name="myform">
+{loop $grouplist $k $v}
+{if $v['point'] > $memberinfo['grouppoint']}
+				<div class="info-bind" style="background:url(//statics.05273.cn/statics/member/images/icon_personal.png) 19px 18px no-repeat;">
+                    <div><span style="color:#016672;">{$v['name']}</span>{if $v['description']} ({$v['description']}){/if}</div>
+                    <div>{$v['price_y']}/{L('year')}、{$v['price_m']}/{L('month')}、{$v['price_d']}/{L('day')}</div>
+                    <a class="btn-binding" href="member-account_manage_upgrade.html?groupid={$v['groupid']}">升级</a>
+                </div>
+{/if}
+{/loop}
+			</form>
+			</div>
+{/if}
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

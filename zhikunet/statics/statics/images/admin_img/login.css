@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.bg-container { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: #211f2c; }
+.bg-container img { width: 100%; height: 100%; }
+.mask { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #8e8dba; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; z-index: 2; }
+.opacity-bg { position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 3; }
+.login-panel { position: absolute; left: 50%; top: 50%; margin-top: -300px; margin-left: -425px; width: 851px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; opacity: 1 \0; filter: alpha(opacity=100) \0; }
+.login-panel .login-hd { width: 528px; margin: 0 auto 65px auto; }
+.login-panel .login-hd i.logo {display: block; margin:0 auto; width: 272px; height: 235px;}
+.login-panel .login-hd h1 { font-size: 44px; line-height: 74px; text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3); color: #fff; }
+.login-panel .login-input-panel .login-frm-bd { position: relative; height: 84px; padding: 20px; border: 1px solid #6e6f84; -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.login-panel .login-input-panel .login-frm-bd .mask { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; }
+.login-panel .login-input-panel .login-frm-bd .login-content-wrap { position: relative; z-index: 3; }
+.login-panel .login-input-panel .login-frm-bd .input-wrap { position: relative; float: left; margin-right: 20px; }
+.login-panel .login-input-panel .login-frm-bd .input-wrap > .opacity-bg { background-color: #fff; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10); opacity: 0.1; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.login-panel .login-input-panel .login-frm-bd .input-wrap > input { position: relative; z-index: 4; }
+.login-panel .login-input-panel .login-frm-bd .input-wrap:hover > .opacity-bg, .login-panel .login-input-panel .login-frm-bd .input-wrap.focus > .opacity-bg { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; box-shadow: 0 2px 10px #1a1b37; }
+.login-panel .login-input-panel.login-area-hide .login-frm-bd .mask, .login-panel .login-input-panel.login-area-hide .login-frm-bd .login-content-wrap, .login-panel .login-input-panel.login-area-hide .login-frm-bd .login-type-pki { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.login-panel .login-input-panel .login-frm-ft { position: relative; height: 38px; line-height: 38px; border: 1px solid #6e6f84; border-top: none; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; color: #fdfdfd; font-size: 14px; padding: 0 25px; }
+.login-panel .login-input-panel .login-frm-ft .mask { background-color: #5c5c6d; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15); opacity: 0.15; }
+.login-panel .login-input-panel .login-frm-ft .login-content-wrap { position: relative; z-index: 2; }
+.login-panel .login-input-panel .login-frm-ft .password-search { color: #9a95a7; text-decoration: underline; }
+.login-panel .login-input-panel .login-frm-ft .password-search:hover { color: #369ffb; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch { float: right; margin-top: 6px; height: 26px; border: 1px solid #22222e; font-size: 12px; background: #373447; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch li { float: left; color: #636479; line-height: 24px; padding: 0 10px; cursor: pointer; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch li.current, .login-panel .login-input-panel .login-frm-ft .login-pattern-switch li:hover { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch li:hover { color: #369ffb; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch li.current.pwd-pattern { background-color: #5e5f74; color: #b4b6c2; }
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch li.current.pki-pattern { background-color: #369dfa; color: #fff; }
+.login-panel .login-input-panel input[type="text"], .login-panel .login-input-panel input[type="password"] { float: left; width: 320px; padding: 0 20px; height: 40px; border-width: 0; background-color: transparent; outline: none; color: #9595a4; letter-spacing: 1px; font-size: 16px; line-height: 40px \0; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.login-panel .login-input-panel input[type="text"]:-moz-placeholder, .login-panel .login-input-panel input[type="password"]:-moz-placeholder { color: #9595a4; }
+.login-panel .login-input-panel input[type="text"]::-moz-placeholder, .login-panel .login-input-panel input[type="password"]::-moz-placeholder { color: #9595a4; }
+.login-panel .login-input-panel input[type="text"]:-ms-input-placeholder, .login-panel .login-input-panel input[type="password"]:-ms-input-placeholder { color: #9595a4; }
+.login-panel .login-input-panel input[type="text"]::-webkit-input-placeholder, .login-panel .login-input-panel input[type="password"]::-webkit-input-placeholder { color: #9595a4; }
+.login-panel .login-input-panel input[type="text"]:hover, .login-panel .login-input-panel input[type="text"]:focus, .login-panel .login-input-panel input[type="password"]:hover, .login-panel .login-input-panel input[type="password"]:focus { color: #bdbdc1; }
+.login-panel .login-input-panel input[type="text"]:hover:-moz-placeholder, .login-panel .login-input-panel input[type="text"]:focus:-moz-placeholder, .login-panel .login-input-panel input[type="password"]:hover:-moz-placeholder, .login-panel .login-input-panel input[type="password"]:focus:-moz-placeholder { color: #bdbdc1; }
+.login-panel .login-input-panel input[type="text"]:hover::-moz-placeholder, .login-panel .login-input-panel input[type="text"]:focus::-moz-placeholder, .login-panel .login-input-panel input[type="password"]:hover::-moz-placeholder, .login-panel .login-input-panel input[type="password"]:focus::-moz-placeholder { color: #bdbdc1; }
+.login-panel .login-input-panel input[type="text"]:hover:-ms-input-placeholder, .login-panel .login-input-panel input[type="text"]:focus:-ms-input-placeholder, .login-panel .login-input-panel input[type="password"]:hover:-ms-input-placeholder, .login-panel .login-input-panel input[type="password"]:focus:-ms-input-placeholder { color: #bdbdc1; }
+.login-panel .login-input-panel input[type="text"]:hover::-webkit-input-placeholder, .login-panel .login-input-panel input[type="text"]:focus::-webkit-input-placeholder, .login-panel .login-input-panel input[type="password"]:hover::-webkit-input-placeholder, .login-panel .login-input-panel input[type="password"]:focus::-webkit-input-placeholder { color: #bdbdc1; }
+/*animated.css兼容下火狐*/
+@-moz-keyframes fadeInUp { 0% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transform: translate(0, 20px); -ms-transform: translate(0, 20px); -webkit-transform: translate(0, 20px); transform: translate(0, 20px); }
+  100% { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); } }
+@-o-keyframes fadeInUp { 0% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+  100% { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); } }
+@-ms-keyframes fadeInUp { 0% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transform: translate(0, 20px); -ms-transform: translate(0, 20px); -webkit-transform: translate(0, 20px); transform: translate(0, 20px); }
+  100% { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); } }
+.animated { -moz-animation-duration: 1s; -o-animation-duration: 1s; -ms-animation-duration: 1s; -moz-animation-fill-mode: both; -o-animation-fill-mode: both; -ms-animation-fill-mode: both; }
+.fadeInUp { -moz-animation-name: fadeInUp; -o-animation-name: fadeInUp; -ms-animation-name: fadeInUp; }
+/** 增加的css **/
+.bg-container {background: url(//statics.zhikunet.org/statics/images/admin_img/login-bg.jpg) repeat fixed;}
+#particles{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.copyRight {position: fixed;bottom: 45px;left: 0px;right: 0px;text-align: center;font-size: 14px;color: #6e6f84;}

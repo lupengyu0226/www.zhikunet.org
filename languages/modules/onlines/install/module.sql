@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('onlines', '在线用户', 'onlines/', 0, '1.0', '在线用户', '', 0, 0, '2014-05-17', '2020-05-17');

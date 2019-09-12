@@ -1,0 +1,2 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES
+('custom_search', '搜索感知', '', 0, '1.0', '', '', 0, 0, '2016-04-07', '2016-04-07');

@@ -1,0 +1,27 @@
+<style type="text/css"> 
+	#xihuan ul li,#xihuan ul li div.pillar{display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;}
+	#xihuan ul li{vertical-align: bottom}
+	#xihuan ul li{width:80px; padding-bottom:10px}
+	#xihuan ul li span{ font-size:12px}
+	#xihuan ul li label{ display:block;}
+	#xihuan ul li div.pillar{ height:20px; width:80px; background:url({IMG_PATH}xihuan/xihuan.gif) repeat-y 28px center; margin-bottom:5px;}
+	#xihuan ul li div.pass{background-position: -83px center;}
+</style>
+<div id="xihuan">
+<ul>
+{loop $setting $k $v}
+<li>{if $v[pic]}<a href="#" id="n{$k}" name="n" onclick="vote({$k})"><img border="0" src="{IMG_PATH}{$v[pic]}" height="23" width="53"></a>{/if}{$data[$v['fields']]}</li>{/loop}
+</ul>
+</div>
+<script type="text/javascript">
+function vote(id) {
+	$.getJSON('{APP_PATH}index.php?app=xihuan&controller=index&view=post&id={$xihuan_id}&k='+id+'&'+Math.random()+'&callback=?', function(data){
+		if(data.status==1)	{
+			$('#xihuan').html(data.data);
+		}else {
+			alert(data.data);
+		}
+	})
+}
+
+</script>

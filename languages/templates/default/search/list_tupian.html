@@ -1,0 +1,70 @@
+{template 'search', 'header'}
+<div id=out>
+<div id="header">
+  <div class="top">
+    <div class="logo fl ml20"><a href="index.php?app=search&siteid={$siteid}"><img src="{IMG_PATH}search/logo.png" width="100" height="26" /></a></div>
+    <div id="search" class="fl">
+        {php $j=0}
+        {loop $search_model $k=>$v}
+        {php $j++;}
+          <a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this),{$siteid}, '{$q}');" {if $v['typeid']==$typeid} class="on"{/if}>{$v['name']}</a>
+        {/loop}
+    </div>
+  </div>
+  <div class="head">
+    <form name="search" type="get">
+    <div class="search">
+      <input type="hidden" name="app" value="search"/>
+      <input type="hidden" name="controller" value="index"/>
+      <input type="hidden" name="view" value="init"/>
+      <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+      <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+      <div class="text">
+        <input type="text" name="q" class="input" id="q" value="{$search_q}" autocomplete="off">
+      </div>
+      <input type="submit" class="submit" value="搜 索">
+    </div>
+    </form>
+  </div>
+</div>
+<style>
+.photo-channel  { padding:5px 10px 10px}
+.photo-channel .photo-list{ padding:0; overflow:auto; padding-top:10px}
+.photo-channel .photo-list li{ float:left; width:260px; padding:0}
+.photo-channel  .photo-list li .img-wrap{width:260px;height:190px;margin:0 auto;background: url(../images/feitian/pic_bg.png) no-repeat; border:none; margin-bottom:6px}
+.photo-channel  .photo-list li .img-wrap a{*font-size:59px;width:104px; height:86px; padding:1px 5px 5px 1px }
+.photo-channel .photo-list li .img-wrap a:hover{ background:none}
+</style>
+<div class="main">
+<div class="mains photo-channel">
+<div class="bk10"></div>
+      <ul class="photo-list picbig">
+{loop $data $i $r}
+<li style="width:360px;height:255px;"><a target="_blank" href="{$r[url]}"><img src="{$r[thumb]}" style="width:350px;height:225px;margin-left:-11px;"></a><div class="img_info"><a class="img_link" href="{$r[url]}" target="_blank" title="{$r[title]}">{$r[title]}</a></div></li>
+{/loop}
+{if empty($data)}未找到结果{/if}
+          </ul>
+      </div>
+</div>
+  </div>
+  <div id="pages">{$pages}
+  <span class="nums" style="margin-left:20px;">找到相关结果约 {$totalnums} 条,（用时{sprintf("%01.2f", $execute_time)} 秒）</span>
+  </div>
+</div>
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+<div class="footerlist">    
+  {edi:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+    <a href="/" target="_blank">首页</a>
+    {loop $data $r}
+       | <a href="{$r[url]}" target="_blank">{$r[catname]}</a>
+    {/loop}
+  {/edi}
+  <p>© 2007-2016 05273.cn All Rights Reserved.</p>
+</div>
+{$mori}
+</body>
+</html>

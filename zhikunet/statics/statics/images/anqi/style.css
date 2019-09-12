@@ -1,0 +1,195 @@
+.m0 {
+	MARGIN: 0px auto
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+BODY {
+	BACKGROUND-COLOR: #dcf2e5
+}
+.title {
+	MARGIN: 0px auto; WIDTH: 1000px
+}
+.f0 {
+	LINE-HEIGHT: 25px; COLOR: #333; FONT-SIZE: 14px
+}
+.fb {
+	COLOR: #007435; FONT-WEIGHT: bold
+}
+.txc {
+	TEXT-ALIGN: center
+}
+.bgw {
+	BACKGROUND-COLOR: #fff
+}
+.mlr7 {
+	MARGIN: 0px 4px
+}
+.pt5 {
+	PADDING-TOP: 5px
+}
+.pr10 {
+	PADDING-RIGHT: 10px
+}
+.mb10 {
+	MARGIN-BOTTOM: 10px
+}
+.mt5 {
+	MARGIN-TOP: 5px
+}
+.pl26 {
+	PADDING-LEFT: 20px
+}
+.pr5 {
+	PADDING-RIGHT: 5px
+}
+A.tom:link {
+	COLOR: #007434; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.tom:visited {
+	COLOR: #007434; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.tom:hover {
+	COLOR: #009241; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.tom:active {
+	COLOR: #007434; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.font14:link {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.font14:visited {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.font14:hover {
+	COLOR: #009241; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.font14:active {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#top01 {
+	BACKGROUND: url(http://statics.05273.cn/statics/images/anqi/zhuanti/top.jpg) no-repeat center top; HEIGHT: 299px
+}
+#menu {
+	TEXT-ALIGN: center; LINE-HEIGHT: 42px; BACKGROUND-COLOR: #1da800; HEIGHT: 42px
+}
+#part1 {
+	PADDING-BOTTOM: 21px; PADDING-LEFT: 25px; WIDTH: 944px; PADDING-RIGHT: 31px; HEIGHT: 276px; PADDING-TOP: 32px
+}
+#part1 .left {
+	WIDTH: 667px; MARGIN-RIGHT: 8px
+}
+#part1 .right IMG {
+	MARGIN: 14px 0px 0px; DISPLAY: block
+}
+#part1 IMG {
+	MARGIN: 13px auto; DISPLAY: block
+}
+#part1_bottom {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 80px; BACKGROUND: url(http://statics.05273.cn/statics/images/anqi/zhuanti/bg.jpg) no-repeat left top; HEIGHT: 145px
+}
+.douyu {
+	PADDING-BOTTOM: 13px; PADDING-LEFT: 114px; WIDTH: 857px; PADDING-RIGHT: 29px; BACKGROUND: url(http://statics.05273.cn/statics/images/anqi/zhuanti/bg_icon.jpg) #fff no-repeat 28px 17px; HEIGHT: 250px; PADDING-TOP: 17px
+}
+.douyu_right {
+	PADDING-RIGHT: 0px; BACKGROUND: url(http://statics.05273.cn/statics/images/anqi/zhuanti/bg_icon2.jpg) no-repeat right top
+}
+.douyu_left {
+	PADDING-LEFT: 0px; BACKGROUND: url(http://statics.05273.cn/statics/images/anqi/zhuanti/bg_icon2.jpg) no-repeat LEFT top
+}
+#part2_pic {
+	PADDING-LEFT: 23px; WIDTH: 977px; HEIGHT: 365px; PADDING-TOP: 10px
+}
+#part2_pic A:link {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; BACKGROUND-COLOR: #fff; WIDTH: 229px; DISPLAY: block; HEIGHT: 359px; COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+#part2_pic A:visited {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; BACKGROUND-COLOR: #fff; WIDTH: 229px; DISPLAY: block; HEIGHT: 359px; COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+#part2_pic A:hover {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; BACKGROUND-COLOR: #007727; WIDTH: 229px; DISPLAY: block; HEIGHT: 359px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+#part2_pic A:active {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; BACKGROUND-COLOR: #fff; WIDTH: 229px; DISPLAY: block; HEIGHT: 359px; COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+.rr {
+	MARGIN: 0px 10px 0px 13px; WIDTH: 236px; HEIGHT: 316px
+}
+.rr IMG {
+	DISPLAY: block; MARGIN-BOTTOM: 17px
+}
+.title3 {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 15px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 1000px; PADDING-RIGHT: 0px; PADDING-TOP: 15px
+}
+#part3 {
+	MARGIN: 0px auto; PADDING-LEFT: 28px; WIDTH: 972px; HEIGHT: 1340px
+}
+.a01 {
+	WIDTH: 236px
+}
+A.a02:link {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 315px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a02:visited {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 315px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a02:hover {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #b83466; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 315px; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a02:active {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 315px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+P.tit {
+	TEXT-ALIGN: center; LINE-HEIGHT: 38px; FONT-FAMILY: ËÎÌו; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+A.a03:link {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 340px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 339px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a03:visited {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 340px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 339px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a03:hover {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #b83466; PADDING-LEFT: 5px; WIDTH: 340px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 339px; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+A.a03:active {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 340px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 339px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+#part4 {
+	PADDING-BOTTOM: 9px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; PADDING-LEFT: 31px; WIDTH: 947px; PADDING-RIGHT: 22px; HEIGHT: 301px; PADDING-TOP: 20px
+}
+#part4 .pl26 {
+	WIDTH: 451px; HEIGHT: 296px
+}
+A.l22:link {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 465px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 291px; PADDING-TOP: 5px
+}
+A.l22:visited {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 465px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 291px; PADDING-TOP: 5px
+}
+A.l22:hover {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #34b0b8; PADDING-LEFT: 5px; WIDTH: 465px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 291px; COLOR: #fff; PADDING-TOP: 5px
+}
+A.l22:active {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 465px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 291px; PADDING-TOP: 5px
+}
+.pic01 {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; PADDING-LEFT: 32px; WIDTH: 951px; PADDING-RIGHT: 17px; HEIGHT: 334px; PADDING-TOP: 0px
+}
+.pic01 A:link {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 314px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+.pic01 A:visited {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 314px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+.pic01 A:hover {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #34b0b8; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 314px; COLOR: #fff; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+.pic01 A:active {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; WIDTH: 222px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 314px; TEXT-DECORATION: none; PADDING-TOP: 5px
+}
+.pic01 P {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}

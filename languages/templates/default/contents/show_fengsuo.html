@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="applicable-device" content="pc">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="{S($url)}";
+            }catch(e){}
+        }
+    }
+</script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.sgallery.js"></script>
+<link href="https://statics.05273.cn/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
+<link href="https://statics.05273.cn/statics/css/show.css" rel="stylesheet" type="text/css" />
+<style>
+.search-soso .btn-search{width:50px;height:26px;border:none;
+background:url(//statics.05273.cn/statics/images/show/soso_bt_1x.png) no-repeat;
+background-image:-webkit-image-set(url(//statics.05273.cn/statics/images/show/soso_bt_1x.png) 1x,url(//statics.05273.cn/statics/images/show/soso_bt_2x.png) 2x);cursor:pointer;}
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+</head>
+<body id="Wrap" style="padding-top: 0px; ">
+<div id="top" style="position: fixed; ">
+<div class="nav" id="nav" style="top: 0px; position: static; ">
+<div class="nav-Article-shuyang clearfix" accesskey="2" title="" tabindex="0">
+	<ul class="clearfix">
+  <!--#include virtual="/caches/posid/15.html"--> 
+	</ul>
+
+</div>
+<!--#include virtual="/caches/posid/31.html"-->
+<script type="text/javascript">
+
+		//function ob(a,b){
+		var Omore = document.getElementById('moreNav');
+		var OList = document.getElementById('navmenu');
+		var omoreNav = document.getElementById('moreNav1');
+
+    Omore.onmouseover = function(){ 
+		   OList.style.display = 'block';
+       omoreNav.className = 'moreNav2';
+		 }
+		
+		Omore.onmouseout = function() {
+		  OList.style.display = 'none';
+			omoreNav.className = 'moreNav1';
+			 } 
+		//}
+
+	 // ob('moreNav','navmenu')
+
+	</script>
+</div>
+</div>
+<div class="body-Top-Ad body-Article-shuyang">
+<div style="width:100%; height:40px"></div>
+</div>
+<div class="body-Article-shuyang">
+<div class="crumbs-tool clearfix">
+<div class="crumbs-div">
+<a target="_blank" href="https://www.05273.cn/"><img src="//statics.05273.cn/images/list/news.png" id="retina_logo" alt="沭阳网资讯" style="padding-right:0;"></a>
+<span class="crumbs-bor"></span>
+<div class="nav-list" id="navList">
+你的位置：<a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文
+			        </div>
+</div>
+<div class="search-soso">
+<form action="//www.05273.cn/index.php" method="get">
+			    <input type="hidden" name="app" value="search"/>
+			    <input type="hidden" name="controller" value="index"/>
+			    <input type="hidden" name="view" value="init"/>
+				<input type="hidden" name="typeid" value="1" id="typeid"/>
+				<input type="hidden" name="siteid" value="1" id="siteid"/>
+<input type="submit" class="btn-search" value="">
+<div class="inputWarp"><input type="text" class="input-con" name="q" id="q" value="请输入关键字" onclick="javascript:if(this.value==&#39;请输入关键字&#39;)this.value=&#39;&#39;;" onblur="setSoKeywords(this)" /></div>
+</form>
+</div>
+</div>
+<div class="wrapper clearfix" id="Main-Article-shuyang"><div class="bd" id="MainL">
+<div class="main">
+<div id="C-Main-Article-shuyang">
+<div class="hd">
+<h1>{if $video}[视频]{/if}{$title}{if ($page) > (1)}【{$page}】{/if}</h1>
+<div class="tit-bar clearfix">
+<div class="ll">
+<span class="color-a-0">
+<a target="_blank" href="{$CAT[url]}">{$CAT[catname]}</A></span><span class="color-a-1">{$copyfrom}</span><span class="article-time">{str_cut($inputtime,15,'')}</span>
+</div>
+<span class="r all-number-comment"><a href="#tag_cmt" id="comment"></a></span>
+<div class="btn-mobile"><div class="d-code" >穿越到手机<div class="d-code-box"><i class="tips"></i><p>微信扫一扫 分享更精彩</p></div> </div></div>
+<span id='jubao'>
+<a id="addError" href="#" class="t6">举报与纠错</a>
+</span>
+<span style="padding:0 10px">
+		<a target="_blank" href="https://www.05273.cn/print/{$catid}/{$id}.print" class="t6">打印本文</a>
+</span>
+</div>
+</div>
+<div class="bd" accesskey="3" tabindex="-1">
+<div id="Cnt-Main-Article-shuyang" style="position: relative; ">
+<div class="mbArticleSharePic">
+{if $pictureurls}
+<script type="text/javascript" src="//statics.05273.cn/statics/js/show_show_picture.js"></script>
+<style type="text/css" >
+.photo_prev a{cursor:url(//statics.05273.cn/statics/images/feitian/prev.cur), auto;}
+.photo_next a{cursor:url(//statics.05273.cn/statics/images/feitian/next.cur), auto;}
+</style>
+<div class="photo-channel">
+        <div id="Article">
+<!-- 幻灯片代码开始-->
+<div class="tool">
+		<a name="pic"></a>
+        <a class="up" href="javascript:;" title="上一张" onclick="showpic('pre')"><span>上一张</span></a><a class="next" href="javascript:;" onclick="showpic('next')" title="下一张"><span>下一张</span></a><span class="stat" id="picnum"></span>
+        <div class="Article-Tool"><div id="picinfo"></div></div>
+</div>
+    <div class="big-pica">
+		<div id="big-pica"></div>
+    	<div class="photo_prev"><a id="photoPrev" title="&lt;上一页" class="btn_pphoto" target="_self" hidefocus="true" href="javascript:;" onclick="showpic('pre');"></a></div>
+        <div class="photo_next"><a id="photoNext" title="下一页&gt;"class="btn_nphoto" target="_self" hidefocus="true" href="javascript:;" onclick="showpic('next')"></a></div>
+        <div id="endSelecta" style="display: none;">
+			<div id="endSelClosea" onclick="$('#endSelect').hide();"></div>
+			<div class="bga"></div>
+			<div class="E_Conta">
+             <p><!--#include virtual="/caches/posid/14.html"--></p>
+				<p>您已经浏览完所有图片</p>
+				<p><a id="rePlayBut" href="javascript:void(0)" onclick="showpic('next', 1);"></a></p>	
+			</div>
+		</div>
+        
+    </div>
+
+    <div class="list-pic">
+        <a href="javascript:;" onclick="showpic('pre')" class="pre-bnt"><span></span></a>
+		<div class="cont" style="position:relative">
+			<ul class="cont picbig" id="pictureurls"  style="position:absolute">
+			{loop $pictureurls $pic_k $r}
+			 <li><div class="img-wrap"><a href="javascript:;" hidefocus="true"><img src="{thumb($r[url], 137, 100, 0)}" alt="{$r[alt]}" rel="{$r[url]}"/></a></div></li>
+			{/loop}
+			</ul>
+		</div>
+        <a href="javascript:;" onclick="showpic('next')" class="next-bnt"><span></span></a>
+    </div>    </div>    </div>
+<!-- 幻灯片代码结束-->
+{/if}
+<div class="content">
+<div id="main_content">
+<!--mainContent begin-->
+{if $allow_visitor==1}
+				{if $video}<CENTER><p><iframe style="Z-INDEX:1" height="380" src="http://v.qq.com/iframe/player.html?vid={$video}&amp;width=640&amp;height=380&amp;auto=0" frameborder="0" width="640" allowfullscreen=""></iframe></p></CENTER>{/if}
+				<P style="TEXT-INDENT: 2em">因政策或法律原因，本条信息暂不对外开放，对此带来不便请多谅解。如有疑问请联系管理员，谢谢！</p>
+				<!--内容关联投票-->
+				{if $voteid}<script language="javascript" src="{APP_PATH}index.php?app=vote&controller=index&view=show&action=js&subjectid={$voteid}&type=2"></script>{/if}  
+			{else}
+				<CENTER><a href="{APP_PATH}index.php?app=content&controller=readpoint&allow_visitor={$allow_visitor}"><font color="red">阅读此信息需要您支付 <B><I>{$readpoint} {if $paytype}元{else}点{/if}</I></B>，点击这里支付</font></a></CENTER>
+			{/if}</div>
+				     {if $titles}
+<fieldset>
+	<legend class="f14">本文导航</legend><ul class="list blue row-2">
+{loop $titles $r}
+	<li>{$n}、<a href="{$r[url]}">{$r[title]}</a></li>
+{/loop}
+</ul>
+</fieldset>
+{/if}           
+</div></div></div>
+{if $pages}
+<div class="page-Article-shuyang" id="ArtPLink">
+<ul>
+<li>{$pages}</li>
+</ul>
+</div>
+{/if} 
+{php $ztinfo = relation_special($catid,$id);}
+{if $ztinfo}
+<fieldset>
+	<legend class="f14">所属专题</legend>
+	<div class="essence-mod mod-side mar-b-10">
+    <div class="bd">
+	<ul class="list blue row-2">
+ {loop $ztinfo $v}
+<dl>
+<dt><a href="{$v['url']}" title="{$v['title']}" target="_blank">
+<img src="{$v['thumb']}" alt="{$v['title']}" width="95" height="60" /></a></dt>
+<dd><a href="{$v['url']}" title="{$v['title']}" target="_blank">{$v['title']}</a></dd>
+<p>{str_cut($v[description],240,'...')}</p>
+</dl> 
+ {/loop}
+</ul>
+ </div>
+</div>
+</fieldset>
+{/if} 
+<p align="center"><img alt="扫一扫 关注沭阳网微信公共账号" src="//statics.05273.cn/statics/images/shuyangnews.jpg" /></p>
+<p align="center">（扫一扫 关注沭阳网微信公共账号）</p> 
+<!--article end-->
+<style>
+.bdshare-button-style0-24 a, .bdshare-button-style0-24 .bds_more {
+    float: left;
+    font-size: 18px;
+    padding-left: 1px;
+    line-height: 24px;
+    height: 24px;
+    background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_24.png?v=dcaa92d6.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 6px 6px 6px 0;
+}
+</style>
+<div class="ft">
+<div class="correlation-Article-shuyang">
+       <div class="Tool-Article-shuyang cf" id="Tool-Article-shuyang">
+            <ul class="cf">
+<li class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+ </ul>
+<div class="aboutRead cf ">
+<div class="aboutTag">
+<dl class="cf">
+<dt class="bg0"></dt>
+{loop $keywords $keyword} <dd class="bgB"><a target="_blank" href="https://www.05273.cn/hot/{urlencode($keyword)}.html">{$keyword}</a></dd>{/loop}
+</dl></div>
+</div>
+</div>
+<p style="margin-right: 0em; margin-top: 0em; float: right">
+<!--#include virtual="/caches/posid/neirongyexiafang.html"-->
+</p>
+<div id="about" class="about-other-read-mod">
+<div class="hd hd-line">
+<h2>热门推荐</h2>
+<div class="mod-line-con"><div class="mod-line"></div></div>
+</div>
+<div class="bd">
+<div class="hot-read">
+		<div class="bd">
+	   <ul id="hotReadList">
+  {edi:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+              {if $data}
+ {loop $data $r}
+ <li><a target="_blank" href="{$r[url]}">{$r[title]}</a><span class="hot-voting-con">{date('Y-m-d',$r[inputtime])}</span></li>
+ {/loop}
+   {/if}
+          {/edi}
+	   </ul>
+ 
+	  </div>
+		
+	</div>
+</div>
+</div>
+</div>
+</div></div>
+<div id="tag_cmt"></div>
+<div class="comment" id="Comment-Article-shuyang"> 
+		<div class="hd hd-line">
+		 <h2>读完这篇文章后写点感想吧
+		<span id='favorite'>
+		你还可以 <a href="javascript:;" onclick="add_favorite('{addslashes($title)}');" class="t6"><b>收藏</b></a> 留以后再看
+		</span></h2>
+		 <div class="hasCom"></div>
+	    </div>
+      {if $allow_comment && module_exists('comment')}
+      <iframe src="{APP_PATH}pinglun_{id_encode("$catid",$id,$siteid)}-1.html" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+        {/if}
+</div>					
+</div>
+</div>
+<div class="side" id="sideBars">
+<div class="ad-box mar-b-30">
+<div id="Finance_F_Rectangle" style="width:300px;height:300px;" class="l_shuyang_com">		
+<!--#include virtual="/caches/posid/13.html"-->
+</div>
+</div>
+<div class="essence-mod mod-side mar-b-10" style="margin-bottom:30px;">
+					  <div class="hd">
+						  <h2>最新图文</h2>
+						</div>
+						<div class="bd">
+<!--#include virtual="/caches/posid/neirongzuixin.html"-->
+</div>
+</div>
+<div class="essence-mod mod-side mar-b-10" style="margin-bottom:30px;">
+					  <div class="hd">
+						  <h2>广告</h2>
+						</div>
+						<div class="bd">
+<!--#include virtual="/caches/posid/7.html"-->
+</div>
+</div>
+</div></div>
+</div></div>
+<!--#include virtual="/caches/posid/footer.html"-->
+</div>
+	</div>
+<script type="text/javascript">
+<!--
+	function show_ajax(obj) {
+		var keywords = $(obj).text();
+		var offset = $(obj).offset();
+		var jsonitem = '';
+		$.getJSON("{APP_PATH}index.php?app=content&controller=index&view=json_list&type=keyword&modelid={$modelid}&id={$id}&keywords="+encodeURIComponent(keywords),
+				function(data){
+				var j = 1;
+				var string = "<div class='point key-float'><div style='position:relative'><div class='arro'></div>";
+				string += "<a href='JavaScript:;' onclick='$(this).parent().parent().remove();' hidefocus='true' class='close'><span>关闭</span></a><div class='contents f12'>";
+				if(data!=0) {
+				  $.each(data, function(i,item){
+					j = i+1;
+					jsonitem += "<a href='"+item.url+"' target='_blank'>"+j+"、"+item.title+"</a><BR>";
+					
+				  });
+					string += jsonitem;
+				} else {
+					string += '没有找到相关的信息！';
+				}
+					string += "</div><span class='o1'></span><span class='o2'></span><span class='o3'></span><span class='o4'></span></div></div>";		
+					$(obj).after(string);
+					$('.key-float').mouseover(
+						function (){
+							$(this).siblings().css({"z-index":0})
+							$(this).css({"z-index":1001});
+						}
+					)
+					$(obj).next().css({ "left": +offset.left-100, "top": +offset.top+$(obj).height()+12});
+				});
+	}
+	function add_favorite(title) {
+		$.getJSON('https://api.05273.cn/?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('谢谢亲,收藏成功,你可以在<a href=https://passport.05273.cn/member-favorite.html target=_blank>会员中心</a>管理这个！');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+//-->
+</script>
+<script type="text/javascript">ARTICLE_INFO=window.ARTICLE_INFO ||{qrcode:'{qrcode(S($url))}'}</script>
+<script type="text/javascript" src="//statics.05273.cn/js/artdialog/artDialog.min.js"></script>
+<script type="text/javascript" src="//statics.05273.cn/js/artdialog/artDialog.plugins.min.js"></script>
+<link href="https://statics.05273.cn/js/artdialog/dialog.css" rel="stylesheet">
+<script type="text/javascript">
+	$('#addError').click(function(){
+		art.dialog({
+			width:'750px',
+			height:'500px',
+			id: 'test',
+			title: '信息举报与纠错',
+			content: '<div class="tg"><form id="tg" name="tg" action="" method="post"><p style="margin:10px 0;">&nbsp; &nbsp; &nbsp; &nbsp;姓名：<input id="username" type="text" name="username" class="input" placeholder="填写您的称呼" value="" /></p><p style="margin:10px 0;">联系方式：<input id="email" type="text" name="email" class="input" placeholder="填写您的电子邮箱或手机号码" value="" /></p><p style="margin:10px 0;">文章标题：<input id="title" type="text" name="title" class="input" value="{$title}" readonly="readonly" /><input type="hidden" name="url" class="input" value="' + location.href + '" /></p><p style="margin:10px 0;">错误类型：<select name="type"><option value="错别字(除的、地、得)">错别字(除的、地、得)</option><option value="成语运用不当">成语运用不当</option><option value="专业术语写法不规则">专业术语写法不规则</option><option value="产品与图片不符">产品与图片不符</option><option value="事实年代以及内容错误">事实年代以及内容错误</option><option value="技术参数错误">技术参数错误</option><option value="其他">其他</option></select></p><p style="margin:10px 0;">纠错内容：<textarea id="content" name="content" class="textarea"></textarea></p><p style="margin:10px 0;">您的建议：<textarea id="jianyi" name="jianyi" class="jianyi"></textarea></p><p style="margin:10px 0;">&nbsp; &nbsp;验证码：<input name="code" id="code" type="text" value="" maxlength="4" style="width:50px;margin:0 10px 0 2px;" /><img id="code_img" onclick="his.src=this.src+"&"+Math.random()" src="//api.05273.cn/index.php?op=checkcode&code_len=4&font_size=14&width=200&height=80&font_color=&background="></p></form></div>',
+			lock: true,
+			fixed: true,
+			ok: function () {
+				$this = this;
+				if($('#username').val()==''){
+					this.shake();
+					$('#username').focus();
+					return false;
+				}else if($('#content').val()==''){
+					this.shake();
+					$('#content').focus();
+					return false;
+				}else if($('#code').val()==''){
+					this.shake();
+					$('#code').focus();
+					return false;
+				}
+				  $.getJSON('//api.05273.cn/index.php?op=jubao&callback=?', $("#tg").serialize(),
+					function(data){
+						if(data.status=='1'){
+							$this.size('200px',100).content('提交成功，谢谢！').button({
+								id: 'button',
+								value: '好的',
+								disabled: false
+							 });
+						}if(data.status=='-2'){
+								$this.size('200px',100).content('提交失败，请重新提交！').button({
+								id: 'button',
+								value: '好的',
+								disabled: false
+							 });
+						}if(data.status=='-3'){
+								$this.size('200px',100).content('提交失败，验证码错误！').button({
+								id: 'button',
+								value: '好的',
+								disabled: false
+							 });
+						}
+
+					}
+				);
+				$this.size('200px',100).title('请稍等').content('提交中..');
+				$('.d-button').hide();
+				return false;
+			},
+			okValue: '提交',
+			cancelValue: '取消',
+			cancel: function () {}
+		});
+		return false;
+	});
+	$("i[class='tips']").after('<img src='+ARTICLE_INFO.qrcode+'?v=2018>');
+</script>
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<script src="//www.05273.cn/core/stats/{$catid}/" type="text/javascript"></script>
+</body>
+</html>

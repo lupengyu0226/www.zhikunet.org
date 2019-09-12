@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$sitelist[$siteid][site_title]}{$SEO['site_title']}_沭阳网今日话题</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{go($catid,$id)}" rel="canonical" />
+<meta name="mobile-agent" content="format=html5;url={S($url)}">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="{S($url)}">
+<link rel="miphtml" href="https://wap.05273.cn/mip-{$catid}-{$id}-1.html">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="{S($url)}";
+            }catch(e){}
+        }
+    }
+</script>
+<link href="https://statics.05273.cn/statics/huati/css/style3.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#votedraw0{ overflow:hidden; zoom:1; line-height:15px; font-size:14px; color:#606060; width:450px; margin:0 auto;}
+	#voteline0{ width:337px; background:#8baad0; height:15px; float:left;}
+	#voteline0 div{ height:15px; background:#dd8250;}
+	#votedraw0 span{ float:left; margin:0 15px;}
+	.voteU{ margin:0; padding:20px 0;}
+	#voteContainer_0_form .wbState{ position:absolute; bottom:10px; right:10px; width:150px;}
+	.xwlc .bdBox{ padding-bottom:60px;}
+	#voteContainer_0_form #wb{ position:static; margin-right:10px;}
+	.ztpj .god, .ztpj .bed{ width:65px;}
+	.ztpj .wbsj .pgLt #lvotenum1,.ztpj .wbsj .pgLt #rvotenum1{ font-size:12px; color:#a5a5a5; line-height:14px; font-weight:700;}
+</style>
+<script type="text/javascript">
+window.onerror = function(){return true;}
+</script>
+<script src="//statics.05273.cn/statics/js/jquery.js" type="text/javascript"></script>
+<script src="//statics.05273.cn/statics/js/Koala.min.1.5.js" type="text/javascript"></script>
+<script src="//statics.05273.cn/statics/huati/js/Qfast1.0.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.lazyload.min.js"></script>
+</head>
+<body class="{$yanse}">
+<style>
+/*专题导航*/
+#topic_nav_box{width:100%;height:35px;background:#000;overflow:visible;}
+#topic_nav{width:1000px;height:35px; margin:0 auto;padding:0;font-size:12px;font-family:"宋体","Arial Narrow"; background:#000;clear:both;}
+#topic_nav img{border:none;}
+#topic_nav ul,#topic_nav li{margin:0;padding:0;list-style:none;}
+#topic_nav .logo{float:left;padding:6px 8px 3px 10px;}
+#topic_nav .link{float:left;width:186px;}
+#topic_nav .end{border:none;}
+#topic_nav ul{float:right;padding:12px 3px 0 0;}
+#topic_nav li{float:left;padding:0 8px;*padding-top:1px;border-right:#8f8f8f 1px solid;line-height:12px;color:#666;}
+#topic_nav a{color:#FFFFFF; text-decoration:none;line-height:14px;}
+#topic_nav a:visited{color:#FFFFFF;}
+#topic_nav a:hover{color:#FFFFFF; text-decoration: underline;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* Safari 3.0 and Opera 9 rules here */
+#topic_nav{font-family:宋体, STSong;}
+}
+#site_nav_mblogin{margin-top:4px;}
+#site_nav_mblogin a{line-height:24px;}
+</style>
+<div id="topic_nav_box">
+<div id="topic_nav">
+		<div class="logo"><a  href="https://www.05273.cn/huati/" target="_blank"><img src="//statics.05273.cn/statics/huati/img/pinglun_logo_000.jpg" /></a></div>
+		<div class="link">
+			<ul>
+				<li><a href="https://www.05273.cn/" target="_blank">沭阳网首页</a></li>
+				<li><a href="https://www.05273.cn/sitemap.html" target="_blank">网站导航</a></li>
+				<li class="end"><a href="https://bbs.05273.cn/" target="_blank">论坛</a></li>
+			</ul>
+		</div>
+		<style type="text/css">
+/*导航微博登录 v20120209 1.0.7 mblogin*/
+#site_nav_mblogin{float:right;height:25px;padding-right:8px;line-height:24px;color:#FFFFFF;font-size:12px;font-family:"宋体","Arial Narrow";}
+#site_nav_mblogin div{float:left;}
+#site_nav_mblogin .mblog_logo{width:20px;height:24px;background:url(//statics.05273.cn/statics/huati/img/wblogin_bt_v3.png) -90px 5px no-repeat; }
+#site_nav_mblogin .mblog_logo span{display:none;}
+#site_nav_mblogin .mblog_login_info{padding-top:3px;}
+#site_nav_mblogin .mblog_login_info span{padding-right:12px;}
+#site_nav_mblogin .mblog_login_info em{font-family:Arial;font-style:normal;padding-right:12px;}
+#site_nav_mblogin .mblog_login_button span,#site_nav_mblogin .mblog_enter_button span{*padding-left:1px;_padding-left:1px;}
+#site_nav_mblogin .mblog_login_button,#site_nav_mblogin .mblog_enter_button{position:relative;z-index:10000;width:54px;height:18px;margin-top:4px;margin-right:12px; padding:2px 0 0 19px;cursor:pointer;line-height:18px;overflow:visible;}
+#site_nav_mblogin .mblog_enter_button{background:url(//statics.05273.cn/statics/huati/img/jinru_wb.jpg); color:#b6d0e0;}
+#site_nav_mblogin .mblog_login_button{background:url(//statics.05273.cn/statics/huati/img/denglu_wb.jpg); color:#ffffff;}
+#site_nav_mblogin .mblog_enter_button{display:none;}
+#site_nav_mblogin .mblog_login_text{padding-top:2px;*padding-top:3px;_padding-top:3px;}
+#site_nav_mblogin .mblog_loginout_text{display:none;padding-top:2px;*padding-top:3px;_padding-top:3px;}
+
+#site_nav_mblogin a{color:#8f8f8f; text-decoration:none;}
+#site_nav_mblogin a:visited{color:#8f8f8f;}
+#site_nav_mblogin a:hover{color:#8f8f8f; text-decoration: underline;}
+#site_nav_mblogin .mblog_login_info em a,#site_nav_mblogin .mblog_login_info em a:visited,#site_nav_mblogin .mblog_login_info em a:hover{color:#8f8f8f}
+#site_nav_mblogin .mblog_login_info a.mbAtMe,#site_nav_mblogin .mblog_login_info a.mbAtMe:visited,#site_nav_mblogin .mblog_login_info a.mbAtMe:hover{color:#8f8f8f;}
+#site_nav_mblogin .mblog_enter_button a,#site_nav_mblogin .mblog_enter_button a:visited,#site_nav_mblogin .mblog_enter_button a:hover{color:#b6d0e0;line-height:17px;}
+
+#site_nav_mblogin .mbCardUserInfo {position: absolute;z-index:999999;left:-160px; top:0;width:236px;margin-top:29px; text-align:left;text-indent:0;overflow:visible;}
+#site_nav_mblogin .mbCardUserDetail div{line-height:18px;}
+#site_nav_mblogin .mbCardUserInfo{height:auto;padding:10px 24px 10px 10px;background:#ffffce;border:#f0e5ba 1px solid;color:#666;}
+#site_nav_mblogin .mbCardUserInfo .arrowBox{position:absolute;width:15px;height:8px;left:0;top:0;margin:-8px 0 0 180px;font-size:1px;line-height:1px;background:url(//statics.05273.cn/statics/huati/img/wblogin_bt_v2.png) 0 -30px no-repeat;celar:both;zoom:1;}
+#site_nav_mblogin .mbCardUserInfo .arrowBox div{font-size:1px;line-height:1px;}
+#site_nav_mblogin .mbCardUserInfo .mbClose {position:absolute;top:0;right:0;width:15px;height:15px;margin:4px;background:url(//statics.05273.cn/statics/huati/img/wblogin_bt_v3.png) 0 -45px no-repeat;font-size:1px;line-height:1px;cursor:pointer;}
+#site_nav_mblogin .mbCardUserInfo .mbClose span{display:none;}
+#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbTxt1,#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbUserNick,#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbFriends{color:#666;}
+#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbReg{padding-left:180px;text-align:left;}
+#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbReg,#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbReg a,#site_nav_mblogin .mbCardUserInfo .mbCardUserDetail .mbReg a:visited{color:#2b4a78;text-decoration:underline;}
+
+#site_nav_mblogin .mbCardUserInfo {-moz-border-radius: 6px;-moz-box-shadow: 2px 2px 2px #f0e5ba;-webkit-border-radius: 6px;-webkit-box-shadow: 2px 2px 2px #f0e5ba;}
+.shuyanglogin { padding:5px 10px 0 0; line-height:25px; float:right; font-family: Microsoft Yahei; position: relative; z-index:10 }
+.shuyanglogin ul { float:right;color:#feffff; text-decoration:none  }
+.shuyanglogin ul a,.shuyanglogin ul li a:visited,.shuyanglogin ul li a:link,.shuyanglogin ul li a:hover { color:#feffff; text-decoration:none }
+.input_bn{background:url(//statics.05273.cn/statics/images/bn/login.gif) no-repeat 0px -1px; width:39px; height:20px; border:none; cursor:pointer}
+.shuyanglogin ul a:hover { background:#1669AB }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* Safari 3.0 and Opera 9 rules here */
+#site_nav_mblogin{font-family:宋体, STSong;}
+}
+
+/*=S 浮动层 */
+.share_layer { overflow:hidden; padding:7px; position:absolute; z-index:999999;zoom:1;font-size:12px; font-family:Arial, Sans-Serif; }
+.share_layer ul, .share_layer ul li { list-style-type:none; }
+.share_layer img { border:0 none; }
+.share_layer a { text-decoration:none; }
+.share_layer a:hover { text-decoration:underline; }
+.share_layer button,.share_layer label { cursor:pointer; border:0 none; }
+.share_layer input,.share_layer  button { font-size:12px; font-family:Arial, Sans-Serif; }
+.share_layer_main{ border:1px solid #b5c1ca; background-color:#FAFCFF; position:relative; z-index:5}
+.share_layer_title { height:24px; background:#EEF4F6 url(//statics.05273.cn/statics/huati/img/loginpop_tbg.png) repeat-x; cursor:move; border-bottom:1px solid #CED3E4; }
+.share_layer_title h3 { float:left; margin:0;padding:3px 0 0 12px; color:#666; font-size:13px;font-weight:normal; line-height:18px; overflow:hidden; font-family:Arial, Helvetica, sans-serif;}
+.share_layer_title .mblogo{ padding-left:24px;background:url(//statics.05273.cn/statics/huati/img/wblogin_bt1.png) -84px 6px no-repeat;}
+.share_layer .bt_close { background:url(//statics.05273.cn/statics/huati/img/pop_bg.png) no-repeat 0 -39px; width:9px; height:10px;cursor:pointer; position:absolute; right:10px; top:11px; z-index:5px;}
+.share_layer_cont a:link, .share_layer_cont a:visited { color:#5F5F5F; text-decoration:underline; }
+.share_layer_cont a:hover, .share_layer_cont a:active { color:#494949; }
+.share_layer_cont { color:#000000; background-color:#FAFCFF;}
+.share_layer_hint { color:#9E9E9E; font-style:normal; }
+.global_tip_button { text-align:center; clear:both; width:100%;}
+.bt_tip_sure, .bt_tip_cancel { background-image:url(//statics.05273.cn/statics/huati/img/pop_bg.png); background-repeat:no-repeat; background-position:0 -58px; font-size:12px; line-height:19px; width:48px; height:23px; margin-right:6px; *overflow:visible;
+_padding-top:3px; _line-height:12px; cursor:pointer; }
+*:lang(zh) .bt_tip_sure, .bt_tip_cancel {padding-top /*\**/:4px\9}
+.bt_tip_cancel { color:#4D637F; background-color:#F3F4F5; background-position:-54px -58px; }
+.icon_hint_warn, .icon_hint_succeed { background:transparent url(//statics.05273.cn/statics/huati/img/pop_bg.png) no-repeat; display:-moz-inline-stack; display:inline-block; height:15px; width:15px; vertical-align:middle; }
+.icon_hint_warn { background-position:-39px -37px; _vertical-align:-2px; }
+.icon_hint_succeed { background-position:-18px -37px; }
+.layer_popup { background-color:#FFFFFF; border:2px solid #6792bc; }
+.icon_hint_warn span, .icon_hint_succeed span { display:none; }
+.share_layer .bg {position:absolute;top:0;left:0;height:100%;padding:500px;zoom:1;}
+.share_layer .del_fri{font-weight:bold;display:-moz-inline-stack;display:inline-block;line-height:9px;width:11px;height:10px;position:absolute;top:6px;right:10px;cursor:pointer; font-family:"Comic Sans MS","Verdana", cursive; color:#99ADBA;}
+.share_layer .del_fri:hover{text-decoration:none; color:#666666;}
+.share_layer_title .none { display:none !important; }
+/*=E 浮动层 */
+</style>
+	<div id="site_nav_mblogin" class="site_nav_mblogin">
+ <form class="login-form" id="page_loginForm"  action="//www.05273.cn/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="https://www.05273.cn"/>
+&nbsp;&nbsp;&nbsp;&nbsp;通行证
+	用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+	密&nbsp;&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+     <a href="https://passport.05273.cn/member-register.html" target="_blank">注册</a> | <a href="https://passport.05273.cn/member-public_forget_password.html" target="_blank">找回</a> | <a href="https://passport.05273.cn/member-public_qq_loginnew.html" target="_blank"><img alt="使用QQ登录" title="使用QQ登录" src="//www.05273.cn/images/qq_5016.png" height="16" width="50" /></a>
+  </form>
+<script type="text/javascript">Login.isLogin('//www.05273.cn/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+		</div>
+	</div>
+</div></div>
+<div class="page">
+<!-- headBox getPic-->
+<div class="headBox">
+<!-- topicHd -->
+<div class="topicHd">
+<h1 class="logo"><a href="https://www.05273.cn/huati/" title="" target="_blank">今日话题-用常识解读新闻</a></h1>
+<div id="Topnav">
+<div class="topcontainer">
+<div id="banner">
+<div class="mymenu" id="wmenu">
+<div class="myitem">
+<div class="icobox"><a href="javascript:void(0)" onclick="postToWb();" class="link icon_find" title="分享到腾讯微博" ></a></div>
+<script type="text/javascript">
+	function postToWb(){
+		var _t = encodeURI(document.title);
+		var _url = encodeURIComponent(document.location);
+		var _appkey = encodeURI("801077112");//你从腾讯获得的appkey
+		var _pic = encodeURI('');//（例如：var _pic='图片url1|图片url2|图片url3....）
+		var _site = '';//你的网站地址
+		var _u = 'https://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
+		window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+	}
+</script>
+</div>
+<div class="myitem">
+<div class="icobox"><a href="https://www.05273.cn/index.php?app=content&controller=rss&rssid=3370" target="_blank" title="RSS订阅" class="link icon_wb" ></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="newsTopic">
+<div class="time">{str_cut($inputtime,15,'')}  <span>第 {$qihao} 期</span></div>
+<h1>{$title}</h1>
+<div class="pinglunNum">[<span><a href="#tag_cmt" id="comment">0</a></span>]人参与讨论</div>
+</div>
+<div class="cf banner w470" id="getPic" >
+<span class="col" ></span>
+<a href="{$biaotituurl}" title="" target="_blank" class="pic" ><img width="470" height="340" src="{$biaotitu}" alt="今日话题"/>
+{if $biaotituname}<b></b>
+<span>{$biaotituname}</span>
+{/if}
+</a>
+<div class="main">
+<h2>导语</h2>
+<div class="text">
+  <p>{$daodu}</p>
+</div>
+<!-- BJPF -->
+<div class="bjpf">
+<?php $space_userid = get_memberinfo_buyusername($username, 'userid');?>
+<a target="_blank" title="{$username}" href="https://{$space_userid}.shuyanghao.com/" target="_blank" class="photoPic"><img width="80" height="80" alt="{$username}的头像" src="{get_memberavatar($space_userid,1,180)}"></a><br><br><br>
+责编：{$username}
+</div>
+</div>
+</div>
+</div>
+<div class="cf topBox" id='gallery'>
+			<div class="main">
+      {if $huati1}
+				<div class="topicBox">
+					<div class="hd">
+						<span class="colNum" >01</span>
+						<h2>{$huati1}</h2>
+					</div>
+				  <div class="bd">
+{if $videourl}
+ <div id="a1" style="text-align: center;"></div>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var flashvars={
+      f:'https://api.05273.cn/video.php?url=[$pat]',
+      a:'{$videourl}',
+        s:2,
+        e:'2',
+        i:'{$thumb}',
+        p:1,
+        my_url:encodeURIComponent(window.location.href),
+        my_title:encodeURIComponent(document.title),
+        b:0
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['https://api.05273.cn/wap.php?url={$videourl}'];
+      CKobject.embed('https://statics.05273.cn/statics/js/ckplayer/ckplayer.swf','a1','ckplayer_a1','600','440',false,flashvars,video,params);
+   </script>
+ <p align="center">建议WIFI环境观看，土豪请随意！</p>
+{/if}
+					{$content}
+		          </div>
+    </div>  
+{/if}
+      {if $huati2}
+				<div class="topicBox">
+					<div class="hd">
+						<span class="colNum" >02</span>
+						<h2>{$huati2}</h2>
+					</div>
+				  <div class="bd">
+					{$huati2content}
+		          </div>
+    </div>  
+{/if}
+      {if $huati3}
+				<div class="topicBox">
+					<div class="hd">
+						<span class="colNum" >03</span>
+						<h2>{$huati3}</h2>
+					</div>
+				  <div class="bd">
+					{$huati3content}
+		          </div>
+    </div>  
+{/if}
+      {if $huati4}
+				<div class="topicBox">
+					<div class="hd">
+						<span class="colNum" >04</span>
+						<h2>{$huati4}</h2>
+					</div>
+				  <div class="bd">
+					{$huati4content}
+		          </div>
+    </div>  
+  {/if}
+      {if $huati5}
+				<div class="topicBox">
+					<div class="hd">
+						<span class="colNum" >05</span>
+						<h2>{$huati5}</h2>
+					</div>
+				  <div class="bd">
+					{$huati5content}
+		          </div>
+    </div>  
+  {/if}
+			  <div class="jieyu">
+						<h2 class="jieyuTit" >结语</h2>
+						<div class="textBox" id="textBox" >{$jieshuyu}</div>
+			  </div>
+      {if $toupiao}
+					<div class="xwlc" >
+						<h2 class="xwlcTit">新闻立场</h2>
+						<div class="bdBox">
+							<h3 class="gdTit" >{$toupiao}</h3>									
+ {if module_exists('lichang')}<script type="text/javascript" src="{APP_PATH}index.php?app=lichang&controller=index&view=init&id={id_encode($catid,$id,$siteid)}"></script>{/if}
+						</div>
+					</div>
+  {/if}
+<br>
+<div id="tag_cmt"></div>
+<div style="width:100%; overflow:hidden;zoom:1;">
+      {if $allow_comment && module_exists('comment')}
+<iframe src="{APP_PATH}pinglun_{id_encode("$catid",$id,$siteid)}-1.html" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+        {/if}
+</div>
+</div>
+<div class="subBox">
+<div class="sub" id="sideNav" >
+<div class="tabs" id="tabs" >
+<dl >
+<dt class="hd current">
+<h2 class="tit" >往期回顾</h2></dt>
+<dd class="bd">
+{edi:content action="lists" catid="3370" thumb="1" num="3" order="id DESC"}
+<ul class="picText">
+{loop $data $v}
+<li><a  title="" href="{$v[url]}" class="pic" target="_blank"><img src="{$v[thumb]}" width="100" height="75"/></a>
+<div class="text">
+<p class="tit"><a  title="" href="{$v[url]}" target="_blank">{$v[title]}</a></p>
+<p class="">{str_cut($v[description],63)}<a  href="{$v[url]}" title="{$v[title]}" target="_blank">[详细]</a></p> </div>
+</li>
+{/loop}
+{/edi}
+</ul>
+<!--#include virtual="/caches/posid/quanju300250.html"-->
+</dd>
+<!-- 头条回顾 -->
+<dt class="hd">
+<span><a href="https://www.05273.cn/" title="" target="_blank">更多&gt;&gt;</a></span>
+<h2 class="tit" ><i></i>头条回顾</h2>
+</dt>
+<dd class="bd">
+<div class="newsA">
+{edi:content action="position" order="id desc" posid="2" num="8"}
+{loop $data $r}
+<a href="{$r['url']}" target="_blank">{str_cut($r[title],54,'')}</a><br />
+{/loop}
+{/edi}
+</div>
+<!--#include virtual="/caches/posid/quanju300250.html"-->
+</dd>
+<!-- /头条回顾 -->
+</dl>
+</div>
+<div class="right_mod_con_r">
+<p class="txt_r2">来源:{$copyfrom}</p>
+</div>
+</div>
+</div>
+<style>
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright">
+	<div>
+<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/product/" target="_blank">产品与服务</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a>
+	</div>
+  	<div class="en">Copyright &copy; 2007-2019 05273.cn All Rights Reserved.  <br>电信与信息服务业务经营许可证编号： 苏ICP备18031647号-1 <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a> <img src="//statics.05273.cn/statics/images/copyright.gif" width="15" height="17"/>  <a href="https://www.05273.cn/special/wenming/" target="_blank"><img src="//statics.05273.cn/statics/images/wm.gif" width="15" height="17" title="沭阳文明网站创建自律公约" border=0/></a></div>
+    <div>
+	</div>
+</div>
+<div class="" id="botBScrl" ></div>
+<div class="fotBox" id="fotBox" >
+	<div class="fotBoxBg" id="fotBoxBg" ></div>
+	<div class="hd"><span class="close" id="Oclose" ></span><h3><a  href="https://www.05273.cn/zhuanti/" title="往期回顾" target="_blank">往期回顾</a></h3></div>
+	<div class="bd" id="wqhgBox" >
+<div id="ScA3">  
+        <div class="wrapBox" >  
+            <div class="cols" id="ISL_Cont1">  
+{edi:content action="lists" catid="3370" thumb="1" num="15" order="id DESC"}
+		<ul class="count">
+{loop $data $v}
+<li><a target="_blank" class="img_wrap" href="{$v[url]}"><img src="{$v[thumb]}" border="0" width="135" height="100"><span href="{$v[url]}">{$v[title]}</span></a></li>
+{/loop}
+		</ul>
+{/edi}
+</div>  
+        </div>
+        <a class="prev"></a>
+        <a class="next"></a>
+    </div> 
+	</div>
+</div>
+<script type="text/javascript">
+	var uptop=document.getElementById('scroup');
+	var obj=document.getElementById("sideNav");
+	if (document.all){
+				var browser=navigator.appName 
+				var b_version=navigator.appVersion 
+				var version=b_version.split(";"); 
+				var trim_Version=version[1].replace(/[ ]/g,""); 
+				if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") {var llq="ie6"}else{var llq="ie"}
+		}else{var llq="noie"}
+	var inNun=false;
+	var inNun2=false;
+	var inNun3=false;
+	var isSc=false;
+	document.getElementById('Oclose').onclick=function(){
+	document.getElementById('fotBox').style.display="none";
+	isSc=true;
+	};
+	onscroll =function(){
+		var distanceTop = $('#botBScrl').offset().top - $(window).height()-10;
+		var allH=document.body.scrollHeight-1200;
+		//底部
+		var scroH=document.documentElement.scrollTop+document.body.scrollTop;
+
+			if($(window).scrollTop() > distanceTop){
+					$('#fotBox').animate({'bottom':'0px'},600);
+					$('#scroup').css('bottom','228px');
+					if (!isSc){$('#fotBox').css('display','block');}else{return false;}
+				}else{
+					$('#fotBox').stop(true).animate({'bottom':'-228px'},100);
+					$('#scroup').css('bottom','50px');
+					isSc=false;
+			}
+			//右侧移动
+				if(scroH >600 && scroH <allH){
+					if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPad|iPod/i.test(navigator.userAgent.toLowerCase())){ 
+									obj.style.display="none";
+							}
+
+							if (llq=="ie6") {obj.style.cssText="margin-top:-25px;position:absolute;top:"+scroH+"px";uptop.style.display="block";}else{
+											if (!inNun){obj.style.cssText="margin-top:10px;top:0px;position:fixed;";uptop.style.display="block";$('#fotBox').css('display','none');inNun=true;
+											}else{return false;}
+								}
+						inNun2=false; 
+						inNun3=false; 
+					}else if(scroH >allH){
+
+								if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPad|iPod/i.test(navigator.userAgent.toLowerCase())){ 
+									obj.style.display="none";
+									$('#fotBox').css('display','none')
+							}
+
+							if (!inNun3){obj.style.cssText="margin-top:0px;position:absolute;top:"+allH+"px";uptop.style.display="block";inNun3=true; 
+											}else{return false;}
+							inNun=false;
+							if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPad|iPod/i.test(navigator.userAgent.toLowerCase())){ 
+									obj.style.display="none";
+							}
+					}else{
+
+								if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPad|iPod/i.test(navigator.userAgent.toLowerCase())){ 
+									obj.style.display="none";
+							}
+
+							inNun=false;
+							if (llq=="ie6") {obj.style.cssText="margin-top:0px;position:absolute;top:580px";uptop.style.display="none";}else{
+									if (!inNun2){obj.style.cssText="margin-top:0px;position:absolute;";uptop.style.display="none";$('#fotBox').css('display','none');inNun2=true; 
+											}else{return false;}
+					}
+				}
+	}
+//yeka
+		function Os(s){
+			return document.getElementById(s)
+		}
+		function tabsChg(e){
+			var aSpan = Os("tabs").getElementsByTagName("dt");
+			var aTit = Os("tabs").getElementsByTagName("h2");
+			var aUl =  Os("tabs").getElementsByTagName("dd");
+			var ai =  Os("tabs").getElementsByTagName("i");
+			var temp = {} ;
+			var BoxH=[];
+			var currentL=0;
+			for (var i=0;i<aUl.length;i++ ){
+				BoxH.push(''+aUl[i].offsetHeight+'');
+				aSpan[i].n = 0;
+				if (i!=0)aUl[i].style.height="0";
+			}
+			BoxH[5]=245;
+			for(var i=0;i<aSpan.length;i++){
+				aSpan[i].index = i;
+				if (/(iPad|iPod)/i.test(navigator.userAgent)) {
+					aSpan[i].onclick = function(){
+						if (currentL != this.index){
+								startMove(aUl[currentL],0);
+								aSpan[currentL].className = 'hd';
+							}else{
+								aSpan[currentL].className = 'hd current';
+						}
+						
+						if (this.className.indexOf('current') !=-1){
+							this.className = 'hd';
+							startMove(aUl[this.index],0);
+						}else{
+							aTit[this.index].style.display = 'block';
+							this.className = 'hd current';
+							startMove(aUl[this.index],BoxH[this.index]);
+						}
+						currentL=this.index;
+					}
+				}else{
+					aSpan[i].onmouseover = function(){ 
+						if(temp != this) { temp.n = 0 }
+						//alert(this.n);
+						if ( this.n ) return;
+						for(var j=0; j<aUl.length; j++){  
+							startMove(aUl[j],0);
+							aSpan[j].className = 'hd';
+							//console.log(this.n);
+						}
+						this.className = 'hd current';
+						startMove(aUl[this.index],BoxH[this.index]);
+					}
+					aSpan[i].onclick=function(){
+						temp = this;
+						//alert(temp.nodeName);
+						for(var j=0;j<aUl.length;j++){
+							aSpan[j].n = 0;
+						}
+						
+						if (this.className.indexOf('current') !=-1){
+							this.className = 'hd';
+							startMove(aUl[this.index],0);
+							this.n = 1;
+							//aTit[this.index].style.display = 'none';
+						}else{
+							this.n = 0;
+							aTit[this.index].style.display = 'block';
+							this.className = 'hd current';
+							startMove(aUl[this.index],BoxH[this.index]);
+						}
+					}
+
+				}
+
+			}
+		}
+		//动画效果函数
+		function startMove(obj,iTarget){
+			clearInterval(obj.timer);   //清空计时器
+			obj.timer = setInterval(    //调用动画
+				function(){doMove(obj,iTarget);}
+			,30);
+		}
+		function doMove(obj,iTarget){
+			//缓冲运动缩放系数
+			var iSpeed = (iTarget - obj.offsetHeight)/8;   
+			iSpeed = (iSpeed>0)? Math.ceil(iSpeed) :Math.floor(iSpeed); //速度取整
+			if(iTarget == obj.offsetHeight){
+				clearInterval(obj.timer);
+			}
+			else{
+				obj.style.height = obj.offsetHeight + iSpeed + 'px';
+			}
+		};tabsChg()
+		//评星显示
+		document.getElementById('phone').onmouseover=function(){
+			document.getElementById('star').style.display="block";
+		}
+		document.getElementById('phone').onmouseout=function(){
+			document.getElementById('star').style.display="none";
+		}
+	// 右侧滚动
+	$(function() {
+		var asideH=$(window).height()-30;
+		var asideHB=asideH-228;
+		var asidetop=(document.documentElement.scrollTop+document.body.scrollTop)+30+'px';
+	});
+</script>
+<script type="text/javascript">    
+Qfast.add('widgets1',{path:"//statics.05273.cn/statics/huati/js/Terminator1.1.min.js",type:"js",requires: ['fx']});    
+Qfast(false,'widgets1',function(){  
+        K.scroll({   
+            id:"ScA3",                          //滚动区域包裹id  
+            effect:"scroll",            //效果配置  
+            conID:"ISL_Cont1",      //实际滚动区域包裹id  
+            scrWrap:".count",       //实际滚动区域配置class  
+            scrElem:"li",               //滚动单元元素配置    
+            scrNum:4,                       //触发一次滚动事件走过的滚动元素个数   
+            showNum:5,                  //滚动区域显示滚动元素的个数           
+            auto:0,                             //自动滚动是否开启  
+            vertical:"left",                //滚动方向  
+            loop:true,                     //是否循环滚  
+            interval:100,              //自动滚动时间间隔  
+            bns: ['.prev', '.next'],//滚动配置按钮class             
+            prevMouseClass:"prevMouseClass",//鼠标悬停按钮显示按钮类名  
+            prevStopClass:"prevStopClass",   //鼠标停止按钮显示按钮类名  
+            nextMouseClass:"nextMouseClass", //鼠标悬停按钮显示按钮类名  
+            nextStopClass:"nextStopClass" //鼠标停止按钮显示按钮类名  
+        })  
+})  
+  $("img").lazyload({ 
+    skip_invisible : false, 
+      effect : "fadeIn",
+      failure_limit: 20 
+  });
+</script> 
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<script src="//www.05273.cn/core/stats/{$catid}/" type="text/javascript"></script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

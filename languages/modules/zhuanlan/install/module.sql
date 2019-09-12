@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module`(`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('zhuanlan', '沭阳号', 'zhuanlan/', '0', '1.0.1', '沭阳号平台', '', '0', '0', '2017-03-10', '2017-03-10');

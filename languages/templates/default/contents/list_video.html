@@ -1,0 +1,49 @@
+{template "content","header_kuanpin"}
+{php $c = isset($_GET['b'])?$_GET['b']:1;} 
+<link href="https://statics.05273.cn/statics/css/vms/reset.css" rel="stylesheet" type="text/css" />
+<link href="https://statics.05273.cn/statics/css/vms/sty.css" rel="stylesheet" type="text/css" />
+<link href="https://statics.05273.cn/statics/css/vms/vms.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/cookie.js"></script>
+<div class="clr ct lst">
+    <div class="lyt_4">
+    	<h5><a href="https://www.05273.cn/video/">宽频首页</a></h5>
+        <ul class="tp_lst"> 
+            <li {if $catid == '90'}class="last"{/if}><a href="https://www.05273.cn/video/shuyang/" {if $catid == '90'}class="ac"{/if}>沭阳视频专区</a></li> 
+            <li {if $catid == '3366'}class="last"{/if}><a href="https://www.05273.cn/video/zhuizong/" {if $catid == '3366'}class="ac"{/if}>事件追踪</a></li> 
+            <li {if $catid == '87'}class="last"{/if}><a href="https://www.05273.cn/video/jingxuan/" {if $catid == '87'}class="ac"{/if}>精选视频</a></li> 
+            <li {if $catid == '41'}class="last"{/if}><a href="https://www.05273.cn/video/gaoxiao/" {if $catid == '41'}class="ac"{/if}>搞笑视频</a></li> 
+            <li {if $catid == '48'}class="last"{/if}><a href="https://www.05273.cn/video/yinyue/" {if $catid == '48'}class="ac"{/if}>音乐</a></li> 
+        </ul>
+    </div>
+     <div class="wp lyt_3">
+    	<div class="lstnav">
+    	  <span></span><span>本页共有<strong id="nums">{$items}</strong>个符合条件的内容  </span> <h5>{$catname}</h5>
+    	</div> 
+		<div class="lstnr">
+		
+        <div class="bct">
+        	<ul class="clr col4 col5"> 
+ 			{edi:content action="lists" catid="$catid" num="15" order="id DESC" moreinfo="1" page="$page"}
+			{php $nums=count($data)}
+ 			{loop $data $v}	
+                 <li>
+                	<div class="w120">
+                        <div class="imgbox"><span class="tm">{$v[shijian]}</span>
+						<a href="{$v[url]}" target="_blank"><img src="{$v[thumb]}" width="120" height="75"></a></div>
+                        <div class="lh21"><a href="{$v[url]}" target="_blank">{str_cut($v[title],57,false)}</a></div>
+                        <div class="sz"><span class="shows">播放数：<cite>{get_views('c-'.$CATEGORYS[$v[catid]][modelid].'-'.$v['id'])}</cite></span></div>
+                    </div>
+                </li> 
+			{/loop}
+			{/edi}
+            </ul>
+			{if $pages}
+            <div class="pages"> 
+			{$pages}
+ 			</div>
+			{/if}
+        </div>
+        </div>
+    </div>
+</div>
+{template "content","footer"}

@@ -1,0 +1,125 @@
+﻿.shuyangtoday
+{
+	width:656px;
+	padding:24px 0 0 0;
+	border-left:solid 2px #EDF0F2;
+	border-right:solid 2px #EDF0F2;
+	border-top:solid 2px #EDF0F2
+}
+
+.shuyangtoday .top
+{
+	width:616px;
+	height:300px;
+	margin:0px 20px 0 20px;
+	background-color:#CCC;
+	position:relative;
+	}
+.shuyangtoday .top h3
+{
+	height:82px;
+	line-height:82px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:96%;
+	padding: 0 2%;
+	margin:0;
+	background-color: rgba(0,0,0,0.5);
+	font-size:34px;
+	font-family:"微软雅黑", "黑体", "宋体";
+	color:#FFF;
+	overflow:hidden;
+	}
+.shuyangtoday .top em
+{
+	width:50px;
+	height:30px;
+	line-height:30px;
+	background-color:#E6ECEC;
+	position:absolute;
+	right:-70px;
+	top:0px;
+	font-style:normal;
+	cursor:pointer;
+	text-align:center;
+	}
+.shuyangtoday .top span
+{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	background-color:#E6ECEC;
+	position:absolute;
+	bottom:-22px;
+	right:-120px;
+	cursor:pointer;
+	text-align:center;
+	}
+.shuyangtoday .top img
+{
+	width:616px;
+	height:300px;
+	cursor:pointer;
+	}
+.shuyangtoday ul
+{
+	padding:0;
+	margin:20px 0 0 0;
+	border-top:solid 2px #EDF0F2;
+	}
+.shuyangtoday ul li
+{
+	height:120px;
+	list-style:none;
+	padding:0 20px;
+	margin:0;
+	border-bottom:solid 2px #EDF0F2;
+	position:relative;}
+.shuyangtoday ul li h3
+{
+	width:450px;
+	height:80px;
+	padding:20px 0;
+	margin:0;
+	float:left;
+	font-size:34px;
+	line-height:40px;
+	font-family:"微软雅黑", "黑体", "宋体";
+	overflow:hidden;
+	}
+.shuyangtoday ul li img
+{
+	width:100px;
+	height:100px;
+	float:right;
+	margin-top:10px;
+	cursor:pointer;
+	}
+
+.shuyangtoday ul li em
+{
+	width:50px;
+	height:30px;
+	line-height:30px;
+	background-color:#E6ECEC;
+	position:absolute;
+	right:-50px;
+	top:10px;
+	font-style:normal;
+	cursor:pointer;
+	text-align:center;
+	}
+.shuyangtoday ul li span
+{
+	width:50px;
+	height:30px;
+	line-height:30px;
+	background-color:#E6ECEC;
+	position:absolute;
+	right:-50px;
+	bottom:10px;
+	cursor:pointer;
+	font-weight:normal;
+	text-align:center;
+	}

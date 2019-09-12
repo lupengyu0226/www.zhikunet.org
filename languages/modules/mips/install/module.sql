@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('mips', '手机MIP', 'mips/', 0, '3.0', '手机MIP', '', 0, 0, '2015-11-08', '2015-11-08');

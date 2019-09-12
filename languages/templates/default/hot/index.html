@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{edi:get sql="SELECT tag,hits,usetimes FROM v9_tags order by hits desc" num="10"}
+{loop $data $r}
+{trim($r[tag])}_{/loop}
+{/edi}沭阳网TAG标签_{$SEO['site_title']}</title>
+<meta name="keywords" content="{edi:get sql="SELECT tag,hits,usetimes FROM v9_tags order by hits desc" num="10"}
+{loop $data $r}
+{$r[tag]}_{/loop}
+{/edi}{$SEO['site_title']}">
+<meta name="description" content="{edi:get sql="SELECT tag,hits,usetimes FROM v9_tags order by hits desc" num="10"}
+{loop $data $r}
+{$r[tag]}_{/loop}
+{/edi}沭阳网TAG标签_{$SEO['site_title']}">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="https://wap.05273.cn/hot.html";
+            }catch(e){}
+        }
+    }
+</script>
+<style>
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 "宋体",arial; color:#2B2B2B;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+section, article, aside, header, footer, nav, dialog, figure {display: block;}
+html{ padding:0; margin:0; height:100%;}
+body { padding:0; margin:0; height:100%; background:#666}
+.bodybg{background-repeat:no-repeat; background-position:center 0; background-size:cover; width:100%; height:100%; overflow:hidden; position:fixed; z-index:0; _position:absolute; _left:expression(eval(document.documentElement.scrollLeft));top:0; left:0;_top:expression(eval(document.documentElement.scrollTop))}
+a {color:#2B2B2B;text-decoration:none;}
+a:hover {color:#bc2931; text-decoration:none;}
+img{border:0; vertical-align:bottom;}
+ul,ol{list-style:none;}
+.clear{ clear:both; margin:0; padding:0; height:0; line-height:0; font-size:0;}
+.clearfix{ zoom:1;}
+.clearfix:after {clear:both; height:0; overflow:hidden; display:block; visibility:hidden; content:"."; }
+.mt10{ margin-top:10px;}
+.mt6{ margin-top:6px;}
+.mb10{ margin-bottom:10px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.mainbody .bd {
+    position:relative;
+    overflow:hidden;
+}
+#scroll_div {
+    position:absolute;
+    overflow:hidden;
+    left:0
+}
+#sub_1, #sub_2, #sub_3 {
+    float:left;
+}
+#keyword {
+    float:left
+}
+#pages { padding:14px 0 10px; font-family:宋体 }
+#pages a { display:inline-block; height:22px; line-height:22px; background:#fff; border:0px solid #ffa200; text-align:center; color:#333; padding:0 10px}
+#pages a.a1 {width:56px; padding:0 }
+#pages a:hover { background:#f1f1f1; color:#000; text-decoration:none }
+#pages span { display:inline-block; height:22px; line-height:22px; background:#5a85b2; border:1px solid #5a85b2; color:#fff; text-align:center;padding:0 10px}
+.page .noPage { display:inline-block; width:56px; height:22px; line-height:22px; border:1px solid #e3e3e3; text-align:center; color:#a4a4a4; }
+.mainbody {width:1000px; height:875px; margin:0 auto; z-index:10; position:relative;}
+.mainbody .hd {height:78px;}
+.hd .logo {height:42px; width:80px; background:url(//statics.05273.cn/statics/images/tag/tag_logo.png);float:left; margin:20px 0; }
+.hd .nav { font: normal 24px/30px "微软雅黑","宋体"; _font-family:"宋体"; float:left;  width:340px; margin-top:30px; color:#FFF;}
+.hd .nav a {display:block; float:left; margin:0 10px; color:#FFF; height:32px; text-decoration:none;}
+.hd .nav a.act {color:#FFF;}
+.hd .nav a:hover {color:#FFF;  background:url(//statics.05273.cn/statics/images/tag/line_a.png) 0 70px no-repeat; }
+.hd .seach {width:125px; height:25px; float:right; margin:22px 0;}
+.hd .seach .keyword { float:right; width:98px; height:24px; background:url(//statics.05273.cn/statics/images/tag/seach1_icon.png) 5px 4px no-repeat; padding:0; padding-left:25px; border:none; border-bottom:solid #d0d0d0 1px; font-size:12px;}
+.hd .seach .keyword2 { float:right; width:98px; height:24px; background: #fff url(//statics.05273.cn/statics/images/tag/seach1_icon.png) 5px 4px no-repeat; padding:0; padding-left:25px; border:none; border-bottom:solid #666 1px; font-size:12px;border-radius:3px;}
+.hd .home{ float:right; width:15px; height:15px; color:#FFF; margin:22px 10px 0 0; padding-top:6px;}
+.hd .home a {text-decoration:underline;}
+.mainbody .bd {width:1000px; margin:20px 0;}
+.mainbody .bd .main {width:1010px; overflow:hidden;}
+.mainbody .bd .main ul { height:810px;}
+.mainbody .bd .main .pd {height:38px; width:80px; background:#0064b2; color:#FFF; font: normal 24px/38px Microsoft Yahei,simhei,"宋体"; overflow:hidden; text-align:center; clear:both;}
+.mainbody .bd .main .pd_e {height:38px; width:80px; background:#0064b2; color:#FFF; font: normal 24px/38px Microsoft Yahei,simhei,"宋体"; overflow:hidden; text-align:center; margin-top:30px; clear:both;}
+.mainbody .bd .main li{width:242px; height:125px; float:left; margin:0 10px 10px 0;}
+.mainbody .bd .main .box { width:242px; height:125px; position:relative; cursor:pointer; display:block;}
+.mainbody .bd .main .box:hover { box-shadow: 5px 5px 10px 0 #333; background:#fff}
+.mainbody .bd .main .bg0 {width:242px; height:125px; background:#FFF; opacity: 0.80; filter: "alpha(opacity=80)"; filter: alpha(opacity=80); zoom: 1; position:absolute; z-index:1; top:0; left:0; }
+.mainbody .bd .main .bg1 {width:242px; height:125px; float:left; background:#71cc0e; opacity: 0.80; filter: "alpha(opacity=80)"; filter: alpha(opacity=80); zoom: 1; position:absolute; z-index:1; top:0; left:0;}
+.mainbody .bd .main .bg2 {width:242px; height:125px; float:left; background:#ffa200; opacity: 0.80; filter: "alpha(opacity=80)"; filter: alpha(opacity=80); zoom: 1; position:absolute; z-index:1; top:0; left:0;}
+.mainbody .bd .main .bg3 {width:242px; height:125px; float:left; background:#00c0ff; opacity: 0.80; filter: "alpha(opacity=80)"; filter: alpha(opacity=80); zoom: 1; position:absolute; z-index:1; top:0; left:0;}
+.mainbody .bd .main .bg4 {width:242px; height:125px; float:left; background:#f67aba; opacity: 0.80; filter: "alpha(opacity=80)"; filter: alpha(opacity=80); zoom: 1; position:absolute; z-index:1; top:0; left:0;}
+.mainbody .bd .main .con {width:222px; height:105px; float:left;padding:10px; position: relative; z-index:2; overflow:hidden;}
+.mainbody .bd .main .con h3{ font: 30px/38px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#333; display:inline-block; font-weight:400;}
+.mainbody .bd .main .con h3.fouse_1 {color:#FFF;}
+.mainbody .bd .main .con h3.fouse_2 {color:#FFF;}
+.mainbody .bd .main .con h3.fouse_3 {color:#FFF;}
+.mainbody .bd .main .con h3.fouse_4 {color:#FFF;}
+.mainbody .bd .main .con h3.fouse_0 {color:#333;}
+.mainbody .bd .main .con .til {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#333; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til_1 {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#FFF; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til_2 {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#FFF; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til_3 {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#FFF; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til_4 {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#FFF; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til_0 {font: normal 16px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#333; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .til1 { font: normal 20px/32px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#333; max-height: 65px; padding-top:5px;}
+.mainbody .bd .main .con .add{ font: normal 12px/24px Microsoft Yahei,simhei,"宋体";; background:url(//statics.05273.cn/statics/images/tag/add_icon.png) 0 4px no-repeat;  padding-left:10px; margin-left:10px; color:#FFF;}
+.mainbody .bd .main .con .add1 { font: normal 12px/24px Microsoft Yahei,simhei,"宋体"; background:url(//statics.05273.cn/statics/images/tag/add_icon.png) 0 4px no-repeat;  padding-left:10px; margin-left:10px; color:#666; }
+.mainbody .bd .main .moreing {width:1000px; height:70px;}
+.mainbody .bd .main .moreing ul.moree {text-align:center;font: normal 23px/28px Microsoft Yahei,simhei,"宋体"; overflow:hidden; color:#FFF; }
+.mainbody .bd .main .more {width:1000px; height:70px; float:left; background:#00c0ff; z-index:1;  }
+.footer{ line-height:22px; overflow:hidden; padding-bottom:10px; color:#FFF;}
+.footer a{color:#FFF;}
+.footer .w{ width:1000px; margin:0 auto;}
+.footer .foot-nav{ float:left; width:890px; color:#FFF;}
+.footer .foot-nav a{ padding:5px;}
+.footer .copyright{ float:left; width:500px; text-align:left; font-family:Arial,"宋体";}
+</style>
+<script src="//statics.05273.cn/statics/js/jquery.js?v={JS_VERSION}" type="text/javascript"></script>
+</head>
+<body>
+<div id="bodybg" class="bodybg"></div>
+<div class="mainbody">
+<div class="hd"><a  href="https://www.05273.cn/hot.html" target="_blank" class="logo"></a>
+<div class="nav" id="nav"><a class="act">共有{$total}个TAG标签</a></div>
+<div class="seach">
+<form action="https://www.05273.cn/index.php?app=search&controller=index&view=init&typeid=1&siteid=1&q=" method="get" target="_blank">
+<input name="q" type="text" value="" class="keyword" id="keyword"/>
+<input type="hidden" name="app" value="search"/>
+	<input type="hidden" name="controller" value="index"/>
+	<input type="hidden" name="view" value="init"/>
+    <input type="hidden" name="typeid" value="1" id="typeid"/>
+	<input type="hidden" name="siteid" value="1" id="siteid"/>
+</form>
+</div>
+<a href="https://www.05273.cn/" target="_blank" class="home"><img src="//statics.05273.cn/statics/images/tag/home_icon.png" alt="沭阳网首页" title="沭阳网首页" /></a></div>
+<div class="bd" id="bd">
+<div id="scroll_div" class="clearfix">
+<div id="sub_1" class="main clearfix">
+<ul>
+{loop $tagdata $r}
+{php $k = $n<5 ? $n :0}
+<li><a href="https://www.05273.cn/hot/{urlencode($r['tag'])}.html" target="_blank" class="box">
+<div class="con"><h3 class="fouse_{$k}">{$r['tag']}</h3><div class="til_{$k}">该标签下共有{$r['usetimes']}篇文章</div></div><div class="bg{$k}"></div></a></li>
+{/loop}
+</ul>
+{if !$_GET[page]}
+<div class="moreing"><a href="https://www.05273.cn/hot_2.html" class="more"><ul class="moree"><br>查看更多</ul></a></div>
+{else}
+<div id="pages" class="text-c">{$pages}</div>
+{/if}
+</div></div></div>
+<!--footer-->
+<div class="footer"><div class="w"><div class="foot-nav"><a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a>
+</div></div>
+<div class="copyright">Copyright &copy; 2007-2019 05273.cn Inc. All Rights Reserved</div></div></div>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+<script type="text/javascript">
+ window.onload=function()
+ {
+	var oA=document.getElementById('nav').getElementsByTagName('a');
+	//初始化高度和宽度
+	$("#bd").height($("#sub_1").height());
+	$("#scroll_div").width($("#sub_1").width()*3);
+	
+	//判断ipad和pc
+	var ua=navigator.userAgent.toLowerCase();
+	var contains=function(a,b)
+	{
+		   if(a.indexOf(b)!=-1)
+		   {
+		       return true;
+		   }
+	};
+	
+	if(contains(ua,'ipad') || contains(ua,"android") && contains(ua,"mobile") || contains(ua,"android"))
+	   {
+		     for(var i=0;i<oA.length;i++)
+			 {
+			   	 oA[i].index=i;
+	             oA[i].onclick=function()
+	             {
+					 for(var i=0;i<oA.length;i++)
+					 {
+					    oA[i].className='';  
+					 }
+					 this.className='act';
+				     $("#scroll_div").css("left",-1010*this.index);
+					 $("#bd").height($("#sub_"+(this.index+1)).height());
+				 }
+			 }
+	   }
+	   else
+	   {
+		        for(var i=0;i<oA.length;i++)
+				{
+				   oA[i].index=i;
+				   oA[i].onclick=function()
+				   {
+						for(var i=0;i<oA.length;i++)
+						{
+						  oA[i].className='';  
+						}
+						this.className='act';
+						$("#scroll_div").animate({left:-this.index*$("#sub_1").width()})
+						$("#bd").height($("#sub_"+(this.index+1)).height());
+						
+				   }	
+				} 
+	   }
+	
+	
+	//随机变换背景图片
+	var randNum=Math.floor(Math.random()*3+1);
+	document.getElementById('bodybg').style.backgroundImage='url(//statics.05273.cn/statics/images/tag/'+randNum+'.jpg)';
+	
+	//输入框
+	var oTxt=document.getElementById('keyword');
+	oTxt.onfocus=function()
+	{
+	  this.className='keyword2';
+	  this.placeholder="ITAG搜索";
+	}
+	oTxt.onblur=function()
+	{
+	  var This=this;
+	  This.className='keyword';
+	}
+	
+	
+ }
+ 
+ //move function begin
+function getStyle(obj, attr)
+{
+	if(obj.currentStyle)
+	{
+		return obj.currentStyle[attr];
+	}
+	else
+	{
+		return getComputedStyle(obj, false)[attr];
+	}
+}
+
+function startMove(obj,json,fn)
+{
+  	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+	   var bStop=true;  //标志运动结束---所有值都到达了
+	   for(attr in json)
+	   {
+		      //1当前值
+			  var iCur=0;
+			   if(attr=='opacity')
+			   {
+				  iCur=parseFloat(parseInt(getStyle(obj,attr)*100));
+			   }else
+			   {
+				 var iCur=parseInt(getStyle(obj,attr));
+			   }
+			   
+			   //2算速度
+			   var iSpeed=(json[attr]-iCur)/8;
+			   iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+			   
+			   //3监测停止
+			   if(iCur!=json[attr])
+			   {
+				 bStop=false;   
+			   }
+			   
+			  if(attr=='opacity')
+			  {
+				obj.style.opacity=(iCur+iSpeed)/100;
+				obj.style.filter='alpha(opacity:'+(iCur+iSpeed)+')';
+			  }else
+			  {
+				 obj.style[attr]=iCur+iSpeed+'px';     
+			  }
+			  
+	   }
+	    if(bStop)
+	    {
+		  clearInterval(obj.timer);
+		  if(fn)
+		  {
+			  fn();	
+		  }
+		}
+	},30);
+	
+}
+</script>
+</body>
+</html>

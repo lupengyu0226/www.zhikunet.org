@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+<title>签到_沭阳网</title>
+<link rel="stylesheet" href="https://statics.05273.cn/sign/css/bootstrap3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://statics.05273.cn/sign/css/style.css">
+<link rel="stylesheet" href="https://statics.05273.cn/sign/css/qiandao_wap.css">
+<script type="text/javascript">
+    try{
+        if(/Macintosh|Mac_PowerPC|Windows NT|Windows XP/i.test(navigator.userAgent)){
+          window.location.href="https://www.05273.cn/index.php?app=sign";
+        }
+    }catch(e){};
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 clearPadding">
+			<div class=""><img src="//statics.05273.cn/sign/images/qiandao_banner.jpg" class="img-responsive"></div>
+			
+			<div class="calendar">
+				<div class="calenbox">
+					<div id="calendar"></div>
+				</div>
+				<div class="text-center">
+				{if !$day_sign}<a href="{APP_PATH}index.php?app=sign&controller=wap&view=sign"><button class="btn btn-qiandao">马上签到</button>{else}<button class="btn btn-qiandao" onClick="signIn()">已签到</button>{/if}
+				</div>
+			</div>
+			<div class="padding10">
+				<div class="font16 pb10 borderb"><strong>签到规则</strong></div>
+				<div class="libaolist">
+					<div class="clearfix borderb ptb10">
+						<div class="col-xs-9 clearPadding">
+							<div class="media">
+								<div class="media-body">
+								<p>首次签到获得{$set[setpoint]}积分奖励</p>
+								<p>连续签到每天增加{$set[setpoint]}积分奖励</p>
+		                        <p>连续签到{$set[limit]}天后每次签到获得{$limitpoint}积分</p>
+								</div>
+							</div>
+						</div>
+					</div>																		
+				</div>
+			</div>
+			<div class="padding10">
+				<div class="font16 pb10 borderb"><strong>其他说明</strong></div>
+				<div class="libaolist">
+					<div class="clearfix borderb ptb10">
+						<div class="col-xs-9 clearPadding">
+							<div class="media">
+								<div class="media-body">
+									<p>如果中间有一天间断未签到的，重新开始计算连续签到时间。</p>
+								</div>
+							</div>
+						</div>
+					</div>																	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="maskbox"></div>
+<div class="qdbox">
+	<div class="text-center text-green font18"><strong>签到成功！</strong></div>
+	<div class="text-center pt10">今日已领取&nbsp;<span class="text-green">{if $day_sign['signpoint']}{$day_sign['signpoint']}{else}0{/if}</span>&nbsp;积分</div>
+	<div class="text-center ptb15">
+		<ul class="qiandao-history-inf clear">
+			<li>
+				<p>连续签到</p>
+				<h4>{$count['continuous']}</h4>
+			</li>
+			<li>
+				<p>本月签到</p>
+				<h4>{$count['monthcount']}</h4>
+			</li>
+			<li>
+				<p>总共签到</p>
+				<h4>{$count['count']}</h4>
+			</li>
+			<li>
+				<p>累计奖励积分</p>
+				<h4>{$count['getpoint']}</h4>
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="//statics.05273.cn/sign/js/jquery-1.10.2.min.js"></script>
+<script src="//statics.05273.cn/sign/js/calendar.js?v={JS_PATH}"></script>
+<script>
+function  signIn(){
+	$(".maskbox").fadeIn();
+	$(".qdbox").fadeIn();
+	$(".maskbox").height($(document).height());
+}
+$(".maskbox").click(function(){
+	$(".maskbox").fadeOut();
+	$(".qdbox").fadeOut();
+});
+$(function(){
+  //ajax获取日历json数据
+    var signList = <?php echo json_encode($day_array); ?>; // 假设已经签到的
+   calUtil.init(signList);
+});
+</script>
+<div style="text-align:center;">
+<footer>
+<div class="login-area" id="footer">
+<div class="login">
+<span  class="new-fr"><a href="https://wap.05273.cn/">回到手机站</a></span>
+<script src="//statics.05273.cn/statics/js/jquery.js?v=20171219" type="text/javascript"></script>
+<form class="login-form" id="page_loginForm">
+<a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=login&forward=">登录</a><span class="layout-lg-bar"> | </span><a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=register">注册</a>
+</form>
+<script type="text/javascript">Login.isLogin('https://www.05273.cn/index.php?app=waplogin&controller=index&view=top_mini','page_loginForm','page');</script>
+</div>
+<div class="version"><a href="https://www.05273.cn/index.php?app=sign&controller=wap" class="on">手机版</a><a href="https://www.05273.cn/index.php?app=sign&mobile" id="toPcHome">电脑版</a></div>
+<div class="copyright">Copyright &copy; 2007-2019 05273.cn 版权所有</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="dns-prefetch" href="https://statics.05273.cn">
+<link rel="dns-prefetch" href="https://upload.05273.cn">
+<link rel="dns-prefetch" href="https://account.05273.cn">
+<link rel="dns-prefetch" href="https://img1.05273.cn">
+<link rel="dns-prefetch" href="https://img2.05273.cn">
+<link rel="dns-prefetch" href="https://img3.05273.cn">
+<link rel="dns-prefetch" href="https://wap.05273.cn">
+<link rel="dns-prefetch" href="https://www.05273.cn">
+<title>我的收藏_沭阳网手机版会员中心</title>
+<meta name="author" content="wap.05073.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/base2013.css?v={CSS_VERSION}" charset="gbk"/>
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/favorite.css?v={CSS_VERSION}" charset="gbk"/>	
+<link rel="apple-touch-icon" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://statics.05273.cn/statics/mobile/img/touch-icon-iphone-retina.png" />
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/jquery-1.6.2.min.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/common.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/spin.min.js?v={JS_VERSION}"></script>
+</head>
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+							<h2>{L('favorite_list')}</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span></span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="https://wap.05273.cn/" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="https://wap.05273.cn/index.php?controller=search" class="new-tbl-cell">
+                	<span class="icon2">搜索</span>
+					<p style="color:#6e6e6e;">搜索</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=comment" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">我的评论</span>
+					<p style="color:#6e6e6e;">我的评论</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index" class="new-tbl-cell">
+                	<span class="icon4">我的帐号</span>
+					<p style="color:#6e6e6e;">我的帐号</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<div class="new-ct">
+	<div class="new-addr">   
+	    	<ul class="new-mu_l2w">
+			{loop $favoritelist $k $v}
+	            <li class="new-mu_l2">
+        	<p class="new-tit new-p-re">
+				<span class="new-txt">{L('title')}</span>
+				                 <span  class="new-txt-rd2 new-option-r" >{format::date($v['adddate'], 1)}</span> 
+							</p>
+            <span class="new-mu_l2a new-p-re">
+                <span class="new-mu_l2cw">{$v['title']}</span>     
+				 				<div class="new-addr-btn">
+                	<a href='{$v['url']}'>访问</a><span class="new-addr-bar">|
+					</span><a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=favorite&id={$v['id']}">{L('delete')}</a>
+                </div>
+				            </span>
+        </li>
+		{/loop}
+               </ul>
+			   <div id="pages">{$pages}</div>
+	        <a  href='//wap.05273.cn/' class="new-abtn-type new-mg-tb30">更多新闻</a>
+    </div>
+</div>
+<div id="autoLoginHeight"></div>
+<script src="//statics.05273.cn/waplogin/js/autoHeight.js?v={JS_VERSION}" type="text/javascript"></script>
+{template 'mobile', 'login_footer'}
+</body>
+</html>
+

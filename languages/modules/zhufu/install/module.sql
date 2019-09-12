@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('zhufu', '祝福', 'zhufu/', 0, '1.0', '祝福', '', 0, 0, '2012-03-01', '2012-03-01');

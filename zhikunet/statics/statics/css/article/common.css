@@ -1,0 +1,964 @@
+.daaovbqslk P {
+	MARGIN-TOP: 14px; FONT-SIZE: 14px; COLOR: #000; LINE-HEIGHT: 25px; FONT-FAMILY: 'ËÎÌå'
+}
+.daaovbqslk P a{
+	COLOR: #C40D24; FONT-FAMILY: 'ËÎÌå'
+}
+.container {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: auto; WIDTH: 960px; PADDING-TOP: 0px; PADDING-LEFT: 0px; 
+}
+.banner960100 {
+	CLEAR: both; PADDING-TOP: 10px; HEIGHT: 100px
+}
+.banner73090 {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; HEIGHT: 90px
+}
+.banner73090 .left {
+	FLOAT: left; WIDTH: 730px; HEIGHT: 90px
+}
+.banner73090 .right {
+	FLOAT: right; WIDTH: 220px; HEIGHT: 90px
+}
+.lmbanner960100 {
+	CLEAR: both; PADDING-TOP: 10px; HEIGHT: 100px
+}
+.gg960_60 {
+	MARGIN-TOP: 10px
+}
+.n_put {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; BORDER-LEFT: #666 1px solid; WIDTH: 120px; LINE-HEIGHT: 18px; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 18px
+}
+.n_put02 {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; BORDER-LEFT: #666 1px solid; WIDTH: 145px; LINE-HEIGHT: 18px; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 18px
+}
+.ndlok {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; OVERFLOW: hidden; BORDER-LEFT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 90px
+}
+.ndlok TABLE {
+	MARGIN-TOP: 6px
+}
+.ndlok TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; HEIGHT: 25px
+}
+.nrlogin {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; BACKGROUND: url(nr_denglu.gif); FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; MARGIN-LEFT: 5px; WIDTH: 45px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 21px; HEIGHT: 21px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+A.nrzhuce {
+	BORDER-TOP-WIDTH: 0px; DISPLAY: block; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 12px; BACKGROUND: url(nr_zhuce.gif); FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; MARGIN-LEFT: 5px; WIDTH: 45px; CURSOR: pointer; LINE-HEIGHT: 21px; HEIGHT: 21px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+A.nrzhuce:link {
+	COLOR: #333
+}
+A.nrzhuce:visited {
+	COLOR: #333
+}
+A.nrzhuce:hover {
+	COLOR: #f60; TEXT-DECORATION: none
+}
+A.nrzhuce:active {
+	COLOR: #f60; TEXT-DECORATION: none
+}
+.ndlok .n_dl {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 30px; PADDING-BOTTOM: 0px; PADDING-TOP: 2px; TEXT-ALIGN: center
+}
+.ndlok .n_dl2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 55px; PADDING-BOTTOM: 0px; PADDING-TOP: 2px; TEXT-ALIGN: center
+}
+#logintop {
+	DISPLAY: none
+}
+.site {
+	CLEAR: both; MARGIN-TOP: 8px
+}
+.site .left {
+	FLOAT: left; WIDTH: 650px; LINE-HEIGHT: 14px; PADDING-TOP: 8px
+}
+.site .right {
+	FLOAT: right; WIDTH: 310px; TEXT-ALIGN: right
+}
+.site .right .put01 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: url(sousuo_03.jpg); PADDING-BOTTOM: 2px; WIDTH: 227px; COLOR: #666; BORDER-TOP-STYLE: none; LINE-HEIGHT: 18px; PADDING-TOP: 2px; FONT-FAMILY: "ËÎÌå"; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 18px; BORDER-BOTTOM-STYLE: none
+}
+.site .right .put02 {
+	BACKGROUND: url(tab05.jpg) no-repeat; MARGIN-LEFT: 3px; WIDTH: 60px; CURSOR: pointer; BORDER-TOP-STYLE: none; LINE-HEIGHT: 22px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+.dangqian {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; BACKGROUND: url(dqwz_bg.gif) no-repeat left bottom; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; LINE-HEIGHT: 30px; PADDING-TOP: 0px; HEIGHT: 30px
+}
+.listxian {
+	CLEAR: both; FONT-SIZE: 1px; BACKGROUND: url(neirong02_201004.gif) no-repeat 50% top; OVERFLOW: hidden; LINE-HEIGHT: 1px; HEIGHT: 1px
+}
+.maincon {
+	MARGIN-TOP: 8px; OVERFLOW: hidden; WIDTH: 960px; ZOOM: 1
+}
+.conbackground {
+	BACKGROUND: url(nr_contentxian.jpg) #fff repeat-y
+}
+.listbackground {
+	BACKGROUND: url(list_bj.gif) repeat-y
+}
+
+.maincon .left {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 20px; WIDTH: 610px; PADDING-TOP: 20px
+}
+.maincon .listleft {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 10px; WIDTH: 630px; PADDING-TOP: 10px
+}
+.maincon .leftad2 {
+	WIDTH: 610px; FLOAT: center; TEXT-ALIGN: center
+}
+.maincon .right {
+	FLOAT: right; WIDTH: 300px
+}
+.maincon .right .r_kuai01 {
+	BACKGROUND: #fff; PADDING-TOP: 8px
+}
+.maincon .right .r_kuai02 {
+	BORDER-RIGHT: #cfdfeb 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cfdfeb 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cfdfeb 1px solid; PADDING-TOP: 8px; BORDER-BOTTOM: #cfdfeb 1px solid
+}
+.maincon .right .r_kuai02 .r_02_01 {
+	BACKGROUND: url(dianxian.gif) repeat-x left center
+}
+.maincon .right .r_kuai02 .r_02_01 .b1 {
+	FONT-SIZE: 14px; BACKGROUND: #fff
+}
+.maincon .right .r_kuai02 .r_02_01 .b2 {
+	FONT-WEIGHT: 100; BACKGROUND: #fff; FLOAT: right
+}
+.maincon .right .r_kuai02 .r_02_02 {
+	CLEAR: both; PADDING-TOP: 5px
+}
+.maincon .right .r_kuai02 .r_02_02 .b1 {
+	BACKGROUND: #fff; FLOAT: left; WIDTH: 100px
+}
+.maincon .right .r_kuai02 .r_02_02 .b2 {
+	BACKGROUND: #fff; FLOAT: right; WIDTH: 165px; LINE-HEIGHT: 20px
+}
+.maincon .right .r_kuai02 .r_02_03 {
+	CLEAR: both; PADDING-TOP: 3px
+}
+.maincon .right .r_kuai02 .r_02_03 .b1 {
+	BACKGROUND: #fff; FLOAT: left; WIDTH: 100px
+}
+.maincon .right .r_kuai02 .r_02_03 .b2 {
+	BACKGROUND: #fff; FLOAT: right; WIDTH: 170px; TEXT-ALIGN: center
+}
+.maincon .right .r_kuai03 {
+	BORDER-RIGHT: #cfdfeb 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cfdfeb 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 8px; BORDER-LEFT: #cfdfeb 1px solid; PADDING-TOP: 8px; BORDER-BOTTOM: #cfdfeb 1px solid
+}
+.maincon .right .r_kuai03 .r_03_text {
+	BACKGROUND: url(dianxian.gif) repeat-x left center
+}
+.maincon .right .r_kuai03 .r_03_text .b1 {
+	FONT-SIZE: 14px; BACKGROUND: #fff
+}
+.maincon .right .r_kuai03 .r_03_text .b2 {
+	FONT-WEIGHT: 100; BACKGROUND: #fff; FLOAT: right
+}
+.maincon .right .r_kuai03 .r_03_con {
+	
+}
+.maincon .right .r_kuai04 {
+	BACKGROUND: #fff; PADDING-TOP: 5px
+}
+.maincon .right .r_kuai05 {
+	BORDER-RIGHT: #cfdfeb 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #cfdfeb 1px solid; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cfdfeb 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cfdfeb 1px solid
+}
+.maincon .right .r_kuai06 {
+	BORDER-RIGHT: #cfdfeb 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cfdfeb 1px; PADDING-LEFT: 10px; PADDING-BOTTOM: 8px; BORDER-LEFT: #cfdfeb 1px solid; PADDING-TOP: 8px; BORDER-BOTTOM: #cfdfeb 1px solid
+}
+.maincon .right .nr_tab01 {
+	CLEAR: both; BORDER-RIGHT: #d8dfe9 1px solid; BORDER-TOP: #d8dfe9 1px solid; BORDER-LEFT: #d8dfe9 1px solid; BORDER-BOTTOM: #d8dfe9 1px solid
+}
+.maincon .right .nr_tab01 .Menubox {
+	FONT-SIZE: 14px; BACKGROUND: url(nr_tab01.jpg) repeat-x; LINE-HEIGHT: 28px; HEIGHT: 28px
+}
+.maincon .right .nr_tab01 .Menubox LI {
+	BORDER-RIGHT: #d8dfe9 1px solid; FLOAT: left; WIDTH: 99px; CURSOR: pointer; COLOR: #003399; LINE-HEIGHT: 28px; LIST-STYLE-TYPE: none; HEIGHT: 28px; TEXT-ALIGN: center
+}
+.maincon .right .nr_tab01 .Menubox A:link {
+	COLOR: #003399
+}
+.maincon .right .nr_tab01 .Menubox A:visited {
+	COLOR: #003399
+}
+.maincon .right .nr_tab01 .Menubox A:hover {
+	COLOR: #c00
+}
+.maincon .right .nr_tab01 .Menubox A:active {
+	COLOR: #c00
+}
+.maincon .right .nr_tab01 .Menubox LI.hover {
+	FONT-WEIGHT: bold; BACKGROUND: url(nr_tab02.jpg) repeat-x; WIDTH: 98px; COLOR: #1c2c58; LINE-HEIGHT: 28px; HEIGHT: 28px
+}
+.maincon .right .nr_tab01 .Contentbox {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.maincon .right .nr_tab01 .Contentbox .b1 {
+	BACKGROUND: url(shuzi2.gif) no-repeat center 3px; FLOAT: left; WIDTH: 36px; HEIGHT: 216px
+}
+.maincon .right .nr_tab02 {
+	CLEAR: both; BORDER-RIGHT: #d8dfe9 1px solid; BORDER-TOP: #d8dfe9 1px solid; BORDER-LEFT: #d8dfe9 1px solid; BORDER-BOTTOM: #d8dfe9 1px solid
+}
+.maincon .right .nr_tab02 .Menubox {
+	BACKGROUND: url(nr_tabbj.gif) no-repeat; LINE-HEIGHT: 28px; HEIGHT: 30px
+}
+.maincon .right .nr_tab02 .Menubox LI {
+	BACKGROUND: url(nr_tabbj3.gif) no-repeat right top; FLOAT: left; WIDTH: 76px; CURSOR: pointer; COLOR: #039; LINE-HEIGHT: 28px; LIST-STYLE-TYPE: none; HEIGHT: 30px; TEXT-ALIGN: center
+}
+.maincon .right .nr_tab02 .Menubox LI.diyi {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 90px
+}
+.maincon .right .nr_tab02 .Menubox A:link {
+	COLOR: #039
+}
+.maincon .right .nr_tab02 .Menubox A:visited {
+	COLOR: #039
+}
+.maincon .right .nr_tab02 .Menubox A:hover {
+	COLOR: #c00
+}
+.maincon .right .nr_tab02 .Menubox A:active {
+	COLOR: #c00
+}
+.maincon .right .nr_tab02 .Menubox LI.hover {
+	BACKGROUND: url(nr_tabbj2.gif) no-repeat center top; WIDTH: 76px; COLOR: #c00; LINE-HEIGHT: 28px; HEIGHT: 30px
+}
+.maincon .right .nr_tab02 .Contentbox {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.maincon .right .nr_tab02 .Contentbox .b1 {
+	BACKGROUND: url(nrshuzi.gif) no-repeat 4px 0px; FLOAT: left; WIDTH: 30px; HEIGHT: 216px
+}
+.maincon .right .clear5px {
+	CLEAR: both; FONT-SIZE: 1px; BACKGROUND: #ffffff; LINE-HEIGHT: 1px; HEIGHT: 5px
+}
+.maincon .maincon_top {
+	CLEAR: both; FONT-SIZE: 1px; BACKGROUND: url(nr_topxian.jpg) no-repeat 50% top; LINE-HEIGHT: 1px; HEIGHT: 2px
+}
+.maincon .maincon_bottom {
+	CLEAR: both; FONT-SIZE: 1px; BACKGROUND: url(nr_botomxian.jpg) no-repeat; LINE-HEIGHT: 1px; HEIGHT: 2px
+}
+.maincon .right .nr_lanmu {
+	BORDER-RIGHT: #cfdfeb 1px solid; BORDER-TOP: #cfdfeb 1px solid; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(nr_tabbj.gif) no-repeat; BORDER-LEFT: #cfdfeb 1px solid; LINE-HEIGHT: 27px; BORDER-BOTTOM: #cfdfeb 1px; HEIGHT: 27px
+}
+.nr_lmdh {
+	CLEAR: both; BACKGROUND: #eef4f9
+}
+.nr_lmdh .Menubox {
+	FONT-SIZE: 14px; OVERFLOW: hidden; LINE-HEIGHT: 30px; PADDING-TOP: 5px; HEIGHT: 30px
+}
+.nr_lmdh .Menubox LI {
+	BORDER-RIGHT: #d8dfe9 1px solid; BORDER-TOP: #d8dfe9 1px solid; BACKGROUND: #fff; FLOAT: left; BORDER-LEFT: #d8dfe9 1px solid; WIDTH: 69px; CURSOR: pointer; COLOR: #047; LINE-HEIGHT: 28px; MARGIN-RIGHT: 5px; BORDER-BOTTOM: #d8dfe9 1px solid; LIST-STYLE-TYPE: none; POSITION: relative; HEIGHT: 28px; TEXT-ALIGN: center
+}
+.nr_lmdh .Menubox A:link {
+	COLOR: #047
+}
+.nr_lmdh .Menubox A:visited {
+	COLOR: #047
+}
+.nr_lmdh .Menubox A:hover {
+	COLOR: #c00
+}
+.nr_lmdh .Menubox A:active {
+	COLOR: #c00
+}
+.nr_lmdh .Menubox LI.hover {
+	FONT-WEIGHT: bold; WIDTH: 70px; COLOR: #1c2c58; HEIGHT: 33px; BORDER-BOTTOM-STYLE: none
+}
+.nr_lmdh .Contentbox {
+	CLEAR: both
+}
+.nr_lmdh .Contentbox .conLM {
+	BORDER-RIGHT: #d8dfe9 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #d8dfe9 1px solid; MARGIN-TOP: -1px! important; PADDING-LEFT: 8px; BACKGROUND: #fff; PADDING-BOTTOM: 5px; BORDER-LEFT: #d8dfe9 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #d8dfe9 1px solid
+}
+.commonNav {
+	CLEAR: both; BORDER-RIGHT: #d3dbe6 1px solid; BORDER-TOP: #d3dbe6 1px solid; MARGIN-TOP: 10px; BORDER-LEFT: #d3dbe6 1px solid; BORDER-BOTTOM: #d3dbe6 1px solid
+}
+.commonNav .Menubox {
+	FONT-SIZE: 14px; BACKGROUND: #fff; OVERFLOW: hidden; LINE-HEIGHT: 30px; BORDER-BOTTOM: #d3dbe6 1px solid; HEIGHT: 30px
+}
+.commonNav .Menubox LI {
+	BORDER-RIGHT: #d3dbe6 1px solid; BORDER-TOP: #fff 1px solid; FLOAT: left; BORDER-LEFT: #fff 1px solid; WIDTH: 73px; CURSOR: pointer; COLOR: #047; LINE-HEIGHT: 28px; BORDER-BOTTOM: #fff 1px solid; LIST-STYLE-TYPE: none; HEIGHT: 28px; TEXT-ALIGN: center
+}
+.commonNav .Menubox A:link {
+	COLOR: #047
+}
+.commonNav .Menubox A:visited {
+	COLOR: #047
+}
+.commonNav .Menubox A:hover {
+	COLOR: #c00
+}
+.commonNav .Menubox A:active {
+	COLOR: #c00
+}
+.commonNav .Menubox LI.hover {
+	BORDER-RIGHT: #ced8e6 1px solid; BORDER-TOP: #ced8e6 1px solid; FONT-WEIGHT: bold; BACKGROUND: url(nr_sanjiao.gif) #ced8e6 no-repeat 50% bottom; BORDER-LEFT: #ced8e6 1px solid; WIDTH: 73px; COLOR: #1c2c58; BORDER-BOTTOM: #ced8e6 1px; POSITION: relative; HEIGHT: 30px
+}
+.commonNav .Menubox LI.tiaob {
+	FONT-WEIGHT: bold; WIDTH: 85px; COLOR: #333
+}
+.commonNav .Contentbox {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+.nrluntan {
+	BORDER-RIGHT: #d8dfe9 1px solid; BORDER-TOP: #d8dfe9 1px solid; BACKGROUND: #fff; BORDER-LEFT: #d8dfe9 1px solid; BORDER-BOTTOM: #d8dfe9 1px solid
+}
+.nrluntan .lttext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(nr_tab01.jpg) repeat-x; LINE-HEIGHT: 28px; HEIGHT: 28px
+}
+.nrluntan .ltzw {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px
+}
+.showpage {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 3px 3px 15px; PADDING-TOP: 3px; FONT-FAMILY: Î¢ÈíÑÅºÚ; TEXT-ALIGN: center
+}
+.showpage A:link {
+	BORDER-RIGHT: #ccdbe4 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #ccdbe4 1px solid; PADDING-LEFT: 6px; BACKGROUND: #fff; PADDING-BOTTOM: 1px; BORDER-LEFT: #ccdbe4 1px solid; COLOR: #0061de; MARGIN-RIGHT: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #ccdbe4 1px solid; TEXT-DECORATION: none
+}
+.showpage A:visited {
+	BORDER-RIGHT: #ccdbe4 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #ccdbe4 1px solid; PADDING-LEFT: 6px; BACKGROUND: #fff; PADDING-BOTTOM: 1px; BORDER-LEFT: #ccdbe4 1px solid; COLOR: #0061de; MARGIN-RIGHT: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #ccdbe4 1px solid; TEXT-DECORATION: none
+}
+.showpage A:hover {
+	BORDER-RIGHT: #2b55af 1px solid; BORDER-TOP: #2b55af 1px solid; BACKGROUND: #3666d4; BORDER-LEFT: #2b55af 1px solid; COLOR: #fff; BORDER-BOTTOM: #2b55af 1px solid
+}
+.showpage A:active {
+	BORDER-RIGHT: #2b55af 1px solid; BORDER-TOP: #2b55af 1px solid; BACKGROUND: #3666d4; BORDER-LEFT: #2b55af 1px solid; COLOR: #fff; BORDER-BOTTOM: #2b55af 1px solid
+}
+.showpage SPAN.current {
+	BORDER-RIGHT: #3666d4 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #3666d4 1px solid; PADDING-LEFT: 6px; FONT-WEIGHT: bold; BACKGROUND: #3666d4; PADDING-BOTTOM: 1px; BORDER-LEFT: #3666d4 1px solid; COLOR: #fff; MARGIN-RIGHT: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #3666d4 1px solid
+}
+.showpage SPAN.disabled {
+	DISPLAY: none
+}
+.mainkuai04 {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; BACKGROUND: url(in_26.gif) #e2ecfe repeat-x; PADDING-BOTTOM: 10px; PADDING-TOP: 6px
+}
+.mainkuai04 .searchto {
+	PADDING-RIGHT: 10px; FLOAT: right; WIDTH: 260px; TEXT-ALIGN: right
+}
+.mainkuai04 .title {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FONT-SIZE: 14px; BACKGROUND: url(in_28.gif) no-repeat left bottom; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN-LEFT: 10px; LINE-HEIGHT: 25px; PADDING-TOP: 2px; POSITION: relative; HEIGHT: 25px; TEXT-ALIGN: center
+}
+.mainkuai04 .title .b {
+	DISPLAY: block; RIGHT: 0px; BACKGROUND: url(in_28.gif) no-repeat right bottom; WIDTH: 3px; PADDING-TOP: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 25px
+}
+.mainkuai04 .content {
+	PADDING-RIGHT: 00px; PADDING-LEFT: 00px; FONT-SIZE: 12px; BACKGROUND: #fff; PADDING-BOTTOM: 5px; MARGIN: 10px 10px 0px; LINE-HEIGHT: 25px; PADDING-TOP: 5px
+}
+.mainkuai04 .cb {
+	PADDING-RIGHT: 500px; DISPLAY: block; FONT-SIZE: 14px; FLOAT: right
+}
+.mainkuai04 .dsrx {
+	FONT-SIZE: 14px; FLOAT: left; MARGIN-LEFT: 50px
+}
+.mainkuai04 .dsdhmoer {
+	PADDING-RIGHT: 20px; FLOAT: right
+}
+.mainkuai04 .searchto .input01 {
+	BORDER-RIGHT: #2d7ab5 1px; PADDING-RIGHT: 0px; BORDER-TOP: #2d7ab5 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; BORDER-LEFT: #2d7ab5 1px solid; WIDTH: 190px; PADDING-TOP: 2px; BORDER-BOTTOM: #2d7ab5 1px solid; HEIGHT: 14px
+}
+.mainkuai04 .searchto .input02 {
+	FONT-SIZE: 12px; BACKGROUND: url(input_01.gif) no-repeat; WIDTH: 66px; CURSOR: pointer; COLOR: #fff; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 18px; BORDER-BOTTOM-STYLE: none
+}
+.mainkuai01 .left04 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; FONT-SIZE: 14px; BACKGROUND: url(rexian_03.gif) no-repeat 5px center; PADDING-BOTTOM: 3px; MARGIN: auto; WIDTH: 200px; LINE-HEIGHT: 18px; PADDING-TOP: 3px; BORDER-BOTTOM: #3fcee5 1px solid; FONT-FAMILY: Arial; HEIGHT: 38px; TEXT-ALIGN: right
+}
+.mainkuai01 .left05 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 50px; FONT-SIZE: 14px; BACKGROUND: url(rexian_10.gif) no-repeat 8px center; PADDING-BOTTOM: 3px; MARGIN: auto; WIDTH: 160px; PADDING-TOP: 3px; BORDER-BOTTOM: #3fcee5 1px solid; FONT-FAMILY: Arial; HEIGHT: 40px
+}
+.mainkuai01 .left06 {
+	FONT-SIZE: 14px; BACKGROUND: url(rexian_15.gif) no-repeat left center; MARGIN: auto; WIDTH: 206px; LINE-HEIGHT: 40px; FONT-FAMILY: Arial; HEIGHT: 40px; TEXT-ALIGN: right
+}
+.gedisou {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; MARGIN-TOP: 5px; PADDING-LEFT: 10px; BACKGROUND: url(shouniu.gif) #f8f8f8 no-repeat 10px center; BORDER-LEFT: #ccc 1px solid; LINE-HEIGHT: 28px; BORDER-BOTTOM: #ccc 1px solid; HEIGHT: 28px
+}
+.gedisou .left {
+	PADDING-LEFT: 8px; FLOAT: left; WIDTH: 544px; POSITION: relative
+}
+.gedisou .left .b1 {
+	FONT-WEIGHT: bold; MARGIN-RIGHT: 20px
+}
+.gedisou .left .b1 A:link {
+	COLOR: #049
+}
+.gedisou .left .b1 A:visited {
+	COLOR: #049
+}
+.gedisou .left .b1 A:hover {
+	COLOR: #c00
+}
+.gedisou .left .b1 A:active {
+	COLOR: #c00
+}
+.gedisou .right {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 28px; FONT-WEIGHT: bold; BACKGROUND: url(fangdajing.gif) no-repeat 0px 2px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 330px; PADDING-TOP: 0px
+}
+* HTML .gedisou .right {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 28px; FONT-WEIGHT: bold; BACKGROUND: url(fangdajing.gif) no-repeat 0px 2px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 330px; PADDING-TOP: 4px
+}
+* + HTML .gedisou .right {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 28px; FONT-WEIGHT: bold; BACKGROUND: url(fangdajing.gif) no-repeat 0px 2px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 330px; LINE-HEIGHT: 22px; PADDING-TOP: 3px
+}
+.gedimore {
+	DISPLAY: none; Z-INDEX: 10; LEFT: 280px; POSITION: absolute; TOP: -1px
+}
+.gedisou .ssput01 {
+	BORDER-RIGHT: #2d7ab5 1px; PADDING-RIGHT: 0px; BORDER-TOP: #2d7ab5 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; BORDER-LEFT: #2d7ab5 1px solid; WIDTH: 190px; PADDING-TOP: 2px; BORDER-BOTTOM: #2d7ab5 1px solid; HEIGHT: 14px
+}
+.gedisou .ssput02 {
+	FONT-SIZE: 12px; BACKGROUND: url(input_01.gif) no-repeat; WIDTH: 66px; CURSOR: pointer; COLOR: #fff; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 18px; BORDER-BOTTOM-STYLE: none
+}
+.links {
+	CLEAR: both; PADDING-RIGHT: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; BACKGROUND: url(youqingxian.gif) repeat-x; PADDING-BOTTOM: 5px; COLOR: #1f376d; PADDING-TOP: 5px
+}
+.links A:link {
+	COLOR: #1f376d
+}
+.links A:visited {
+	COLOR: #1f376d
+}
+.links A:hover {
+	COLOR: #c00
+}
+.links A:active {
+	COLOR: #c00
+}
+.links .huoban {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(huobanxian.gif) repeat-x 50% bottom; PADDING-BOTTOM: 5px; LINE-HEIGHT: 22px; PADDING-TOP: 5px; HEIGHT: 22px
+}
+.links .huoban UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.links .youqing UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.links .huoban LI {
+	FLOAT: left; WIDTH: 96px; TEXT-ALIGN: center
+}
+.links .youqing LI {
+	FLOAT: left; WIDTH: 96px; TEXT-ALIGN: center
+}
+.links .huoban LI.title {
+	FONT-WEIGHT: bold
+}
+.links .youqing LI.title {
+	FONT-WEIGHT: bold
+}
+.links .youqing {
+	CLEAR: both; LINE-HEIGHT: 30px; PADDING-TOP: 8px
+}
+.alltopicsbox {
+	FONT-SIZE: 18px; BACKGROUND: url(http://www.exam8.com/images/gongyong200910/allhottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.topicsbox {
+	BACKGROUND: url(http://www.exam8.com/images/gongyong200910/hottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.gwytopicsbox {
+	BACKGROUND: url(http://www.exam8.com/images/gongyong200910/gwyhottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.bgytopicsbox {
+	BACKGROUND: url(http://www.exam8.com/images/gongyong200910/bgyhottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.dktopicsbox {
+	BACKGROUND: url(http://www.exam8.com/images/gongyong200910/dkhottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.zcyytopicsbox {
+	BACKGROUND: url(http://www.exam8.com/images/gongyong200910/zcyyhottopicsbg.gif) no-repeat; MARGIN: 10px auto; WIDTH: 500px
+}
+.topicsbar {
+	PADDING-LEFT: 85px; FONT-SIZE: 18px; COLOR: #fff; LINE-HEIGHT: 33px; FONT-FAMILY: ºÚÌå,Arial; HEIGHT: 33px
+}
+.topicsbar SPAN {
+	PADDING-RIGHT: 5px; FONT-SIZE: 12px; FLOAT: right; COLOR: #fff; FONT-FAMILY: ËÎÌå
+}
+.topicsbar SPAN A:link {
+	COLOR: #fff
+}
+.topicsbar SPAN A:visited {
+	COLOR: #fff
+}
+.topicsbar SPAN A:hover {
+	COLOR: #ff0
+}
+.topicsbar SPAN A:active {
+	COLOR: #ff0
+}
+.topiccon {
+	BORDER-RIGHT: #d89b19 1px solid; PADDING-RIGHT: 35px; BORDER-TOP: #d89b19 1px solid; PADDING-LEFT: 35px; BACKGROUND: #fffdf4; PADDING-BOTTOM: 5px; BORDER-LEFT: #d89b19 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #d89b19 1px solid
+}
+.topics {
+	FONT-SIZE: 14px; COLOR: #c00; LINE-HEIGHT: 35px; BORDER-BOTTOM: #ccc 1px dotted; POSITION: relative; HEIGHT: 35px; TEXT-ALIGN: center
+}
+.topics A:link {
+	COLOR: #c00
+}
+.topics A:visited {
+	COLOR: #c00
+}
+.topics A:hover {
+	COLOR: #f30
+}
+.topics A:active {
+	COLOR: #f30
+}
+.topics .biaoqiant {
+	MARGIN-TOP: 5px; FONT-WEIGHT: 100; FONT-SIZE: 12px; BACKGROUND: url(http://www.exam8.com/images/gongyong200910/topicarrow.gif); LEFT: 0px; WIDTH: 55px; COLOR: #fff; LINE-HEIGHT: 18px; POSITION: absolute; TOP: 5px; HEIGHT: 18px
+}
+.stopics {
+	FONT-WEIGHT: 100; FONT-SIZE: 12px; PADDING-TOP: 8px; TEXT-ALIGN: center
+}
+.maincon .diquLeft {
+	BORDER-RIGHT: #dfdfdf 1px solid; BORDER-TOP: #dfdfdf 1px solid; FLOAT: left; BORDER-LEFT: #dfdfdf 1px solid; WIDTH: 958px; BORDER-BOTTOM: #dfdfdf 1px
+}
+.maincon .diquLeft .diquText {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; BACKGROUND: url(gedi_textbj.gif) repeat-x; LINE-HEIGHT: 48px; BORDER-BOTTOM: #dfdfdf 1px solid; HEIGHT: 48px
+}
+.diqutextbg1 {
+	PADDING-RIGHT: 50px; PADDING-LEFT: 10px; BACKGROUND: url(diqutext-bg1.jpg) repeat-x; HEIGHT: 48px
+}
+.diqutextbg {
+	BACKGROUND: url(diqutext-bg.jpg) no-repeat; WIDTH: 28px; HEIGHT: 48px
+}
+.diquhot {
+	PADDING-LEFT: 10px; FONT-WEIGHT: 100; FONT-SIZE: 12px; BACKGROUND: url(diqutext-hot-bg.jpg) no-repeat 0px 16px; WIDTH: 67px; COLOR: #fff; PADDING-TOP: 2px; HEIGHT: 17px
+}
+.font14 {
+	PADDING-LEFT: 10px; FONT-SIZE: 14px; COLOR: #c00
+}
+.font14 A:link {
+	COLOR: #c00
+}
+.font14 A:visited {
+	COLOR: #c00
+}
+.font14 A:hover {
+	COLOR: #f00
+}
+.maincon .diquLeft .diquUl {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #f4f4f4; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BORDER-BOTTOM: #dfdfdf 1px solid
+}
+.maincon .diquLeft .diquUl UL LI {
+	PADDING-LEFT: 10px; BACKGROUND: url(gedi_sanjiao.gif) no-repeat left center; FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 38px; LIST-STYLE-TYPE: none; HEIGHT: 22px
+}
+.maincon .diquLeft .diquKuai1 {
+	BORDER-RIGHT: #dfdfdf 1px solid; FLOAT: left; WIDTH: 478px; BORDER-BOTTOM: #dfdfdf 1px solid
+}
+.maincon .diquLeft .diquKuai2 {
+	FLOAT: right; WIDTH: 479px; BORDER-BOTTOM: #dfdfdf 1px solid
+}
+.maincon .diquLeft .diquKtext {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(gedi_text_bj.gif) repeat-x; PADDING-BOTTOM: 0px; COLOR: #c00; LINE-HEIGHT: 30px; PADDING-TOP: 0px; BORDER-BOTTOM: #dfdfdf 1px solid; HEIGHT: 30px
+}
+.maincon .diquLeft .diquKtext A:link {
+	COLOR: #c00
+}
+.maincon .diquLeft .diquKtext A:visited {
+	COLOR: #c00
+}
+.maincon .diquLeft .diquKtext A:hover {
+	COLOR: #f00
+}
+.maincon .diquLeft .diquKtext A:active {
+	COLOR: #f00
+}
+.maincon .diquLeft .diquKtext SPAN {
+	FONT-WEIGHT: 100; FONT-SIZE: 12px; FLOAT: right
+}
+.maincon .diquLeft .diquKtext SPAN A:link {
+	COLOR: #333
+}
+.maincon .diquLeft .diquKtext SPAN A:visited {
+	COLOR: #333
+}
+.maincon .diquLeft .diquKtext SPAN A:hover {
+	COLOR: #f30
+}
+.maincon .diquLeft .diquKtext SPAN A:active {
+	COLOR: #f30
+}
+.maincon .diquLeft .diquKcon {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FONT-SIZE: 14px; PADDING-BOTTOM: 8px; LINE-HEIGHT: 28px; PADDING-TOP: 8px; HEIGHT: 285px
+}
+.maincon .Newsdq {
+	LINE-HEIGHT: 20px; HEIGHT: 30px
+}
+#picBox_top {
+	MARGIN: 0px auto; OVERFLOW: hidden; WIDTH: 450px; POSITION: relative; HEIGHT: 80px
+}
+#picBox_top UL#show_pic_top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 450px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; POSITION: absolute; HEIGHT: 80px
+}
+#picBox_top UL#show_pic_top LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 80px
+}
+#picBox_top UL#show_pic_top LI IMG {
+	DISPLAY: block; WIDTH: 450px; HEIGHT: 80px
+}
+#icon_num_top {
+	RIGHT: 0px; BOTTOM: 5px; POSITION: absolute
+}
+#icon_num_top LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: #999; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 5px 0px 0px; WIDTH: 18px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 18px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none; HEIGHT: 18px; TEXT-ALIGN: center
+}
+#icon_num_top LI:hover {
+	FONT-WEIGHT: bold; BACKGROUND: #f30
+}
+#icon_num_top LI.active {
+	FONT-WEIGHT: bold; BACKGROUND: #f30
+}
+.lanmnav TD DIV {
+	PADDING-LEFT: 8px; LINE-HEIGHT: 23px; MARGIN-RIGHT: 5px
+}
+.lanmnav TD DIV SPAN {
+	DISPLAY: block; PADDING-LEFT: 12px; BACKGROUND: url(nav_btm.gif) no-repeat; WIDTH: 98%; TEXT-ALIGN: left
+}
+.lanmnav TD DIV LABEL {
+	DISPLAY: block; PADDING-LEFT: 5px
+}
+.lanmnavxuxian {
+	BORDER-RIGHT: #ccc 1px dashed; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; WIDTH: 10px; PADDING-TOP: 0px; HEIGHT: 100%
+}
+A.daohangre {
+	PADDING-RIGHT: 15px; BACKGROUND: url(hoth.gif) no-repeat right 1px
+}
+.commonlink {
+	CLEAR: both; MARGIN-TOP: 10px
+}
+.commonlink .Menubox {
+	BACKGROUND: url(linknav.gif) #fff repeat-x; OVERFLOW: hidden; LINE-HEIGHT: 33px; HEIGHT: 33px
+}
+.commonlink .Menubox UL {
+	PADDING-TOP: 6px
+}
+.commonlink .Menubox LI {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN-LEFT: 10px; CURSOR: pointer; COLOR: #047; LINE-HEIGHT: 27px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; POSITION: relative; HEIGHT: 27px; TEXT-ALIGN: center
+}
+.commonlink .Menubox LI B {
+	DISPLAY: block; RIGHT: 0px; WIDTH: 2px; POSITION: absolute; TOP: 0px
+}
+.commonlink .Menubox A:link {
+	COLOR: #047
+}
+.commonlink .Menubox A:visited {
+	COLOR: #047
+}
+.commonlink .Menubox A:hover {
+	COLOR: #c00
+}
+.commonlink .Menubox A:active {
+	COLOR: #c00
+}
+.commonlink .Menubox LI.hover {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FONT-WEIGHT: bold; BACKGROUND: url(linktab.gif) no-repeat left bottom; PADDING-BOTTOM: 0px; COLOR: #1c2c58; LINE-HEIGHT: 27px; PADDING-TOP: 0px; HEIGHT: 27px
+}
+.commonlink .Menubox LI.hover B {
+	DISPLAY: block; RIGHT: 0px; BACKGROUND: url(linktab.gif) no-repeat right bottom; WIDTH: 2px; LINE-HEIGHT: 27px; POSITION: absolute; TOP: 0px; HEIGHT: 27px
+}
+.commonlink .Menubox LI.tiaob {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; COLOR: #333; LINE-HEIGHT: 23px; PADDING-TOP: 0px; HEIGHT: 27px
+}
+.commonlink .Contentbox {
+	BORDER-RIGHT: #e2ecfe 10px solid; PADDING-RIGHT: 10px; BORDER-TOP: #e2ecfe 10px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 5px; BORDER-LEFT: #e2ecfe 10px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #e2ecfe 10px solid
+}
+.sijia {
+	MARGIN-TOP: 10px
+}
+.sijia #parent_sijia {
+	FONT-SIZE: 14px; HEIGHT: 30px
+}
+.sijia #parent_sijia UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.sijia #parent_sijia LI {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN-LEFT: 5px; CURSOR: pointer; LINE-HEIGHT: 30px; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 30px; TEXT-ALIGN: center
+}
+.sijia #parent_sijia LI.hover1 A:link {
+	COLOR: #fff
+}
+#parent_sijia LI.hover1 A:visited {
+	COLOR: #fff
+}
+.sijia #parent_sijia LI.hover1 A:hover {
+	COLOR: #fff
+}
+#parent_sijia LI.hover1 A:active {
+	COLOR: #fff
+}
+.sijia #parent_sijia LI.sjkc1 {
+	BACKGROUND: url(hong2001.gif) no-repeat
+}
+.sijia #parent_sijia LI.sjkc1 .b01 {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(hong2001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia #parent_sijia LI.sjkc2 {
+	BACKGROUND: url(lv2001.gif) no-repeat
+}
+.sijia #parent_sijia LI.sjkc2 .b02 {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(lv2001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia #parent_sijia LI.sjkc3 {
+	BACKGROUND: url(qing2001.gif) no-repeat
+}
+.sijia #parent_sijia LI.sjkc3 .b03 {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(qing2001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia #parent_sijia LI.sjkc4 {
+	BACKGROUND: url(lan2001.gif) no-repeat
+}
+.sijia #parent_sijia LI.sjkc4 .b04 {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(lan2001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia #parent_sijia LI.sjkc5 {
+	BACKGROUND: url(fen2001.gif) no-repeat
+}
+.sijia #parent_sijia LI.sjkc5 .b05 {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(fen2001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Menubox1 {
+	BACKGROUND: url(hong1003.gif) repeat-x
+}
+.sijia .Menubox1 LI.hover1 {
+	FONT-WEIGHT: bold; BACKGROUND: url(hong1001.gif) no-repeat; COLOR: #fff
+}
+.sijia .Menubox1 LI.hover1 .b00 {
+	Z-INDEX: 2; BACKGROUND: url(hong1002.gif) no-repeat; LEFT: 45%; WIDTH: 12px; POSITION: absolute; TOP: 29px; HEIGHT: 7px
+}
+.sijia .Menubox1 LI.hover1 SPAN {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(hong1001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Menubox2 {
+	BACKGROUND: url(lv1003.gif) repeat-x
+}
+.sijia .Menubox2 LI.hover2 {
+	FONT-WEIGHT: bold; BACKGROUND: url(lv1001.gif) no-repeat; COLOR: #fff
+}
+.sijia .Menubox2 LI.hover2 .b00 {
+	Z-INDEX: 2; BACKGROUND: url(lv1002.gif) no-repeat; LEFT: 45%; WIDTH: 12px; POSITION: absolute; TOP: 29px; HEIGHT: 7px
+}
+.sijia .Menubox2 LI.hover2 SPAN {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(lv1001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Menubox3 {
+	BACKGROUND: url(qing1003.gif) repeat-x
+}
+.sijia .Menubox3 LI.hover3 {
+	FONT-WEIGHT: bold; BACKGROUND: url(qing1001.gif) no-repeat; COLOR: #fff
+}
+.sijia .Menubox3 LI.hover3 .b00 {
+	Z-INDEX: 2; BACKGROUND: url(qing1002.gif) no-repeat; LEFT: 45%; WIDTH: 12px; POSITION: absolute; TOP: 29px; HEIGHT: 7px
+}
+.sijia .Menubox3 LI.hover3 SPAN {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(qing1001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Menubox4 {
+	BACKGROUND: url(lan1003.gif) repeat-x
+}
+.sijia .Menubox4 LI.hover4 {
+	FONT-WEIGHT: bold; BACKGROUND: url(lan1001.gif) no-repeat; COLOR: #fff
+}
+.sijia .Menubox4 LI.hover4 .b00 {
+	Z-INDEX: 2; BACKGROUND: url(lan1002.gif) no-repeat; LEFT: 45%; WIDTH: 12px; POSITION: absolute; TOP: 29px; HEIGHT: 7px
+}
+.sijia .Menubox4 LI.hover4 SPAN {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(lan1001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Menubox5 {
+	BACKGROUND: url(fen1003.gif) repeat-x
+}
+.sijia .Menubox5 LI.hover5 {
+	FONT-WEIGHT: bold; BACKGROUND: url(fen1001.gif) no-repeat; COLOR: #fff
+}
+.sijia .Menubox5 LI.hover5 .b00 {
+	Z-INDEX: 2; BACKGROUND: url(fen1002.gif) no-repeat; LEFT: 45%; WIDTH: 12px; POSITION: absolute; TOP: 29px; HEIGHT: 7px
+}
+.sijia .Menubox5 LI.hover5 SPAN {
+	DISPLAY: block; Z-INDEX: 1; RIGHT: 0px; BACKGROUND: url(fen1001.gif) no-repeat right top; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 30px
+}
+.sijia .Contentbox {
+	CLEAR: both; OVERFLOW: hidden; PADDING-TOP: 10px; HEIGHT: 613px
+}
+.sijia .Contentbox .left {
+	FLOAT: left; WIDTH: 220px
+}
+.sijia .Contentbox .left .mswxbottom {
+	CLEAR: both; BORDER-RIGHT: #f90 1px solid; BORDER-TOP: #f90 1px solid; MARGIN-TOP: 10px; BORDER-LEFT: #f90 1px solid; WIDTH: 218px; BORDER-BOTTOM: #f90 1px solid
+}
+.sijia .Contentbox .left .msph {
+	BACKGROUND: url(dianxian.gif) repeat-x 50% bottom; PADDING-TOP: 8px; HEIGHT: 44px
+}
+.sijia .Contentbox .left .msph .msb1 IMG {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #ccc 1px solid
+}
+.sijia .Contentbox .left .msphcon {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; WIDTH: 206px; PADDING-TOP: 5px
+}
+.sijia .Contentbox .left .mstu {
+	MARGIN-TOP: 10px
+}
+.sijia .Contentbox .left02 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; WIDTH: 206px; PADDING-TOP: 6px
+}
+.sijia .Contentbox .left02 .mingshi {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; OVERFLOW: hidden; WIDTH: 206px; PADDING-TOP: 11px; BORDER-BOTTOM: #c0c0c0 1px dotted; HEIGHT: 88px
+}
+.sijia .Contentbox .left02 .mingshi01 {
+	FLOAT: left; WIDTH: 65px
+}
+.sijia .Contentbox .left02 .mingshi02 {
+	FLOAT: right; WIDTH: 130px; LINE-HEIGHT: 21px
+}
+.sijia .Contentbox .left02 .b1 {
+	FONT-WEIGHT: bold; BACKGROUND: url(mignzibj.gif) repeat-x; LINE-HEIGHT: 20px; HEIGHT: 20px; TEXT-ALIGN: center
+}
+.sijia .Contentbox .left02 .zhifu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; PADDING-TOP: 8px; TEXT-ALIGN: center
+}
+.sijia .Contentbox .left02 .zhifu IMG {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.sijia .Contentbox .content {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; LINE-HEIGHT: 22px; PADDING-TOP: 5px; HEIGHT: 130px
+}
+.sijia .Contentbox .right .sjcen {
+	CLEAR: both; MARGIN-TOP: 10px
+}
+.sijia .Contentbox .right .center01 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; BACKGROUND: url(dianxian.gif) repeat-x 50% bottom; WIDTH: 450px; LINE-HEIGHT: 40px; HEIGHT: 40px; TEXT-ALIGN: center
+}
+.sijia .Contentbox .right .center01 .b1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-WEIGHT: 100; FONT-SIZE: 12px; BACKGROUND: url(../lanmuQianLan/tttitle.gif) no-repeat 10px 12px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 32px; COLOR: #fff; LINE-HEIGHT: 16px; PADDING-TOP: 12px; HEIGHT: 18px; TEXT-ALIGN: center
+}
+.sijia .Contentbox .right .center02 {
+	PADDING-TOP: 8px; TEXT-ALIGN: center
+}
+.sijia .Contentbox .right {
+	FLOAT: right; WIDTH: 730px; POSITION: relative
+}
+.sijia .Contentbox .sjboo {
+	WIDTH: 730px; PADDING-TOP: 10px
+}
+.sijia .Contentbox .hong3000 {
+	BORDER-RIGHT: #f90 1px solid; BORDER-TOP: #f90 1px solid; BORDER-LEFT: #f90 1px solid; WIDTH: 218px; BORDER-BOTTOM: #f90 1px solid
+}
+.sijia .Contentbox .hong3001 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(hong3001.gif) no-repeat; HEIGHT: 24px
+}
+.sijia .Contentbox .hong3002 {
+	BORDER-RIGHT: #f90 1px solid; BORDER-TOP: #f90 1px solid; FLOAT: left; BORDER-LEFT: #f90 1px solid; WIDTH: 358px; BORDER-BOTTOM: #f90 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .hong3003 {
+	BORDER-RIGHT: #f90 1px solid; BORDER-TOP: #f90 1px solid; FLOAT: right; BORDER-LEFT: #f90 1px solid; WIDTH: 358px; BORDER-BOTTOM: #f90 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .hongtext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(hong3002.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 24px
+}
+.sijia .Contentbox .lv3000 {
+	BORDER-RIGHT: #a7d384 1px solid; BORDER-TOP: #a7d384 1px solid; BORDER-LEFT: #a7d384 1px solid; WIDTH: 218px; BORDER-BOTTOM: #a7d384 1px solid
+}
+.sijia .Contentbox .lv3001 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(lv3001.gif) no-repeat; HEIGHT: 24px
+}
+.sijia .Contentbox .lv3002 {
+	BORDER-RIGHT: #a7d384 1px solid; BORDER-TOP: #a7d384 1px solid; FLOAT: left; BORDER-LEFT: #a7d384 1px solid; WIDTH: 358px; BORDER-BOTTOM: #a7d384 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .lv3003 {
+	BORDER-RIGHT: #a7d384 1px solid; BORDER-TOP: #a7d384 1px solid; FLOAT: right; BORDER-LEFT: #a7d384 1px solid; WIDTH: 358px; BORDER-BOTTOM: #a7d384 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .lvtext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(lv3002.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 24px
+}
+.sijia .Contentbox .qing3000 {
+	BORDER-RIGHT: #9adbe1 1px solid; BORDER-TOP: #9adbe1 1px solid; BORDER-LEFT: #9adbe1 1px solid; WIDTH: 218px; BORDER-BOTTOM: #9adbe1 1px solid
+}
+.sijia .Contentbox .qing3001 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(qing3001.gif) no-repeat; HEIGHT: 24px
+}
+.sijia .Contentbox .qing3002 {
+	BORDER-RIGHT: #9adbe1 1px solid; BORDER-TOP: #9adbe1 1px solid; FLOAT: left; BORDER-LEFT: #9adbe1 1px solid; WIDTH: 358px; BORDER-BOTTOM: #9adbe1 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .qing3003 {
+	BORDER-RIGHT: #9adbe1 1px solid; BORDER-TOP: #9adbe1 1px solid; FLOAT: right; BORDER-LEFT: #9adbe1 1px solid; WIDTH: 358px; BORDER-BOTTOM: #9adbe1 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .qingtext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(qing3002.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 24px
+}
+.sijia .Contentbox .lan3000 {
+	BORDER-RIGHT: #acbbe5 1px solid; BORDER-TOP: #acbbe5 1px solid; BORDER-LEFT: #acbbe5 1px solid; WIDTH: 218px; BORDER-BOTTOM: #acbbe5 1px solid
+}
+.sijia .Contentbox .lan3001 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(lan3001.gif) no-repeat; HEIGHT: 24px
+}
+.sijia .Contentbox .lan3002 {
+	BORDER-RIGHT: #acbbe5 1px solid; BORDER-TOP: #acbbe5 1px solid; FLOAT: left; BORDER-LEFT: #acbbe5 1px solid; WIDTH: 358px; BORDER-BOTTOM: #acbbe5 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .lan3003 {
+	BORDER-RIGHT: #acbbe5 1px solid; BORDER-TOP: #acbbe5 1px solid; FLOAT: right; BORDER-LEFT: #acbbe5 1px solid; WIDTH: 358px; BORDER-BOTTOM: #acbbe5 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .lantext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(lan3002.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 24px
+}
+.sijia .Contentbox .lan3004 {
+	CLEAR: both; BORDER-RIGHT: #acbbe5 1px solid; BORDER-TOP: #acbbe5 1px solid; MARGIN-TOP: 10px; BORDER-LEFT: #acbbe5 1px solid; WIDTH: 218px; BORDER-BOTTOM: #acbbe5 1px solid
+}
+.sijia .Contentbox .lan3005 {
+	PADDING-RIGHT: 8px; MARGIN-TOP: 21px; BACKGROUND: #f2f9ff; LINE-HEIGHT: 42px; HEIGHT: 42px; TEXT-ALIGN: right
+}
+.sijia .Contentbox .fen3000 {
+	BORDER-RIGHT: #e7b8d6 1px solid; BORDER-TOP: #e7b8d6 1px solid; BORDER-LEFT: #e7b8d6 1px solid; WIDTH: 218px; BORDER-BOTTOM: #e7b8d6 1px solid
+}
+.sijia .Contentbox .fen3001 {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(fen3001.gif) no-repeat; HEIGHT: 24px
+}
+.sijia .Contentbox .fen3002 {
+	BORDER-RIGHT: #e7b8d6 1px solid; BORDER-TOP: #e7b8d6 1px solid; FLOAT: left; BORDER-LEFT: #e7b8d6 1px solid; WIDTH: 358px; BORDER-BOTTOM: #e7b8d6 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .fen3003 {
+	BORDER-RIGHT: #e7b8d6 1px solid; BORDER-TOP: #e7b8d6 1px solid; FLOAT: right; BORDER-LEFT: #e7b8d6 1px solid; WIDTH: 358px; BORDER-BOTTOM: #e7b8d6 1px solid; HEIGHT: 166px
+}
+.sijia .Contentbox .fentext {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: url(fen3002.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 24px
+}
+.sijia .Contentbox .fen3004 {
+	CLEAR: both; BORDER-RIGHT: #e7b8d6 1px solid; BORDER-TOP: #e7b8d6 1px solid; MARGIN-TOP: 10px; BORDER-LEFT: #e7b8d6 1px solid; WIDTH: 218px; BORDER-BOTTOM: #e7b8d6 1px solid
+}
+.sijia .Contentbox .fen3005 {
+	PADDING-RIGHT: 8px; MARGIN-TOP: 21px; BACKGROUND: #f8f1f6; LINE-HEIGHT: 42px; HEIGHT: 42px; TEXT-ALIGN: right
+}
+.xytab {
+	
+}
+.xytab .Menubox {
+	FONT-SIZE: 12px; BACKGROUND: url(xyyh00.gif) repeat-x; LINE-HEIGHT: 23px; HEIGHT: 23px; TEXT-ALIGN: center
+}
+.xytab .Menubox UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.xytab .Menubox LI {
+	BACKGROUND: url(xyyh01.gif) repeat-x; FLOAT: left; MARGIN: 0px; BORDER-LEFT: #f8b777 1px solid; WIDTH: 76px; COLOR: #c00; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+.xytab .Menubox LI A:link {
+	COLOR: #c00
+}
+.xytab .Menubox LI A:visited {
+	COLOR: #c00
+}
+.xytab .Menubox LI A:hover {
+	COLOR: #c00
+}
+.xytab .Menubox LI A:active {
+	COLOR: #c00
+}
+.xytab .Menubox LI.hover {
+	FONT-WEIGHT: bold; BACKGROUND: url(xyyh02.gif) repeat-x; COLOR: #c00
+}
+.xytab .Contentbox {
+	PADDING-LEFT: 10px; LINE-HEIGHT: 22px; HEIGHT: 100%
+}
+.jiankan {
+	BORDER-BOTTOM: #CCCCCC 1px solid; BORDER-LEFT: #CCCCCC 1px solid; WIDTH: 588px; MARGIN-BOTTOM: 5px; HEIGHT: 120px; BORDER-TOP: #CCCCCC 1px solid; BORDER-RIGHT: #CCCCCC 1px solid
+}
+.jiankan p{
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; MARGIN-TOP: 12px; FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 20px; FONT-FAMILY: 'ËÎÌå'
+}

@@ -1,0 +1,169 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BODY {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 0px; OVERFLOW-Y: scroll; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "微软雅黑", Arial, Verdana, Geneva, Helvetica, sans-serif; BACKGROUND: #fff; COLOR: #878787; FONT-SIZE: 12px; BORDER-TOP: medium none; FONT-WEIGHT: normal; BORDER-RIGHT: medium none; PADDING-TOP: 0px
+}
+FORM {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+UL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+LI {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+A:link {
+	COLOR: #333; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #c62020
+}
+.hidden {
+	DISPLAY: none
+}
+.about-clear {
+	CLEAR: both
+}
+.about-allbox {
+	POSITION: absolute; WIDTH: 960px; MARGIN-LEFT: -480px; LEFT: 50%
+}
+.about-banner {
+	WIDTH: 960px; BACKGROUND: url(//statics.05273.cn/statics/about/banner.jpg) no-repeat; HEIGHT: 307px
+}
+.about-bannerclick {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; MARGIN-TOP: 10px; WIDTH: 100px; BACKGROUND: #fb4901; FLOAT: right; HEIGHT: 25px; COLOR: #fff; CURSOR: pointer
+}
+.about-bannerclick:hover {
+	BACKGROUND: #c23c01
+}
+.about-bannerclick A:link {
+	COLOR: #fff
+}
+.about-bannerclick A:visited {
+	COLOR: #fff
+}
+.about-bannerclick A:hover {
+	COLOR: #fff
+}
+.about-menu {
+	WIDTH: 960px; BACKGROUND: url(//statics.05273.cn/statics/about/menu.gif) repeat-x; HEIGHT: 40px
+}
+.about-menu UL {
+	TEXT-ALIGN: center; PADDING-LEFT: 20px
+}
+.about-menu LI {
+	LINE-HEIGHT: 40px; FLOAT: left; HEIGHT: 40px; FONT-WEIGHT: bold
+}
+.about-menuclass {
+	WIDTH: 100px; COLOR: #fff; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuclass A:link {
+	COLOR: #fff; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuclass A:visited {
+	COLOR: #fff; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuclass:hover {
+	COLOR: #ffff00
+}
+.about-menuclass A:hover {
+	COLOR: #ffff00
+}
+.about-menuclassh {
+	WIDTH: 90px; COLOR: #ffff00; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuclassh A:link {
+	COLOR: #ffff00; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuclassh A:visited {
+	COLOR: #ffff00; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-menuline {
+	WIDTH: 1px; BACKGROUND: url(//statics.05273.cn/statics/about/menuline.gif); OVERFLOW: hidden
+}
+.about-content {
+	MARGIN-TOP: 20px; WIDTH: 960px
+}
+.about-contentl {
+	WIDTH: 200px; FLOAT: left
+}
+A.about-contentlm:link {
+	LINE-HEIGHT: 28px; MARGIN: 2px 2px 2px 0px; PADDING-LEFT: 45px; WIDTH: 153px; DISPLAY: block; BACKGROUND: url(//statics.05273.cn/statics/about/ico.gif) no-repeat; HEIGHT: 28px; COLOR: #878787; FONT-SIZE: 14px; CURSOR: pointer
+}
+A.about-contentlm:visited {
+	LINE-HEIGHT: 28px; MARGIN: 2px 2px 2px 0px; PADDING-LEFT: 45px; WIDTH: 153px; DISPLAY: block; BACKGROUND: url(//statics.05273.cn/statics/about/ico.gif) no-repeat; HEIGHT: 28px; COLOR: #878787; FONT-SIZE: 14px; CURSOR: pointer
+}
+A.about-contentlm.hover {
+	LINE-HEIGHT: 28px; MARGIN: 2px 2px 2px 0px; PADDING-LEFT: 45px; WIDTH: 153px; DISPLAY: block; BACKGROUND: url(//statics.05273.cn/statics/about/icohover.gif) no-repeat; HEIGHT: 28px; COLOR: #878787; FONT-SIZE: 14px; CURSOR: pointer
+}
+A.about-contentlm:hover {
+	LINE-HEIGHT: 28px; MARGIN: 2px 2px 2px 0px; PADDING-LEFT: 45px; WIDTH: 153px; DISPLAY: block; BACKGROUND: url(//statics.05273.cn/statics/about/icohover.gif) no-repeat; HEIGHT: 28px; COLOR: #878787; FONT-SIZE: 14px; CURSOR: pointer
+}
+A.about-contentlmhover {
+	LINE-HEIGHT: 28px; MARGIN: 2px 2px 2px 0px; PADDING-LEFT: 45px; WIDTH: 153px; DISPLAY: block; BACKGROUND: url(//statics.05273.cn/statics/about/icohover.gif) no-repeat; HEIGHT: 28px; COLOR: #878787; FONT-SIZE: 14px; CURSOR: pointer
+}
+.about-contentline {
+	BORDER-BOTTOM: #e0e0e0 1px solid; OVERFLOW: hidden
+}
+.about-contentr {
+	BORDER-LEFT: #e0e0e0 1px solid; PADDING-LEFT: 50px; WIDTH: 709px; FLOAT: left
+}
+.about-contentrtop {
+	BORDER-BOTTOM: #e0e0e0 1px dashed; LINE-HEIGHT: 39px; WIDTH: 650px; MARGIN-BOTTOM: 30px; HEIGHT: 39px; COLOR: #c62020; FONT-SIZE: 32px; FONT-WEIGHT: bold
+}
+.about-contentrcontent {
+	LINE-HEIGHT: 200%; WIDTH: 650px
+}
+.about-foot {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 24px; LINE-HEIGHT: 200%; MARGIN-TOP: 20px; WIDTH: 960px; COLOR: #000; VERTICAL-ALIGN: middle; BORDER-TOP: #e0e0e0 1px dashed; PADDING-TOP: 24px
+}
+.about-foot A:link {
+	HEIGHT: 0px; COLOR: #000
+}
+.about-foot A:visited {
+	HEIGHT: 0px; COLOR: #000
+}
+.about-foot A:hover {
+	BORDER-BOTTOM: #c62020 1px solid; COLOR: #c62020
+}
+.logo_links {
+	MARGIN: 0px auto; WIDTH: 612px
+}
+.logo_links LI {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 92px; PADDING-RIGHT: 5px; FLOAT: left; HEIGHT: 52px; PADDING-TOP: 5px
+}
+.logo_links LI IMG {
+	BORDER-BOTTOM: #bfbfbf 1px solid; BORDER-LEFT: #bfbfbf 1px solid; BORDER-TOP: #bfbfbf 1px solid; BORDER-RIGHT: #bfbfbf 1px solid
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.clearfix {
+	DISPLAY: inline-block
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}
+.about-content ul li{	background:url(//statics.05273.cn/statics/images/uline.gif) left bottom repeat-x;width: 650px;height:35px;font-size: 12px;line-height:39px;text-align: left;}
+.about-content ul li a{	width:500px;float:left;display:block;color:#333;text-decoration:none;background: url(//statics.05273.cn/statics/about/arrow.gif) no-repeat 1px 15px;padding: 0 0 0 9px;}
+.about-content ul li span{float:right;margin:0;padding:0;color: #999;}
+.about-content ul li a:hover{	color: #1297D1;}
+h4 {padding-left:15px; line-height:2em; margin-bottom:0.5em; border-bottom:1px dotted #BAC6D8; color:#195A95; background:transparent url(//statics.05273.cn/statics/about/dot.gif) no-repeat 5px 50%; }
+.foot{margin:0 auto; width:960px; clear:both; text-align:center}
+.foot01{border-top:#ccc dashed 1px;  padding:5px 0px;}
+.foot01_1{float:left; border-right:#cfcfcf dashed 1px; height:70px; padding:0px 10px}
+.foot01_1 h2{color:#007eb5; text-align:left}
+.foot01_1 li{float:left; margin:0px 8px; text-align:left; white-space:nowrap}
+.f_W01{width:160px}	
+.f_W02{width:250px}	
+.f_W03{width:200px}	
+.f_W04{width:260px; border:none}	
+.foot02{text-align:center}
+.foot03{text-align:center; padding-top:5px}

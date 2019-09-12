@@ -1,0 +1,13 @@
+{template "content","header_page"}<div class=about-content>
+<div class=about-contentl>
+{loop $arrchild_arr $cid}
+<div><a class="about-contentlm"  href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></div>
+{/loop}
+<div class=about-contentline></div></div>
+<div class=about-contentr>
+<div class=about-contentrtop>{$title}</div>
+<div class=about-clear></div>
+<div class=about-contentrcontent>{$content}<br><br>
+<br></div></div></div>
+<div class=about-clear></div>
+{template "content","footer"}

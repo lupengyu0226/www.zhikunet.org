@@ -1,0 +1,53 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">选择您要发布的栏目</h2>
+                </div>
+                <div class="bd mt20">
+                     <div class="fabu-nv">
+                        <ul class="nv">
+						<li><a class="btn" href="post-10.html" target="_blank">民生资讯</a></li> 
+						<li><a class="btn" href="post-11.html" target="_blank">地方资讯</a></li> 
+						<li><a class="btn" href="post-12.html" target="_blank">实用新闻</a></li>
+						<li><a class="btn" href="post-13.html" target="_blank">国内评论</a></li> 
+						<li><a class="btn" href="post-14.html" target="_blank">社会万象</a></li> 
+						<li><a class="btn" href="post-15.html" target="_blank">港澳台</a></li>
+						<li><a class="btn" href="post-57.html" target="_blank">旅游景区</a></li>  
+						<li><a class="btn" href="post-58.html" target="_blank">酒店宾馆</a></li> 
+						<li><a class="btn" href="post-59.html" target="_blank">餐饮美食</a></li>
+						<li><a class="btn" href="post-60.html" target="_blank">沭阳房产</a></li> 
+						<li><a class="btn" href="post-61.html" target="_blank">学沭阳话</a></li> 
+						<li><a class="btn" href="post-62.html" target="_blank">人才招聘</a></li> 
+						<li><a class="btn" href="post-63.html" target="_blank">企业黄页</a></li> 
+						<li><a class="btn" href="post-64.html" target="_blank">电脑商家</a></li> 
+						<li><a class="btn" href="post-65.html" target="_blank">沭阳交友</a></li> 
+						<li><a class="btn" href="post-22.html" target="_blank">县内新闻</a></li> 
+                        </ul>
+                    </div>
+				<div class="uc-wp">
+                    <div class="bd uc-wp-list">
+                        <div class="uc-empty">友情提示：请按照您所需要发布的信息,选择好分类,这和能否获得审核有很大关系！</div>
+                    </div>
+                </div>
+			</div>
+				</div>
+		</div>
+	</div>
+</div>
+<script language="JavaScript">
+<!--
+	function c_c(catid) {
+		location.href='index.php?app=member&controller=content&view=published&siteid={$siteid}&t=2&catid='+catid;
+	}
+//-->
+</script>
+{template "member","footer"}

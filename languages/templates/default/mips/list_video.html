@@ -1,0 +1,19 @@
+{template "mips","header_list"}
+                 <div class="mip-article-content">
+                    <!-- mip-article-content Start -->
+                    <div class="mip-article">
+<div class="submenu">
+  <div class="title">
+     <h1>{$catname}</h1><div class="subnav"><a href="https://mip.05273.cn">首页</a> &gt; {mip_pos($catid)}</div>
+  </div>
+</div>                               
+  <div class="main">
+  {edi:mobile action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+  {loop $data $r}
+  <mip-link class="item" href="{is_mips($r[url])}"><h2>{$r[title]}</h2><div class="news-view">  {if $r['thumb']}<mip-img class="news-thumb" src="{$r['thumb']}" /></mip-img>{/if}</div><div class="news-view">{str_cut($r[description],300,'..')}</div><div class="news-info"> {inputtime_zone($r[inputtime])} </div></mip-link>  
+ {/loop}
+  {/edi}
+   <div id="pages" class="text-c">{$ipad_pages}</div>
+     </div></div>
+                </div>
+{template "mips","footer_mip"}

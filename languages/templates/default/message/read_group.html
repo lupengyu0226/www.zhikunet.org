@@ -1,0 +1,45 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">系统短消息记录</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="init"} class="active"{/if}><a class="btn" href="message-init.html">全部消息</a></li>
+                            <li{if ROUTE_A=="inbox"} class="active"{/if}><a class="btn" href="message-inbox.html">收件箱</a></li>
+                            <li{if ROUTE_A=="outbox"} class="active"{/if}><a class="btn" href="message-outbox.html">发件箱</a></li>
+                            <li{if ROUTE_A=="group"} class="active"{/if}><a class="btn" href="message-group.html">系统消息</a></li>
+                            <li{if ROUTE_A=="send"} class="active"{/if}><a class="btn" href="message-send.html">发送短消息</a></li>
+                        </ul>
+                    </div>
+                    <div class="list-view">
+                        <ul class="list mt10">
+{php $userid = get_memberinfo_buyusername($infos['send_from_id'],'userid')}
+{php $nickname = get_memberinfo_buyusername($infos['send_from_id'],'nickname')}
+                            <li style="border-bottom:0px none;">
+                                <a class="avt" href="javascript:void(0);" style="cursor:default;" title="系统消息">
+                                    <img src="{IMG_PATH}member/nophoto.gif" alt="系统消息">
+                                </a>
+                                <dl>
+                                    <dt>
+                                        <span class="fr">{date('Y-m-d H:i:s',$infos['inputtime'])}</span>系统消息：
+                                        <a href="javascript:void(0);" style="cursor:default;">{$infos['subject']}</a>
+                                    </dt>
+                                    <dd>{$infos['content']}</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                	</div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

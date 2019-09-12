@@ -1,0 +1,74 @@
+{template "content","headermoxing_list"}
+<div id="pagebody_extbg" class="y_tagbox">
+	<div class="tag_dh">
+    <a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表
+    </div>
+
+<div class="y_tagleft">
+<div class="box_l col_590">
+<div class="global_model">
+    	{edi:content action="lists" catid="$catid" thumb"1" num="25" order="id DESC" page="$page" moreinfo="1"}
+{loop $data $k $v}
+<div class="mldulebox_list">
+
+            	<div class="mldulebox_img"><a href="{$v[url]}"><img src="{thumb($v[thumb], 80, 80)}" class="summaryimg image" alt="" width="80" /></a></div>
+<div class="mldulebox_text">
+                <h4 style="line-height:30px"><span class="box_r">{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}">{$v[title]}</a></h4>
+                
+<ul>
+<li>星级:{$v[xingji]}<br>
+客房总数:{$v[kefang]}<br>
+联系电话:{$v[lianxi]}<br>
+酒店地址:{$v[dizhi]}
+</li>
+</ul>
+                </div>
+
+</div>
+{/loop}
+<div class="pages"><div>{$pages}</div></div></div>
+{/edi}
+</div>
+<div class="clear"></div>
+</div><!--column end-->
+<div class="y_tagright">
+            <div class="m_right02">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+            	<h2>广告</h2>
+                <ul>
+<!--#include virtual="/caches/posid/quanju250.html"-->
+				</ul>
+            </div>
+            <div class="clear"></div>
+    <div class="m_right01">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+            	<h2>频道总排行</h2>
+                <ul>
+    	{edi:content action="lists" catid="$catid" num="10" order="id DESC" page="$page" moreinfo="1"}
+				{loop $data $r}
+					
+						<li><span class="box_r">{date('m-d',$r[inputtime])}</span><a href="{$r[url]}" target="_blank">{str_cut($r[title],32,'')}</a></li>
+				{/loop}
+				</ul>
+            {/edi}
+            </div>
+            <div class="clear"></div>
+            <div class="m_right01">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+                <!--月度评论热点-->
+
+            	<h2>频道本月排行</h2>
+                <ul>
+				{loop $data $r}
+					
+						<li><span class="box_r">{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],32,'')}</a></li>					
+				{/loop}
+            </ul>
+            {/edi}
+            </div>
+
+</div>
+{template "content","footer"}

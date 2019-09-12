@@ -1,0 +1,73 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('buy_point')}</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_C=="deposit" && (ROUTE_A=="pay" || ROUTE_A=="pay_recharge")} class="active"{/if}><a class="btn" href="pay-pay.html">在线充值</a></li>
+                            <li{if ROUTE_C=="deposit" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pay-init.html">支付记录</a></li>
+                            <li{if ROUTE_C=="spend_list" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pays-init.html">消费记录</a></li>
+                            <li{if ROUTE_A=="change_credit"} class="active"{/if}><a class="btn" href="member-change_credit.html">购买积分</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt20">
+                    	<div class="content tal">
+			<form method="post" action="" id="myform" name="myform">
+			<table width="100%" cellspacing="0" class="table_form">
+				<tr>
+					<th width="100">{L('account_remain')}：</th> 
+					<td>	
+						<font style="color:#F00; font-size:18px;font-family:Georgia,Arial; font-weight:700">{$memberinfo[amount]}</font>{L('unit_yuan')}，
+						<font style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700">{$memberinfo[point]}</font>{L('unit_point')}
+					</td>
+				</tr>
+				<tr>
+					<th width="100">{L('cost')}：</th> 
+					<td>	
+						<input type="text" class="input-text" name="money" id="money" size="4">{L('unit_yuan')}
+						{L('can_change_point_num')}：<font id="point" style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700">0</font>{L('unit_point')}
+						<font id="alert" style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700"></font>
+					</td>
+				</tr>
+
+				<tr>
+					<th width="100"></th> 
+					<td>			
+						<input type="submit" class="button" name="buy" id="dosubmit" value="兑换">
+					</td>
+				</tr>
+			</table>
+			</form>
+			
+			</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+<script language="JavaScript">
+<!--
+$(document).ready(function() {
+	$("#point").html($("#money").val()*{if !empty($member_setting['rmb_point_rate'])}{$member_setting['rmb_point_rate']}{else}10{/if});
+	$("#money").keyup(function() {
+		$(this).val($(this).val().replace(/[^\d]/g,''));
+		$("#point").html($("#money").val()*{if !empty($member_setting['rmb_point_rate'])}{$member_setting['rmb_point_rate']}{else}10{/if});
+		if({$memberinfo[amount]} < $(this).val()) {
+			$("#alert").html('{L('not_sufficient_funds')}');
+		} else {
+			$("#alert").html('');
+		}
+	});
+});
+//-->
+</script>
+{template "member","footer"}

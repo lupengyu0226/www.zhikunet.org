@@ -1,0 +1,15 @@
+{edi:content action="lists" catid="$catid" siteid="$siteid" order="id DESC" page="$page"}
+{php $category=array()}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+    {php $category["category"]=array("catid"=>$catid,"name"=>$CATEGORYS[$catid][catname],"description"=>$r[description],"pic"=>trim_weapp($CATEGORYS[$catid][image]));}
+{loop $data $k=>$r}
+    {php $category["video"][]=array("catid"=>$r[catid],"id"=>$r[id],"title"=>$r[title],"description"=>$r[description],"catname"=>$CATEGORYS[$r[catid]][catname],"pic"=>$r[thumb],"pubdate"=>inputtime_zone($r[inputtime]));}
+{/loop}
+{/edi}
+ {php $category["page"]=array("COUNT"=>'14',"TOTAL"=>'3',"CURRENT"=>'1',"PN"=>'1',"LAST"=> false);}
+{edi:content action="position" posid="26"thumb="1" order="id DESC" num="5"}
+{loop $data $v}
+ {php $category["hots"][]=array("catid"=>$v[catid],"id"=>$v[id],"title"=>$v[title],"description"=>trim_indent($v[description]),"pic"=>trim_weapp($v[thumb]));}
+{/loop}
+{/edi}
+{php echo json_encode($category)}

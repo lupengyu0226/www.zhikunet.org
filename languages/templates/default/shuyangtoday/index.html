@@ -1,0 +1,34 @@
+﻿{edi:get sql="select * from v9_shuyangtoday order by id desc" num="1"}
+<div class="cplist_style2" id="mainlist">
+{loop $data $n $r}
+    {php $info = string2array($r['datas'])}
+	<div class="cplist_style2_item">
+        <a href="{S($info[top][url])}">
+		<div class="imgw"><img src="{$info[top][thumb]}"></div>
+				<div class="c">
+					<strong class="n">{$info[top][title]}</strong>
+				</div>
+			</a>
+		</div>
+    {loop $info['list'] $v}
+	<div class="cplist_style2_item">
+       <a href="{S($v[url])}">
+	   <div class="imgw"><img src="{$v[thumb]}"></div>
+				<div class="c">
+	   <strong class="n">{$v[title]}</strong>
+				</div>
+			</a>
+		</div>
+    {/loop}
+{/loop}
+{/edi}
+		<div class="cplist_style2_item">
+			<a href="https://bbs.05273.cn/plugin.php?id=wechat:access">
+				<div class="imgw"><img src="https://bbs.05273.cn/data/attachment/common/ab/common_654_AG86e9Ie.png"></div>
+				<div class="c">
+					<strong class="n">新闻爆料轻点这里进入微社区</strong>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="loadmore" id="loadmore"></div>

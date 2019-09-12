@@ -1,0 +1,9 @@
+<view class="clearfix mt30"></view>
+<template name="foot">
+  <view class="weui-footer">
+      <view class="weui-footer__links">
+          <navigator url="/pages/index/index" class="weui-footer__link">沭阳网精华版</navigator>
+      </view>
+      <view class="weui-footer__text">Copyright © 2007-2017 05273.com</view>
+  </view>
+</template>

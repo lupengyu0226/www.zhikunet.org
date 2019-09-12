@@ -1,0 +1,83 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>沭阳今日天气_沭阳网天气</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="apple-touch-icon" href="https://statics.05273.cn/statics/images/weather/m/img/icon.png" />
+    <meta name="apple-mobile-web-app-title" content="沭阳天气">
+    <meta name="applicable-device" content="mobile">
+    <script>
+        if (!/(iPhone|Android|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  
+            window.location.href ="https://www.05273.cn/weather/"; 
+        }  
+    </script>
+
+<link href="https://statics.05273.cn/statics/images/weather/m/css/index.css" rel="stylesheet"></head>
+<body>
+  <div id="root">
+   <div>
+    <section id="sec-main" class="container">
+     <a id="link-back" class="" href="https://wap.05273.cn/"></a>
+     <p id="txt-location">沭阳县</p>
+     <p id="txt-temperature" class="positive"><?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['tmp_min']?>-<?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['tmp_max']?></p>
+     <p id="txt-weather"><?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['cond_txt_d']?></p>
+     <div id="ct-wind-humidity">
+      <p class="show txt"><?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['wind_dir']?> <?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['wind_sc']?>级</p>
+     </div>
+     <p id="txt-tips">你若安好，便是晴天~</p>
+     <div id="ct-landscape">
+      <div class="layer" id="layer1" style="transform: translate3d(0px, 0px, 0px);"></div>
+      <div class="layer" id="layer2" style="transform: translate3d(0px, 0px, 0px);"></div>
+     </div>
+     <div class="ct-aqi level4" data-boss="aqi">
+      <p id="til"><?php echo $arr['HeWeather6'][0]['daily_forecast'][0]['hum']?></p>
+      <p id="value">相对湿度</p>
+     </div>
+    </section>
+    <section id="sec-tomorrow" class="container">
+     <div class="item">
+      <div class="top">
+       <p class="date">明天</p>
+       <p class="temperature"><?php echo $arr['HeWeather6'][0]['daily_forecast'][1]['tmp_min']?>/<?php echo $arr['HeWeather6'][0]['daily_forecast'][1]['tmp_max']?>&deg;</p>
+      </div>
+      <div class="bottom">
+       <p class="weather"><?php echo $arr['HeWeather6'][0]['daily_forecast'][1]['cond_txt_d']?>转<?php echo $arr['HeWeather6'][0]['daily_forecast'][1]['cond_txt_n']?></p>
+       <img src="https://statics.05273.cn/statics/images/weather/m/icon/<?php echo $arr['HeWeather6'][0]['daily_forecast'][1]['cond_code_d']?>.png" class="logo">
+      </div>
+     </div>
+     <div class="item">
+      <div class="top">
+       <p class="date">后天</p>
+       <p class="temperature"><?php echo $arr['HeWeather6'][0]['daily_forecast'][2]['tmp_min']?>/<?php echo $arr['HeWeather6'][0]['daily_forecast'][2]['tmp_max']?>&deg;</p>
+      </div>
+      <div class="bottom">
+       <p class="weather"><?php echo $arr['HeWeather6'][0]['daily_forecast'][2]['cond_txt_d']?>转<?php echo $arr['HeWeather6'][0]['daily_forecast'][2]['cond_txt_n']?></p>
+       <img src="https://statics.05273.cn/statics/images/weather/m/icon/<?php echo $arr['HeWeather6'][0]['daily_forecast'][2]['cond_code_d']?>.png" class="logo">
+      </div>
+     </div>
+    </section>
+    <footer id="sec-footer">
+     <div id="ct-links">
+      <a href="http://m.weather.com.cn" id="txt-pub">数据来源于中国天气网</a>
+      <a class="link" href="https://wap.05273.cn">沭阳网</a>
+     </div>
+     <div id="copyright">
+      Copyright &copy; 2007 - 2018 沭阳网. All Rights Reserved
+     </div>
+    </footer>
+   </div>
+  </div> 
+  <div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body></html>

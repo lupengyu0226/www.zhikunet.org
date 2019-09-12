@@ -1,0 +1,15 @@
+/******************* CSS Document  by Artis. *******************/
+body{margin:0;padding:0; background:#fff;}
+form,p,span,div,ul,li,input,dl,dt,dd{margin:0;padding:0;}
+td,body,select{font-size:12px; color:#4a4d41; font-family:""}
+ul,li{list-style:none}
+h1,h2,h3,h4,h5{margin:0; padding:0}
+img{border:none;}
+a { color:#4a4d41; text-decoration:none}
+a:hover {color:#f00; text-decoration:underline}
+.uline a{text-decoration:underline}
+.uline a:hover{text-decoration:none}
+.fl {float:left}
+.fr {float:right}
+.dis{display:block}
+.undis{display:none}

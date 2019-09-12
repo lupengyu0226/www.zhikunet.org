@@ -1,0 +1,90 @@
+{template "content","header_video"}
+<BODY bgColor=#000000>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=968 align=center height=60>
+  <TBODY>
+  <TR vAlign=top>
+    <TD style="PADDING-TOP: 0px" height=60 width=968>
+      <DIV align=center>
+
+<TABLE style="LINE-HEIGHT: 1.5" border=0 cellSpacing=1 cellPadding=1 width=968 background={IMG_PATH}video/topback.jpg bgColor=#000000 align=center>
+  <TBODY>
+  <TR>
+    <TD style="PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" width=588 align=left vlign="top">
+<a href="https://www.05273.cn/video/">全部</a> <a href="https://www.05273.cn/video/gaoxiao/">搞笑</a> <a href="https://www.05273.cn/video/my/">母婴</a> <a href="https://www.05273.cn/video/lyou/">旅游</a> <a href="https://www.05273.cn/video/shishang/">时尚</a> <a href="https://www.05273.cn/video/shenghuo/">生活</a> <a href="https://www.05273.cn/video/dongman/">动漫</a> <a href="https://www.05273.cn/video/game/">游戏</a> <a href="https://www.05273.cn/video/yinyue/">音乐</a> <a href="https://www.05273.cn/video/yuanchuang/">原创</a> <a href="https://www.05273.cn/video/yule/">娱乐</a> <a href="https://www.05273.cn/video/caij/">财经</a> <a href="https://www.05273.cn/video/keji/">科技</a> <a href="https://www.05273.cn/video/qiche/">汽车</a> <a href="https://www.05273.cn/video/tiyu/">体育</a>
+ </TD>
+    <TD width=640 align=right>
+      </TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=1 cellPadding=1 width=968 bgColor=#000000 align=center>
+  <TBODY>
+  <TR>
+    <TD style="PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px">
+<SPAN style="BACKGROUND-IMAGE: url(//statics.05273.cn/statics/images/video/Untitled0.jpg); BORDER-BOTTOM: #01060a 2px solid; BORDER-LEFT: #01060a 2px solid; BACKGROUND-COLOR: #000000; COLOR: #ffffff; BORDER-TOP: #01060a 2px solid; BORDER-RIGHT: #01060a 2px solid">
+<A title={$title} href="{$url}" target=etshowfilm>
+{if $thumb}<img style="BORDER-BOTTOM: #479fe0 2px solid; BORDER-LEFT: #479fe0 2px solid; BORDER-TOP: #479fe0 2px solid; BORDER-RIGHT: #479fe0 2px solid" align=absMiddle src="{$thumb}" width=128 height=96>{else}<img style="BORDER-BOTTOM: #479fe0 2px solid; BORDER-LEFT: #479fe0 2px solid; BORDER-TOP: #479fe0 2px solid; BORDER-RIGHT: #479fe0 2px solid" align=absMiddle src="//statics.05273.cn/statics/images/nopic.gif" width=128 height=96>{/if}</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} <A title={$title} href="{$url}" target=etshowfilm>{$title}</A>&nbsp;&nbsp;</SPAN> </TD>
+    <TD background=//statics.05273.cn/statics/images/video/Untitled2.jpg align=right>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:void(0)" onclick="postToWb();" class="tmblog"><img  border=0  src="//statics.05273.cn/statics/share/images/button32.png" alt="转发微博"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript"> 
+	function postToWb(){
+		var _t = '{$title}';
+		var _url = encodeURIComponent(document.location);
+		var _appkey = encodeURI("801077112");//你从腾讯获得的appkey
+		var _pic = encodeURI('{$thumb}');//（例如：var _pic='图片url1|图片url2|图片url3....）
+		var _site = '';//你的网站地址
+		var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;
+		window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+	}
+</script>
+
+    </TD></TR></TBODY></TABLE>
+</DIV>
+</TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=968 align=center>
+  <TBODY>
+  <TR>
+    <TD height=50>
+      <DIV align=center><IMG src="//statics.05273.cn/statics/images/video/topbackpic.jpg" width=968 height=50></DIV></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=968 background={IMG_PATH}video/Untitled.jpg align=center height=666>
+  <TBODY>
+  <TR vAlign=top>
+    <TD style="PADDING-TOP: 11px" height=648 width=968 align=center>
+      <DIV id="video">
+<P align=center><div id="a1"></div></P>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var flashvars={
+          f:'https://api.05273.cn/video.php?url=[$pat]',
+          a:'{$apivideo}',
+          s:2,
+          e:'3',
+          k:'{$timeurl}',
+          n:'{$timewenzi}',
+          my_title:'{$title}',
+          my_url:'{$url}',
+          my_summary:'{$description}',
+          my_pic:'{$thumb}',
+          b:'1'
+  };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+  var video=['https://api.05273.cn/wap.php?url={$apivideo}->video/mp4'];
+    CKobject.embed('https://statics.05273.cn/statics/js/ckplayer/ckplayer.swf','a1','ckplayer_a1','622','420',false,flashvars,video,params);
+    </script>
+</DIV></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=968 align=center>
+  <TBODY>
+  <TR>
+    <TD height=50 align=middle><IMG src="{IMG_PATH}video/bottombackpic.jpg" width=968 height=50></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=968 background={IMG_PATH}video/bottombackpic1.jpg bgColor=#000000 align=center>
+</TABLE>
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&img=0&pos=right&uid=13212" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+		var bds_config = {
+		'bdText':'#沭阳#我在#沭阳网#的宽频影院看{$title}的视频,特分享给大家,一起来围观吧,地址是:',
+                'snsKey':{'tsina':'2034610354','tqq':'801077112'}
+	}
+		document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+</BODY>
+</HTML>

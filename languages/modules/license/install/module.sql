@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('license', '商业授权', 'license/', 0, '1.0', '商业授权', '', 0, 0, '2010-9-05', '2010-9-05');

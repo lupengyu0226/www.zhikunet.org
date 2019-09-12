@@ -1,0 +1,64 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.zhikunet.org/statics/member/css/login.css" rel="stylesheet">
+<style type="text/css">body{background-color:#f1faff;}</style>
+<div id="bd" class="mt160">
+    <div class="xs-member-wp wp">
+        <div class="xs-member xs-member-wp fr">
+            <div class="hd tac"><h2>欢迎登录沭阳网</h2></div>
+            <div class="bd mt30">
+                <form method="post" action="https://passport.zhikunet.org/member-login.html" onsubmit="save_username();" id="myform" class="xs-member-form" name="myform">
+                <input type="hidden" name="forward" id="forward" value="https://passport.zhikunet.org/member-index.html">
+                <div class="form-group field-loginform-username required">
+                    <label class="iconfont" for="loginform-username">&#xe605;</label>
+                    <input type="text" class="form-control" id="username" name="username" size="22" placeholder="请输入会员帐号">
+                    <div class="help-block"></div>
+                </div>
+                <div class="form-group field-loginform-password required">
+                    <label class="iconfont" for="loginform-password">&#xe601;</label>
+                    <input type="password" class="form-control" id="password" name="password" size="22" placeholder="请输入密码">
+                    <div class="help-block"></div>
+                </div>
+                <div>
+                    <a class="fr forget-password" href="{PASSPORT_PATH}member-public_forget_password.html">忘记密码？</a>
+                    <label for="loginform-rememberme" class="pl8">
+                        <label><input type="checkbox" class="fl" id="cookietime" name="cookietime" value="2592000"> {L('remember')}{L('username')}</label>
+                    </label>
+                </div>
+                <div class="mt20">
+                    <button class="btn btn-success" type="submit" name="dosubmit" id="dosubmit">登 录</button>
+                </div>
+                </form>
+                <p class="mt20 mb20 tac">采用第三方账号直接登录，或者<a class="register-now" href="{PASSPORT_PATH}member-register.html">马上注册</a></p>
+                <div class="sns_login_container">
+                    <ul class="y-box sns_login_list" style="width:200px;">
+                        <li class="sinaweibo"><a href="{PASSPORT_PATH}member-public_sina_login.html" "> <i class="icon"></i> 新浪微博 </a> </li>
+                        <li class="qq"> <a href="{PASSPORT_PATH}member-public_qq_loginnew.html"> <i class="icon"></i> QQ </a> </li>
+                        <li class="baidu"> <a href="{PASSPORT_PATH}member-public_xzh.html"> <i class="icon"></i> 百度 </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<script language="JavaScript">
+<!--
+	$(function(){
+		$('#username').focus();
+	})
+	function save_username() {
+		if($('#cookietime').attr('checked')==true) {
+			var username = $('#username').val();
+			setcookie('username', username, 3);
+		} else {
+			delcookie('username');
+		}
+	}
+	var username = getcookie('username');
+	if(username != '' && username != null) {
+		$('#username').val(username);
+		$('#cookietime').attr('checked',true);
+	}
+//-->
+</script>
+{template "member","footer"}

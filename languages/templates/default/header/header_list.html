@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{if ($page) > (1)}第{$page}页_{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="applicable-device" content="pc">
+<link href="https://statics.zhikunet.org/css/list/base.css" rel="stylesheet" type="text/css" />
+<link href="https://statics.zhikunet.org/css/list/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//statics.zhikunet.org/statics/js/jquery.js"></script>
+<script type="text/javascript" src="//statics.zhikunet.org/statics/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+               window.location.href="{S($url)}";
+            }catch(e){}
+        }
+    }
+</script>
+</head>
+<body>
+<style>.absolute{position:absolute;}</style>
+<div class="mininav">
+  <div class="mininavInner">
+    <div class="mininavLeft">
+      <div class="fl">
+ <form class="login-form" id="page_loginForm"  action="//www.zhikunet.org/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="https://www.zhikunet.org"/>
+     沭阳网通行证&nbsp;&nbsp;用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+	密&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+     <a href="https://passport.zhikunet.org/member-register.html" target="_blank">注册账户</a> | <a href="https://passport.zhikunet.org/member-public_forget_password.html" target="_blank">找回密码</a>
+  </form>
+  <script type="text/javascript">Login.isLogin('//www.zhikunet.org/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+      </div>
+    </div>
+<div class="mininavRight">
+  <div id="loginAll" class="fr">
+    <a href="https://www.zhikunet.org/gundong.html" class="newgundong" target="_blank">最新滚动</a>
+    <a href="https://www.zhikunet.org/ad-7/" class="gwweibo" target="_blank" style="font-weight: bold;color: red">官方微博</a>
+    <a href="https://www.zhikunet.org/sheweishouye.html" class="shouye" target="_blank">设为首页</a>
+    <a href="https://passport.zhikunet.org/member-public_qq_loginnew.html" title="使用QQ登录" class="onelogin"></a>
+  </div>
+</div>
+  </div>
+</div>
+<!-- Header End -->
+<!--首页导航-->
+<div class="lay header">
+  <div  id="channel_nav" class="top">
+    <div class="logo">
+      <h1><a href="https://www.zhikunet.org/news/">沭阳新闻</a></h1>
+    </div>
+<div class="Form-Crumbs-Article-shuyang" role="search">
+<form action="//www.zhikunet.org/index.php" method="get">
+<input class="submit" value="" role="button" type="submit">
+<div class="inputWarp"><a href="http://so.zhikunet.org/" target="_blank" class="SosonLogo" title="沭阳网搜索"><span>沭阳网搜索</span></a>
+<input type="hidden" name="app" value="search"/>
+<input type="hidden" name="controller" value="index"/>
+<input type="hidden" name="view" value="init"/>
+<input type="hidden" name="typeid" value="1" id="typeid"/>
+<input type="hidden" name="siteid" value="1" id="siteid"/>
+<input class="txtArea" name="q" value="请输入关键词" x-webkit-speech="" x-webkit-grammar="builtin:translate" autocomplete="off" onfocus="if(this.value=='请输入关键词')this.value=''" type="text"></div>
+</form>
+</div>
+  </div>

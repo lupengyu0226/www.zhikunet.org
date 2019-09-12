@@ -1,0 +1,63 @@
+{template "book","header"}
+<!--main-->
+<link href="{CSS_PATH}sty.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><link href="{CSS_PATH}ielt9.css" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.tools.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<script language="JavaScript">
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#realname").formValidator({onshow:"请输入姓名",onfocus:"请输入姓名"}).inputValidator({min:2,max:10,onerror:"姓名应该2-6位"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"姓名格式错误"});
+	$("#email").formValidator({onshow:"请输入电子邮箱",onfocus:"请输入电子邮箱",oncorrect:"邮箱格式正确"}).inputValidator({min:2,max:32,onerror:"请输入电子邮箱"}).regexValidator({regexp:"email",datatype:"enum",onerror:"请填写正确的邮箱地址"});
+	$("#mobile").formValidator({onshow:"请输入联系电话",onfocus:"请输入联系电话",oncorrect:"电话格式正确"}).inputValidator({min:11,max:11,onerror:"电话号码应该为11位"}).regexValidator({regexp:"^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$",onerror:"请填写正确的电话号码"});
+});
+//-->
+</script>
+<div class="tmp_bd clr">
+ <div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span><a href="{APP_PATH}index.php?app=book&controller=index">留言板</a> &gt; 填写留言</div>
+	<div class="brd addpg">
+    	<div class="bgx">
+        	<div class="mbox">
+                <div class="bs"></div>
+                <div class="iptbox">
+                	<form id="myform" action="{APP_PATH}index.php?app=book&controller=index&view=add" method="POST">
+                    	<ul class="clr iptuli">
+                            <li class="clr"><label>姓&nbsp;名</label><input id="realname" name="realname" type="text" /></li>
+                            <li class="clr"><label>Email</label><input id="email" name="email" type="text" /></li>
+                            <li class="clr"><label>手&nbsp;机</label><input id="mobile" name="mobile" type="text" /></li>
+                            <li class="zftxt">以上信息属个人隐私，智库网承诺绝不向第三方透露。</li>
+                            <li class="clr"><label>标&nbsp;题</label><input name="title" type="text" class="lybt"/></li>
+                            <li class="clr"><label class="lynr">内&nbsp;容</label><textarea name="content" cols="" rows="5"></textarea></li>
+							{if $set['enablecheckcode'] == 1}
+							<li class="clr yzms"><div class="r">{form::checkcode('code_img','4','14',80,24)}</div><div class="r"><label>验证码</label><input name="code" type="text" /></div></li>
+							{/if}
+                            <li class="clr tj_box"><div class="r"><input name="reser" type="reset" class="ipt_cz"/><input name="dosubmit" type="submit"  class="ipt_tj"/></div>
+							<input name="checked" type="checkbox" class="gxbox" id="gx" value="1" checked="CHECKED"/><label for="gx">是否公开</label>
+                            <div class="ptxt" id="showb">
+                              <div class="spr spr_sj"></div>
+                              <strong>查看密码：</strong><input name="view_password" type="text" class="spswd" onfocus="if (value =='请输入密码'){value =''}" onblur="if (value ==''){value='请输入密码'}" value="请输入密码" />
+                            </div>
+                          </li>
+                        </ul>
+                    </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$('#gx').click(function(){
+		if($('#gx').attr('checked')== 'checked'){
+		  $('#showb').removeClass('show');
+		  }else{
+		  $('#showb').addClass('show');
+		  }
+	});
+	$('#ssc').overlay({mask:"#000",top:"30px"});
+});
+</script>
+<!--main_end-->
+{template "book","footer"}

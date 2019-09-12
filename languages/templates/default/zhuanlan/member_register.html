@@ -1,0 +1,115 @@
+{template "member","header"}
+<script type="text/javascript">
+<!--
+    var charset = '<?php echo CHARSET?>';
+    var uploadurl = '<?php echo shy_base::load_config('system','upload_url')?>';
+//-->
+</script>
+<link type="text/css" href="https://statics.zhikunet.org/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">申请沭阳号</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="content info-space">
+					<form name="myform" action="{PASSPORT_PATH}mp-register.html" method="post" id="myform">
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">沭阳号名称:</label>
+                            <input class="info-input-text" name="name" type="text" id="name" size="30" value="{$username}">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">自定义域名:</label>
+                            <input class="info-input-text" name="domain" type="text" id="domain" size="30" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">沭阳号头像:</label>
+                            <?php echo form::images('thumb', 'thumb', '', 'zhuanlan', '', 40, 'info-input-text', '', '', array(350, 350))?>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">沭阳号介绍:</label>
+                            <textarea name="authors"  id="authors" rows="5" cols="50" value=></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">验证码:</label>
+                            <input name="code" type="text" id="code" size="10"  class="info-input-text"/> {form::checkcode('code_img','4','14',110,30)}
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">&nbsp;</label>
+                        	<input class="btn btn-primary info-submit" type="submit" name="dosubmit" id="dosubmit" value="{L('submit')}" />
+                        </div>
+					</form>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<script type="text/javascript">
+<!--
+$(function(){
+    $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+  $("#name").formValidator({onshow:"{L('input').L('zhuanlan_name')}",onfocus:"{L('zhuanlan_name').L('between_2_to_20')}"}).inputValidator({min:2,max:30,onerror:"{L('zhuanlan_name').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('zhuanlan_name').L('format_incorrect')}"}).ajaxValidator({
+        type : "get",
+        url : "",
+        data :"app=zhuanlan&controller=member_index&view=public_checkname_reg",
+        datatype : "html",
+        async:'false',
+        success : function(data){
+            if( data == "1" ) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        buttons: $("#dosubmit"),
+        onerror : "{L('deny_register').L('or').L('user_already_exist')}",
+        onwait : "{L('connecting_please_wait')}"
+    });
+    $("#domain").formValidator({onshow:"请输入自定义域名",onfocus:"自定义域名不能为空"}).inputValidator({min:1,max:16,onerror:"自定义域名不能为空"}).regexValidator({regexp:"username",datatype:"enum",onerror:"{L('自定义域名').L('不能为中文')}"}).ajaxValidator({
+        type : "get",
+        url : "",
+        data :"app=zhuanlan&controller=member_index&view=public_check_domain",
+        datatype : "html",
+        async:'false',
+        success : function(data){
+            if( data == "1" ) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        buttons: $("#dosubmit"),
+        onerror : "禁止使用或已经存在",
+        onwait : "验证中"
+    });
+    $("#code").formValidator({onshow:"请输入验证码",onfocus:"验证码不能为空"}).inputValidator({min:1,max:999,onerror:"验证码不能为空"}).ajaxValidator({
+        type : "get",
+        url : "",
+        data :"app=zhuanlan&controller=member_index&view=public_checkcode",
+        datatype : "html",
+        async:'false',
+        success : function(data){   
+            if(data == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        },
+        buttons: $("#dosubmit"),
+        onerror : "验证码错误",
+        onwait : "验证中"
+    });
+})
+//-->
+</script>
+{template "member","footer"}

@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/category",
+    "pages/article/article",
+    "pages/player/player",
+    "pages/settings/settings",
+    "pages/about/about",
+    "pages/video/video",
+    "pages/category/category"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00a2ea",
+    "navigationBarTitleText": "沭阳网精华版",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#2EA2DF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/home.png",
+      "selectedIconPath":"images/home_s.png"
+    }, {
+      "pagePath": "pages/index/category",
+      "text": "频道",
+      "iconPath":"images/category.png",
+      "selectedIconPath":"images/category_s.png"
+    },{
+      "pagePath": "pages/video/video",
+      "text": "视频新闻",
+      "iconPath":"images/video.png",
+      "selectedIconPath":"images/video_s.png"
+    },{
+      "pagePath": "pages/settings/settings",
+      "iconPath":"images/me.png",
+      "selectedIconPath":"images/me_s.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

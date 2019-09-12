@@ -1,0 +1,31 @@
+/*! jQuery UI - v1.11.1 mini slider专用 EDI - 2015-05-18
+* http://jqueryui.com
+* Includes: core.css, draggable.css, button.css, progressbar.css, slider.css, theme.css
+*  Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+/* Layout helpers
+----------------------------------*/
+body{background:#f1f2f7;padding:0px !important;margin:0px !important;font-size:12px;font-family: "Microsoft YaHei UI", "Segoe UI", Arial, Verdana, Sans-Serif, sans-serif;}
+ul li{list-style:none;}
+h1,h2,h3,h4,h5,h6,a,p,span{font-family: "Microsoft YaHei UI","Hiragino Sans GB W3","Segoe UI", Arial, Verdana, Sans-Serif, sans-serif;}
+a,a:hover,a:focus{text-decoration:none;outline:none;-webkit-transition:all 0.3s;transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;}
+.slider-info{margin-bottom: 6px;}
+.ui-widget-header{background:#54ADE8 !important;border-radius:15px !important;-webkit-border-radius:15px !important;}
+#eq span{height:120px;float:left;margin:15px}
+.ui-widget-content{background:#f0f2f7 !important;border:none !important;border-radius:15px !important;-webkit-border-radius:15px !important;}
+.ui-slider-horizontal{height:8px !important;margin-bottom: 5px;}
+.ui-slider-horizontal .ui-slider-handle{top:-0.57em !important;}
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{background:#fff !important;border:3px solid #54ADE8 !important;border-radius:50% !important;-webkit-border-radius:50% !important;-webkit-transition:all 0s;transition:all 0s;-moz-transition:all 0s;-o-transition:all 0s;}
+.ui-slider-vertical{width:8px !important;}
+.ui-slider-vertical .ui-slider-handle{left:-0.5em !important;}
+.ui-slider .ui-slider-handle{cursor:default;height:1.6em;position:absolute;width:1.6em;z-index:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.bound-s{width:90px;margin-bottom:15px;}
+#ui-id-1{width: 26% !important;border-radius: 0px !important;-webkit-border-radius: 0px !important;-moz-border-radius: 0px !important;padding: 15px 10px 15px 15px;border: 5px solid #EAEDF4 !important;}
+#ui-id-1 li{border-bottom: 1px }
+#ui-id-1 li a{padding: 5px;display: block;cursor: pointer;}
+.ui-slider {position: relative;text-align: left;}
+.ui-slider .ui-slider-range {position: absolute;z-index: 0;font-size: .7em;display: block;border: 0;background-position: 0 0;}
+.ui-slider-horizontal .ui-slider-handle {top: -.3em;margin-left: -.2em;}
+.ui-slider-horizontal .ui-slider-range {top: 0;height: 100%;}
+
+
+

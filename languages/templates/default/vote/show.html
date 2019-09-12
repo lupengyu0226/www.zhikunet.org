@@ -1,0 +1,15 @@
+{edi:vote action="show" subjectid="$subjectid" order="$order"}
+		{loop $data $v}
+		<form action="?app=vote&controller=index&view=post&subjectid={$subjectid}" method="post">
+		<h5>{$v[subject]}</h5>
+			{edi:vote action="option_lists" subjectid="$subjectid" return="dat"}
+			{loop $dat $option_v}
+			
+			<a href="{$option_v[url]}" target="_blank">{$option_v[option]}</a> <br>
+			{/loop}
+			{$pages}
+			{/edi}
+		<input type="submit" value="提交" />
+		</form>
+		{/loop}
+ {/edi}

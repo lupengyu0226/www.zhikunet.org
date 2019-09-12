@@ -1,0 +1,107 @@
+{template "content","header"}
+<!--main-->
+<link href="{CSS_PATH}sty.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><link href="{CSS_PATH}ielt9.css" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.tools.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<div class="tmp_bd clr">
+ <div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span><a href="{APP_PATH}index.php?app=book&controller=index">留言板</a></div>
+  <div class="lyt_1">
+    <div class="brd lstbd">
+      <div class="mg20">
+        <ul class="lbuli">
+		{loop $infos $s $c}
+		{php $regdate = get_memberinfo($c[userid],'regdate')}
+		{php $lastdate = get_memberinfo($c[userid],'lastdate')}
+          <li>
+		  {if $c[username] != ''}
+            <div class="img50">
+			  <div class="ts_box">
+                <ul class="lluli">
+                  <li>留&nbsp;&nbsp;言&nbsp;&nbsp;者：<span>{$c[realname]}</span></li>
+                  <li>注册时间：<span>{date('Y-m-d H:i:s',$regdate)}</span></li>
+                  <li>登录时间：<span>{date('Y-m-d H:i:s',$lastdate)}</span></li>
+                </ul>
+                <span class="sjbg"></span>
+			   </div>
+              <img src="{get_memberavatar($c[userid],1,90)}" onerror="this.src='{$phpsso_api_url}/statics/images/member/nophoto.gif'" width="50" height="50">
+			 </div>
+		  {else}
+			<div class="img50">
+			  <div class="ts_box">
+                <ul class="lluli">
+                  <li>留&nbsp;&nbsp;言&nbsp;&nbsp;者：<span>{$c[realname]}</span></li>
+                  <li>留言时间：<span>{date('Y-m-d H:i:s',$c[addtime])}</span></li>
+                </ul>
+                <span class="sjbg"></span>
+			   </div>
+              <img src="{IMG_PATH}zz_bg.jpg" width="50" height="50">
+			 </div>
+		  {/if}
+            <div class="t_box">
+              <div> <span class="mr"><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$c[siteid]}&id={$c[id]}" title="查看详情">查看详情>></a></span> <span class="time">{date('Y-m-d H:i:s',$c[addtime])}</span>
+                <h5 class="wp"><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$c[siteid]}&id={$c[id]}" title="{$c[title]}">{str_cut($c[title],26)}</a></h5>
+              </div>
+              <p>{str_cut($c[content],85)}</p>
+            </div>
+            <div class="ptxt">
+              <div class="spr spr_sj"></div>
+              <strong>回复：</strong>
+			  {if ($infos[$s][$c[id]] != '')}
+			  {$infos[$s][$c[id]]}
+            </div>
+			  {else}
+			  <font color="red">留言暂时没有回复</font>
+			  {/if}
+          </li>
+		{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+      </div>
+    </div>
+  </div>
+  <div class="lyt_2">
+  	<a href="{APP_PATH}index.php?app=book&controller=index&view=add&siteid={$siteid}" title="我要留言" class="ly_btn">我要留言</a>
+<div class="box">
+      <div class="nav">
+        <h5>我的留言</h5>
+      </div>
+      <ul class="list">
+	  {if $username != ''}
+	  {loop $my_book $c}
+        <li><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$c[siteid]}&id={$c[id]}" title="{$c[title]}">{str_cut($c[title],26)}</a></li>
+	  {/loop}
+	  {else}
+		<li>登陆后可查看留言</li>
+	  {/if}
+      </ul>
+    </div>
+<div class="bk10"></div>
+<div class="box">
+	<div class="nav">
+		<h5>热门留言</h5>
+	</div>
+	<ul class="list">
+	{pc:book action="hot" num="10" order="ID desc" return="data"}
+	{loop $data $c}
+		<li><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$c[siteid]}&id={$c[id]}" title="{$c[title]}">{str_cut($c[title],26)}</a></li>
+	{/loop}
+	{/pc}
+	</ul>
+</div>
+
+  </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.img50').hover(function(){
+				$(this).children('.ts_box').show();
+			},function(){
+				$(this).children('.ts_box').hide();
+			});
+    });
+</script>
+<!--main_end-->
+{template "content","footer"}

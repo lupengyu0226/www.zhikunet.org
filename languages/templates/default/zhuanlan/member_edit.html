@@ -1,0 +1,113 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<script type="text/javascript">
+<!--
+  var charset = '<?php echo CHARSET?>';
+  var uploadurl = '<?php echo shy_base::load_config('system','upload_url')?>';
+//-->
+</script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">修改沭阳号</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="init"} class="active"{/if}><a class="btn" href="{PASSPORT_PATH}mp-init.html">沭阳号信息</a></li>
+                            <li{if ROUTE_A=="edit"} class="active"{/if}><a class="btn" href="{PASSPORT_PATH}mp-edit-{$zhuanlan_info['id']}.html">修改信息</a></li>
+                            <li><a class="btn" href="{PASSPORT_PATH}member-fabu.html">发布内容</a></li>
+                        </ul>
+                    </div>
+                    <div class="content tal mt20">
+<form name="myform" action="{PASSPORT_PATH}mp-edit-{$zhuanlan_info['id']}.html" method="post" id="myform">
+<table width="100%" cellspacing="0" class="table_form">
+    <tr>
+       <th width="120">用户名：</th>        
+       <td style="padding:0 0 0 10px">{$zhuanlan_info[username]}</td>
+    </tr>
+     <tr>
+    <th>沭阳号名称：</th>
+    <td><input name="info[name]" type="text" id="name" size="30" value="{$zhuanlan_info[name]}" class="input-text"/></td>
+       </tr>
+     <tr>
+       <th>自定义域名：</th>
+       <td>{$zhuanlan_info[domain]}</td>
+     </tr>
+     <tr>
+       <th>沭阳号头像：</th>
+       <td><?php echo form::images('info[thumb]', 'thumb', $zhuanlan_info['thumb'], 'zhuanlan',$id);?></td>
+     </tr>
+     <tr>
+       <th>沭阳号介绍：</th>
+       <td><textarea name="info[authors]"  id="authors" rows="5" cols="50">{$zhuanlan_info[authors]}</textarea></td>
+     </tr>
+     <tr>
+       <th>验证码：</th>
+       <td><input name="code" type="text" id="code" size="10"  class="input-text"/> {form::checkcode('code_img','4','14',110,30)}</td>
+     </tr>
+     <tr>
+       <td></td>
+       <td colspan="2"><label>
+         <input type="submit" name="dosubmit" id="dosubmit" value="确 定" class="button"/>
+         </label></td>
+     </tr>
+   </table>
+   </form>
+   </div>
+        </div>
+            </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+<!--
+$(function(){
+  $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+  $("#name").formValidator({onshow:"{L('input').L('zhuanlan_name')}",onfocus:"{L('zhuanlan_name').L('between_2_to_20')}"}).inputValidator({min:2,max:30,onerror:"{L('zhuanlan_name').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('zhuanlan_name').L('format_incorrect')}"}).ajaxValidator({
+      type : "get",
+    url : "",
+    data :"app=zhuanlan&controller=member_index&view=public_checkname_ajax&id={$zhuanlan_info['id']}",
+    datatype : "html",
+    async:'false',
+    success : function(data){
+            if( data == "1" ) {
+                return true;
+      } else {
+                return false;
+      }
+    },
+    buttons: $("#dosubmit"),
+    onerror : "{L('deny_register').L('or').L('user_already_exist')}",
+    onwait : "{L('connecting_please_wait')}"
+  });
+  $("#code").formValidator({onshow:"请输入验证码",onfocus:"验证码不能为空"}).inputValidator({min:1,max:999,onerror:"验证码不能为空"}).ajaxValidator({
+      type : "get",
+    url : "",
+    data :"app=zhuanlan&controller=member_index&view=public_checkcode",
+    datatype : "html",
+    async:'false',
+    success : function(data){ 
+            if(data == 1)
+      {
+                return true;
+      }
+            else
+      {
+                return false;
+      }
+    },
+    buttons: $("#dosubmit"),
+    onerror : "验证码错误",
+    onwait : "验证中"
+  });
+})
+//-->
+</script>
+{template "member","footer"}

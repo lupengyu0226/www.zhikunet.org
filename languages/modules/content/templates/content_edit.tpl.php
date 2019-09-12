@@ -1,0 +1,205 @@
+<?php
+defined('IN_ADMIN') or exit('No permission resources.');
+include $this->admin_tpl('headerpost','admin');?>
+<style type="text/css">
+html,body{ background:#e2e9ea}
+</style>
+<script type="text/javascript">
+<!--
+	var charset = '<?php echo CHARSET;?>';
+	var uploadurl = '<?php echo shy_base::load_config('system','upload_url')?>';
+//-->
+</script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>content_addtop.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>colorpicker.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>cookie.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>jquery.hotkeys.js"></script>
+<script type="text/javascript">var catid=<?php echo $catid;?></script>
+<form name="myform" id="myform" action="?app=content&controller=content&view=edit" method="post" enctype="multipart/form-data">
+<div class="addContent">
+<div class="crumbs"><?php echo L('edit_content_position');?></div>
+<div class="col-right">
+    	<div class="col-1">
+        	<div class="content pad-6">
+<?php
+if(is_array($forminfos['senior'])) {
+ foreach($forminfos['senior'] as $field=>$info) {
+	if($info['isomnipotent']) continue;
+	if($info['formtype']=='omnipotent') {
+		foreach($forminfos['base'] as $_fm=>$_fm_value) {
+			if($_fm_value['isomnipotent']) {
+				$info['form'] = str_replace('{'.$_fm.'}',$_fm_value['form'],$info['form']);
+			}
+		}
+		foreach($forminfos['senior'] as $_fm=>$_fm_value) {
+			if($_fm_value['isomnipotent']) {
+				$info['form'] = str_replace('{'.$_fm.'}',$_fm_value['form'],$info['form']);
+			}
+		}
+	}
+ ?>
+	<h6><?php if($info['star']){ ?> <font color="red">*</font><?php } ?> <?php echo $info['name']?></h6>
+	 <?php echo $info['form']?><?php echo $info['tips']?> 
+<?php
+} }
+?>
+          </div>
+        </div>
+    </div>
+    <a title="展开与关闭" class="r-close" hidefocus="hidefocus" style="outline-style: none; outline-width: medium;" id="RopenClose" href="javascript:;"><span class="hidden">展开</span></a>
+    <div class="col-auto">
+    	<div class="col-1">
+        	<div class="content pad-6">
+<table width="100%" cellspacing="0" class="table_form">
+	<tbody>	
+<?php
+if(is_array($forminfos['base'])) {
+ foreach($forminfos['base'] as $field=>$info) {
+	if($info['isomnipotent']) continue;
+	if($info['formtype']=='omnipotent') {
+		foreach($forminfos['base'] as $_fm=>$_fm_value) {
+			if($_fm_value['isomnipotent']) {
+				$info['form'] = str_replace('{'.$_fm.'}',$_fm_value['form'],$info['form']);
+			}
+		}
+		foreach($forminfos['senior'] as $_fm=>$_fm_value) {
+			if($_fm_value['isomnipotent']) {
+				$info['form'] = str_replace('{'.$_fm.'}',$_fm_value['form'],$info['form']);
+			}
+		}
+	}
+ ?>
+	<tr>
+      <th width="80"><?php if($info['star']){ ?> <font color="red">*</font><?php } ?> <?php echo $info['name']?>
+	  </th>
+      <td><?php echo $info['form']?>  <?php echo $info['tips']?></td>
+    </tr>
+<?php
+} }
+?>
+
+    </tbody></table>
+                </div>
+        	</div>
+        </div>
+        
+    </div>
+</div>
+<div id="m-rightshare">
+  <div class="u-menu z-show">
+    <li class="top"><a href="#top" id="top">返回顶部</a></li>
+  </div>
+</div>
+<style type="text/css">
+#m-rightshare {
+	z-index:99;
+	width:80px;
+	display: block;
+	height:70px;
+	right:0;
+	bottom: 300px;
+	position: fixed;;
+}
+.u-menu {
+	width:80px;
+	height:70px;
+}
+.top, .bottom {
+	background:url(<?php echo IMG_PATH?>zhizhu.png) no-repeat;
+	width: 75px;
+	height: 75px
+}
+.top a:hover{
+	background:url(<?php echo IMG_PATH?>zhizhu.png) no-repeat;
+}
+.u-menu li a {
+	width:80px;
+	height:70px;
+	display:block;
+	text-indent:-9999px;
+}
+</style>
+<script type="text/javascript"> 
+$(function(){
+	$('#top').click(function(){omnipotent('selectid','?app=collection&controller=node&view=public_spider','采集文章',1,700,100);})
+});
+</script>
+<div class="fixed-bottom">
+	<div class="fixed-but text-c">
+    <div class="button">
+    <input value="<?php echo $data['username']?>" type="hidden" name="info[username]" />
+	<input value="<?php if($r['upgrade']) echo $r['url'];?>" type="hidden" name="upgrade">
+	<input value="<?php echo $r['url'];?>" type="hidden" name="info[url]">
+	<input value="<?php echo $id;?>" type="hidden" name="id"><input value="<?php echo L('save_close');?>" type="submit" name="dosubmit" class="cu" onclick="refersh_window()"></div>
+    <div class="button"><input value="<?php echo L('save_continue');?>" type="submit" name="dosubmit_continue" class="cu" onclick="refersh_window()"></div>
+    <div class="button"><input value="<?php echo L('c_close');?>" type="button" name="close" onclick="refersh_window();close_window();" class="cu" title="Alt+X"></div>
+      </div>
+</div>
+</form>
+
+</body>
+</html>
+<script type="text/javascript"> 
+<!--
+	//jQuery(document).bind('keydown.Ctrl_1',function (evt){$("select[name='info[typeid]']").get(0).selectedIndex=1;return false; });
+	//jQuery(document).bind('keydown.Ctrl_2',function (evt){$("select[name='info[typeid]']").get(0).selectedIndex=2;return false; });
+	//jQuery(document).bind('keydown.Ctrl_3',function (evt){$("select[name='info[typeid]']").get(0).selectedIndex=3;return false; });	
+	jQuery(document).bind('keydown.Ctrl_e',function (evt){	
+	
+	var oEditor = CKEDITOR.instances.content;
+	var _data=oEditor.getData();//获取内容
+	_data=formatword(_data);
+    oEditor.setData('');//清空字符串
+    oEditor.setData(ToCDB(_data));//将格式化后的HTML写入编辑框		
+	return false; });
+	jQuery(document).bind('keydown.Alt_d',function (evt){$("input[name='info[inputtime]']").val(new Date().format('yyyy-MM-dd hh:mm:ss'));return false; });
+	jQuery(document).bind('keydown.Alt_a',function (evt){$("input[name='dosubmit_continue']").click();return false; });
+	jQuery(document).bind('keydown.Alt_q',function (evt){window.top.art.dialog({id:'selectid'}).close();return false; });
+	
+//只能放到最下面
+var openClose = $("#RopenClose"), rh = $(".addContent .col-auto").height(),colRight = $(".addContent .col-right"),valClose = getcookie('openClose');
+$(function(){
+	if(valClose==1){
+		colRight.hide();
+		openClose.addClass("r-open");
+		openClose.removeClass("r-close");
+	}else{
+		colRight.show();
+	}
+	openClose.height(rh);
+	$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'200',height:'50'}, 	function(){$(obj).focus();
+	boxid = $(obj).attr('id');
+	if($('#'+boxid).attr('boxid')!=undefined) {
+		check_content(boxid);
+	}
+	})}});
+	<?php echo $formValidator;?>
+	
+/*
+ * 加载禁用外边链接
+ */
+	jQuery(document).bind('keydown.Alt_x', function (){close_window();});
+	jQuery(document).bind('keydown.Ctrl_w',function (evt){$("input[name='dosubmit']").click();return false; });
+})
+document.title='<?php echo L('edit_content').addslashes($data['title']);?>';
+self.moveTo(0, 0);
+function refersh_window() {
+	setcookie('refersh_time', 1);
+}
+openClose.click(
+	  function (){
+		if(colRight.css("display")=="none"){
+			setcookie('openClose',0,1);
+			openClose.addClass("r-close");
+			openClose.removeClass("r-open");
+			colRight.show();
+		}else{
+			openClose.addClass("r-open");
+			openClose.removeClass("r-close");
+			colRight.hide();
+			setcookie('openClose',1,1);
+		}
+	}
+)
+//-->
+</script>

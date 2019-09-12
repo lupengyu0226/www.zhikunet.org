@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<meta http-equiv="X-Ua-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="沭阳网{$SEO['keyword']}">
+<meta name="description" content="沭阳网{$SEO['description']}">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/statics/css/about.css?v={CSS_VERSION}" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js?v={JS_VERSION}"></script>
+<body>
+<div class=about-allbox>
+<div class=about-banner>
+<div class=about-bannerclick><a href="https://www.05273.cn/" target=_blank>返回沭阳网</a></div></div>
+<div class=about-clear></div>
+<div class=about-menu>
+<ul>
+        	{loop $arrchild_arr $cid}
+  <li class=about-menuclassh><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
+  <li class=about-menuline></li>
+{/loop}
+</ul>
+</div>
+<div class=about-clear></div>

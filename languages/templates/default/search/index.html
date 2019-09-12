@@ -1,0 +1,85 @@
+{template 'search', 'header'}
+<div class="top">
+  <div id="search" class="ml10">
+        <script src="//weather.gtimg.cn/qqindex/0101170701.js" type="text/javascript"></script>
+        <span>沭阳</span>
+        <span class="weather-week"></span>
+        <span class="weatherText"></span>
+        <span class="weather-quality"></span>
+        <span class="weather-pm"></span>
+        <span class="weatherIcon"></span>
+        <span class="tem"></span> | 
+    {php $j=0}
+    {loop $search_model $k=>$v}
+    {php $j++;}
+        <a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this));" {if $j==1 && $typeid=$v['typeid']} class="on" {/if}>{$v['name']}</a>
+    {/loop}
+    {php unset($j);}
+  </div>
+</div>
+<div class="home">
+  <div class="search">
+    <div class="logo"><a href="javascript:;"><img src="{IMG_PATH}search/logo.gif" width="260" height="70" /></a></div>
+    <form name="search" type="get">
+      <fieldset id="input-container">
+      <input type="hidden" name="app" value="search"/>
+      <input type="hidden" name="controller" value="index"/>
+      <input type="hidden" name="view" value="init"/>
+      <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+      <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+        <div class="text">
+          <input type="text" name="q" id="q" class="input" autocomplete="off">
+        </div>
+        <input type="submit" class="submit" value="搜 索">
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+<script type="text/javascript">
+    var nowTime = new Date(),
+        nowYear = nowTime.getFullYear(),
+        nowMonth = nowTime.getMonth()+1,
+        nowDate = nowTime.getDate(),
+        nowTimeDay = nowTime.getDay(),
+        nowTimeHour = nowTime.getHours(),
+        tsTime = nowYear + '-' + nowMonth + '-' + nowDate,
+        weeks = ['周日','周一','周二','周三','周四','周五','周六'],
+        nowTimeWeek = weeks[nowTimeDay];
+        edi=weatherMap.weatherIcon[__weather_qqindex.wt].txt;
+        if(nowTimeHour<20&&nowTimeHour>4){
+            var n=weatherMap.weatherIcon[__weather_qqindex.wt].day;
+        } else{
+            var n=weatherMap.weatherIcon[__weather_qqindex.wt].night;
+        }
+        $('.weatherIcon').attr('style','background:url('+n+') center center no-repeat');
+        $('.tem').html(__weather_qqindex.tp+'℃');
+        $('.weather_out').attr("title",''+edi+'');
+        $('.weather-week').html(nowTimeWeek);
+        $('.weatherText').html(weatherMap.weatherIcon[__weather_qqindex.wt].txt);
+    $.ajax({
+        url: "//weather.gtimg.cn/aqi/cityrank.json",
+        dataType: "jsonp",
+        jsonpCallback: "cityrank",
+        success: function(data) {
+          for(var i = 0, len = data.length;i < len; i ++){
+            if(data[i].id == "01011707"){
+              $('.weather-quality').html("空气:" + data[i].quality);
+              $('.weather-pm').html("PM2.5:" + data[i].pm2_5);
+            }
+          }
+        }
+    });
+</script>
+<script language="JavaScript">
+<!--
+$(document).ready(function(){
+	$("#q").focus();
+}); 
+//-->
+</script>
+{template 'search', 'footer'}

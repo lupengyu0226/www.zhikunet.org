@@ -1,0 +1,76 @@
+{template "member","header"}
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('modify').L('avatar')}</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="content upload-container" style="padding:15px;border:1px solid #ddd;background-color:#f6fafb;text-align:center;">
+<div class="content">
+        
+        <script language="javascript" type="text/javascript" src="{$phpsso_api_url}/statics/js/swfobject.js"></script>
+        <script type="text/javascript">
+          var flashvars = {
+            'upurl':"{$upurl}&callback=return_avatar&"
+          }; 
+          var params = {
+            'align':'middle',
+            'play':'true',
+            'loop':'false',
+            'scale':'showall',
+            'wmode':'window',
+            'devicefont':'true',
+            'id':'Main',
+            'bgcolor':'#ffffff',
+            'name':'Main',
+            'allowscriptaccess':'always'
+          }; 
+          var attributes = {
+            
+          }; 
+          swfobject.embedSWF("{$phpsso_api_url}/statics/images/main.swf", "myContent", "490", "434", "9.0.0","{$phpsso_api_url}/statics/images/expressInstall.swf", flashvars, params, attributes);
+
+          function return_avatar(data) {
+            if(data == 1) {
+              window.location.reload();
+            } else {
+              alert('failure');
+            }
+          }
+        </script> 
+        <ul class="col-right col-avatar" id="avatarlist">
+          {loop $avatar $k $v}
+          <li>
+            <img src="{$v}" height="{$k}" width="{$k}" onerror="this.src='{$phpsso_api_url}/statics/images/member/nophoto.gif'"><br />
+            {L('avatar')}{$k} x {$k}
+          </li>
+          {/loop}
+        </ul>
+        <div class="col-auto">
+          <div id="myContent"> 
+            <p>Alternative content</p> 
+          </div>
+        </div>
+      </div>
+      <span class="o1"></span><span class="o2"></span><span class="o3"></span><span class="o4"></span>
+    </div>
+        <div class="col-auto">
+          <div id="myContent"> 
+            <p>你的浏览器可能不支持FLASH</p> 
+          </div>
+        </div>
+			</div>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

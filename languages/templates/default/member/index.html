@@ -1,0 +1,254 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+        {if $new_arr['new_count'] >0}
+        <div class="bd uc-msg mt20" id='new_count'>
+            <div class="list-view">
+                <ul class="list mt10">
+                    <li style="border-bottom:0px none;">
+                        <a class="avt" href="{APP_PATH}" target="_blank"><img src="//statics.05273.cn/statics/member/images/icon_default_avatar.jpg" alt="沭阳网"></a>
+                        <dl>
+                            <dt><a href="message-inbox.html" style="cursor:default;">站内信提醒</a></dt>
+                            <dd>亲爱的{if $memberinfo['nickname']}{$memberinfo['nickname']}{else}{$memberinfo['username']}{/if}，您有{$new_arr['new_count']}条新的站内短信尚未阅读，点击我进行阅读</dd>
+                            <dd class="follow">
+                                <a class="btn followed" href="message-inbox.html" hidefocus="true">查看</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {/if}
+        {edi:announce action="memberlists" num="1" siteid="$memberinfo[siteid]" cache="3600"}
+        {if $data}
+        {loop $data $r}
+        {php $announceid = $r[aid];}
+        			<div class="bd uc-msg mt20" id='announcement' style="display:none">
+                    	<div class="list-view">
+                        	<ul class="list mt10">
+                            	<li style="border-bottom:0px none;">
+                                	<a class="avt" href="{APP_PATH}" target="_blank"><img src="//statics.05273.cn/statics/member/images/icon_default_avatar.jpg" alt="沭阳网"></a>
+                                    <dl>
+                                        <dt><a href="index.php?app=announce&controller=index&view=show&aid={$r[aid]}" style="cursor:default;">{$r[title]}</a></dt>
+                                        <dd>{$r[content]}</dd>
+                                        <dd class="follow">
+                                        	<a class="btn followed" href="javascript:hide_element('announcement');setcookie('announcement_{$memberinfo[userid]}_{$r[aid]}', 1);" hidefocus="true">设为已读</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+        {/loop}
+        {else}
+       {edi:message action="lists" num="1" groupid="$memberinfo[groupid]" cache="3600"}
+        {loop $data $r}
+        {php $gid = $r[id];}
+        {if $status[$gid]==0}
+                    <div class="bd uc-msg mt20" id='gid' style="display:none">
+                        <div class="list-view">
+                            <ul class="list mt10">
+                                <li style="border-bottom:0px none;">
+                                    <a class="avt" href="{APP_PATH}" target="_blank"><img src="//statics.05273.cn/statics/member/images/icon_default_avatar.jpg" alt="沭阳网"></a>
+                                    <dl>
+                                        <dt><a href="index.php?app=message&controller=index&view=read_group&group_id={$r[id]}" style="cursor:default;">{$r[subject]}</a></dt>
+                                        <dd>{$r[content]}</dd>
+                                        <dd class="follow">
+                                            <a class="btn followed" href="javascript:hide_element('gid');setcookie('gid_{$memberinfo[userid]}_{$r[id]}', 1);" hidefocus="true">设为已读</a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+        {/if}
+        {/loop}
+        {/edi}
+        {/if}
+        {/edi}
+            <div class="uc-wp">
+                <div class="hd"><h2 class="fl">会员中心</h2><p class="fr">余额：<a class="total-money" href="index.php?app=pay&controller=deposit&view=pay">{$memberinfo[amount]}</a>  积分：<a class="total-score" href="index.php?app=pay&controller=spend_list&view=init&starttime=&endtime=&type=2&dosubmit=1">{$memberinfo[point]}</a>{if !$day_sign}<p class="qiandao-notic"><span id='sign_ajax'><a href="javascript:;" onclick="sign_ajax();">今日您尚未签到,一键签到</a></span>{else}<p class="qiandao-notic"><span>签到成功,奖励<font style="color:#F00; font-size:12px;font-weight:700">{$day_sign['signpoint']}</font></span>积分，明天继续哦{/if}  <a href="https://www.05273.cn/index.php?app=sign"><font style="color:#F00;">我的签到</font></a></p></div>
+                <div class="info-space"></div>
+                <div class="info-detail">
+                    <p style="font-size:15px;">欢迎您，{if $memberinfo['vip']}尊贵的VIP会员{/if}{if $memberinfo['nickname']}{$memberinfo['nickname']}{else}{$memberinfo['username']}{/if}，<span id="echoData"></span></p>
+                    <p>感谢您在{inputtime_zhuce($memberinfo[regdate])}注册，本次是您第 <font style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700">{$memberinfo[loginnum]}</font> 次登录，当前会员级别：{$memberinfo['groupname']}。</p>
+                </div>
+            </div>
+            <div class="uc-wp mt40">
+                <div class="hd course-schedule">
+                    <ul class="cl">
+                        <li class="fl active"><a href="#w0">我的收藏</a></li>
+                        <li class="fl"><a href="#w1">我的投诉</a></li>
+                        <li class="fl"><a href="#w2">我的评论</a></li>
+                    </ul>
+                </div>
+                <div id="w0" class="bd uc-wp-list">
+{edi:member action="favoritelist" userid="$memberinfo[userid]" num="5"}
+{if $data}
+					<ul class="live-list">
+{loop $data $k $v}
+
+                    	<li>
+                            <div class="s-title">
+                                <h3><a href="{$v['url']}" target="_blank" title="{$v['title']}">{$v['title']}</a></h3>
+                                <p class="live-teacher">{format::date($v['adddate'], 1)}收藏</p>
+                                <p><a class="fr" href="index.php?app=member&controller=index&view=favorite&id={$v['id']}">取消收藏</a></p>
+                            </div>
+                        </li>
+{if $n==5}
+                    	<div class="pagenavi mt30"><a href="member-favorite.html">查看更多收藏...</a></div>
+{/if}
+{/loop}
+					</ul>
+{else}
+                	<div class="uc-empty">暂无收藏的文章，赶紧去看看<a href="{APP_PATH}" target="_blank">最新文章</a></div>
+{/if}
+{/edi}
+                </div>
+                <div id="w1" class="bd mt20 hide uc-wp-list">
+{edi:member  action="jubaolist" userid="$memberinfo[userid]" num="5"}
+{if $data}
+                    <ul class="live-list">
+{loop $data $k $v}
+
+                        <li>
+                            <div class="s-title">
+                                <h3><a href="index.php?app=member&controller=index&view=jubao_view&id={$v['id']}" target="_blank" title="{$v['title']}">{$v['title']}</a></h3>
+                                <p class="live-teacher">{format::date($v['adddate'], 1)}</p>
+                                <p><a class="fr"><?php echo $v['status']==0 ? L('status_0') : L('status_1')?></a></p>
+                            </div>
+                        </li>
+{if $n==5}
+                        <div class="pagenavi mt30"><a href="member-jubao.html">查看更多</a></div>
+{/if}
+{/loop}
+                    </ul>
+{else}
+                    <div class="uc-empty">暂无投诉</div>
+{/if}
+{/edi}
+                </div>
+                <div id="w2" class="bd mt20 hide uc-wp-list">
+{edi:member action="commentlist" userid="$memberinfo[userid]" num="5"}
+{if $data}
+                    <ul class="live-list">
+{loop $data $k $v}
+
+                        <li>
+                            <div class="s-title">
+                                <h3><a href="https://www.05273.cn/{$v[commentid]}-1.html" target="_blank" title="{$v['title']}">{$v['content']}</a></h3>
+                                <p class="live-teacher">{format::date($v['creat_at'], 1)}</p>
+                                <p><a class="fr" href="index.php?app=member&controller=index&view=comment&id={$v['id']}">删除评论</a></p>
+                            </div>
+                        </li>
+{if $n==5}
+                        <div class="pagenavi mt30"><a href="member-favorite.html">查看更多.</a></div>
+{/if}
+{/loop}
+                    </ul>
+{else}
+                    <div class="uc-empty">暂无评论，赶紧去看看<a href="{APP_PATH}" target="_blank">最新文章</a></div>
+{/if}
+{/edi}
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{if $announceid}
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<script language="JavaScript">
+<!--
+$(document).ready(function() {
+	var announcement = getcookie('announcement_{$memberinfo[userid]}_{$announceid}');
+	if(announcement==null || announcement=='') {
+		$("#announcement").fadeIn("slow");
+	}
+});
+//-->
+</script>
+{/if}
+{if $gid}
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<script language="JavaScript">
+<!--
+$(document).ready(function() {
+    var gid = getcookie('gid_{$memberinfo[userid]}_{$gid}');
+    if(gid==null || gid=='') {
+        $("#gid").fadeIn("slow");
+    }
+});
+//-->
+</script>
+{/if}
+<script language="JavaScript">
+function sign_ajax() {
+    $.getJSON('https://passport.05273.cn/index.php?app=sign&controller=index&view=sign_ajax&callback=?', function(data){
+        if(data.status==1)  {
+            $("#sign_ajax").html('签到成功,奖励<font style="color:#F00; font-size:12px;font-weight:700">'+data.signpoint+'</font></span>积分，明天继续哦');
+        } 
+        if(data.status==-2)  {
+            $("#sign_ajax").html('还没到签到时间');
+        } 
+    });
+
+}
+</script>
+<script type="text/javascript">
+$(function(){
+	$('.course-schedule li').click(function(){
+		var index = $(this).index();
+		$(this).addClass('active').siblings().removeClass('active');
+		$('div[id^="w"]').addClass('hide');
+		$('#w'+index).removeClass('hide');
+		$('html,body').animate({'scrollTop':530},600);
+	});
+});
+/*top time*/
+$(document).ready(function(){
+	var b = new Date();
+	var hr = b.getHours();
+	var mess1="";
+	if (( hr >= 0 ) && (hr <= 4 ))
+	mess1="深夜了，还在忙？！注意身体，该休息了！"
+	if (( hr >= 4 ) && (hr < 7))
+	mess1="清晨好！沭阳网祝你快乐开始新的一天！"
+	if (( hr >= 7 ) && (hr < 12))
+	mess1="早上好，一天之际在于晨，又是美好的一天！"
+	if (( hr >= 12) && (hr <= 13))
+	mess1="该吃午饭啦！有什么好吃的？记得要多吃一点哦？"
+	if (( hr >= 13) && (hr <= 17))
+	mess1="下午好！欢迎来到沭阳网！这一天忙不？"
+	if (( hr >= 17) && (hr <= 18))
+	mess1="太阳落山了！意味着下班，下班万岁！ ^_^"
+	if (( hr >= 18) && (hr <= 19))
+	mess1="晚上好，沭阳网给您的感觉还不错吧！"
+	if (( hr >= 19) && (hr <= 21))
+	mess1="沭阳网愿和你分享晚间的快乐^_^"
+	if ((hr >= 22) && (hr <= 23))
+	mess1="这么晚了，洗洗睡吧！但愿不会影响您明天的工作！"
+    document.getElementById("echoData").innerHTML = mess1;
+})
+</script>
+{if $memberinfo['mobile']}{else}
+<div id="mail-box" class="pop-up">
+    <div class="popup-mail">
+        <div class="pop-title">
+            <h2 class="">实名认证提示</h2>
+        </div>
+        <div class="txt-center info-space popup-mail-txt" id="sendSuccess">
+            <p><span class="iconfont color-suc">&#xe629;</span>根据工信部实名制要求，为了更合法更规的为用户服务，沭阳网即日起对用户进行实名制服务</p>
+            <p>本网对于注册用户的网络身份管理实行“后台实名、前台自愿、手机验证”原则。</p>
+            <p>相关信息通过认证之后，用户发布的信息可正常审核通过。</p>
+            <p>沭阳网不会非法使用您提交的手机信息。</p>
+            <input type="button" value="绑定手机" class="btn btn-success close" onclick="redirect('{PASSPORT_PATH}member-account_change_mobile.html')">
+        </div>
+        <div class="info-space"></div>
+    </div>
+</div>
+{/if}
+{template "member","footer"}

@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `shuyang_weixin_sent_group_news`;

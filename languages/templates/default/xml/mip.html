@@ -1,0 +1,9 @@
+<?php echo '<?xml version="1.0" encoding="utf-8" ?>'; ?>
+<?php header('Content-type: text/xml');?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/"> 
+<?php $data = news('36', 5000); ?>
+ {loop $data $r}	
+'https://wap.05273.cn/mip-{$r[catid]}-{$r[id]}-1.html',
+{/loop}
+</urlset>

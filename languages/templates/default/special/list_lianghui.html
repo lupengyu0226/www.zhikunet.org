@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="https://statics.05273.cn/zhuanti/2018lianghui/css/css.css?v=20180104" />
+<script src="//statics.05273.cn/statics/js/jquery.js" type="text/javascript"></script>
+<script src="//statics.05273.cn/statics/js/jquery.lazyload.min.js" type="text/javascript"></script>
+<script src="//statics.05273.cn/statics/js/Koala.min.1.5.js" type="text/javascript"></script>
+<script src="//statics.05273.cn/statics/js/weatherNew_1.0.js" type="text/javascript"></script>
+<script type="text/javascript" src="//statics.05273.cn/zhuanti/2018lianghui/js/base.js"></script>
+<!--以下是页面独有JS,请不要放在公用php文件中-->
+<script type="text/javascript" src="//statics.05273.cn/zhuanti/2018lianghui/js/index.js"></script>
+<!--以上是页面独有JS,请不要放在公用php文件中-->
+<!--[if IE 6]>
+  <script type="text/javascript" src="js/Png_js.js"></script>
+  <script type="text/javascript">
+  DD_belatedPNG.fix('*');
+  </script>
+<![endif]--> 
+<title>{$info[name]}_2018聚焦沭阳县两会_{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+</head>
+<body>  
+  <div class="lh_banner">
+  </div>
+  <div class="wrapin">
+    <div class="lh_tt">
+      <dl>
+          <dt>{$info[name]}</dt>  
+      </dl>
+      <a href="https://www.05273.cn/special/2018lianghui/" class="more_a">返回专题</a>
+    </div>
+    <ul class="hmt_list">
+    {edi:special  action="content_list" specialid="$specialid" typeid="$typeid" listorder="1" page="$page" num="20"}
+      {loop $data $r} 
+       <li><a href="{$r['url']}" target="_blank" title="{$r['title']}">{$r['title']}</a><span>{date('Y-m-d',$r[inputtime])}</span></li>
+        {/loop}       
+    {/edi} 
+    </ul>
+    <div id="pages" class="text-c">{$pages}</div>
+  <div class="clear"></div>
+  <div class="footer">
+    <p><a href="https://www.05273.cn/about/aboutus/" rel="nofollow" target="_blank">关于沭阳网</a> | <a href="https://www.05273.cn/about/shuyangwang/" rel="nofollow" target="_blank">本网动态</a> | <a href="https://www.05273.cn/about/contactus/" rel="nofollow" target="_blank">联系方式</a> | <a href="https://www.05273.cn/about/submission/" rel="nofollow" target="_blank">投稿荐稿</a> | <a href="https://www.05273.cn/about/copyright/" rel="nofollow" target="_blank">免责声明</a> | <a href="https://www.05273.cn/about/adsen/" rel="nofollow" target="_blank">广告投放</a> | <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> | <a href="https://www.05273.cn/about/book/" rel="nofollow" target="_blank">意见反馈</a> | <a href="https://www.05273.cn/about/delete/" rel="nofollow" target="_blank">删帖须知</a> | <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a> | <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a> | <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a> | <a href="https://wap.05273.cn/" target="_blank">手机站</a> </p>
+    <p>Copyright &copy; 2007-2019 05273.cn All Rights Reserved.</p>
+    <p><a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备18031647号-1</a> <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备32132202000115号</a> <a arget="_blank" rel="nofollow" href="https://www.05273.cn/about/wangxin/" target="_blank">沭宣备0000001号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" rel="nofollow" target="_blank">举报</a></p>  
+  </div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/**
+ * By 05273.com
+ * date 2013.9.27
+ * v  1.0
+ * 适配新闻底层页&(不包含windowsPhone)
+ */
+var _ie8=(function(){var rv=-1;if(navigator.appName=='Microsoft Internet Explorer'){var ua=navigator.userAgent;var re=new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");if(re.exec(ua)!=null)
+rv=parseFloat(RegExp.$1);}
+return rv!=-1&&rv<10;})();(function($){$.getScript=function(src,func){var script=document.createElement('script');script.async="async";script.charset="utf-8";script.src=src;if(func){script.onload=func;}
+document.getElementsByTagName("head")[0].appendChild(script);}})($)
+var share={url:window.location.href,twb:function(){console.log("腾讯微博");window.location="http://share.v.t.qq.com/index.php?c=share&a=index&url="+share.url+"&appkey=801378464&title="+document.title+"&pic&line1=";},qzone:function(){console.log("腾讯空间");window.location="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+share.url+"&site=&title="+document.title+"&pics=";},swb:function(){console.log("新浪微博");window.location="http://weibo.cn/ext/share?rt="+document.title+"&ru="+share.url+"";},clickfn:function(){if(_ie8){$(".sharet").click(function(){$(this).attr("href","http://share.v.t.qq.com/index.php?c=share&a=index&url="+share.url+"&appkey=801378464&title="+document.title+"&pic&line1=")});$(".shareqzone").click(function(){$(this).attr("href","http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+share.url+"&site=&title="+document.title+"&pics=")});$(".sharewb").click(function(){$(this).attr("href","http://weibo.cn/ext/share?rt="+document.title+"&ru="+share.url+"")});}else{$(".sharet").click(function(){share.twb();});$(".shareqzone").click(function(){share.qzone();});$(".sharewb").click(function(){share.swb();});};}};$(".gochannels").click(function(){var t=$(".channels");t.toggleClass("channelstoggle");});$(".channels li").click(function(){$(this).siblings().removeClass("current");$(this).addClass("current");});$(".gotop").click(function(){window.scroll(0,0);});window.onload=function(){$.getScript("",function(){});if(_ie8){$(".share").hide();}else{share.clickfn();}}

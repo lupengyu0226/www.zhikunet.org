@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('url', '外链管理', 'url/', 0, '1.0', '外链', '', 0, 0, '2010-9-05', '2010-9-05');

@@ -1,0 +1,8 @@
+{edi:content action="category" catid="16" siteid="$siteid" order="listorder ASC"}
+{php $category=array()}
+{loop $data $k=>$r}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+    {php $category["category"][]=array("catid"=>$r[catid],"name"=>$r[catname],"description"=>$r[description],"pic"=>trim_weapp($r[image]));}
+{/loop}
+{/edi}
+{php echo json_encode($category)}

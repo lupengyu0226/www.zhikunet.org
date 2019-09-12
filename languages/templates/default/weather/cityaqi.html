@@ -1,0 +1,285 @@
+{template "weather","header_cityaqi"}
+<div class="quality-page" style="background-image: url(//statics.05273.cn/statics/images/weather/youliang_baitian.png);">
+    <!-- header -->
+    <div class="header">
+        <!-- layout -->
+        <div class="layout yh">
+            <!-- logo -->
+            <div class="tx-logo">
+                <h1><a href="index.html"></a></h1>
+            </div>
+            <!-- /logo -->
+
+            <!-- mod-today -->
+            <div class="mod-today quality-mod-today">
+
+                <div class="hd cf">
+
+                    <!-- 实况天气 -->
+                    <div id="cur-box" class="cur-box fl">
+                        <dl class="cur-name cf">
+                            <dt class="fl posr">
+                                <h2 class="city yh f30"></h2>
+                                <i class="posa line-r"></i>
+                            </dt>
+                            <dd class="fl l18">
+                                <p><span class="full-date"></span></p>
+                                <p><span class="sk-date-quality"></span></p>
+                            </dd>
+                        </dl>
+
+                        <dl class="cur-info quality-cur-info yh cf">
+                            <dt class="fl">
+                                <div class="quality-ico-box"></div>
+                            </dt>
+                            <dd class="fl tq posr">
+                                <div class=" f20" style="margin-top:-8px;overflow:hidden;">
+                                    <span class="w-zl"></span>&nbsp;&nbsp;&nbsp;<span class="w-aqi"></span>&nbsp;&nbsp;&nbsp;<span class="w-pm"></span>
+                                </div>
+                                <div class="f16">
+                                    <span class="w-pm10"></span>&nbsp;&nbsp;&nbsp;<span class="w-o3"></span>&nbsp;&nbsp;&nbsp;<span class="w-no2"></span>&nbsp;&nbsp;&nbsp;<span class="w-co"></span>
+                                </div>
+                            </dd>
+                            <dd class="fl zl posr">
+                                <a class="link-index" href="javascript:;">
+                                    <i class="posa line-l"></i>
+                                    <div class="f20" style="margin-top:-8px;"><span>天气：</span><span class="w-wd"></span></div>
+                                    <div class="w-sd f16"></div>
+                                </a>
+                            </dd>
+                        </dl>
+                        <div class="tab-hz quality-tab-hz f14">数据来源：PM25.in</div>
+                    </div>
+                    <!-- /实况天气 -->
+
+                    <!-- 搜索 -->
+                    <div class="sidebar posr yh f14 fr">
+                        <dl class="search-box">
+                            <dt>
+                                <ul class="stab-hd cf">
+                                    <li>城市天气</li>
+                                    <!-- <li>景区天气</li> -->
+                                    <li class="current">空气质量</li>
+                                </ul>
+                            </dt>
+                            <dd class="cf posr">
+                                <input type="text" id="wSearch" class="searchTxt" value="输入地名、拼音均可" />
+                                <a href="javascript:;" class="wSearchBtn" id="wSearchBtn" target="_blank">查询</a>
+                                <i class="posa line-t"></i>
+                                <i class="posa line-r"></i>
+                                <i class="posa line-b"></i>
+                                <i class="posa line-l"></i>
+                            </dd>
+                        </dl>
+                        <!-- 推荐城市列表 -->
+                        <ul id="suggest-box" class="suggest-box posa"></ul>
+                        <div id="city-box" class="city-box posa">
+                            <ul class="city-list cf">
+                                <li><a href="?icity=01010101" name="北京市">北京</a></li>
+                                <li><a href="?icity=01012601" name="上海市">上海</a></li>
+                                <li><a href="?icity=01013307" name="昆明市">昆明</a></li>
+                                <li><a href="?icity=01013401" name="杭州市">杭州</a></li>
+                                <li><a href="?icity=01010704" name="广州市">广州</a></li>
+                                <li><a href="?icity=01012703" name="成都市">成都</a></li>
+                                <li><a href="?icity=01012507" name="西安市">西安</a></li>
+                                <li><a href="?icity=01011704" name="南京市">南京</a></li>
+                                <li><a href="?icity=01010715" name="深圳市">深圳</a></li>
+                                <li><a href="?icity=01010401" name="重庆市">重庆</a></li>
+                                <li><a href="?icity=01011502" name="长沙市">长沙</a></li>
+                                <li><a href="?icity=01011912" name="沈阳市">沈阳</a></li>
+                                <li><a href="?icity=01010508" name="厦门市">厦门</a></li>
+                                <li><a href="?icity=01011410" name="武汉市">武汉</a></li>
+                                <li><a href="?icity=01011008" name="海口市">海口</a></li>
+                                <li><a href="?icity=01013213" name="乌鲁木齐">乌鲁木齐</a></li>
+                                <li><a href="?icity=01012310" name="青岛市">青岛</a></li>
+                                <li><a href="?icity=01011904" name="大连市">大连</a></li>
+                                <li><a href="?icity=01011303" name="哈尔滨市">哈尔滨</a></li>
+                                <li><a href="?icity=01011014" name="三亚市">三亚</a></li>
+                                <li><a href="?icity=01011603" name="长春市">长春</a></li>
+                                <li><a href="?icity=01010811" name="南宁市">南宁</a></li>
+                                <li><a href="?icity=01010903" name="贵阳市">贵阳</a></li>
+                                <li><a href="?icity=01010501" name="福州市">福州</a></li>
+                                <li><a href="?icity=01011216" name="郑州市">郑州</a></li>
+                                <li><a href="?icity=01012305" name="济南市">济南</a></li>
+                                <li><a href="?icity=01010806" name="桂林市">桂林</a></li>
+                                <li><a href="?icity=01012901" name="天津市">天津</a></li>
+                                <li><a href="?icity=01012408" name="太原市">太原</a></li>
+                                <li><a href="?icity=01011806" name="南昌市">南昌</a></li>
+                                <li><a href="?icity=01013003" name="拉萨市">拉萨</a></li>
+                                <li><a href="?icity=01012207" name="西宁市">西宁</a></li>
+                                <li><a href="?icity=01013101" name="香港">香港</a></li>
+                                <li><a href="?icity=01010301" name="澳门">澳门</a></li>
+                                <li><a href="?icity=0101170701" name="沭阳县">沭阳</a></li>
+                            </ul>
+                            <ul class="city-list cf">
+                                <li><a href="?icity=01010101" name="北京市">北京</a></li>
+                                <li><a href="?icity=01012601" name="上海市">上海</a></li>
+                                <li><a href="?icity=01010704" name="广州市">广州</a></li>
+                                <li><a href="?icity=01010715" name="深圳市">深圳</a></li>
+                                <li><a href="?icity=01013401" name="杭州市">杭州</a></li>
+
+                                <li><a href="?icity=01012901" name="天津市">天津</a></li>
+                                <li><a href="?icity=01012507" name="西安市">西安</a></li>
+                                <li><a href="?icity=01011410" name="武汉市">武汉</a></li>
+                                <li><a href="?icity=01012703" name="成都市">成都</a></li>
+                                <li><a href="?icity=01011704" name="南京市">南京</a></li>
+
+                                <li><a href="?icity=01011108" name="石家庄市">石家庄</a></li>
+                                <li><a href="?icity=01011216" name="郑州市">郑州</a></li>
+                                <li><a href="?icity=01012305" name="济南市">济南</a></li>
+                                <li><a href="?icity=01012408" name="太原市">太原</a></li>
+                                <li><a href="?icity=01010208" name="合肥市">合肥</a></li>
+
+                                <li><a href="?icity=01013213" name="乌鲁木齐">乌鲁木齐</a></li>
+                                <li><a href="?icity=01010607" name="兰州齐">兰州</a></li>
+                                <li><a href="?icity=01011912" name="沈阳市">沈阳</a></li>
+                                <li><a href="?icity=01011303" name="哈尔滨市">哈尔滨</a></li>
+                                <li><a href="?icity=01011603" name="长春市">长春</a></li>
+
+                                <li><a href="?icity=01010508" name="厦门市">厦门</a></li>
+                                <li><a href="?icity=01012310" name="青岛市">青岛</a></li>
+                                <li><a href="?icity=01013307" name="昆明市">昆明</a></li>
+                                <li><a href="?icity=01010501" name="福州市">福州</a></li>
+                                <li><a href="?icity=01010702" name="东莞市">东莞</a></li>
+
+                                <li><a href="?icity=01010401" name="重庆市">重庆</a></li>
+                                <li><a href="?icity=01011502" name="长沙市">长沙</a></li>
+                                <li><a href="?icity=01011806" name="南昌市">南昌</a></li>
+                                <li><a href="?icity=01011712" name="扬州市">扬州</a></li>
+                                <li><a href="?icity=01011706" name="苏州市">苏州</a></li>
+
+                                <li><a href="?icity=01011110" name="邢台市">邢台</a></li>
+                                <li><a href="?icity=01011101" name="保定市">保定</a></li>
+                                <li><a href="?icity=01011104" name="邯郸市">邯郸</a></li>
+                                <li><a href="?icity=01011109" name="唐山市">唐山</a></li>
+                                <li><a href="?icity=01011707" name="廊坊市">宿迁</a></li>
+
+                            </ul>
+                        </div>
+                        <!-- 推荐城市列表 -->
+                    </div>
+                    <!-- /搜索 -->
+
+                </div>
+
+                <div class="bd">
+                    <div id="quality-zhishu" class="quality-zhishu cf f14">
+                        <dl class="item fl">
+                            <dt class="fl ico-q1"></dt>
+                            <dd>
+                                <p class="f18 l30">首要污染物</p>
+                                <p class="l18" data-quality></p>
+                            </dd>
+                        </dl>
+                        <dl class="item fl">
+                            <dt class="fl ico-q2"></dt>
+                            <dd>
+                                <p class="f18 l30">气象条件</p>
+                                <p class="l18" data-quality></p>
+                            </dd>
+                        </dl>
+                        <dl class="item fl">
+                            <dt class="fl ico-q3"></dt>
+                            <dd>
+                                <p class="f18 l30">影响人群</p>
+                                <p class="l18" data-quality></p>
+                            </dd>
+                        </dl>
+                        <dl class="item fl">
+                            <dt class="fl ico-q4"></dt>
+                            <dd>
+                                <p class="f18 l30">爱心提示</p>
+                                <p class="l18" data-quality></p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- /mod-today -->
+
+        </div>
+        <!-- /layout -->
+    </div>
+    <!-- /header -->
+    
+    <!-- main -->
+    <div class="main">
+        <!-- layout -->
+        <div class="layout">
+
+            <!-- 详细数据报告 -->
+            <div class="mod-quality">
+                <div class="hd">
+                    <h2 class="tit yh f24">各监测点详细数据</h2>
+                </div>
+                <div class="bd cf">
+                    <div id="quality-detail"></div>
+                </div>
+            </div>
+            <!-- /详细数据报告 -->
+
+            <!-- 空气质量排行 -->
+            <div class="quality-rank cf">
+                <div class="chief">
+                    <div class="hd">
+                        <h2 class="tit yh f20">全国实时空气质量指数(AQI)前十名</h2>
+                    </div>
+                    <div class="bd">
+                        <div id="chart-1" class="chart"></div>
+                    </div>
+                </div>
+                <div class="extra">
+                    <div class="hd">
+                        <h2 class="tit yh f20">全国实时空气质量指数(AQI)后十名</h2>
+                    </div>
+                    <div class="bd">
+                        <div id="chart-2" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /空气质量排行 -->
+
+        </div>
+        <!-- /layout -->
+    </div>
+    <!-- /main -->
+
+<script id="quality-temp" type="text/html">
+<table class="table" width="100%">
+    <thead>
+        <tr class="trbg">
+            <td>序号</td>
+            <td>监测点</td>
+            <td>&nbsp;AQI&nbsp;</td>
+            <td>空气质量<br />指数类别</td>
+            <td>首要污染物</td>
+            <td>PM 2.5<br />细颗粒物</td>
+            <td>PM 10<br />可吸入颗粒物</td>
+            <td>CO<br />一氧化碳</td>
+            <td>NO2<br />二氧化氮</td>
+            <td>O3<br />臭氧1小时平均</td>
+            <td>O3_8h<br />臭氧8小时平均</td>
+            <td>SO2<br />二氧化硫</td>
+        </tr>
+    </thead>
+    <tbody>
+    {{each list as value i}}
+        <tr{{if i % 2 == 1}} class="trbg"{{/if}}>
+            <td>{{i + 1}}</td>
+            <td><!--<a href="?icity={{value.id}}">-->{{value.position_name}}<!--</a>--></td>
+            <td>{{value.aqi}}</td>
+            <td>{{value.quality}}</td>
+            <td>{{value.primary_pollutant}}</td>
+            <td>{{value.pm2_5}}</td>
+            <td>{{value.pm10}}</td>
+            <td>{{value.co}}</td>
+            <td>{{value.no2}}</td>
+            <td>{{value.o3}}</td>
+            <td>{{value.o3_8h}}</td>
+            <td>{{value.so2}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+</script>
+{template "weather","footer"}

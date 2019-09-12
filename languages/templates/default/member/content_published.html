@@ -1,0 +1,66 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}member_common.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('published_content')}</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="content">
+{if $datas}
+			<table width="100%" cellspacing="0"  class="table-list">
+        <thead>
+            <tr>
+            <th width="30">ID</th>
+            <th>{L('title')}</th>
+            <th width="80">{L('category')}</th>
+            <th width="80">{L('adddate')}</th>
+            <th width="90">{L('operation')}</th>
+            </tr>
+        </thead>
+    <tbody>
+{loop $datas $info}
+	<tr>
+	<td align="center">{$info['id']}</td>
+	<td align="left"><a href="{$info[url]}" target="_blank" title="{$info['title']}">{str_cut($info['title'], 60)}</a> {if $info[status]==0}<font color="red">{L('reject_content')}</font>{elseif $info[status]!='99'}<font color="#1D94C7">待审中</font>{/if}</td>
+	<td align="center"><a href="{if strpos($CATEGORYS[$info['catid']][url],'http://')===false}{$siteurl}{/if}{$CATEGORYS[$info['catid']][url]}" target="_blank">{$CATEGORYS[$info['catid']][catname]}</a></td>
+	<td align="center">{date('Y-m-d',$info['inputtime'])}</td>
+	<td align="center">
+	{if $info[status]==99}<font color="green">{L('pass')}</font>{elseif !$info[flag]}<a href="index.php?app=member&controller=content&view=edit&catid={$info[catid]}&id={$info[id]}&t=2"><font color="red">{L('edit')}</font></a> | <a href="index.php?app=member&controller=content&view=delete&catid={$info[catid]}&id={$info[id]}&t=2">删除</a>{else}<a href="index.php?app=member&controller=content&view=edit&catid={$info[catid]}&id={$info[id]}&t=2"><font color="red">{L('edit')}</font></a> | <a href="index.php?app=member&controller=content&view=delete&catid={$info[catid]}&id={$info[id]}&t=2">删除</a>{/if}
+  	 
+	</td>
+	</tr>
+{/loop}
+    </tbody>
+    </table>
+
+ <div id="pages"> {$pages}</div>
+{else}
+				<div class="uc-wp">
+                    <div class="bd uc-wp-list">
+                        <div class="uc-empty">您还未曾发表过文章，请<a href="content-publish.html?t=2">发布内容</a></div>
+                    </div>
+                </div>
+{/if}
+			</div>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+<script language="JavaScript">
+<!--
+	function c_c(catid) {
+		location.href='index.php?app=member&controller=content&view=published&siteid={$siteid}&t=2&catid='+catid;
+	}
+//-->
+</script>
+{template "member","footer"}

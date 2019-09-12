@@ -1,0 +1,6 @@
+.kx { width:436px; height:45px; position:fixed;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));bottom:0; left:50%; margin-left:-220px; display:none; z-index:50; background:url(//statics.05273.cn/statics/images/kuaixun.png) 0 0px no-repeat; }
+.kx .tit{ width:45px; height:45px; float:left; font:500 18px/45px "微软雅黑"; color:#fff; padding-left:20px; overflow:hidden; padding-right:5px;}
+#kx_text { line-height:45px; float:left; width:290px; padding-left:13px; margin-left:15px; display:inline; overflow:hidden; background:url(//statics.05273.cn/statics/images/kuaixun.png) 0 -150px no-repeat; }
+#kx_text a { font-size:14px; color:#333; text-decoration:none;}
+#kx_text a:hover {text-decoration: underline;}
+.kx .close { width:20px; height:20px; position:absolute; right:20px; top:15px; }

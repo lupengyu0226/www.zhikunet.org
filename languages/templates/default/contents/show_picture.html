@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="mobile-agent" content="format=html5;url={S($url)}">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="{S($url)}">
+<link rel="miphtml" href="https://wap.05273.cn/mip-{$catid}-{$id}-1.html">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="{S($url)}";
+            }catch(e){}
+        }
+    }
+</script>
+<link href="https://statics.05273.cn/statics/css/pic/pic.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.sgallery1.2.js"></script>
+<SCRIPT type=text/javascript>
+$(function(){
+$("html,body").animate({ scrollTop: 90 }, 1500); 
+})
+</SCRIPT>
+</head>
+<body>
+<div class="wrapper-out">
+	<div class="hd header">
+		<div class="logo">
+			<a href="https://www.05273.cn" target="_blank" title="沭阳网"><img src="//www.05273.cn/images/b_logo.gif"/></a>
+		</div>
+		<div class="nav"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)} > 正文</div>
+		<div class="mainNav">
+            <div id="userinfo"></div>
+            <div id="userlogin">
+ <form class="login-form" id="page_loginForm"  action="//www.05273.cn/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="https://www.05273.cn"/>
+&nbsp;&nbsp;&nbsp;&nbsp;沭阳论坛通行证
+	用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+	密&nbsp;&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+     <a href="https://passport.05273.cn/member-register.html" target="_blank">注册账户</a> | <a href="https://passport.05273.cn/member-public_forget_password.html" target="_blank">找回密码</a> | <a href="https://passport.05273.cn/member-public_qq_loginnew.html" target="_blank"><img alt="使用QQ登录" title="使用QQ登录" src="//www.05273.cn/images/qq_5016.png" height="16" width="50" /></a>
+  </form>
+<script type="text/javascript">Login.isLogin('//www.05273.cn/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+            </div>
+		</div>
+	</div>
+	<div class="bd body">
+		<div id="Main-P-QQ" class="wrapper-inner">
+			<div class="hd">
+			<div id="LN_zutu_Width1" style="width:980px;height:35px;"></div>
+				<h1>{$title}</h1>
+				<div id="toolBar">
+					<ul class="left">
+						<li class="save"><a href="javascript:;" id="orgPic" onclick="showpic('big');">查看原图</a></li>
+						<li>|</li>
+						<li >提示：支持键盘翻页 ←左 右→</li>
+					</ul>
+					<ul class="right">
+						<li>|</li>
+						{if $allow_comment && module_exists('comment')}
+						<li class="comment" title="发表评论"><a href="https://www.05273.cn/content_{id_encode("$catid",$id,$siteid)}-1.html" target="_blank" id="iwannComent">我要评论</a></li>
+						{/if}
+						<li>|</li>
+						<script type="text/javascript">
+						(function(){
+								var p = {
+								url:location.href,
+								showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+								desc:'我在沭阳网图片频道看到了一张非常精彩的图片，分享给你们看看',/*默认分享理由(可选)*/
+								summary:'{$description}',/*分享摘要(可选)*/
+								title:'{$title} - 沭阳网图片频道',/*分享标题(可选)*/
+								site:'沭阳网图片频道',/*分享来源 如：腾讯网(可选)*/
+								pics:'{$thumb}', /*分享图片的路径(可选)*/
+								style:'101',
+								width:142,
+								height:30
+								};
+								var s = [];
+								for(var i in p){
+								s.push(i + '=' + encodeURIComponent(p[i]||''));
+								}
+								document.write(['<li class="shareQQ" title="分享到我的QQ空间" id="ShareZonepic"><a version="1.0" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank">分享到空间</a></li>'].join(''));
+						})();
+						</script>
+						<li>|</li>
+						<li class="shareWB" onclick="postToWb();" title="转播到我的腾讯微博" id="Sharewbpic">转播到微博</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bd big-pic">
+				<div class="Main_A">
+					<div class="mouseOver mouseOverleft">
+						<div class="pageLeft">
+							<span>
+                                <a id="photoPrev" onclick="showpic('pre');" href="javascript:;" hidefocus="true" target="_self" title="点击浏览上一张图片,支持键盘'←'翻页"></a>
+							</span>
+						</div>
+					</div>
+					<div class="mouseOver mouseOverright">
+						<div class="pageRight">
+							<span>
+								<a id="photoNext" onclick="showpic('next')" href="javascript:;" hidefocus="true" target="_self" title="点击浏览下一张图片,支持键盘'→'翻页"></a>
+							</span>
+						</div>
+					</div>
+					<div id="endSelect">
+						<a href="javascript:;" id="endSelClose" onclick="$('#endSelect').hide();" class="close"></a>
+						<div class="end-inner">
+							<div class="hd">
+								<div class="left">
+									<span class="firstImg"><img src="{$thumb}" width="86" height="56" alt="{$title}" /></span>
+								</div>
+								<div class="right">
+									<h2>{$title}</h2>
+									<ul>
+										<li class="button">
+											<a id="rePlayBut" onclick="showpic('next', 1);" href="javascript:void(0)"><span></span> <em></em>重新播放</a>
+										</li>	
+										<li class="button">
+											<a href="javascript:void(0)" onclick="postToWb();" id="MIcblog"><span></span><em></em>转播到微博</a>
+										</li>
+										<li class="button">
+						<script type="text/javascript">
+						(function(){
+								var p = {
+								url:location.href,
+								showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+								desc:'我在沭阳网图片频道看到了一张非常精彩的图片，分享给你们看看',/*默认分享理由(可选)*/
+								summary:'{$description}',/*分享摘要(可选)*/
+								title:'{$title} - 沭阳网图片频道',/*分享标题(可选)*/
+								site:'沭阳网图片频道',/*分享来源 如：腾讯网(可选)*/
+								pics:'{$thumb}', /*分享图片的路径(可选)*/
+								style:'101',
+								width:142,
+								height:30
+								};
+								var s = [];
+								for(var i in p){
+								s.push(i + '=' + encodeURIComponent(p[i]||''));
+								}
+								document.write(['<li class="button"><a version="1.0" id="ShareinQQ" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank"><span></span><em></em>分享到空间</a></li>'].join(''));
+						})();
+						</script>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="bd">
+								<h3>大家都在看</h3>
+								<ul id="lastComend">
+                                <!--#include virtual="/caches/posid/photoend.html"-->
+                                </ul>
+							</div>
+							<div class="ft">
+								<a href="https://www.05273.cn/photo/" target="_blank" class="buttonClik">进入沭阳网图片频道</a>
+							</div>
+						</div>
+					</div>
+                    <div id="big-pic"></div>
+				</div>
+				<div class="Main_B">
+                	<p id="picinfo"></p>
+                    <p>{$content}</p>
+                </div>
+				<div class="Main_C">
+					<div class="smallPic">
+						<a onclick="showpic('pre')" href="javascript:;" class="left" id="goleft"></a>
+						<div class="cont left" id="SmallWarp">
+							<ul id="pictureurls">
+			{loop $pictureurls $pic_k $r}
+			 <li><div class="img-wrap"><a href="javascript:;" hidefocus="true"><img src="{thumb($r[url], 116, 0)}" alt="{$r[alt]}" rel="{$r[url]}"/></a></div></li>
+			{/loop}
+                                                        </ul>
+						</div>
+						<a onclick="showpic('next')" href="javascript:;" class="right" id="goright"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+       	<div id="copyright" class="copyright">
+		<div class="layout">
+			<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a>
+		</div>
+  	<div class="en">Copyright &copy; 2007-2019 05273.cn All Rights Reserved.  </div>
+    	<div>
+		 苏ICP备18031647号-1 <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" target="_blank">举报</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function postToWb(){
+		var _t = encodeURI('我在沭阳网图片频道看到了一张非常精彩的图片，分享给你们看看:{$title}');
+		var _url = encodeURIComponent(document.location);
+		var _appkey = encodeURI("801077112");
+		var _pic = encodeURI('{$thumb}');
+		var _site = '';
+		var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+		window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+	}
+</script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/show_picture.js"></script>
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<script src="//www.05273.cn/core/stats/{$catid}/" type="text/javascript"></script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

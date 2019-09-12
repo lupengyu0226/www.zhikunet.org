@@ -1,0 +1,9 @@
+.videobg {
+	WIDTH: 248px; BACKGROUND: url(http://www.05273.com/templates/shuyangnew/images/tvnews/videobg.jpg) no-repeat 50% top; HEIGHT: 247px
+}
+.videobotton {
+	POSITION: absolute; FILTER: alpha(opacity=60); WIDTH: 80px; BACKGROUND: url(http://www.05273.com/templates/shuyangnew/images/tvnews/videoopen.png); HEIGHT: 80px; TOP: 60px; CURSOR: pointer; LEFT: 90px; -moz-opacity: 0.6
+}
+.videobottonover {
+	POSITION: absolute; FILTER: alpha(opacity=90); WIDTH: 80px; BACKGROUND: url(http://www.05273.com/templates/shuyangnew/images/tvnews/videoopen.png); HEIGHT: 80px; TOP: 60px; CURSOR: pointer; LEFT: 90px; -moz-opacity: 0.9
+}

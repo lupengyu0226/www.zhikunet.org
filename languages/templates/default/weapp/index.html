@@ -1,0 +1,18 @@
+{edi:content action="lists" catid="16" siteid="$siteid" order="updatetime DESC" page="$page"}
+{php $category=array()}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+{loop $data $k=>$r}
+    {php $category["news"][]=array("catid"=>$r[catid],"id"=>$r[id],"title"=>$r[title],"description"=>trim_indent($r[description]),"catname"=>$CATEGORYS[$r[catid]][catname],"pic"=>trim_weapp($r[thumb]),"pubdate"=>inputtime_zone($r[updatetime]));}
+{/loop}
+{/edi}
+{edi:content action="lists" catid="16" siteid="$siteid" thumb="1" order="id DESC" num="5"}
+{loop $data $v}
+ {php $category["hots"][]=array("catid"=>$v[catid],"id"=>$v[id],"title"=>$v[title],"description"=>trim_indent($v[description]),"pic"=>trim_weapp($v[thumb]));}
+{/loop}
+{/edi}
+{edi:content action="position" posid="2" order="listorder DESC" num="1"}
+{loop $data $r}
+{php $category["toutiao"][]=array("catid"=>$r[catid],"id"=>$r[id],"title"=>$r[title]);}
+{/loop}
+{/edi}  
+{php echo json_encode($category)}

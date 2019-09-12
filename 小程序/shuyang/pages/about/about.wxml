@@ -1,0 +1,18 @@
+<view class="container flex-column">
+  <view class="top-container flex-rest-height">
+    <view class="logo">
+      <image src="../../images/logo.png" class="logo-image"></image>
+    </view>
+    <view class="name">
+      <text>沭阳网精选版</text>
+    </view>
+    <view class="about">
+      <text class="about-text">沭阳网: www.05273.com</text>
+      <text class="about-text">客服电话: 0527-88274850</text>
+      <text class="about-text">邮箱: web@05273.com</text>
+    </view>
+  </view>
+  <view class="bottom-container">
+    <text>Copyright © 2007-2017 05273.com</text>
+  </view>
+</view>

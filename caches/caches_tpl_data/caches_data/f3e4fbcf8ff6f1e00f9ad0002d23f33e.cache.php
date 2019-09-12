@@ -1,0 +1,48 @@
+<?php
+return array (
+  0 => 
+  array (
+    'id' => '8',
+    'catid' => '11',
+    'typeid' => '1',
+    'username' => 'admin',
+    'posids' => '0',
+    'url' => 'https://ww.zhikunet.org/index.php?app=content&controller=index&view=show&catid=11&id=8',
+    'keywords' => '测试',
+    'title' => '测试 3',
+    'inputtime' => '1565791380',
+    'updatetime' => '1565791459',
+    'description' => '测试 ',
+    'status' => '99',
+    'listorder' => '0',
+    'islink' => '0',
+    'sysadd' => '1',
+    'style' => '',
+    'thumb' => '',
+    'major_id' => '3644',
+    'newsid' => '526',
+  ),
+  1 => 
+  array (
+    'id' => '6',
+    'catid' => '10',
+    'typeid' => '1',
+    'username' => 'admin',
+    'posids' => '0',
+    'url' => 'https://ww.zhikunet.org/index.php?app=content&controller=index&view=show&catid=10&id=6',
+    'keywords' => '测试 人民 大学测试人民大学',
+    'title' => '测试人民大学',
+    'inputtime' => '1565771160',
+    'updatetime' => '1565792128',
+    'description' => '测试人民大学测试人民大学测试人民大学测试人民大学',
+    'status' => '99',
+    'listorder' => '0',
+    'islink' => '0',
+    'sysadd' => '1',
+    'style' => '',
+    'thumb' => '',
+    'major_id' => '3642',
+    'newsid' => '527',
+  ),
+);
+?>

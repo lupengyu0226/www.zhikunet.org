@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2017第五届中国沭阳花木节_沭阳网</title>
+<meta name="keywords" content="沭阳花木节,沭阳网" />
+<meta name="description" content="2017第五届中国沭阳花木节" />
+<link href="https://statics.05273.cn/images/2017hmj/css/pc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="//statics.05273.cn/images/2017hmj/js/jquery.SuperSlide.2.1.1.js"></script>
+<link href="https://statics.05273.cn/images/2017hmj/js/jquery-sakura.css" rel="stylesheet" type="text/css" media="all" charset="utf-8" />
+<script type="text/javascript" src="//statics.05273.cn/images/2017hmj/js/jquery-sakura.js"></script>
+<script>
+$(function() {
+    $('.blossoms').sakura();
+});
+$(window).load(function() {
+    $('.blossoms').sakura();
+});
+</script>
+
+</head>
+<body>
+<div style=" position:absolute; top:0; left:-9999px;"><img src="//statics.05273.cn/images/2017hmj/img/p1d.png" /></div>
+<div class="top">
+<div class="header" style="overflow:hidden; position:absolute; top:0; left:0; width: 100%; min-width: 1024px; margin: 0px auto;">
+<div class="w1024">
+<div class="blossoms"></div>
+</div>
+</div>
+<div class="main">
+<p class="p1"></p>
+<p class="p2"></p>
+<p class="p3"></p>
+<p class="p4"></p>
+</div>
+</div>
+<!-- top over -->
+<div class="part1">
+<h2>新闻资讯</h2>
+<div class="left">
+<div class="focusBox">
+<ul class="pic">
+{edi:special  action="content_list" specialid="$specialid" thumb="1" listorder="3" num="4"}
+{loop $data $r}
+<li><a target="_blank" href="{$r['url']}"><img src="{$r['thumb']}" alt="{$r['title']}" /></a></li>
+{/loop}
+{/edi}     
+</ul>
+<div class="txt-bg"></div>
+<div class="txt">
+<ul>
+{edi:special  action="content_list" specialid="$specialid" thumb="1" listorder="3" num="4"}
+{loop $data $r}
+<li><a target="_blank" href="{$r['url']}">{$r['title']}</a></li>
+{/loop}
+{/edi}   
+</ul>
+</div>
+<ul class="num">
+<li><a>1</a><span></span></li>
+<li><a>2</a><span></span></li>
+<li><a>3</a><span></span></li>
+<li><a>4</a><span></span></li>
+</ul>
+<script type="text/javascript">
+jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+    //下面startFun代码用于控制文字上下切换
+    startFun:function(i){
+         jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+    }
+});
+</script>
+<!-- 焦点图 E -->
+</div>
+</div>
+<!-- left over -->
+<div class="right">
+ 		{edi:special  action="content_list" specialid="$specialid" listorder="1" num="1"}
+			{loop $data $r}
+<h3><a href="{$r['url']}" target="_blank">{str_cut($r['title'], 54, '')}</a></h3>
+<p>{str_cut($r['description'], 198)}</p>
+       		{/loop}	
+        {/edi}  
+<ul>
+ 		{edi:special  action="content_list" specialid="$specialid" listorder="1" num="6"}
+			{loop $data $r}
+                	<li><a href="{$r['url']}" target="_blank">{str_cut($r['title'], 54, '')}</a><span>{date('Y-m-d',$r[inputtime])}</span></li>
+       		{/loop}	
+        {/edi}  
+</ul>
+</div>
+<!-- right over -->
+</div>
+<!-- part1 over -->
+<div class="part2">
+<h2>行程安排</h2>
+<ul>
+<li><a href="https://www.05273.cn/news/sh/0923/view_276353.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/jiemudan.png" alt="花木节倒计时，最全最强节目单剧透" /></a>
+<p><a href="https://www.05273.cn/news/sh/0923/view_276353.html" target="_blank">最全最强节目单</a></p></li>
+<li><a href="https://www.05273.cn/news/sh/0925/view_276689.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/gongjiao.png" alt="公交直达专线" /></a>
+<p><a href="https://www.05273.cn/news/sh/0925/view_276689.html" target="_blank">公交直达专线</a></p></li>
+<li><a href="https://www.05273.cn/news/sh/0927/view_277078.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/changdi.png" alt="活动场地分布图" /></a>
+<p><a href="https://www.05273.cn/news/sh/0927/view_277078.html" target="_blank">活动场地分布图</a></p></li>
+<li><a href="https://www.05273.cn/news/sh/0927/view_277080.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/zhanwei.png" alt="展馆示意图" /></a>
+<p><a href="https://www.05273.cn/news/sh/0927/view_277080.html" target="_blank">展馆示意图</a></p></li>
+</ul>
+</div>
+<!-- part2 over -->
+<div class="part3">
+<h2>精彩视频</h2>
+<ul>
+<li><a href="https://www.05273.cn/video/zhuizong/0930/view_2674.html" target="_blank"><img src="https://img.05273.cn/2017/0928/20170928023742690.jpg" alt="第五届中国·沭阳花木节开幕完整版" /></a>
+<p><a href="https://www.05273.cn/video/zhuizong/0930/view_2674.html" target="_blank">第五届中国·沭阳花木节开幕完整版</a></p></li>
+<li><a href="https://www.05273.cn/video/shuyang/0928/view_2671.html" target="_blank"><img src="https://img.05273.cn/2017/0928/20170928024743740.jpg" alt="2017年中国沭阳苗木交易博览会产品金奖颁奖" /></a>
+<p><a href="https://www.05273.cn/video/shuyang/0928/view_2671.html" target="_blank">2017年中国沭阳苗木交易博览会产品金奖颁奖</a></p></li>
+<li><a href="https://www.05273.cn/video/shuyang/0928/view_2670.html" target="_blank"><img src="https://img.05273.cn/2017/0928/20170928024743652.jpg" alt="2017年度沭阳十佳诚信花木电商" /></a>
+<p><a href="https://www.05273.cn/video/shuyang/0928/view_2670.html" target="_blank">2017年度沭阳十佳诚信花木电商</a></p></li>
+</ul>
+</div>
+<!-- part3 over -->
+<div class="part4">
+<h2>游览攻略</h2>
+<ul>
+<li class="li1"><img src="https://img.05273.cn/2017/0928/20170928025704636.jpg" alt="2017第五届中国沭阳花木节颜集镇展位" />
+<h3><a href="https://www.05273.cn/photo/tupian/view_444.html" target="_blank">2017第五届中国沭阳花木节颜集镇展位</a></h3></li>
+<li class="li1"><img src="https://img.05273.cn/2017/0928/20170928025617233.jpg" alt="2017第五届中国沭阳花木节新河镇展位" />
+<h3><a href="https://www.05273.cn/photo/tupian/view_443.html" target="_blank">2017第五届中国沭阳花木节新河镇展位</a></h3></li>
+<li class="li2"><img src="https://img.05273.cn/2017/0928/20170928025519984.jpg" alt="2017第五届中国沭阳花木节扎下镇展位" />
+<h3><a href="https://www.05273.cn/photo/tupian/view_442.html" target="_blank">2017第五届中国沭阳花木节扎下镇展位</a></h3></li>
+<li class="li2"><img src="https://img.05273.cn/2017/0928/20170928025354120.jpg" alt="2017第五届中国沭阳花木节庙头镇展位" />
+<h3><a href="https://www.05273.cn/photo/tupian/view_441.html" target="_blank">2017第五届中国沭阳花木节庙头镇展位</a></h3></li>
+</ul>
+</div>
+<!-- part4 over -->
+<div class="part5">
+<h2>高清大图</h2>
+<script type="text/javascript" src="//statics.05273.cn/images/2017hmj/js/lrtk.js"></script>
+<!-- 代码 开始 -->
+<div id="playBox">
+<div class="pre"></div>
+<div class="next"></div>
+<div class="smalltitle">
+<ul>
+<li class="thistitle"></li>
+<li style=" text-indent:-9999px;"></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<ul class="oUlplay">
+<li><a href="https://www.05273.cn/photo/tupian/view_436.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/kaimu.jpg" alt="2017第五届中国沭阳花木节开幕式" /></a></li>
+<li><a href="https://www.05273.cn/photo/tupian/view_438.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/banjiang.jpg" alt="2017第五届中国沭阳花木节颁奖典礼" /></a></li>
+<li><a href="https://www.05273.cn/photo/tupian/view_437.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/qianyue.jpg" alt="2017第五届中国沭阳花木节签约仪式" /></a></li>
+<li><a href="https://www.05273.cn/photo/tupian/view_439.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/pengjin.jpg" alt="2017第五届中国沭阳花木节盆景展" /></a></li>
+<li><a href="https://www.05273.cn/photo/tupian/view_440.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/shuhuaqishizhan.jpg" alt="2017第五届中国沭阳花木节书画奇石展" /></a></li>
+<li><a href="https://www.05273.cn/photo/tupian/view_445.html" target="_blank"><img src="//statics.05273.cn/images/2017hmj/img/meishi.jpg" alt="2017第五届中国沭阳花木节美食街" /></a></li>
+</ul>
+</div>
+<!-- 代码 结束 -->
+</div>
+<!-- part5 over -->
+<div class="footer">
+<ul>
+    <a href="https://www.05273.cn/about/aboutus/" rel="nofollow" target="_blank">关于沭阳网</a> | <a href="https://www.05273.cn/about/shuyangwang/" rel="nofollow" target="_blank">本网动态</a> | <a href="https://www.05273.cn/about/contactus/" rel="nofollow" target="_blank">联系方式</a> | <a href="https://www.05273.cn/about/submission/" rel="nofollow" target="_blank">投稿荐稿</a> | <a href="https://www.05273.cn/about/copyright/" rel="nofollow" target="_blank">免责声明</a> | <a href="https://www.05273.cn/about/adsen/" rel="nofollow" target="_blank">广告投放</a> | <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> | <a href="https://www.05273.cn/about/book/" rel="nofollow" target="_blank">意见反馈</a> | <a href="https://www.05273.cn/about/delete/" rel="nofollow" target="_blank">删帖须知</a> | <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a> | <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a> | <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a> | <a href="https://wap.05273.cn/" target="_blank">手机站</a> 
+
+<div class="en">Copyright &copy; 2007-2019 05273.cn</div>
+ <p><a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备18031647号-1</a> <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备32132202000115号</a> <a arget="_blank" rel="nofollow" href="https://www.05273.cn/about/wangxin/" target="_blank">沭宣备0000001号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" rel="nofollow" target="_blank">举报</a></p>
+</ul>
+
+</div>
+<!-- footer over -->
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+{template "content","header_kuanpintiaozhuan"}
+<link href="{CSS_PATH}vms/vms.css" rel="stylesheet" type="text/css" />
+<div class="clr ct show_pg">
+	<div class="crumbs"><a href="{APP_PATH}">首页</a><span> &gt; </span>{catpos($catid)} 正文</div>
+    <div class="lty18">
+    	<div class="clr">
+    <div class="zj"><h5>{$title}</h5></div>
+    <div class="clr xxg">
+        <div class="clr">更新时间：{$inputtime}</div>
+    </div>
+    </div>
+    	<div class="plbox">
+<div id="video" style="position:relative;z-index: 100;width:822px;height:500px;"><div id="a1"></div></div>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript" src="//statics.05273.cn/statics/js/ckplayer/offlights.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+	        f:'https://api.05273.cn/video.php?url=[$pat]',
+	        a:'{$apivideo}',
+	        s:2,
+	        e:'3',
+	       	k:'{$timeurl}',
+	        n:'{$timewenzi}',
+	        my_title:'{$title}',
+	        my_url:'{$url}',
+	        my_summary:'{$description}',
+	        my_pic:'{$thumb}',
+	        b:'1'
+	};
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	var video=['https://api.05273.cn/wap.php?url={$apivideo}->video/mp4'];
+    CKobject.embed('https://statics.05273.cn/statics/js/ckplayer/ckplayer.swf','a1','ckplayer_a1','822','500',false,flashvars,video,params);
+    </script>
+	</div>
+	<div class="bk10"></div>
+      <div class="box">
+        		<h5>视频简介</h5>
+            	<ul class="content list blue f14 row-2">
+                 {$content}
+                </ul>
+        </div>
+	<div class="bk10"></div>
+      <div class="box">
+        		<h5>分享视频</h5>
+            	<ul class="content list blue f14 row-6">
+               <li>
+				<div class="clr wp l">
+				<!--#include virtual="/caches/posid/33.html"-->  </div><div class="btn-mobile"><div class="d-code" >穿越到手机<div class="d-code-box"><i class="tips"></i><p>微信扫一扫 分享更精彩</p></div> </div>
+                </li>
+            </ul>
+        </div>
+	<div class="bk10"></div>
+      <div class="box">
+        		<h5>相关视频</h5>
+  {edi:content action="relation" relation="$relation" id="$id" catid="$catid" num="6" keywords="$rs[keywords]"}
+              {if $data}
+            	<ul class="content list blue f14 row-2">
+				{loop $data $r}
+                	<li>·<a href="{$r[url]}" target="_blank">{str_cut($r[title], 52)}</a></li>
+					{/loop}
+                </ul>
+   {/if}
+				{/edi}
+        </div>
+		 <div class="clr mgt10 mgb10">
+			{if $allow_comment && module_exists('comment')}
+           <iframe src="{APP_PATH}pinglun_{id_encode("$catid",$id,$siteid)}-1.html" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+	 
+        {/if}
+		 </div>
+    </div>
+  <div class="wp lty2">
+    <div class="box0">
+    	<div class="nav">
+             <h5>上升最快的视频</h5>
+        </div>
+        <div class="bct">
+        	<div class="lbbox nos" >
+            <ul class="c1 c2">        
+{edi:content action="hits" catid="$catid" num="5" order="dayviews DESC"}
+{loop $data $r}
+	<li>
+	<div class="clr h77">
+	<a href="{$r[url]}" ><img src="{$r[thumb]}" width="104" height="65" class="l"></a>
+	<div class="lhbfq"><a href="{$r[url]}" >{$r[title]}</a></div>
+	<div class="lhbfqsz"><span class="shows">播放数：<cite>{get_views('c-'.$CATEGORYS[$r[catid]][modelid].'-'.$r['id'])}</cite></span></div>
+	</div>
+	</li> 
+{/loop}
+{/edi}					
+            </ul>
+            </div>
+        </div>
+    </div>
+ <div class="mgt10 box2">
+    	<div class="nav tag3">
+        	<ul class="clr col3"  id="tag1">
+                <li><a href="#" class="ac">热点</a></li>
+            </ul>
+        </div>
+        <div class="bct tabn1">
+        	<ul class="uli4 mg10">
+			{edi:content action="hits" catid="$catid" num="10" order="dayviews DESC"}
+			{loop $data $r}
+ 				{if $n==1}
+					<li class="p_r">
+						  <div class="l"><span class="bs">1</span><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" width="106" height="75"></a></div>
+						  <div class="lh18"><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],39,false)}</a></div>
+						  <div>{str_cut($r[description],66)}</div>
+					</li>
+				{else}
+					<li><a href="{$r[url]}" title="{$r[title]}" target="_blank">{str_cut($r[title],66,false)}</a></li>
+				{/if}			
+ 			{/loop}
+			{/edi}
+          </ul>  
+        </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">ARTICLE_INFO=window.ARTICLE_INFO ||{qrcode:'{qrcode(S($url))}'}</script>
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<script type="text/javascript">
+<!--
+	function add_favorite(title) {
+		$.getJSON('https://api.05273.cn/?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('收藏成功');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+$("i[class='tips']").after('<img src='+ARTICLE_INFO.qrcode+'?v=2018>');
+//-->
+</script>
+{template "content","footer"}

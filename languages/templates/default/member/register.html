@@ -1,0 +1,275 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/register.css" rel="stylesheet">
+<style type="text/css">body{background-color:#f1faff;}</style>
+<div id="bd" class="mt160">
+    <div class="xs-member-wp wp">
+        <div class="xs-member xs-member-wp xs-tab">
+            <div class="hd tac"><h2>{L('member').L('register')}</h2></div>
+            <div class="bd mt30">
+            {if !isset($_GET['t'])}
+                <form class="xs-member-form tab-bd" id="myform" action="" method="post">
+                <input type="hidden" name="siteid" value="1" />
+                <div class="form-group field-registerform-username required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-username">&#xe605;</label>
+                    <input type="text" class="form-control" id="username" name="username" size="36" placeholder="请输入用户名">
+                </div>
+                <div class="form-group field-registerform-password required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-password">&#xe601;</label>
+                    <input type="password" class="form-control" id="password" name="password" size="36" placeholder="请输入密码">
+                </div>
+                <div class="form-group field-registerform-password required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-password">&#xe601;</label>
+                    <input type="password" class="form-control" id="pwdconfirm" name="pwdconfirm" size="36" placeholder="请再次输入密码">
+                </div>
+                <div class="form-group field-registerform-email required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-email">&#xe632;</label>
+                    <input type="text" class="form-control" id="email" name="email" size="36" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group field-registerform-salesid" style="min-height:70px;">
+                    <label class="login-icon icon-id" for="registerform-salesid">ID</label>
+                    <input type="text" class="form-control" id="nickname" name="nickname" size="36" placeholder="请输入昵称">
+                </div>
+
+		{if $sms_setting['sms_enable']=='1'}
+                <div class="form-group field-registerform-email required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-email">&#xe62e;</label>
+                    <input type="text" class="form-control" id="code" name="code" size="36" placeholder="{L('checkcode')}">{form::checkcode('code_img', '4', '14', 120, 26)}
+                </div>
+
+                <div class="form-group field-registerform-email required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-email">&#xe62e;</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" size="36" placeholder="手机号码">
+                </div>
+                 <div class="form-group field-registerform-email required" style="min-height:70px;">
+				<span id="mobile_div"><button onclick="get_verify()" type="button" class="btn xs-register-btn">获取短信校验码</button></span>
+				<span id="mobile_send" style="display:none">，短信已发送成功，请查收，短信如在10分钟内没有收到，请重试其他方法</span>
+
+			<div id="mobile_send_div" style="display:none">此服务免费,验证码已发送到<span id="mobile_send"></span>，<span id="edit_mobile" style="display:none"><a href="javascript:void();" onclick="edit_mobile()">修改号码</a>，</span> 如果超过120秒未收到验证码，您可以免费重新获取。<br><br>
+			<div class="submit"><button type="button" id="GetVerify" onclick="get_verify()" class="hqyz">重获短信验证码</button></div> <br><br></div> 
+			<script language="JavaScript">
+			<!--
+				var times = 120;
+				var isinerval;
+				function get_verify() {
+					var session_code = $('#code').val();
+					if(session_code=='') {
+						alert('请输入验证码');
+						$('#code').focus();
+						return false;
+					}
+					var mobile = $("#mobile").val();
+					var partten = /^1[3-9]\d{9}$/;
+					if(!partten.test(mobile)){
+						alert("请输入正确的手机号码");
+						$('#mobile').focus();
+						return false;
+					}
+					
+					$.get("index.php?app=api&controller=index&op=sms",{ mobile: mobile,session_code:session_code,random:Math.random()}, function(data){
+						if(data=="0") {
+							$("#mobile_send").html(mobile);
+							$("#mobile_div").css("display","none");
+							$("#mobile_send_div").css("display","");
+							times = 120;
+							$("#GetVerify").attr("disabled", true);
+							isinerval = setInterval("CountDown()", 1000);
+						} else if(data=="-1") {
+							alert("你今天获取验证码次数已达到上限");
+						} else if(data=="-100") {
+							$('#code').val('');
+							alert("验证码已失效，请点击图片验证码获取新的验证码！");
+							$('#code').focus();
+						} else if(data=="-101") {
+							alert("验证码错误！");
+							$('#code').focus();
+						} else {
+							alert("短信发送失败");
+						}
+					});
+					
+				}
+				function CountDown() {
+					if (times < 1) {
+						$("#GetVerify").html("获取短信验证码").attr("disabled", false);
+						$("#edit_mobile").css("display","");
+						clearInterval(isinerval);
+						return;
+					}
+					$("#GetVerify").html(times+"秒后重获验证码");
+					times--;
+				}
+				function edit_mobile() {
+					$("#mobile_div").css("display","");
+					$("#mobile_send_div").css("display","none");
+				}
+			//-->
+			</script>
+		    </div></div>
+			    <div class="form-group field-registerform-email required" style="min-height:70px;">
+                    <label class="iconfont login-icon" for="registerform-email">&#xe62e;</label>
+                    <input type="text" class="form-control" id="mobile_verify" name="mobile_verify" size="36" placeholder="请输入短信验证码">
+                </div>
+		
+		{/if}
+		
+		{if $member_setting['enablcodecheck']=='1' && $sms_setting['sms_enable']!='1'}
+		<div class="input"><label>{L('checkcode')}：</label><input type="text" id="code" name="code" size="10" class="input-text">{form::checkcode('code_img', '5', '14', 120, 26)}</div>
+		{/if}
+		
+                <div class="form-group mt10">
+                    <button type="submit" class="btn btn-primary xs-register-btn" id="dosubmit" name="dosubmit" >提交注册</button>
+                </div>
+                </form>
+{elseif isset($_GET['t']) && $_GET['t']==2}
+<div class="col-left form-login form-reg">
+{php $emailurl = param::get_cookie('email') ? str_replace('@', '',strstr(param::get_cookie('email'), '@')) : '';}
+{param::get_cookie('_username')} {L('hellow')}，{L('login_email_authentication')} {if $emailurl} {L('please_click')}<a href="http://mail.{$emailurl}">{L('login_email')}</a><br><br>
+如果没有收到邮件，请点击<a onclick="$('#send_newemail').show()"><font color="red">这里</font></a>更换邮箱试试<br><br>
+<div style="display:none" id="send_newemail">
+<div class="form-group field-registerform-email required" style="min-height:70px;">
+    <label class="iconfont login-icon" for="registerform-email">&#xe632;</label>
+    <input type="text" class="form-control" id="newemail" name="newemail" size="36" placeholder="请输入邮箱">
+</div>
+<div class="submit"><input type="submit" name="dosubmit" class="btn xs-register-btn" value="重新发送新邮箱验证" onclick="javascript:send_newmail();"></div></div>
+<script language="JavaScript">
+function send_newmail() {
+	//var mail_type = $('input[checkbox=mail_type][checked]').val();
+	var newemail = $('#newemail').val();
+ $.post('?app=member&controller=index&view=send_newmail&newemail='+newemail,{},function(data){
+ 	if(data=='1'){alert('发送成功，请查看验证！');}else if(data=='-1'){alert('邮箱已被占用！');}else{alert('发送错误，请联系管理员！');}
+	});
+} 
+</script>
+{/if}
+</div>
+{elseif isset($_GET['t']) && $_GET['t']==3}
+<div class="col-left form-login form-reg">
+{param::get_cookie('_username')} {L('hellow')}，{L('please_wait_administrator_verify')}
+</div>
+{else}
+<script language="JavaScript">
+<!--
+	redirect("{PASSPORT_PATH}member-login.html");
+//-->
+</script>
+{/if}
+                <p class="mt20 mb20 tac"><a href="{PASSPORT_PATH}member-register.html?protocol=1" target="_blank">注册前请阅读注册协议</a></p>
+				<p class="mt20 mb20 tac">使用第三方直接注册，或者使用<a href="{PASSPORT_PATH}member-login.html">已有账号登录</a></p>
+                <div class="sns_login_container">
+                    <ul class="y-box sns_login_list" style="width:200px;">
+                        <li class="sinaweibo"><a href="{PASSPORT_PATH}member-public_sina_login.html"> <i class="icon"></i> 新浪微博 </a> </li>
+                        <li class="qq"> <a href="{PASSPORT_PATH}member-public_qq_loginnew.html"> <i class="icon"></i> QQ </a> </li>
+                        <li class="baidu"> <a href="{PASSPORT_PATH}member-public_xzh.html"> <i class="icon"></i> 百度 </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<script language="JavaScript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+
+	$("#username").formValidator({onshow:"{L('input').L('username')}",onfocus:"{L('username').L('between_2_to_10')}"}).inputValidator({min:2,max:30,onerror:"{L('username').L('between_2_to_10')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('username').L('format_incorrect')}"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"app=member&controller=index&view=public_checkname_ajax",
+		datatype : "html",
+		async:'false',
+		success : function(data){
+            if( data == "1" ) {
+                return true;
+			} else {
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "{L('deny_register').L('or').L('user_already_exist').L('or').L('between_error')}",
+		onwait : "{L('connecting_please_wait')}"
+	});
+	$("#password").formValidator({onshow:"{L('input').L('password')}",onfocus:"{L('password').L('between_6_to_20')}"}).inputValidator({min:6,max:20,onerror:"{L('password').L('between_6_to_20')}"});
+	$("#pwdconfirm").formValidator({onshow:"{L('input').L('cofirmpwd')}",onfocus:"{L('passwords_not_match')}",oncorrect:"{L('passwords_match')}"}).compareValidator({desid:"password",operateor:"=",onerror:"{L('passwords_not_match')}"});
+	$("#email").formValidator({onshow:"{L('input').L('email')}",onfocus:"{L('email').L('format_incorrect')}",oncorrect:"{L('email').L('format_right')}"}).inputValidator({min:7,max:32,onerror:"{L('email').L('between_7_to_32')}"}).regexValidator({regexp:"email",datatype:"enum",onerror:"{L('email').L('format_incorrect')}"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"app=member&controller=index&view=public_checkemail_ajax",
+		datatype : "html",
+		async:'false',
+		success : function(data){	
+            if( data == "1" ) {
+                return true;
+			} else {
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "{L('deny_register').L('or').L('email_already_exist')}",
+		onwait : "{L('connecting_please_wait')}"
+	});
+	$("#nickname").formValidator({onshow:"{L('input').L('nickname')}",onfocus:"{L('nickname').L('between_2_to_20')}"}).inputValidator({min:2,max:20,onerror:"{L('nickname').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('nickname').L('format_incorrect')}"}).ajaxValidator({
+			type : "get",
+			url : "",
+			data :"app=member&controller=index&view=public_checknickname_ajax",
+			datatype : "html",
+			async:'false',
+			success : function(data){
+				if( data == "1" ) {
+					return true;
+				} else {
+					return false;
+				}
+			},
+			buttons: $("#dosubmit"),
+			onerror : "{L('deny_register').L('or').L('already_exist')}",
+			onwait : "{L('connecting_please_wait')}"
+		});
+	{if $member_setting['mobile_checktype']=='2' && $sms_setting['sms_enable']=='1'}
+	$("#mobile").formValidator({onshow:"请输入手机号码",onfocus:"请输入手机号码"}).inputValidator({min:1,max:11,onerror:"请输入正确的手机号码"});
+	{/if}
+	$("#mobile_verify").formValidator({onshow:"请输入手机收到的验证码",onfocus:"请输入手机收到的验证码"}).inputValidator({min:1,onerror:"请输入手机收到的验证码"}).ajaxValidator({
+					type : "get",
+					url : "index.php?app=api&controller=index",
+					data :"op=sms_idcheck&action=id_code",
+					datatype : "html",
+					async:"false",
+					success : function(data){
+						if( data == "1" ) {
+							return true;
+						} else {
+  							return false;
+						}
+					},
+					buttons: $("#dosubmit"),
+					onerror : "验证码错误",
+					onwait : "请稍候..."
+				});
+
+	{$formValidator}
+});
+//-->
+</script>
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<script language="JavaScript">
+<!--
+	$(function(){
+		$('#username').focus();
+	})
+	function save_username() {
+		if($('#cookietime').attr('checked')==true) {
+			var username = $('#username').val();
+			setcookie('username', username, 3);
+		} else {
+			delcookie('username');
+		}
+	}
+	var username = getcookie('username');
+	if(username != '' && username != null) {
+		$('#username').val(username);
+		$('#cookietime').attr('checked',true);
+	}
+//-->
+</script>
+{template "member","footer"}

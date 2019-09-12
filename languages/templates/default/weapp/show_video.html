@@ -1,0 +1,5 @@
+{php $category=array()}
+{php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+{php $category["video"]=array("id"=>$id,"catid"=>$catid,"title"=>$r[title],"user"=>$username,"source"=>$copyfrom,"description"=>trim_indent($description),"body"=>'https://app.05273.cn/wap.php?url='.$apivideo,"pic"=>'http://statics.05273.cn/images/qiche.jpeg',"pubdate"=>$inputtime,"hits"=>hits_views('c-'.$CATEGORYS[$catid][modelid].'-'.$r['id']));}
+{php $category["category"]=array("catid"=>$catid,"name"=>$CATEGORYS[$catid][catname]);}
+{php echo json_encode($category)}

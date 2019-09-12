@@ -1,0 +1,33 @@
+/*! Lofty v0.1 beta float http://lofty.fangdeng.org/ MIT*/
+/*! Lofty v0.1 beta Classic http://lofty.fangdeng.org/ MIT*/
+html{color:#000;overflow-y:scroll;background:#fff}
+*{font-family:'\5FAE\8F6F\96C5\9ED1'}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,lengend,button,input,textarea,form,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 Tahoma,Arial,"\5b8b\4f53",sans-serif}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp,tt{font-family:"Courier New",Courier,monospace}
+small{font-size:12px}
+ul,ol{list-style:none}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+abbr[title],acronym[title]{border-bottom:1px dotted;cursor:help}
+q:before,q:after{content:''}
+:focus{outline:0}
+legend{color:#000}
+fieldset,img{border:none}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+hr{border:none;height:1px;*color:#fff}
+img{-ms-interpolation-mode:bicubic}
+.fd-clear {	clear: both}
+.fn-clear:after,.fn-clear:before{display:block;line-height:0;height:0;content:""}
+.fn-clear:after{clear:both}
+.clearFix:after {display: block;content: '';clear: both;height: 0;font-size: 0;overflow: hidden}
+#header:after,#content:after,#footer:after,.layout:after{display:block;clear:both;height:0;content:"\0020"}
+.fd-clr{*zoom:1}
+.fd-clr:after{display:block;clear:both;height:0;content:"\0020"}
+.right{ float: right;}
+.left{ float: left;}
+.clearfix { *zoom: 1;}

@@ -1,0 +1,39 @@
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
+<link href="https://statics.05273.cn/statics/css/dialog_simp.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//statics.05273.cn/statics/js/dialog.js"></script>
+{edi:message action="check_new"}
+{php $new_arr = $data;}
+{/edi}
+        <ul class="sd uc-sd fl">
+            <li>
+                <h3>个人中心</h3>
+                <ul>
+                    <li{if ROUTE_A=="favorite"} class="active"{/if}><a href="member-favorite.html"><i class="icon-collect"></i>我的收藏</a></li>
+                    <li{if ROUTE_A=="jubao"} class="active"{/if}><a href="member-jubao.html"><i class="icon-xcounpon"></i>我的投诉</a></li>
+                    <li{if ROUTE_A=="comment"} class="active"{/if}><a href="member-comment.html"><i class="icon-chat"></i>我的评论</a></li>
+                    <li{if ROUTE_M=="pay"||ROUTE_A=="change_credit"} class="active"{/if}><a href="pay-pay.html"><i class="icon-xcoin"></i>在线充值</a></li>
+                    <li{if ROUTE_M=="message"} class="active"{/if}><a href="message-init.html"><i class="icon-message"></i>消息列表{if $new_arr['new_count'] >0}<font color=red>({$new_arr['new_count']})</font>{/if}</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>媒体中心</h3>
+                <ul>
+                    <li{if ROUTE_M=="zhuanlan"} class="active"{/if}><a href="mp-init.html"><i class="icon-grant"></i>沭阳号</a></li>
+                    <li{if ROUTE_A=="publish"} class="active"{/if}><a  href="member-fabu.html"><i class="icon-exercise"></i>发布内容</a></li>
+                    <li{if ROUTE_A=="published"} class="active"{/if}><a href="content-published.html"><i class="icon-course"></i>我的发布</a></li>
+                    {if $memberinfo[point] > 9999}<li{if ROUTE_A=="account_press"} class="active"{/if}><a href="member-account_press.html"><i class="icon-xcounpon"></i>稿件处理</a></li>{/if}
+                </ul>
+            </li>
+            <li>
+                <h3>账号设置</h3>
+                <ul>
+                    <li{if ROUTE_A=="account_manage_info"} class="active"{/if}><a href="member-account_manage_info.html&t=1"><i class="icon-schedule"></i>修改个人信息</a></li>
+                    <li{if ROUTE_A=="account_manage_avatar"} class="active"{/if}><a href="member-account_manage_avatar.html&t=1"><i class="icon-schoolarship"></i>修改头像</a></li>
+{if !empty($memberinfo['encrypt'])}
+                    <li{if ROUTE_A=="account_manage_password"} class="active"{/if}><a href="member-account_manage_password.html&t=1"><i class="icon-exchange"></i>修改邮箱/密码</a></li>
+{/if}
+                    <li{if ROUTE_A=="account_manage_upgrade"} class="active"{/if}><a href="member-account_manage_upgrade.html&t=1"><i class="icon-certify"></i>会员自助升级</a></li>
+                </ul>
+            </li>
+        </ul>

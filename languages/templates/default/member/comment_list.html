@@ -1,0 +1,37 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">我的评论</h2>
+                </div>
+                <div class="bd uc-wp-list">
+                {if $commentlist}
+                <ul class="live-list">
+                {loop $commentlist $k $v}
+                 {php $v=preg_replace("/<(i?div.*?)>(.*?)<(\/i?div.*?)>/si","",$v);}
+                 {php $v=preg_replace("/<(i?span.*?)>(.*?)<(\/i?div.*?)>/si","",$v);}
+                 {php $v=preg_replace("/<(i?span.*?)>(.*?)<(\/i?span.*?)>/si","",$v);}
+                    	<li>
+                            <div class="s-title">
+                                <h3>{$v[content]}</h3>
+                                <p class="live-teacher">{format::date($v['creat_at'], 1)} | <a href="https://www.05273.cn/{$v[commentid]}-1.html" target="_blank">查看</a></p>
+                                <p><a class="fr" href="index.php?app=member&controller=index&view=comment&id={$v['id']}">{L('delete')}</a></p>
+                            </div>
+                        </li>
+                     {/loop}
+					</ul>
+                    <div class="pagenavi">{$pages}</div>
+                     {else}
+                	<div class="uc-empty">暂无评论，赶紧去看看<a href="{APP_PATH}" target="_blank">最新文章</a></div>
+                 {/if}
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

@@ -1,0 +1,7 @@
+{if $kuaixun_setting[$siteid]['is_post']=='1'}
+{edi:kuaixun action="type_list" siteid="$siteid" order="kuaixunid desc" num="1" return="dat"}
+{loop $dat $v}
+var c_kuaixun  = [{"u":"{$v['url']}","t":"{$v['name']}","st":"{$v['lx']}"}];
+{/loop}
+{/edi}
+{/if}

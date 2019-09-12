@@ -1,0 +1,19 @@
+{edi:content action="stats" num="15" image="1" order="inputtime DESC" page="$page"}
+ {loop $data $r}
+ <?php $space_userid = get_memberinfo_buyusername($r['username'], 'userid');?>
+ <?php $space_authors = zhuanlan_memberinfo($r['username'],'authors');?>
+ <?php $space_thumb = zhuanlan_memberinfo($r['username'],'thumb');?>
+  <div class="zlbox {if $n%3==0}cl{/if}">
+   <a href="{$r[rurl]}" target="_blank">
+    <div class="zlpic"><IMG alt="{$r['title']}" src="{$r[image]}" width="300"></div>
+      <h3 class="zltit">{$r['title']}</h3>
+    </a>
+<div class="zlmsg">
+<a href="https://{zhuanlan_memberinfo($r['username'],'domain')}.shuyanghao.com/" class="pr" target="_blank"><IMG onerror="this.src='//statics.05273.cn/statics/images/blog/nophoto.gif'" alt="{$r['username']}的头像" src="{if (is_array($space_thumb))}{is_avatar(get_memberavatar($space_userid,1,180))}{else}{zhuanlan_memberinfo($r['username'],'thumb')}{/if}"  width="36" height="36" > </a> 
+<p><span>{$r['username']}</span></p>
+<p>{if (is_array($space_authors))}这家伙太懒，什么都没留下！{else}{str_cut($space_authors,51,'..')}{/if}</p>
+  <a class="zlbtn" href="https://{zhuanlan_memberinfo($r['username'],'domain')}.shuyanghao.com/" target="_blank">访问</a> 
+    </div>
+  </div>
+ {/loop}
+ {/edi}

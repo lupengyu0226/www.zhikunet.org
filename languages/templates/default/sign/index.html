@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>日历签到 - 沭阳网</title>
+<link rel="stylesheet" href="https://statics.05273.cn/sign/css/qiandao_style.css">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("&mobile")<0){
+            try{
+                window.location.href="https://www.05273.cn/index.php?app=sign&controller=wap";
+            }catch(e){}
+        }
+    }
+</script>
+</head>
+<body>
+<div class="qiandao-warp">
+	<div class="qiandap-box">
+		<div class="qiandao-banner">
+			<img src="//statics.05273.cn/sign/images/qiandao_banner.jpg" height="551" width="1120" alt="">
+		</div>
+		<div class="qiandao-con clear">
+			<div class="qiandao-left">
+				<div class="qiandao-left-top clear">
+					<div class="current-date">2016年1月6日</div>
+					<div class="qiandao-history qiandao-tran qiandao-radius"><a href="{PASSPORT_PATH}/member-index.html">用户中心</a></div>
+					<div class="qiandao-history qiandao-tran qiandao-radius" id="js-qiandao-history">我的签到</div>
+				</div>
+				<div class="qiandao-main" id="js-qiandao-main">
+					<ul class="qiandao-list" id="js-qiandao-list">
+					</ul>
+				</div>
+			</div>
+			<div class="qiandao-right">
+				<div class="qiandao-top">
+					{if !$day_sign}<a href="{APP_PATH}index.php?app=sign&controller=index&view=sign"><div class="just-qiandao qiandao-sprits"></div></a>{else}<div class="just-qiandao qiandao-sprits actived"></div>{/if}
+					{if !$day_sign}<p class="qiandao-notic">今日您尚未签到</p>{else}<p class="qiandao-notic">今日已领<span>{if $day_sign['signpoint']}{$day_sign['signpoint']}{else}0{/if}</span>积分，请明日继续签到</p>{/if}
+				</div>
+				<div class="qiandao-bottom">
+					<div class="qiandao-rule-list">
+						<h4>签到规则</h4>
+						<p>首次签到获得{$set[setpoint]}积分奖励</p>
+						<p>连续签到每天增加{$set[setpoint]}积分奖励</p>
+                        <p>连续签到{$set[limit]}天后每次签到获得{$limitpoint}积分</p>
+					</div>
+					<div class="qiandao-rule-list">
+						<h4>其他说明</h4>
+						<p>如果中间有一天间断未签到的，重新开始计算连续签到时间。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 我的签到 layer start -->
+<div class="qiandao-layer qiandao-history-layer">
+	<div class="qiandao-layer-con qiandao-radius">
+		<a href="javascript:;" class="close-qiandao-layer qiandao-sprits"></a>
+		<ul class="qiandao-history-inf clear">
+			<li>
+				<p>连续签到</p>
+				<h4>{$count['continuous']}</h4>
+			</li>
+			<li>
+				<p>本月签到</p>
+				<h4>{$count['monthcount']}</h4>
+			</li>
+			<li>
+				<p>总共签到数</p>
+				<h4>{$count['count']}</h4>
+			</li>
+			<li>
+				<p>签到累计奖励积分</p>
+				<h4>{$count['getpoint']}</h4>
+			</li>
+		</ul>
+		<div class="qiandao-history-table" >
+			<table>
+				<thead>
+					<tr>
+						<th>签到日期</th>
+						<th>奖励积分</th>
+						<th>说明</th>
+					</tr>
+				</thead>
+				<table >
+                {loop $month_sign_list $v}
+					<tr>
+						<td>{date("Y-m-d H:i:s",$v['signtime'])}</td>
+						<td>{$v['signpoint']}</td>
+						<td>连续签到{$v['continuous']}天奖励</td>
+					</tr>
+				{/loop}
+				</table>
+			</table>
+		</div>
+	</div>
+	<div class="qiandao-layer-bg"></div>
+</div>
+<style type="text/css">
+.foot-Article-shuyang {padding:13px 0 10px;font-size:12px; background:#4d56a3;text-align:center }
+#tcopyright { color:#FFFFFF }
+.tcopyright .en{font-family:Arial;}
+#tcopyright a { color:#FFFFFF;text-decoration:none;}
+#tcopyright a:hover { text-decoration:underline; color:#FFFFFF }
+</style>
+<div class="foot-Article-shuyang">
+<div id="tcopyright" class="tcopyright">
+<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于沭阳网</a> | <a href="https://www.05273.cn/about/shuyangwang/" target="_blank">本网动态</a> | <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> | <a href="https://www.05273.cn/about/submission/" target="_blank">投稿荐稿</a> | <a href="https://www.05273.cn/about/copyright/" target="_blank">免责声明</a> | <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> | <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> | <a href="https://www.05273.cn/about/book/" target="_blank">意见反馈</a> | <a href="https://www.05273.cn/about/delete/" target="_blank">删帖须知</a> | <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+| <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+| <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+| <a href="https://wap.05273.cn/" target="_blank">手机站</a>  
+  	<div class="en">   Copyright © 2007-2019 05273.cn All Rights Reserved.  <br>电信与信息服务业务经营许可证编号： 苏ICP备18031647号-1 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a>
+  </div>
+<div>
+<!-- 我的签到 layer end -->
+<script src="//statics.05273.cn/sign/js/jquery-1.10.2.min.js"></script>
+<script>
+$(function() {
+    var signFun = function() {
+        var dateArray = <?php echo json_encode($day_array); ?>; // 假设已经签到的
+        var $dateBox = $("#js-qiandao-list"),
+            $currentDate = $(".current-date"),
+            _html = '',
+            myDate = new Date();
+        $currentDate.text(myDate.getFullYear() + '年' + parseInt(myDate.getMonth() + 1) + '月' + myDate.getDate() + '日');
+        var monthFirst = new Date(myDate.getFullYear(), parseInt(myDate.getMonth()), 1).getDay();
+        var d = new Date(myDate.getFullYear(), parseInt(myDate.getMonth() + 1), 0);
+        var totalDay = d.getDate(); //获取当前月的天数
+        for (var i = 0; i < 42; i++) {
+            _html += ' <li><div class="qiandao-icon"></div></li>'
+        }
+        $dateBox.html(_html) //生成日历网格
+        var $dateLi = $dateBox.find("li");
+        for (var i = 0; i < totalDay; i++) {
+            $dateLi.eq(i + monthFirst).addClass("date" + parseInt(i + 1));
+            for (var j = 0; j < dateArray.length; j++) {
+                if (i == dateArray[j]) {
+                    $dateLi.eq(i + monthFirst).addClass("qiandao");
+                }
+            }
+        } //生成当月的日历且含已签到
+    }();
+    function openLayer(a, Fun) {
+        $('.' + a).fadeIn(Fun)
+    } //打开弹窗
+    var closeLayer = function() {
+            $("body").on("click", ".close-qiandao-layer", function() {
+                $(this).parents(".qiandao-layer").fadeOut()
+            })
+        }() //关闭弹窗
+    $("#js-qiandao-history").on("click", function() {
+        openLayer("qiandao-history-layer", myFun);
+        function myFun() {
+            console.log(1)
+        } //打开弹窗返回函数
+    })
+})
+</script>
+</body>
+</html>

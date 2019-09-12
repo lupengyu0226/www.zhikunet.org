@@ -1,0 +1,69 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">支付记录</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_C=="deposit" && (ROUTE_A=="pay" || ROUTE_A=="pay_recharge")} class="active"{/if}><a class="btn" href="pay-pay.html">在线充值</a></li>
+                            <li{if ROUTE_C=="deposit" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pay-init.html">支付记录</a></li>
+                            <li{if ROUTE_C=="spend_list" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pays-init.html">消费记录</a></li>
+                            <li{if ROUTE_A=="change_credit"} class="active"{/if}><a class="btn" href="member-change_credit.html">兑换积分</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid-view mt20">
+<div class="search_form mt30" style="margin-bottom:10px; clear:both;">
+<form name="searchform" action="{PASSPORT_PATH}pay-init.html" method="get" >
+<input type="hidden" value="pay" name="m">
+<input type="hidden" value="deposit" name="c">
+<input type="hidden" value="init" name="a">
+		<div class="search">
+		订单时间  {form::date('info[start_addtime]',$start_addtime)} 到   {form::date('info[end_addtime]',$end_addtime)}
+		{form::select($trade_status,$status,'name="info[status]"', L('all_status'))}  
+		<input type="submit" value="查询" class="button" name="dosubmit">
+		</div>
+</form>
+</div>
+<table width="100%" cellspacing="0"  class="table-list table">
+        <thead>
+            <tr>
+            <th width="20%">支付单号</th>
+            <th width="20%">时间</th>
+            <th width="15%">支付方式</th>
+            <th width="8%">存入金额</th>
+            <th width="15%">支付状态</th>
+            </tr>
+        </thead>
+    <tbody>
+{if $infos}
+{loop $infos $info} 
+	<tr>
+	<td width="20%" align="center">{$info['trade_sn']}</td>
+	<td  width="20%" align="center">{date('Y-m-d H:i:s',$info['addtime'])}</td>
+	<td width="15%" align="center">{$info['payment']}</td>
+	<td width="10%" align="center">{$info['money']} {php echo $info['type']==1 ? '元':'点'}</td>
+	<td width="15%" align="center">{L($info['status'])} </a>
+	</tr>
+{/loop}
+{else}
+                                <tr>
+                                    <td colspan="5"><div class="empty">暂时支付记录，<a href="pay-pay.html">先充值</a>！</div></td>
+                                </tr>
+{/if}
+    </tbody>
+</table>
+<div class="pagenavi mt20">{$pages}</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

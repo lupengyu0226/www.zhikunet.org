@@ -1,0 +1,180 @@
+{template "content","header"}
+{template "content","header_top"}
+{template "content","header_logo"}
+{template "content","header_nav"}
+<?php $typeid = intval($_GET['typeid']);?>
+<div class="navs">
+  <div class="nav">
+    <ul>
+  <li class="home"><a href="https://www.zhikunet.org">首页</a></li>
+    {edi:content action="category" catid="16" num="15" siteid="$siteid" order="listorder ASC"}
+      {loop $data $r}
+      <li><a href="{$r[url]}" target="_blank">{$r[catname]}</a></li>
+      {/loop}
+      {/edi}
+    </ul>
+  </div>
+</div>
+</div>
+<!--#include virtual="/caches/posid/rementuji.html"--> 
+<!--#include virtual="/caches/posid/pindaoad.html"--> 
+<!--/首页导航--> 
+<!-- Body Begin -->
+<div class="wrap">
+<div class="main">
+  <div class="submenu">
+  <div class="title">
+    <h1>{$TYPE[$typeid][name]}</h1><div class="subnav"><a href="{siteurl($siteid)}">首页</a> > {catpos($catid)} <a href="https://www.zhikunet.orgnews/xn/xz_{$typeid}_1.html">{$TYPE[$typeid][name]}</a></div>
+  </div>
+</div>
+  <div class="column2" id="news">
+    <div class="bd"><div id="listZone">
+{loop $datas $r}
+{php $keywords = explode(' ',$r[keywords]);}
+<div class="Q-tpList" style="z-index:97"><div class="Q-tpWrap">
+{if $r[thumb]}<a target="_blank" class="pic" href="{$r[url]}"><img class="picto" src="//statics.zhikunet.orgstatics/images/grey.gif" data-original="{thumb($r[thumb], 120, 80)}"></a>{/if}<h1 class="f14 l24"><a target="_blank" class="linkto" href="{$r[url]}">{$r[title]}</a></h1><p class="l22">{str_cut(strip_tags($r[description]), 330)}</p>
+ <div class="about-tags"><span class="date">发布于：{date('Y-m-d H:i',$r[inputtime])}</span>  
+<em><a href="https://www.zhikunet.orghot.html" target="_blank">ITAG</a></em> 
+{loop $keywords $keyword}
+<a href="https://www.zhikunet.orghot/{urlencode($keyword)}.html" target="_blank">{$keyword}</a> 
+{/loop}
+</div>
+</div></div>
+{/loop}
+</div>
+</div>
+<div id="pages" class="text-c">{$pages}</div>
+  </div>
+</div>
+<!-- 右侧 -->
+<div class="side">
+<div class="s column">
+  <div class="bd">
+    <div class="cover">
+      <div class="cate"><h2>微信扫一扫，精彩再继续</h2></div>
+      <a href="https://www.zhikunet.orgabout/weixin/"><img src="//statics.zhikunet.orgstatics/images/weixin.gif" alt=""></a>
+    </div>
+</div>
+<div class="s rank">
+  <div class="hd"><h2>广告</h2></div>
+  <div class="bd">
+    <ul>
+    <!--#include virtual="/caches/posid/quanju300250.html"--> 
+    </ul>
+  </div>
+</div>
+<div class="s rank">
+  <div class="hd"><h2>频道总排行</h2></div>
+  <div class="bd">
+    <ul class="num">
+      <li class="r1">1</li>
+      <li class="r2">2</li>
+      <li class="r3">3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <ul>
+            {edi:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+        {loop $data $v}
+        <li><a target="_blank" href="{$v[url]}">{$v[title]}</a></li>
+        {/loop}
+      {/edi}
+    </ul>
+  </div>
+</div>
+</div>
+<div class="s rank">
+  <div class="hd"><h2>频道本月排行</h2></div>
+  <div class="bd">
+    <ul class="num">
+      <li class="r1">1</li>
+      <li class="r2">2</li>
+      <li class="r3">3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <ul>
+            {edi:content action="hits" catid="$catid" num="10" order="monthviews DESC" cache="3600"}
+        {loop $data $v}
+        <li><a target="_blank" href="{$v[url]}">{$v[title]}</a></li>
+        {/loop}
+      {/edi}
+    </ul>
+  </div>
+</div>
+</div>
+<!-- 右侧 -->
+<div class="cls"></div>
+</div>
+<!--返回顶部-->
+<div id="goTop" onmouseover="this.className='on'" onmouseout="this.className=''"><a href="javascript:;"></a></div>
+<script type="text/javascript">
+var goTopBtn = document.getElementById("goTop");
+function goTop()
+{
+    if(goTopBtn)
+    { 
+        goTopBtn.onclick = function()
+        {
+            var doc = (document.documentElement.scrollTop)? document.documentElement : document.body;
+            var time;
+            time = setInterval(function(){
+                doc.scrollTop -= Math.ceil(doc.scrollTop*0.7);
+                if(doc.scrollTop<=0) clearInterval(time);
+            },1)
+        }
+    }
+} 
+
+goTop();
+window.onscroll = function()
+{
+    if(goTopBtn)
+    { 
+        document.documentElement.className = '';
+        var doc = (document.documentElement.scrollTop)? document.documentElement : document.body;
+        goTopBtn.style.visibility = doc.scrollTop ?"visible":"hidden";
+    }
+}
+  $("img").lazyload({ 
+    skip_invisible : false, 
+      effect : "fadeIn",
+      failure_limit: 20 
+  });
+  if(navigator.userAgent.indexOf("MSIE 6.0")>0)
+   {
+     $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 80){
+        $('.navs').css('top',stop+'px');
+      }
+      if(stop <= 80){
+        $('.navs').css('top','80px');
+      }
+      });
+   }else{
+    $(window).scroll(function(){
+      var stop = $(window).scrollTop();
+      if(stop >= 80){
+        $('.navs').css('position','fixed').css('top','0px');
+      }
+      if(stop <= 80){
+        $('.navs').css('position','absolute').css('top','80px');
+      }
+    });
+   };
+</script>
+<!-- 返回顶部结束 -->
+<script src="//www.zhikunet.orgcore/stats/{$catid}/" type="text/javascript"></script>
+<!-- Footer Begin -->
+{template "content","footer"}

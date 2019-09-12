@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="dns-prefetch" href="//statics.05273.cn">
+    <link rel="dns-prefetch" href="//upload.05273.cn">
+    <link rel="dns-prefetch" href="//account.05273.cn">
+    <link rel="dns-prefetch" href="//img.05273.cn">
+    <link rel="dns-prefetch" href="//wap.05273.cn">
+    <link rel="dns-prefetch" href="//www.05273.cn">
+		<title>登录 - 沭阳网手机版会员中心</title>
+    	<meta name="author" content="wap.05073.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="http://statics.05273.cn/waplogin/css/base2013.css?v=20130806100001" charset="gbk"/>
+        <link rel="apple-touch-icon-precomposed" href="http://statics.05273.cn/statics/mobile/img/weblogo.png"/>
+		
+		
+        
+
+        <script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    try{
+        if(/Macintosh|Mac_PowerPC|Windows NT|Windows XP/i.test(navigator.userAgent)){
+          window.location.href="http://passport.05273.cn/member-login.html";
+        }
+    }catch(e){};
+</script>
+	</head>
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+							<h2>沭阳网登录</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span></span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="http://wap.05273.cn/" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="http://wap.05273.cn/index.php?controller=search" class="new-tbl-cell">
+                	<span class="icon2">搜索</span>
+					<p style="color:#6e6e6e;">搜索</p>
+                </a>
+                <a href="http://www.05273.cn/index.php?app=waplogin&controller=index&view=comment" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">我的评论</span>
+					<p style="color:#6e6e6e;">我的评论</p>
+                </a>
+                <a href="http://www.05273.cn/index.php?app=waplogin&controller=index" class="new-tbl-cell">
+                	<span class="icon4">我的帐号</span>
+					<p style="color:#6e6e6e;">我的帐号</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<link rel="stylesheet" type="text/css" href="http://statics.05273.cn/waplogin/css/base.css" charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="http://statics.05273.cn/waplogin/css/login.css" charset="utf-8"/>
+<style type="text/css">
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow:0 0 0 60px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+</style>
+<div class="common-wrapper">
+    <div class="main">
+<form method="post" action="" onsubmit="save_username();" id="myform" name="myform">
+<input type="hidden" name="forward" id="forward" value="{$forward}">
+		<div class="new-txt-err new-mg-t10" id="error" style="display:none"></div> 
+		<div class="item item-username">
+            <input class="txt-input txt-username" type="text" name="username" id="username" value=""  placeholder="请输入用户名/邮箱/已验证手机"/>
+            <b class="input-close"></b>
+        </div>
+        <div class="item item-password">
+			<input id="password" name="password" class="txt-input txt-password ciphertext" type="password"  placeholder="请输入密码" />
+            <input id="ptext" name="ptext" class="txt-input txt-password plaintext" style="display:none" type="text"   placeholder="请输入密码" />
+			<b class="tp-btn btn-off "></b>
+            <b class="input-close"></b> 
+        </div>
+        <div class="item item-captcha">
+		<input type="hidden" value="1" id="codeLevel" />
+        <div id="codeDiv" class="input-info" style="display:none">
+            <input class="txt-input txt-captcha" type="text" name="validateCode" id="validateCode"  size="11" maxlength="20" placeholder="验证码" />
+			<span id="captcha-img">
+				<img src="" id='code' width="75" height="30" alt="" onclick="com_jd_passport_m_validateCode('code','codeKey','1',$('#username').val().trim());" />
+				<input type="hidden" value="" name="codeKey" id="codeKey">
+			</span>
+            <b class="input-close"></b>
+        </div>
+				</div>
+        <div class="item item-btns">
+		    <input type="submit" name="dosubmit" id="dosubmit" class="btn-login" value="登录">
+        </div>
+		</form>	
+        <div class="item item-login-option">
+            <span class="register-free">
+		                			<a rel="nofollow" href='index.php?app=waplogin&controller=index&view=register' >免费注册</a>
+        		            </span>
+            <span class="retrieve-password">
+				<a href='index.php?app=waplogin&controller=index&view=public_get_password_type' class=""> 找回密码</a>  
+            </span>
+        </div>
+		        <!--div class="item item-login-other">
+            <dl>
+                <dt>其它登录方式</dt>
+                <dd>
+                    <a href='#' class="qq"><span>QQ</span></a>
+                    <a href='#' class="renren"><span>人人</span></a>
+                    <a href='#' class="weibo"><span>新浪微博</span></a>
+                    <a href='#' class="douban"><span>豆瓣</span></a>
+                </dd>
+            </dl>
+        </div>
+		    </div-->
+</div>
+<div id="autoLoginHeight"></div>
+
+<script type="text/javascript" >
+    window.onload=function(){
+        var oPop=document.getElementsByClassName('pop-bg');
+        //oPop[0].style.height=document.body.offsetHeight+'px';
+    }
+    $(function() {
+		$(".input-close").hide();
+		displayPwd();
+		//remember();
+		//showActionError();
+		//autoHeight_login();
+		//dispValidateCode();
+		//displayClearBtn();
+		setTimeout(displayClearBtn, 200 ); //延迟显示,应对浏览器记住密码
+	});	
+	//是否显示清除按钮
+	function displayClearBtn(){
+		if(document.getElementById("username").value != ''){
+			$("#username").siblings(".input-close").show();
+		}
+		if(document.getElementById("password").value != ''){
+			$(".ciphertext").siblings(".input-close").show();
+		}
+		if($("#codeLevel").val()!="" && $("#codeLevel").val()!='0'){
+			if($("#validateCode").val()!=""){
+				$("#validateCode").siblings(".input-close").show();
+			}
+		}
+	}
+	//清除input内容
+    $('.input-close').click(function(e){  
+		$(e.target).parent().find(":input").val("");
+		$(e.target).hide();
+		$($(e.target).parent().find(":input")).each(function(i){
+			if(this.id=="ptext" || this.id=="password"){
+				$("#password").val('');
+				$("#ptext").val('');
+			}
+           //this.src = "test" + i + ".jpg";
+         });
+    });  
+	
+	//设置password字段的值	
+	$('.txt-password').bind('input',function(){
+		$('#password').val($(this).val());
+	});
+	
+	//显隐密码切换
+	function displayPwd(){
+    	$(".tp-btn").toggle(
+          function(){
+            $(this).addClass("btn-on");
+			var textInput = $(this).siblings(".plaintext");
+    		var pwdInput = $(this).siblings(".ciphertext");
+			pwdInput.hide();
+			textInput.val(pwdInput.val()).show().focusEnd();
+          },
+          function(){
+		  	$(this).removeClass("btn-on");
+		  	var textInput = $(this).siblings(".plaintext ");
+    		var pwdInput = $(this).siblings(".ciphertext");
+            textInput.hide();
+			pwdInput.val(textInput.val()).show().focusEnd();
+          }
+    	);
+	}
+</script>
+{template 'mobile', 'login_footer'}
+</body>
+</html>

@@ -1,0 +1,831 @@
+{template "content","header2014"}
+<!--框架-->
+<div class="headnews w998">
+   {edi:content action="lists" catid="6" order="id DESC" thumb="1" num="4"}
+     {loop $data $r}
+         <div class="newlist">
+               <a href="{$r[url]}" class="pic" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],93,0)}" height="62" width="93" alt="{$r[title]}"></a>
+               <h3><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],42,'')}</a></h3>
+               <p>{str_cut(trim_indent($r[description]), 87,'')}</p>
+         </div>
+       {/loop}  
+   {/edi} 
+</div>
+<div class="w958 today">
+<div class="jrtt">
+  <div class="toutiao"></div>
+{edi:content action="position" posid="2" order="listorder DESC" num="5"}
+{loop $data $r}
+ {if $n==1}
+<h1><a href="{$r[url]}" target="_blank" title="{$r['title']}"{title_style($r[style])}>{str_cut($r[title],93,'')}</a></h1>
+ <ul>
+{else}
+<li><a href="{$r[url]}" target="_blank" title="{$r['title']}">{str_cut($r[title],89,'')}</a></li>
+{/if}
+{/loop}
+{/edi}  
+      </ul>
+      <a class="more" href="https://www.05273.cn/today.html" target="_blank">更多头条</a>
+</div>
+</div>
+<div id="x1" class="wrap">
+<!-- 第一屏 -->
+<div class="layout mb20 clr">
+<!--左侧互动模块-->
+<div class="sideHd">
+<!--焦点图-->
+    <div id="focus">
+      <div class="focus" id="focus">
+        <div class="fPs">
+          <div class="fix">
+            <div class="fPic" id="D2pic1"> 
+            {edi:content action="lists" catid="16" order="id DESC" thumb="1" num="6"}
+              {loop $data $r}
+               <div class="fcon"><a href="{$r['url']}" target="_blank"><img src="{thumb($r[thumb],310,230)}" alt="{$r[title]}"></a> <span class="shadow"><a href="{$r['url']}" target="_blank">{str_cut($r[title],60)}</a> </span>
+                </div>
+              {/loop}
+            {/edi}
+            </div>
+          </div>
+        </div>
+        <span id="prev" class="prev"></span> <span id="next" class="next"></span> </div>
+    </div>
+    <div class="fbg">
+      <div id="focusimg" class="focusimg"> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>1</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>2</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>3</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>4</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>5</i></a> <a target="_self" hidefocus="true" href="javascript:void(0)"><i>6</i></a> </div>
+    </div>
+<!--/焦点图-->
+<!--报料台-->
+<div class="baoliao">
+    <a href="https://www.05273.cn/baoliao/" target="_blank" class="blbtn" title="沭阳网新闻爆料平台">我要报料</a>
+    {edi:content action="position" posid="24" order="listorder DESC" num="1"}
+    <div class="bltit">
+        {if $data}
+            {loop $data $r}
+            <a href="{$r[url]}" target="_blank">{$r[title]}</a>
+            {/loop}
+        {else}
+        <a href="https://www.05273.cn/baoliao/" target="_blank">暂无报料</a>
+        {/if}
+    </div>
+    {/edi}
+</div>
+<!--/报料台-->
+<!--今日话题-->
+<div class="jinrihuati">
+    <div class="cover">
+		<div class="con">
+			<div class="hd"><h2><a href="https://www.05273.cn/huati/" target="_blank">今日话题</a></h2></div>
+			{edi:content action="lists" catid="3370" num="1" moreinfo="1" order="id DESC" thumb="1"}
+			<div class="bd">
+			{loop $data $huati}
+            <a href="{$huati[url]}" target="_blank" title="{$huati[title]}">{str_cut($huati[title],42,'')}</a>
+	        {/loop}
+         </div>
+		</div>
+	</div>
+	<div class="info"><span>本期简介：</span>{str_cut($huati[description],195)}[<a href="{$huati['url']}" target="_blank" title="{$huati[title]}">详细</a>]</div>
+    {/edi} 
+</div>
+<!--/今日话题-->
+<!--往期回顾-->
+<div class="huati">
+    <div class="hd"><h2>往期回顾</h2><a href="https://www.05273.cn/huati/" class="join" target="_blank">更多</a></div>
+    <div class="bd">
+    <ul>
+	{edi:content action="lists" catid="3370" start="1" num="5" moreinfo="1" order="id DESC" thumb="0"}
+	    {loop $data $r}
+		<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">[第{$r[qihao]}期]{str_cut($r[title],48,'')}</a></li>
+        {/loop}
+    {/edi} 
+        </ul>
+    </div>
+</div>
+<!--社会万象-->
+<div class="gov">
+    <div class="hd"><h2>社会万象</h2><a href="https://www.05273.cn/daodu/shehui/" class="join" target="_blank">更多</a></div>
+    <div class="bd">
+    <ul>
+	{edi:content action="lists" catid="14" num="5" order="id DESC"}
+		{loop $data $r}
+		<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],69,'')}</a></li>
+		{/loop}
+    {/edi} 
+        </ul>
+    </div>
+</div>
+<!--/社会万象-->
+<!--热点新闻-->
+<div class="redian">
+    <div class="hd"><h2>热点新闻</h2><a href="https://www.05273.cn/news/rd/" class="join" target="_blank">更多</a></div>
+    <div class="bd">
+    <ul>
+	{edi:content action="lists" catid="21" num="5" order="id DESC"}    
+		{loop $data $r}
+		<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],69,'')}</a></li>
+		{/loop}
+    {/edi} 
+        </ul>
+    </div>
+</div>
+</div>
+<!--/热点新闻-->
+<!--热点新闻区-->
+<div class="main">
+<!--头条-->
+<div class="headline">
+    <div>
+ {edi:content action="position" catid="16" posid="5" order="listorder DESC" num="6"}
+ {loop $data $r}
+{if $n%3==1}
+<h2><a href="{$r[url]}" target="_blank" title="{$r['title']}"{title_style($r[style])}>{str_cut($r[title],69,'')}</a></h2>
+<p>
+{else}
+<a href="{$r[url]}" target="_blank" title="{$r['title']}"{title_style($r[style])}>{str_cut($r[title],57,'')}</a>
+{/if}
+{/loop}
+{/edi} 
+</p>
+</div>
+</div>
+<!--/头条-->
+<!--新闻列表-->
+<div class="newslist">
+      <ul>
+		 {edi:content action="lists" catid="24" order="id DESC" num="5"}
+{loop $data $r}
+{if $n==1}
+<li><a class="fwb" target="_blank" href="{$r['url']}" title="{$r[title]}">{str_cut($r[title],69,'')}</a></li>
+{else}
+<li><a href="{$r['url']}" target="_blank" title="{$r[title]}">{str_cut($r[title],75,'')}</a><span class="{if is_today($r[inputtime])==1}todays{else}right{/if}">{inputtime_zone($r[inputtime])}</span></li>
+{/if}
+{/loop}
+		{/edi} 
+       </ul>
+	   <ul>
+		 {edi:content action="lists" catid="22" order="id DESC" num="5"}
+              {loop $data $r}
+	              {php $TYPE = getcache('type_content','commons');}
+	              {if $n==1}
+	              <li><a class="fwb" target="_blank" href="{$r['url']}" title="{$r[title]}">{str_cut($r[title],69,'')}</a></li>
+	              {else}
+	              <li>{if $TYPE[$r[typeid]][name]}<a target="_blank" class="linkto" href="https://www.05273.cn/news/xn/xz_{$r[typeid]}_1.html">[{$TYPE[$r[typeid]][name]}]</a>{/if} <a href="{$r['url']}" target="_blank" title="{$r[title]}">{str_cut($r[title],75,'')}</a><span class="{if is_today($r[inputtime])==1}todays{else}right{/if}">{inputtime_zone($r[inputtime])}</span></li>
+	              {/if}
+              {/loop}
+		{/edi} 
+       </ul>
+     <ul>
+	 {edi:content action="lists" catid="23" order="id DESC" num="5"}
+      {loop $data $r}
+          {if $n==1}
+          <li><a class="fwb" target="_blank" href="{$r['url']}" title="{$r[title]}">{str_cut($r[title],69,'')}</a></li>
+          {else}
+          <li><a href="{$r['url']}" target="_blank" title="{$r[title]}">{str_cut($r[title],75,'')}</a><span class="{if is_today($r[inputtime])==1}todays{else}right{/if}">{inputtime_zone($r[inputtime])}</span></li>
+          {/if}
+      {/loop}
+	{/edi} 
+   </ul>
+</div>
+<!--/新闻列表-->
+<!--视频-->
+<div class="video">
+    <div class="hd"><h2><a href="https://www.05273.cn/video/zhuizong/" target="_blank">视频</a></h2></div>
+    <div class="bd">
+        <div class="clr">
+      {edi:content action="lists" catid="3366" num="2"  moreinfo="1" order="id DESC" thumb="1"}
+        {loop $data $r}
+         {if $n==1}
+        <div class="v fl"><a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],170,110)}" alt="{$r[title]}">
+    		<div class="shadow">{if $r[shijian]}{$r[shijian]}{else}0:00{/if}</div>
+    		<i></i>
+      	</a>
+      	<a class="tit" href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],54,'')}</a>
+        </div>
+        {else}
+        <div class="v fr"><a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],170,110)}" alt="{$r[title]}">
+    		<div class="shadow">{if $r[shijian]}{$r[shijian]}{else}0:00{/if}</div>
+    		<i></i></a>
+         <a class="tit" target="_blank" href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],54,'')}</a>
+         </div>
+          {/if}
+           {/loop}
+       {/edi}
+        </div>
+        <div class="vlist">
+      <ul>
+      {edi:content action="lists" catid="3366" start="2" num="4" order="id DESC" thumb="1"}
+        {loop $data $r}
+      	<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],54,'')}</a></li>
+             {/loop}
+       {/edi}
+      </ul>
+    </div>
+    </div>
+</div>
+<!--/视频-->
+<!--江苏新闻-->
+<div class="plan">
+    <div class="hd"><h2><a href="https://www.05273.cn/daodu/jiangsu/" target="_blank">江苏新闻</a></h2></div>
+    <div class="bd">
+      {edi:content action="lists" catid="89" num="1" order="id DESC" thumb="1"}
+        {loop $data $r}
+        <div class="newst clr">
+		     <h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],90,'')}</a></h2>
+		         <div class="pt"><a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],140,100)}" alt="{$r[title]}"></a>
+			     <p>{str_cut(trim_indent($r[description]), 300,'')}<a href="{$r[url]}" target="_blank" title="{$r[title]}">[详细]</a></p>
+		       </div>
+		 </div>
+         {/loop}
+       {/edi}  
+		<ul>
+		  {edi:content action="lists" catid="89" num="3" order="id DESC"}
+		    {loop $data $r}
+	    	<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],99,'')}</a></li>
+		     {/loop}
+		   {/edi}  
+		</ul>
+    </div>
+</div>
+<!--/江苏新闻-->
+</div>
+<!--/热点新闻区-->
+<!--#include virtual="/caches/posid/indexsousuo.html"--> 
+<!--右侧资讯区-->
+<div class="sideInfo">
+<!--图文资讯-->
+<div class="minfo">
+    <div class="hd"><h2>图文资讯</h2><a target="_blank" href="https://www.05273.cn/special/yaoyan/" class="jzyy"><img src="//statics.05273.cn/zhuanti/images/jzyy.png"></a></div>
+    <div class="bd">
+    <div class="shList">
+    {edi:content action="lists" catid="6" order="listorder DESC" thumb="1" num="5"}
+    {loop $data $r}
+    <dl {if $n==1}class="selected"{else}{/if}>
+    <dt><a target="_blank" href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],90,'')}</a></dt>
+    <dd>
+    <div class="Q-tpList">
+    <div class="Q-tpWrap">
+    <div class="pic">
+	<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],110,72)}" height="72" width="110" alt="{$r[title]}"></a>
+	<a href="{$r[url]}" target="_blank" title="{$r[title]}"><strong>{inputtime_zone($r[inputtime])}</strong></a>
+	</div>
+    <p>{str_cut(trim_indent($r[description]), 160,'')}</p>
+	<p><span class="fr"><a href="{$r[url]}" target="_blank">查看</a></span></p>
+    </div>
+    </div>
+    </dd>
+    </dl>
+    {/loop}  
+    {/edi} 
+    </div>
+    </div>
+</div>
+<!--/图文资讯-->
+<!--民生资讯-->
+<div class="shuyangbbs">
+    <div class="hd"><h2><a href="https://www.05273.cn/daodu/ms/" target="_blank">民生资讯</a></h2></div>
+    <div class="bd">
+    <div class="cover">
+          {edi:content action="lists" catid="10" num="1" order="id DESC" thumb="1"}
+       		 {loop $data $r}
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],93,62)}" alt="{$r[title]}"></a>
+            <h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],48,'')}</a></h2>
+			<p>{str_cut(trim_indent($r[description]), 150,'')}<a href="{$r[url]}" target="_blank" title="{$r[title]}">[详细]</a></p>
+             {/loop}
+          {/edi}  
+		</div>
+		<ul>
+          {edi:content action="lists" catid="10" num="3" order="id DESC"}
+       		 {loop $data $r}
+			<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],90,'')}</a></li>
+             {/loop}
+          {/edi}  
+		</ul>
+    </div>
+</div>
+<!--/民生资讯-->
+<!--地方资讯-->
+<div class="shuyangbbs">
+    <div class="hd"><h2><a href="https://www.05273.cn/daodu/dif/" target="_blank">地方资讯</a></h2></div>
+    <div class="bd">
+    <div class="cover">
+          {edi:content action="lists" catid="11" num="1" order="id DESC" thumb="1"}
+       		 {loop $data $r}
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],93,62)}" alt="{$r[title]}"></a>
+        	<h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],48,'')}</a></h2>
+			<p>{str_cut(trim_indent($r[description]), 150,'')}<a href="{$r[url]}" target="_blank" title="{$r[title]}">[详细]</a></p>
+             {/loop}
+          {/edi}  
+		</div>
+		<ul>
+          {edi:content action="lists" catid="11" num="3" order="id DESC"}
+       		 {loop $data $r}
+			<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],90,'')}</a></li>
+             {/loop}
+          {/edi}  
+		</ul>
+    </div>
+</div>
+<!--/地方资讯-->
+            <div class="shuyangbbs">
+    <div class="hd"><h2><a href="https://www.05273.cn/daodu/guoji/" target="_blank">国际花边</a></h2></div>
+    <div class="bd">
+      <div class="cover">
+          {edi:content action="lists" catid="3365" num="1" order="id DESC" thumb="1"}
+       		 {loop $data $r}
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],93,62)}" alt="{$r[title]}"></a>
+            <h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],48,'')}</a></h2>
+			<p>{str_cut(trim_indent($r[description]), 150,'')}<a href="{$r[url]}" target="_blank" title="{$r[title]}">[详细]</a></p>
+             {/loop}
+          {/edi}  
+		</div>
+		<ul>
+          {edi:content action="lists" catid="3365" num="3" order="id DESC"}
+       		 {loop $data $r}
+			<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],90,'')}</a></li>
+             {/loop}
+          {/edi}  
+		</ul>
+    </div>
+</div>
+<div class="shuyangHd">
+    <div class="hd"><h2><a href="https://www.05273.cn/tvnews/shuyangtv/" target="_blank">视频新闻</a></h2></div>
+	<ul>
+	  {edi:content action="lists" catid="20" num="3" order="id DESC"}
+			 {loop $data $r}
+	      <li><a href="{$r[url]}" target="_blank">
+	      <h2>{$r[title]}</h2>
+	      <p class="clr"> <span>{inputtime_zone($r[inputtime])}</span><em>现在观看</em></p></a></li>
+	     {/loop}
+	  {/edi}  
+	</ul>
+</div>
+</div>
+</div>
+<!--/第一屏-->
+<!--通栏1广告-->
+<div class="tlad"><!--#include virtual="/caches/posid/baoliaoad.html"--> </div>
+<!--通栏1广告-->
+<!-- 沭生活 -->
+<div id="x2" class="Hmod Hent mb20">
+<div class="hd">
+    <h2>沭阳生活</h2><span><a href="https://www.05273.cn/photo/tupian/" target="_blank">风景</a> | <a href="https://www.05273.cn/canying/" target="_blank">美食</a> | <a href="https://www.05273.cn/binguan/" target="_blank">酒店</a> | <a href="https://www.05273.cn/jingqu/" target="_blank">景区</a> | <a href="https://www.05273.cn/shuyang/" target="_blank">沭阳话</a></span>
+    <div class="line"></div>
+</div>
+<div class="bd">
+<div class="Hside-l">
+    <div class="shd">
+        <h3><a href="https://www.05273.cn/photo/tupian/" target="_blank">沭阳风景</a></h3>
+    </div>
+    <div class="sbd">
+        <div class="focus2">
+	     {edi:content action="lists" catid="86" num="1" order="id DESC" thumb="1"}
+       		 {loop $data $r}
+               <a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" alt="{$r[title]}" data-original="{thumb($r[thumb],310,180)}">
+               <p>{str_cut($r[title],57,'')}</p></a>
+             {/loop}
+         {/edi}  
+        </div>
+<!--/焦点图-->
+<div class="clr">
+ {edi:content action="lists" catid="86" num="1" start="1" order="id DESC" thumb="1"}
+		 {loop $data $r}
+        <div class="v fl">
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],150,110)}" alt="{$r[title]}"></a>
+			<p><a class="tit" href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],36,'')}</a></p>
+		</div>
+     {/loop}
+ {/edi}
+ {edi:content action="lists" catid="86" num="1" start="2" order="id DESC" thumb="1"}
+		 {loop $data $r}
+		<div class="v fr">
+		<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],150,110)}" alt="{$r[title]}"></a>
+		<p><a class="tit" href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],36,'')}</a></p>
+		</div>
+     {/loop}
+{/edi}
+</div>
+    <ul>
+		 {edi:content action="lists" catid="86" num="4" start="3" order="id DESC" thumb="1"}
+       		 {loop $data $r}
+		     <li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],57,'')}</a></li>
+             {/loop}
+      {/edi}
+    </ul>
+</div>
+</div>
+<div class="Hmain">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/canying/" target="_blank">餐饮美食</a></h3>
+</div>
+<div class="sbd">
+    <div class="sheadline">
+     <div>
+         {edi:content action="lists" catid="59" num="1"  order="id DESC" thumb="1"}
+             {loop $data $r}
+             <h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{$r[title]}</a></h2>
+             {/loop}
+         {/edi}
+         {edi:content action="lists" catid="59" num="5" start="1" order="id DESC" thumb="1"}
+             {loop $data $r}
+              <p><a href="{$r[url]}">[{str_cut($r[title],30,'')}]</a>  {str_cut($r[description],87)} </p>
+             {/loop}
+         {/edi}
+      </div>
+    </div>          
+    <div class="clr">
+        <div class="v fl">
+                     {edi:content action="lists" catid="59" num="2"  order="id DESC" thumb="1"}
+                     {loop $data $r}
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],180,130)}" alt="{$r[title]}"></a>
+			<p><a class="tit" href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],27,'')}</a></p>
+                     {/loop}
+                    {/edi}
+		</div>
+		<div class="v fr">
+                     {edi:content action="lists" catid="59" num="2" start="2"  order="id DESC" thumb="1"}
+                     {loop $data $r}
+			<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($r[thumb],180,130)}" alt="{$r[title]}"></a>
+			<p><a class="tit" href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],27,'')}</a></p>
+                     {/loop}
+                    {/edi}
+		</div>
+</div>
+</div>
+</div>
+<div class="Hside-r">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/shuyang/" target="_blank">学沭阳话</a></h3>
+</div>
+<div class="sbd">
+    <div class="cover clr">
+   {edi:content action="lists" catid="61" thumb="1" num="1" order="id DESC"}
+          {loop $data $v}
+        <div><a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],130,150)}" alt="{$v[title]}"></a>
+		<h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></h2>
+		<p>{str_cut($v[description],300,'..')}<a href="{$v[url]}" target="_blank" title="{$v[title]}">[详细]</a></p></div>
+          {/loop}
+   {/edi}
+    </div>
+    <div class="slist line clr">
+  {edi:content action="lists" catid="58" num="1" order="id DESC"}
+  {loop $data $v} 
+        <h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></h2>
+      {/loop}
+   {/edi}
+		<div class="slist-tit blue pdd10">酒店宾馆</div>
+		<ul>
+  {edi:content action="lists" catid="58" num="4" start="1" order="id DESC"}
+  {loop $data $v} 
+			<li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></li>
+      {/loop}
+   {/edi}
+		</ul>
+    </div>
+    <div class="slist clr">
+{edi:content action="lists" catid="56" num="1" order="id DESC"}
+  {loop $data $v} 
+        <h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></h2>
+      {/loop}
+   {/edi}	
+<div class="slist-tit orange pdd10">景点景区</div>
+<ul>
+      {edi:content action="lists" catid="56" num="4" start="1" order="id DESC"}
+	  {loop $data $v} 
+				<li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></li>
+          {/loop}
+       {/edi}
+</ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- /沭生活 -->
+<!-- 沭住行 -->
+<div id="x4" class="Hmod Hmoney mb20">
+<div class="hd">
+    <h2>沭阳住行</h2><span><a href="https://www.05273.cn/house/" target="_blank">房产</a> | <a href="https://www.05273.cn/auto/" target="_blank">汽车</a> | <a href="https://www.05273.cn/pc/" target="_blank">电脑</a> | <a href="https://www.05273.cn/hr/" target="_blank">人才</a> | <a href="https://www.05273.cn/yellow/" target="_blank">黄页</a></span>
+    <div class="line"></div>
+</div>
+<div class="bd">
+<div class="Hside-l">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/house/" target="_blank">沭阳房产</a></h3>
+</div>
+<div class="sbd">
+<div class="focus2">
+  {edi:content action="lists" catid="60" thumb="1" num="1" order="id DESC"}
+	  {loop $data $v} 
+            <a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],310,180)}" alt="{$v[title]}"><p>{str_cut($v[title],30,'')}</p></a>
+      {/loop}
+  {/edi}
+    </div>
+<ul>
+  {edi:content action="lists" catid="60" start="1" num="3" order="id DESC"}
+	  {loop $data $v} 
+            <li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],90,'')}</a></li>
+      {/loop}
+  {/edi}
+</ul>
+</div>
+</div>
+<div class="Hmain">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/auto/" target="_blank">汽车频道</a></h3>
+</div>
+<div class="sbd">
+    <div class="sheadline">
+  {edi:content action="lists" catid="91" num="1" order="id DESC"}
+	  {loop $data $v} 
+            <h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],54,'')}</a></h2>
+            <p>{str_cut(trim_indent($v[description]), 300)}[<a href="{$v[url]}" target="_blank" title="{$v[title]}">详细</a>]</p>
+      {/loop}
+   {/edi}
+    </div>
+        <ul class="noline">
+  {edi:content action="lists" catid="91" start="1" num="5" order="id DESC"}
+	  {loop $data $v} 
+            <li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],120,'')}</a></li>
+      {/loop}
+   {/edi}
+ </ul>
+</div>
+</div>
+<div id="tab">
+<ul id="cardBtn1">
+   <li class="tabBtn">电脑商家</li>
+   <li class="tabBtn">企业黄页</li>
+   <li class="tabBtn">人才招聘</li>
+</ul>
+<div id="cardBody1">
+<div class="tabBody">
+<div class="past">
+	<div class="pbd">
+		<div class="num"></div>
+		<div class="tit">
+  {edi:content action="lists" catid="64" num="8" order="id DESC"}
+	  {loop $data $v} 
+		 <p><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],53,'')}</a></p>
+      {/loop}
+  {/edi}
+		</div>
+	</div>
+</div>
+</div>
+<div class="tabBody" style="display: none; ">
+<div class="past">
+	<div class="pbd">
+		<div class="num"></div>
+		<div class="tit">
+  {edi:content action="lists" catid="63" num="8" order="id DESC"}
+	  {loop $data $v} 
+		<p><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],53,'')}</a></p>
+      {/loop}
+  {/edi}
+		</div>
+	</div>
+</div>
+</div>
+<div class="tabBody" style="display: none; ">
+<div class="past">
+	<div class="pbd">
+		<div class="num"></div>
+		<div class="tit">
+  {edi:content action="lists" catid="62" num="8" order="id DESC"}
+	  {loop $data $v} 
+		<p><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],53,'')}</a></p>
+      {/loop}
+  {/edi}
+		</div>
+	</div>
+</div>
+  </div>
+</div>              
+</div>
+</div>
+</div>
+<!-- /沭住行 -->
+<!--通栏2广告-->
+<div class="tlad"><!--#include virtual="/caches/posid/chuangwei.html"--> </div>
+<!--通栏2广告-->
+<!-- 沭娱乐 -->
+<div id="x5" class="Hmod Hlife mb20">
+<div class="hd">
+    <h2>沭阳娱乐</h2><span><a href="https://www.05273.cn/video/shuyang/" target="_blank">沭阳专区</a> | <a href="https://www.05273.cn/video/jingxuan/" target="_blank">精选视频</a> | <a href="https://www.05273.cn/video/zhuizong/" target="_blank">事件追踪</a> | <a href="https://www.05273.cn/video/gaoxiao/" target="_blank">搞笑</a> | <a href="https://www.05273.cn/video/yinyue/" target="_blank">音乐</a> | <a href="https://www.05273.cn/video/" target="_blank">更多视频</a></span>
+    <div class="line"></div>
+</div>
+<div class="bd">
+<div class="Hside-l">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/video/" target="_blank">精选视频</a></h3>
+</div>
+<div class="sbd">
+<div class="focus2">
+  {edi:content action="lists" catid="87" num="1" thumb="1" order="id DESC"}
+	  {loop $data $v} 
+                <a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" alt="{$v[title]}" data-original="{thumb($v[thumb],310,180)}"> <p>{str_cut($v[title],53,'')}</p></a>
+      {/loop}
+   {/edi}
+    </div>
+    <!--/焦点图-->
+<div class="clr">
+ <div class="v fl">
+  {edi:content action="lists" catid="87" num="1" start="1" thumb="1" order="id DESC"}
+  {loop $data $v} 
+        <a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],150,110)}" alt="{$v[title]}"></a><p><a class="tit" href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],36,'')}</a></p>
+      {/loop}
+   {/edi}
+		</div>
+		<div class="v fr">
+  {edi:content action="lists" catid="87" num="1" start="2" thumb="1" order="id DESC"}
+  {loop $data $v} 
+        <a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],150,110)}" alt="{$v[title]}"></a><p><a class="tit" href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],36,'')}</a></p>
+      {/loop}
+   {/edi}
+	</div>
+</div>
+    <ul>
+  {edi:content action="lists" catid="87" num="4" start="3" thumb="1" order="id DESC"}
+  {loop $data $v} 
+       <li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],60,'')}</a></li>
+      {/loop}
+   {/edi}
+ </ul>
+</div>
+</div>
+<div class="Hmain">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/video/" target="_blank">推荐视频</a></h3>
+</div>
+<div class="sbd">
+    <div class="sheadline">
+ {edi:content action="position" catid="19" posid="15" order="listorder DESC" num="1"}
+	 {loop $data $r}
+        <h2><a href="{$r[url]}" target="_blank" title="{$r[title]}">{str_cut($r[title],90,'')}</a></h2>
+		<p>{str_cut($r[description],300)}<a href="{$r[url]}" target="_blank" title="{$r[title]}">[详细]</a></p>
+      {/loop}
+   {/edi}
+    </div>
+        <ul>
+  {edi:content action="position" catid="19" posid="15" start="1" order="listorder DESC" num="6"}
+	 {loop $data $r}
+		<li><a href="{$r[url]}" target="_blank" title="{$r[title]}">{$r[title]}</a></li>
+      {/loop}
+   {/edi}
+		</ul>
+    <div class="clr">
+        <div class="v fl">
+  {edi:content action="lists" catid="19" num="1" thumb="1" order="id DESC"}
+  {loop $data $v} 
+			<a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],180,110)}" alt="{$v[title]}"></a>
+			<p><a class="tit" href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></p>
+      {/loop}
+   {/edi}
+		</div>
+		<div class="v fr">
+  {edi:content action="lists" catid="19" num="1" start="1" thumb="1" order="id DESC"}
+  {loop $data $v} 
+			<a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],180,110)}" alt="{$v[title]}"></a>
+			<p><a class="tit" href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></p>
+      {/loop}
+   {/edi}
+		</div>
+    </div>
+</div>
+</div>
+<div class="Hside-r">
+<div class="shd">
+    <h3><a href="https://www.05273.cn/video/shuyang/" target="_blank">沭阳专区</a></h3>
+</div>
+<div class="sbd">
+    <div class="cover clr">
+  {edi:content action="lists" catid="90" num="1" thumb="1" order="id DESC"}
+  {loop $data $v} 
+        <a href="{$v[url]}" target="_blank" title="{$v[title]}"><img src="//statics.05273.cn/statics/images/grey.gif" data-original="{thumb($v[thumb],130,150)}" alt="{$v[title]}"></a>
+		<h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{str_cut($v[title],51,'')}</a></h2>
+		<p>{str_cut($v[description],300)}<a href="{$v[url]}" target="_blank" title="{$v[title]}">[详细]</a></p>
+      {/loop}
+   {/edi}
+    </div>
+    <div class="slist line clr">
+  {edi:content action="lists" catid="48" num="1" order="id DESC"}
+  {loop $data $v} 
+        <h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></h2>
+      {/loop}
+   {/edi}
+		<div class="slist-tit blue pdd26">音乐</div>
+		<ul>
+  {edi:content action="lists" catid="48" num="4" start="1" order="id DESC"}
+  {loop $data $v} 
+			<li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></li>
+      {/loop}
+   {/edi}
+		</ul>
+    </div>
+    <div class="slist clr">
+  {edi:content action="lists" catid="41" num="1" order="id DESC"}
+  {loop $data $v} 
+        <h2><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></h2>
+      {/loop}
+   {/edi}
+		<div class="slist-tit orange pdd26">搞笑</div>
+		<ul>
+  {edi:content action="lists" catid="41" num="4" start="1" order="id DESC"}
+  {loop $data $v} 
+			<li><a href="{$v[url]}" target="_blank" title="{$v[title]}">{$v[title]}</a></li>
+      {/loop}
+   {/edi}
+		</ul>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- /沭娱乐 -->
+<!--#include virtual="/caches/posid/feifajizi.html"--> 
+
+<!-- 图说 -->
+<div class="f2 clearfix">
+  <div class="dmainav fl">
+	  <div class="left fl">
+		<h3><a href="https://www.zhikunet.org/photo/" target="_blank">图说</a></h3>
+	  </div>
+		<div class="right fr">
+		<ul><li><a href="https://www.zhikunet.org/photo/" target="_blank"> +更多图片 </a></li></ul>
+		</div>
+  </div>
+  <div class="dutu fl lazyload_7">
+    <div class="pianleft fl border">
+			{edi:content action="position" posid="8" catid="8" thumb="1" num="1" order="id DESC"}
+			{loop $data $v} 
+			<div class="wb-zb"><a href="{$v[url]}" target="_blank"><img src="//statics.zhikunet.org/statics/images/grey.gif" data-original="{thumb($v[thumb],545,292)}" width="545" height="292" alt="{$v[title]}"/></a></div><p><a href="{$v[url]}">{$v[title]}</a></p></div>
+		  {/loop}
+		  {/edi}
+		<div class="piancenter fl">
+				{edi:content action="lists" catid="8" thumb="1" num="4" order="id DESC"}
+				{loop $data $v} 
+			<div class="pc border fl">
+				<div class="wb-zbz"><a href="{$v[url]}" class="zb-title" target="_blank"><img src="//statics.zhikunet.org/statics/images/grey.gif" data-original="{thumb($v[thumb],165,135)}" width="165" height="135" alt="{$v[title]}"/></a><p><a href="{$v[url]}">{str_cut($v['title'], 39, '')}</a></p></div>
+			</div>
+			  {/loop}
+			  {/edi} 
+		</div>
+		<div class="pianright fl border">
+			{edi:content action="position" posid="22" catid="8" thumb="1" num="1" order="id DESC"}
+				{loop $data $v} 
+					<div class="wb-zb"><a href="{$v[url]}" class="zb-title" target="_blank"><img src="//ststics.zhikunet.org/statics/images/grey.gif" data-original="{thumb($v[thumb],184,292)}" width="190" height="292" alt="{$v[title]}" /></a><p><a href="{$v[url]}">{str_cut($v['title'], 40, '')}</a></p></div>
+			  {/loop}
+			{/edi} 
+		</div>
+  </div>
+</div>   
+<!-- /图说 -->
+<div class="ChageHead">
+<div class="choose">便民电话</div>
+<div class="add"><a href="https://www.zhikunet.org/phone.shtml" target="_blank">免费申请，先到先得，赶快点此加入</a></div>
+</div>
+<div class="MainCotact">
+<div id="sellstelephone">
+{edi:phone action="type_list" siteid="$siteid" order="listorder ASC" num="18" return="dat"}
+{loop $dat $v}
+<div class="list"><span>{$v['name']}电话:</span><p>{$v['url']}</p></div>
+{/loop}
+{/edi}
+<div class="list"><span>免费申请</span><p><a href="https://www.zhikunet.org/phone.shtml" target="_blank">点此加入</a></p></div>
+</div>
+</div>
+</div>
+<!--/框架-->
+<!--#include virtual="/caches/posid/indexmap.html"--> 
+<!-- 友情链接 -->
+<div class="media">
+<div class="layout">
+<div class="other">
+<h2><span>沭阳网</span>友情链接</h2>
+<p>{edi:link  action="type_list" siteid="$siteid" order="listorder ASC" num="50" return="dat"}
+{loop $dat $v}
+{if $n>1}|{/if}<a href="{$v['url']}" title="{$v['name']}"{if $v['robots']==0} rel="nofollow"{/if} target="_blank">{$v['name']}</a>
+{/loop}
+{/edi}</p> 
+</div>
+</div>
+</div>
+<!-- /友情链接 -->
+<!--侧栏导航-->
+<div class="backToTop" id="backToTop">
+<div class="top"><a href="javascript:;" onclick="scroll_html('x0')"  target="_self"></a></div>
+  <ul class="nav_link clr" id="c_nav_list">
+    <li><a class="a1" href="javascript:;" onclick="scroll_html('x1')" target="_self">沭阳城事</a></li>
+    <li class="line"></li>
+    <li><a class="a2" href="javascript:;" onclick="scroll_html('x2')" target="_self">沭阳生活</a></li>
+    <li class="line"></li>
+    <li><a class="a4" href="javascript:;" onclick="scroll_html('x4')" target="_self">沭阳住行</a></li>
+    <li class="line"></li>
+    <li><a class="a5" href="javascript:;" onclick="scroll_html('x5')" target="_self">沭阳娱乐</a></li>
+    <li class="line"></li>
+    <li><a class="a6" href="javascript:;" onclick="scroll_html('x6')" target="_self">沭阳论坛</a></li>
+  </ul>
+<div class="erweima"><a href="https://www.zhikunet.org/about/weixin/" target="_blank"><img alt="沭阳网微信公号二维码" src="//ststics.zhikunet.org/statics/css/2014style/img/qr.png" /></a></div>
+<div class="backtop"><a href="javascript:;" onclick="scroll_html('x0')"  target="_self"></a></div>
+</div>
+<!--/侧栏导航-->
+{template "content","footer2014"}

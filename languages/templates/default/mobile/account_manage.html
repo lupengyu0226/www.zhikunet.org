@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="dns-prefetch" href="https://statics.05273.cn">
+<link rel="dns-prefetch" href="https://upload.05273.cn">
+<link rel="dns-prefetch" href="https://account.05273.cn">
+<link rel="dns-prefetch" href="https://img1.05273.cn">
+<link rel="dns-prefetch" href="https://img2.05273.cn">
+<link rel="dns-prefetch" href="https://img3.05273.cn">
+<link rel="dns-prefetch" href="https://wap.05273.cn">
+<link rel="dns-prefetch" href="https://www.05273.cn">
+<title>会员信息_沭阳网手机版会员中心</title>
+<meta name="author" content="wap.05073.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/base2013.css?v={CSS_VERSION}" charset="gbk"/>
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/waplogin/css/info.css?v={CSS_VERSION}" charset="gbk"/>	
+<link rel="apple-touch-icon-precomposed" href="https://statics.05273.cn/statics/mobile/img/weblogo.png"/>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/jquery-1.6.2.min.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/common.js?v={JS_VERSION}"></script>
+<script type="text/javascript" src="//statics.05273.cn/waplogin/js/spin.min.js?v={JS_VERSION}"></script>
+</head>
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+							<h2>{if $memberinfo['nickname']} {$memberinfo['nickname']} {else} {$memberinfo['username']}{/if}的信息</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span></span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="https://wap.05273.cn/" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="https://wap.05273.cn/index.php?controller=search" class="new-tbl-cell">
+                	<span class="icon2">搜索</span>
+					<p style="color:#6e6e6e;">搜索</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index&view=comment" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">我的评论</span>
+					<p style="color:#6e6e6e;">我的评论</p>
+                </a>
+                <a href="https://www.05273.cn/index.php?app=waplogin&controller=index" class="new-tbl-cell">
+                	<span class="icon4">我的帐号</span>
+					<p style="color:#6e6e6e;">我的帐号</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<div class="other">
+       <ul class="all-order-list">
+	  　　　 <li class="all-order-item"><a class="all-order-go-btn">{L('username')}:{$memberinfo['username']}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">昵称:{if $memberinfo['nickname']} {$memberinfo['nickname']} {else} {$memberinfo['username']}{/if}   ID:{$memberinfo['userid']} {if $memberinfo['vip']}<img src="{IMG_PATH}icon/vip.gif">{elseif $memberinfo['overduedate']}<img src="{IMG_PATH}icon/vip-expired.gif" title="{L('overdue')}，{L('overduedate')}：{format::date($memberinfo['overduedate'],1)}">{/if}</a></li>
+           {if $memberinfo['vip']} <li class="all-order-item"><a class="all-order-go-btn">VIP{L('overduedate')}:{format::date($memberinfo['overduedate'])}</a></li>{/if}
+			<li class="all-order-item"><a class="all-order-go-btn">{L('member_group')}：{$grouplist[$memberinfo['groupid']]['name']}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">{L('account_remain')}:{$memberinfo[amount]} {L('unit_yuan')}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">{L('point')}:{$memberinfo[point]} {L('unit_point')}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">{L('regtime')}:{FORMAT::date($memberinfo['regdate'] ,1)}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">{L('lastlogintime')}:{FORMAT::date($memberinfo['lastdate'] ,1)}</a></li>
+            <li class="all-order-item"><a class="all-order-go-btn">{L('regip')}:{$memberinfo['regip']}</a></li>
+			<li class="all-order-item"><a class="all-order-go-btn">{L('lastip')}:{$memberinfo['lastip']}</a></li>
+			{if $sms_setting['sms_enable']=='1'}
+			<li class="all-order-item"><a class="all-order-go-btn">{L('mp')}:{if $memberinfo['mobile']}{substr($memberinfo['mobile'],0,3)}****{substr($memberinfo['mobile'],-4)}{/if}</a></li>{/if}
+			{loop $member_modelinfo $k $v}
+			<li class="all-order-item"><a class="all-order-go-btn">{$k}:{$v}</a></li>
+			{/loop}
+			<li class="all-order-item"><a href='https://www.05273.cn/index.php?app=waplogin&controller=index&view=account_manage_info' class="all-order-go-btn">编辑我的资料</a></li>
+			        </ul>
+</div>
+<div id="autoLoginHeight"></div>
+<script src="//statics.05273.cn/waplogin/js/autoHeight.js?v={JS_VERSION}" type="text/javascript"></script>
+{template 'mobile', 'login_footer'}
+</body>
+</html>
+

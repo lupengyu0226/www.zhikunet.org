@@ -1,0 +1,53 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{JS_PATH}admin_common.js"></script> 
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" /> 
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">我的沭阳号</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="init"} class="active"{/if}><a class="btn" href="{PASSPORT_PATH}mp-init.html">沭阳号信息</a></li>
+                            <li{if ROUTE_A=="edit"} class="active"{/if}><a class="btn" href="{PASSPORT_PATH}mp-edit-{$zhuanlan_info['id']}.html">修改信息</a></li>
+                            <li><a class="btn" href="{PASSPORT_PATH}member-fabu.html">发布内容</a></li>
+                        </ul>
+                    </div>
+					<div class="list-view">
+					{if $zhuanlan_info['name']}
+                           <ul class="list mt10">
+                            <li>
+                                <a class="avt" href="{PASSPORT_PATH}mp-edit-{$zhuanlan_info['id']}.html" title="{$info['send_from_id']}">
+                                    <img src="{if $zhuanlan_info[thumb]}{$zhuanlan_info[thumb]}{else}{get_memberavatar($this->_userid,1,180)}{/if}" alt="{$info['send_from_id']}" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'">
+                                </a>
+                                <dl>
+                                    <dt>
+                                        <span class="fr">开通时间：{format::date($zhuanlan_info[creat_at], 1)}</span>{$zhuanlan_info['name']}{if $memberinfo['vip']}<img src="{IMG_PATH}icon/vip.gif">{elseif $memberinfo['overduedate']}<img src="{IMG_PATH}icon/vip-expired.gif" title="{L('overdue')}，{L('overduedate')}：{format::date($memberinfo['overduedate'],1)}">{/if}：
+                                        管理用户：{$zhuanlan_info[username]} 访问量：{$zhuanlan_info[total]}</a>
+                                            </dt>
+											<dd>
+											<p>介绍：{$zhuanlan_info['authors']}</p>
+											状态：<font style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700"><?php if ($zhuanlan_info['status']==0) {echo "正在审核中";} elseif ($zhuanlan_info['status']==1) {echo "正常状态";} elseif ($zhuanlan_info['status']==2) {echo "审核被拒绝，";echo $zhuanlan_info['cause'];echo "<a href='https://passport.05273.cn/mp-fushen-".$zhuanlan_info['id'].".html'>，点此修改复审</a>";}?></font>
+											</dd>
+                                        </dl>
+                                    </li>
+                                    </ul>
+                                {else}
+                                    <div class="bd">
+                                        <div class="uc-empty" style=" line-height:100px; text-align:left; padding-left:20px;">你还没申请沭阳号，<a href="{PASSPORT_PATH}mp-register.html">点此申请</a></div>
+                                    </div>
+                                {/if}
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

@@ -1,0 +1,39 @@
+{template 'member', 'header'}
+<div id="memberArea">
+{template 'member', 'account_manage_left'}
+<div class="col-auto">
+	<div class="col-1 ">
+		<h5 class="title">我的专栏信息</h5>
+		<div class="content">
+		<div class="col-1 member-info">
+		{if $zhuanlan_info['name']}
+		<div class="content">
+			<div class="col-left himg"><img src="{$zhuanlan_info[thumb]}" width="60" height="60"><p>修改</p></div>
+
+			<div class="col-auto">
+				<h5>{if $memberinfo['vip']}<img src="{IMG_PATH}icon/vip.gif">{elseif $memberinfo['overduedate']}<img src="{IMG_PATH}icon/vip-expired.gif" title="{L('overdue')}，{L('overduedate')}：{format::date($memberinfo['overduedate'],1)}">{/if}
+				<font color="{$grouplist[$memberinfo[groupid]]['usernamecolor']}">
+				{$zhuanlan_info['name']}
+				</font>
+				{if $memberinfo['email']}（{$memberinfo['email']}）{/if}</h5>
+				<p class="blue">
+				专栏所属用户：{$zhuanlan_info[username]}，
+				开通时间：{format::date($zhuanlan_info[creat_at], 1)}，专栏状态：<font style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700"><?php echo $zhuanlan_info[status]==0 ? L('未审核或被封禁') : L('正常')?></font>
+				</p>
+				<p>专栏介绍：{$zhuanlan_info[authors]}</p>
+				
+			</div>
+		</div>
+		{else}
+		<div class="content">
+			<div class="col-auto">
+				<h5>你还没申请专栏，<a href="index.php?m=zhuanlan&c=member_index&a=register">点此申请</a></h5>
+			</div>
+		</div>
+		{/if}
+	</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+{template 'member', 'footer'}

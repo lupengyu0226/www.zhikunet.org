@@ -1,0 +1,70 @@
+{template "mips","header_category"}
+                 <div class="mip-article-content">
+                    <!-- mip-article-content Start -->
+                    <div class="mip-article">
+  <!-- channels/E -->
+  <!-- nav/S -->
+  <div class="nav">
+    <ul>
+     {edi:mobile action="category" catid="$catid" order="listorder DESC" num="15"}
+         {loop $data $r}
+            <li><mip-link href="{is_mips($CATEGORYS[$r['catid']][url])}">{$r[catname]}</mip-link></li>
+           {/loop}
+        {/edi}
+          </ul>
+  </div>
+  <!-- nav/E --> 
+  <!-- gallery/S -->
+  <div class="gallery" id="gallery">
+    <mip-carousel autoplay layout="responsive" width="400" height="200" indicator buttonController>
+  {edi:mobile action="lists" catid="$catid" order="listorder DESC" thumb="1" num="5"}
+    {loop $data $r}
+  <mip-link href="{is_mips($r[url])}"> <mip-img src="{$r['thumb']}" alt="{$r['title']}"></mip-img>
+        <div class="mip-carousle-subtitle slide-otxt">
+          <p>{$r['title']}</p>
+        </div>
+        </mip-link>
+          {/loop}
+          </mip-carousel>
+          {/edi}
+  </div>
+ <!-- gallery/E --> 
+  {php $j=1;}
+  {loop subcat($catid) $v}
+  {php if($v['type']!=0) continue;}
+  <!-- module/S -->
+<div class="module" id="ycbox">
+    <div class="head">
+      <h2 class="current">{$v[catname]}</h2>
+    </div>
+    <div class="content">
+      <div class="panel society">
+        <div class="modulelist">
+          <ul>
+      {edi:mobile action="lists" catid="$v[catid]" thumb="1" num="1" order="id DESC"}
+      {loop $data $r}
+             <li class="full"> <mip-link href="{is_mips($r[url])}">
+              <div class="thumb"> <mip-img src="{thumb($r['thumb'],120,80)}" alt="{$r['title']}"></mip-img></div>
+              <h2>{$r[title]}</h2>
+              <p>{str_cut($r[description],174,'..')}</p>
+              </mip-link> </li>
+          {/loop}
+        {/edi}
+                {edi:mobile action="lists" catid="$v[catid]" num="6" order="id DESC"}
+          {loop $data $r}
+                        <li class="lite">
+              <h2> <mip-link href="{is_mips($r[url])}">{$r[title]}</mip-link> </h2>
+            </li>
+          {/loop}
+      {/edi}
+          </ul>
+        </div>
+        <div class="getNewsmore"> <mip-link href="{is_mips($CATEGORYS[$r['catid']][url])}"><span class="gochannel">更多{$v[catname]}</span></mip-link> </div>
+      </div>
+    </div>
+  </div>
+  {/loop}
+  <!-- footnav/S -->
+     </div></div>
+                </div>
+{template "mips","footer_mip"}

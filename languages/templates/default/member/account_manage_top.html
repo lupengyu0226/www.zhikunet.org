@@ -1,0 +1,19 @@
+    <div class="uc-hd">
+        <div class="wp">
+            <div class="info">
+                 <a class="avt" href="member-account_manage_avatar.html&t=1" title="{if $memberinfo['nickname']}{$memberinfo['nickname']}{else}{$memberinfo['username']}{/if}"><img src="{$avatar[90]}" alt="{if $memberinfo['nickname']}{$memberinfo['nickname']}{else}{$memberinfo['username']}{/if}" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'"></a>
+                <div class="name">
+                    <a class="username" href="member-account_manage_info.html&t=1">{if $memberinfo['nickname']}{$memberinfo['nickname']}{else}{$memberinfo['username']}{/if}</a>&nbsp;{if $memberinfo['vip']}<img src="{IMG_PATH}icon/vip.gif">{/if}
+                    <a class="icon icon-identity identity-{$memberinfo['starnum']}" href="member-account_manage.html?t=1"></a>
+                   {if $memberinfo['email']}<p>{$memberinfo['email']}</p>{/if}
+                    <p>{$memberinfo['groupname']} &nbsp;&nbsp; 余额：<a class="total-money" href="pay-pay.html">{$memberinfo[amount]}</a>  积分：<a class="total-score" href="index.php?app=pay&controller=spend_list&view=init&starttime=&endtime=&type=2&dosubmit=1">{$memberinfo[point]}</a></p>
+                </div>
+            </div>
+            <ul class="menu">
+                <li{if ROUTE_A=="init"} class="active"{/if}><a href="member-index.html?t=1">个人中心</a></li>
+                <li{if ROUTE_A=="published"} class="active"{/if}><a href="content-published.html">我的发布</a></li>
+                <li><a href="https://{$memberinfo[userid]}.shuyanghao.com/" target="_blank">我的主页</a></li>
+                <li{if ROUTE_A=="account_manage"} class="active"{/if}><a href="member-account_manage.html?t=1">账号设置</a></li>
+            </ul>
+        </div>
+    </div>

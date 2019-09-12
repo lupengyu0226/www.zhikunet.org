@@ -1,0 +1,58 @@
+{template "content","header_kuanpin"}
+<link href="{CSS_PATH}vms/reset.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}vms/sty.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}vms/vms.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+<div class="clr ct lst">
+    <div class="lyt_4">
+    	<h5><a href="https://www.05273.cn/video/">宽频首页</a></h5>
+        <ul class="tp_lst"> 
+{php $nums = count(subcat($CATEGORYS[$catid]['parentid'],0,0,$siteid));}
+{loop subcat($CATEGORYS[$catid]['parentid'],0,0,$siteid) $r}
+{php $num++}	
+            <li {if $n == $nums}class="last"{/if}><a href="{$r[url]}" {if $catid == $r[catid]}class="ac"{/if}>{$r[catname]}</a></li> 
+ {/loop}			
+        </ul>
+    </div>
+     <div class="wp lyt_3">
+    	<div class="lstnav">
+    	  <span></span><span>本页共有<strong id="nums">{$items}</strong>个符合条件的内容  </span> <h5>{$catname}</h5>
+    	</div> 
+		<ul class="clr ulitg">
+            <li><a class="ac">最近更新</li>
+
+        </ul>
+		<div class="lstnr">
+		
+        <div class="bct">
+        	<ul class="clr col4 col5"> 
+		{edi:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+{loop $data $r}	
+			
+                 <li>
+                	<div class="w120">
+                        <div class="imgbox"></a>
+
+						<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="120" height="75"></a></div>
+                        <div class="lh21"><a href="{$r[url]}" target="_blank">{str_cut($r[title],16,false)}</a></div>
+                        <div class="sz"><span class="shows">播放数：<cite>{get_views('c-'.$CATEGORYS[$r[catid]][modelid].'-'.$r['id'])}</cite></span><span>评论：<cite>{get_comments(id_encode("content_$r[catid]",$v[id],$siteid))}</cite></span></div>
+                    </div>
+                </li> 
+{/loop}
+            </ul>
+
+        </ul>
+
+            <div class="pages"> 
+			{$pages}
+ 			</div>
+{/edi}
+        </div>
+	
+		
+		
+        </div>
+    </div>
+</div>
+<div class="ft"></div>
+{template "content","footer"}

@@ -1,0 +1,9 @@
+ {edi:mobile action="lists" catid="$catid" num="10" order="id DESC" moreinfo="1" page="$page"}
+  {loop $data $r}
+  <a class="item" href="{S($r[url])}">
+    <h2>第{$r[qihao]}期 {$r[title]}</h2>
+    <div class="news-view">  {if $r['thumb']}<img class="news-thumb" src="{$r['thumb']}" />{/if}{str_cut($r[description],174,'..')}</div>
+    <div class="news-info"> {inputtime_zone($r[inputtime])} </div>
+    </a>  
+{/loop}
+{/edi}

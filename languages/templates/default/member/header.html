@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{L('member','','member').L('manage_center')} - 沭阳网</title>
+<link type="text/css" href="https://statics.zhikunet.org/statics/member/css/style.css" rel="stylesheet">
+<script type="text/javascript" src="//statics.zhikunet.org/statics/member/js/jquery.js"></script>
+<script type="text/javascript" src="//statics.zhikunet.org/statics/member/js/layer/layer.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="//statics.zhikunet.org/statics/member/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="//statics.zhikunet.org/statics/member/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container">
+        <h1 class="top-logo"><a href="{APP_PATH}" title="{$SEO['site_title']}">{$SEO['site_title']}</a></h1>
+        <nav class="top-nav">
+            <ul>
+                <li class="cat-11"><a href="https://www.zhikunet.org/">首页</a></li>
+                <li class="cat-99"><a href="https://www.zhikunet.org/news/">沭阳新闻</a>
+                	<ul class="toolbar">
+                    <li><a href="https://www.zhikunet.org/news/rd/" target="_blank">热点新闻</a></li>
+                    <li><a href="https://www.zhikunet.org/news/xn/" target="_blank">县内新闻</a></li>
+                    <li><a href="https://www.zhikunet.org/news/bm/" target="_blank">部门动态</a></li>
+                    <li><a href="https://www.zhikunet.org/news/zf/" target="_blank">政府新闻</a></li>
+                    <li><a href="https://www.zhikunet.org/news/qy/" target="_blank">沭阳企业</a></li>
+                    <li><a href="https://www.zhikunet.org/news/sh/" target="_blank">社会新闻</a></li>
+                    </ul>
+                </li>
+                <li class="cat-94"><a href="https://www.zhikunet.org/daodu/">国内新闻</a>
+                	<ul class="toolbar">
+                    <li><a href="https://www.zhikunet.org/daodu/jiangsu/" target="_blank">江苏要闻</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/ms/" target="_blank">民生资讯</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/dif/" target="_blank">地方资讯</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/zy/" target="_blank">实用新闻</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/sshi/" target="_blank">国内评论</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/shehui/" target="_blank">社会万象</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/gao/" target="_blank">港澳台资讯</a></li>
+                    <li><a href="https://www.zhikunet.org/daodu/guoji/" target="_blank">国际花边</a></li>
+                    </ul>
+                </li>
+                <li class="cat-12"><a href="https://bbs.zhikunet.org/">沭阳论坛</a></li>
+                <li class="cat-24"><a href="https://www.zhikunet.org/about/weixin/">微信平台</a></li>
+                <li class="cat-93"><a href="https://www.zhikunet.org/about/">关于我们</a>
+                	<ul class="toolbar">
+                    <li><A href="https://www.zhikunet.org/about/contactus/" target="_blank">联系方式</A></LI>  
+                    <li><A href="https://www.zhikunet.org/about/copyright/" target="_blank">版权声明</A></LI>  
+                    <li><A href="https://www.zhikunet.org/about/adsen/" target="_blank">广告投放</A></LI>  
+                    <li><A href="https://www.zhikunet.org/about/product/" target="_blank">产品与服务</A></LI>  
+                    <li><A href="https://www.zhikunet.org/about/partners/" target="_blank">合作伙伴</A></LI>  
+                    <li><A href="https://www.zhikunet.org/about/job/" target="_blank">诚聘英才</A></LI>  
+                    <li><A href="https://www.zhikunet.org/rss/" target="_blank">RSS订阅</A></LI>  
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="umenu">
+            <a href="javascript:void(0);" onClick="javascript:AddFavorite('{APP_PATH}','{$SEO['site_title']}');return false;">收藏</a>
+            <a href="javascript:void(0);" onClick="SetHome(this,'{APP_PATH}');return false;">设为首页</a>
+        </div>
+        <ul class="top-member pull-right" id="top_menu">
+        	<li class="btn_searchbar active"><a class="iconfont" href="javascript:void(0);">&#xe65a;</a></li>
+            <li class="top-mobile xs-hover">
+                <a class="hover-btn iconfont" title="手机网站" href="javascript:;">
+                    <i class="icon-default">&#xe655;</i><i class="icon-hover">&#xe6a2;</i>
+                </a>
+                <div class="hover-bd app-down">
+
+                    <a href="javascript:void(0);">
+                        <p>关注沭阳网公众号</p>
+                        <img class="qcode" src="//statics.zhikunet.org/statics/images/shuyangnews.jpg" alt="关注沭阳网公众号">
+                    </a>
+                </div>
+            </li>
+            <li class="top-login">
+              <a href="https://{if $memberinfo['userid']}{$memberinfo['userid']}.{/if}shuyanghao.com/">沭阳号</a>{if $memberinfo['userid']}<a href="https://passport.zhikunet.org/member-logout.html">退出</a>{/if}
+            </li>
+
+        </ul>
+        <div class="top-search" id="top_search">
+			<form action="{PASSPORT_PATH}index.php" method="get">
+				<input type="hidden" name="app" value="search"/>
+				<input type="hidden" name="controller" value="index"/>
+				<input type="hidden" name="view" value="init"/>
+				<input type="hidden" name="typeid" value="1" id="typeid"/>
+				<input type="hidden" name="siteid" value="1" id="siteid"/>
+				<input class="top-input" name="q" type="text" autocomplete="off" placeholder="资讯搜索" value="{if $search_q}{$search_q}{/if}" />
+				<button class="iconfont btn-search" type="submit">&#xe65a;</button>
+			</form>
+        </div>
+<script language="javascript">
+/*search*/
+function stopPropagation(e) {
+	if (e.stopPropagation) 
+		e.stopPropagation();
+	else 
+		e.cancelBubble = true;
+}
+$(document).bind("click",function(){
+	$(".top-search").removeClass("active");
+	$(".btn_searchbar").addClass("active");
+});
+$(".top-search,.btn_searchbar a").bind("click",function(e){
+	stopPropagation(e);
+});
+$(function(){
+	$(".btn_searchbar a").click(function(){
+		$(this).parent().removeClass("active");
+		$(".top-search").addClass("active");
+		stopPropagation(e);
+	})
+})
+</script>
+    </div>
+</header>
+{php echo runhook('member_glogal_header')}

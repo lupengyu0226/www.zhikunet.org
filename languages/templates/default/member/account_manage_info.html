@@ -1,0 +1,70 @@
+{template "member","header"}
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'account_manage_top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp info-uc">
+                <div class="hd">
+                    <div class="fl"><h2>{L('modify').L('memberinfo')}</h2></div>
+                </div>
+                <div class="info-space mt20">
+                    <form method="post" action="" id="myform" name="myform">
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">{L('nickname')}:</label>
+                            <input type="text" class="info-input-text" id="nickname" name="nickname" value="{$memberinfo['nickname']}" size="30">
+                            <div class="help-block"></div>
+                        </div>
+{loop $forminfos $k $v}
+                        <div class="form-group">
+                            <label class="control-label" for="student-qq">{if $v['isbase']}<font color=red>*</font>{/if} {$v['name']}:</label>
+                            {$v['form']}
+{if $v['tips']}
+                            <div class="help-block">{$v['tips']}</div>
+{/if}
+                        </div>
+{/loop}
+                        <div class="form-group">
+                            <label class="control-label">&nbsp;</label>
+                        	<input class="btn btn-primary info-submit" type="submit" name="dosubmit" id="dosubmit" value="更新资料" />
+                        </div>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="JavaScript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#nickname").formValidator({onshow:"{L('input').L('nickname')}",onfocus:"{L('nickname').L('between_2_to_20')}"}).inputValidator({min:2,max:20,onerror:"{L('nickname').L('between_2_to_20')}"}).regexValidator({regexp:"ps_username",datatype:"enum",onerror:"{L('nickname').L('format_incorrect')}"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"app=member&controller=index&view=public_checknickname_ajax&userid={$memberinfo[userid]}",
+		datatype : "html",
+		async:'false',
+		success : function(data){
+            if( data == "1" ) {
+                return true;
+			} else {
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "{L('already_exist')}",
+		onwait : "{L('connecting_please_wait')}"
+	}).defaultPassed();
+
+	{$formValidator}
+});
+
+//-->
+</script>
+{template "member","footer"}

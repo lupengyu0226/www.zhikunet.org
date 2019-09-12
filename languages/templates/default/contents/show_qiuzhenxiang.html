@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>沭阳网求真相第{$qihao}期_沭阳城事_沭阳网_沭阳网今日话题</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="https://statics.05273.cn/statics/huati/css/zhenxiang.css" rel="stylesheet" type="text/css">
+<script src="//statics.05273.cn/statics/js/jquery.js" type="text/javascript"></script>
+<meta name="mobile-agent" content="format=html5;url={S($url)}">
+<link rel="alternate" media="only screen and(max-width: 640px)" href="{S($url)}">
+<link rel="miphtml" href="https://wap.05273.cn/mip-{$catid}-{$id}-1.html">
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="{S($url)}";
+            }catch(e){}
+        }
+    }
+</script>
+</head>
+<body id="top">
+<div class="mininav">
+  <div class="mininavInner">
+    <div class="mininavLeft">
+      <div class="fl">
+ <form class="login-form" id="page_loginForm"  action="//www.05273.cn/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="https://www.05273.cn"/>
+     沭阳网通行证&nbsp;&nbsp;用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+	密&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+     <a href="https://passport.05273.cn/member-register.html" target="_blank">注册账户</a> | <a href="https://passport.05273.cn/member-public_forget_password.html" target="_blank">找回密码</a>
+  </form>
+  <script type="text/javascript">Login.isLogin('//www.05273.cn/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+      </div>
+    </div>
+<div class="mininavRight">
+  <div id="loginAll" class="fr">
+    <a href="https://www.05273.cn/gundong.html" class="newgundong" target="_blank">最新滚动</a>
+    <a href="https://www.05273.cn/ad-7/" class="gwweibo" target="_blank" style="font-weight: bold;color: red">官方微博</a>
+    <a href="https://www.05273.cn/sheweishouye.html" class="shouye" target="_blank">设为首页</a>
+    <a href="https://passport.05273.cn/member-public_qq_loginnew.html" title="使用QQ登录" class="onelogin"></a>
+  </div>
+</div>
+  </div>
+</div>
+<!--头部开始-->
+<div class="header">
+    <h1><a href="">沭阳网求真相-沭阳网今日话题</a></h1>
+    <em><a href="https://www.05273.cn/huati/" target="_blank">往期回顾</a>｜<a href="#aera20" target="_blank">本期评论</a>｜<a href="https://www.05273.cn/" target="_blank">首页</a></em>
+</div>
+<!--头部结束-->
+<!--框架-->
+<div class="wrap">
+    <div class="main">
+      <div id="area0" class="hd hd1">
+        <h2>{$title}</h2>
+        <div class="info">
+           <h3>沭阳网话题</h3>
+           <p>&nbsp;&nbsp;<em>第 {$qihao} 期</em></p>
+        </div>
+      </div>
+      <div class="bd">
+        <a href="{$biaotituurl}" target="_blank"><img width="734" height="480" src="{$biaotitu}" alt="{$title}"></a>
+        <div class="txt">
+          <h4>导读</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$daodu}</p>
+        </div>
+      </div>
+	  {if $huati1}
+      <div id="area1" class="hd hd2">
+        <h2>{$huati1}</h2>
+      </div>
+      <div class="bd bd2">
+	  {$content}
+      </div>
+      {/if}
+	  {if $huati2}
+      <div id="area2" class="hd hd2">
+        <h2>{$huati2}</h2>
+      </div>
+      <div class="bd bd2">
+	  {$huati2content}
+      </div>
+      {/if}
+	  {if $huati3}
+      <div id="area3" class="hd hd2">
+        <h2>{$huati3}</h2>
+      </div>
+      <div class="bd bd2">
+	  {$huati3content}
+      </div>
+      {/if}
+	  {if $huati4}
+      <div id="area4" class="hd hd2">
+        <h2>{$huati4}</h2>
+      </div>
+      <div class="bd bd2">
+	  {$huati4content}
+      </div>
+      {/if}
+	  {if $huati5}
+      <div id="area5" class="hd hd2">
+        <h2>{$huati5}</h2>
+      </div>
+      <div class="bd bd2">
+	  {$huati5content}
+      </div>
+      {/if}
+	  {if $toupiao}
+<div class="summary">
+      <div class="hd hd3">
+        <h2>新闻立场</h2><em><span>第 {$qihao} 期：</span>{$title}</em>
+      </div>
+      <div class="bd">
+               <div class="vote">
+                   <div class="vote_c">
+                    <div id="ui-voteBox" data-vote-id="10010912">
+					<h3 class="gdTit" >{$toupiao}</h3>									
+ <script type="text/javascript" src="{APP_PATH}index.php?app=lichang&controller=index&view=init&id={id_encode($catid,$id,$siteid)}"></script>
+					</div>
+                   </div>
+               </div>
+            </div>
+</div>
+  {/if}
+      <div id="aera20" class="bd pl">
+        <!--评论开始-->
+          <div class="layout cmjs" id="cmjs">
+      {if $allow_comment && module_exists('comment')}
+<iframe src="{APP_PATH}pinglun_{id_encode("$catid",$id,$siteid)}-1.html" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+        {/if}
+          </div>
+        <!--评论结束-->
+      </div>
+<!-- 制作人员 -->
+<div class="namelist">
+  <div class="qr">
+    <img src="//statics.05273.cn/statics/huati/img/ewm.jpg" alt="关注沭阳网微信账号">
+    <p>关注沭阳网微信账号</p>
+  </div>
+  <p>监制：admin　　编辑团：<a href="http://3.shuyanghao.com/" target="_blank">爱你</a>,<a href="https://5.shuyanghao.com/" target="_blank">我爱的人</a>,<a href="https://13386.shuyanghao.com/" target="_blank">沭阳吧</a>,<a href="https://4.shuyanghao.com/" target="_blank">admin</a>,<a href="https://10719.shuyanghao.com/" target="_blank">myedi</a>,<a href="https://7311.shuyanghao.com/" target="_blank">今日沭阳</a></p>
+  <p>出品：沭阳网新闻中心</p>
+  <p>内容来源：中国新闻网、南都网、腾讯网等</p>
+  <p>版权声明：沭阳网原创策划，转载或报道请注明出处。</p>
+</div>
+<!-- 制作人员结束 -->
+    </div>
+    <ul id="menu" class="menuTop">
+      <li class="current" id="no0"><a href="javascript:void(0);">封面</a></li>
+      {if $huati1}<li id="no1"><a href="#no1" target="_self">{$huati1}</a></li>{/if}
+      {if $huati2}<li id="no2"><a href="#no2" target="_self">{$huati2}</a></li>{/if}
+      {if $huati3}<li id="no3"><a href="#no3" target="_self">{$huati3}</a></li>{/if}
+      {if $huati4}<li id="no4"><a href="#no4" target="_self">{$huati4}</a></li>{/if}
+      {if $huati5}<li id="no4"><a href="#no5" target="_self">{$huati5}</a></li>{/if}
+
+   </ul>
+</div>
+<!-- 框架结束 -->
+<a id="goTop" class="goTop_top" href="#top">回顶部</a>
+<style>
+#huandeng_F_clcf{display:none;}
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright" role="contentinfo">
+	<div>
+		<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/links.shtml" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a> 
+	</div>
+  	<div class="en">Copyright &copy; 2007-2019 05273.cn All Rights Reserved. </div>
+    <div>
+		 <a href="http://www.miitbeian.gov.cn/" target="_blank">苏ICP备18031647号-1</a> <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" target="_blank">举报</a>
+	</div>
+</div>
+<style>
+  .tcopyright,.tcopyright a{color: #FFF;}
+</style>
+<script type="text/javascript">
+;(function(){
+var $ = function(id){return document.getElementById(id);}
+
+/*获取className*/
+function getByClass(className, context) {
+  context = context || document;
+  if (context.getElementsByClassName) {
+    return context.getElementsByClassName(className);
+  }
+  var nodes = context.getElementsByTagName('*'),
+    ret = [];
+  for (var i = 0; i < nodes.length; i++) {
+    if (hasClass(nodes[i], className)) ret.push(nodes[i]);
+  }
+  return ret;
+}
+
+function hasClass(node, className) {
+  var names = node.className.split(/\s+/);
+  for (var i = 0; i < names.length; i++) {
+    if (names[i] == className) return true;
+  }
+  return false;
+}
+
+var oMenuArea = $("menu");
+var aLi = oMenuArea.getElementsByTagName("li");
+//var aTip = oMenuArea.getElementsByTagName("span");
+//var aIco = oMenuArea.getElementsByTagName("i");
+var timer = timer2 = null;
+var isIE6= navigator.appVersion.indexOf("MSIE 6")>-1;
+//var clientHeight = document.body.clientHeight;
+//var windowHeight = document.all ? document.getElementsByTagName("html")[0].offsetHeight : window.innerHeight;
+var i = num = 0;
+var aArea = getByClass("area",document);
+var aDistance = [];
+
+
+
+
+/*清除导航按钮的class*/ 
+function clearName(){
+  for (i = 0; i < aLi.length; i++) {
+    aLi[i].className = "";
+  };  
+}
+
+/*缓动框架*/ 
+function johnnyMove(obj,iTarget){
+clearInterval(timer);
+timer = setInterval(function(){
+  var iSpeed = (iTarget - obj.offsetTop) / 8;
+  iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+  if(obj.offsetTop == iTarget){
+  clearInterval(timer);
+  }else{
+  obj.style.top = obj.offsetTop + iSpeed +"px";   
+  }
+
+},30);
+}
+
+/*运动到目标通栏*/ 
+function setFocus(o){   
+  var _this = this;
+  clearInterval(timer2);
+  timer2 = setInterval(function(){
+    var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+  var iSpeed2 = ($("area"+ o).offsetTop - scrollT) / 8;
+    iSpeed2 = iSpeed2 > 0 ? Math.ceil(iSpeed2) : Math.floor(iSpeed2);
+   
+    if($("area" + o).offsetTop - scrollT == 0){
+    clearInterval(timer2);
+    }else{  
+      document.documentElement.scrollTop += iSpeed2;
+      document.body.scrollTop += iSpeed2;    
+    }
+    
+  },30);
+
+  num = o;
+}
+
+/*导航按钮绑定事件*/
+for (i = 0; i < aLi.length; i++) {
+  aLi[i].index = i;
+  aLi[i].onclick =function(){
+    setFocus(this.index);
+   }
+ 
+}
+
+function scrollFunc(){  
+    clearInterval(timer2);
+}
+
+/*注册鼠标滚动事件*/
+if(document.addEventListener){
+    document.addEventListener('DOMMouseScroll',scrollFunc,false);
+}//W3C
+window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome
+/*判断元素距离页面底部的位置*/
+function reachBottom() {
+        var btmHeight = "-1";// 这里配置元素距页面底部的距离
+        var scrollTop = 0;
+        var clientHeight = 0;
+        var scrollHeight = 0;
+        if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+        } else if (document.body) {
+            scrollTop = document.body.scrollTop;
+        }
+        if (document.body.clientHeight && document.documentElement.clientHeight) {
+            clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+        } else {
+            clientHeight = (document.body.clientHeight > document.documentElement.clientHeight) ? document.body.clientHeight: document.documentElement.clientHeight;
+        }
+        scrollHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        if (scrollHeight-(scrollTop + clientHeight) <= btmHeight) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+// 滚动条和导航联动&&ie6下导航固定位置
+window.onload = window.onscroll = window.onresize= function(event){  
+  var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+  if(isIE6){
+      var posMid = parseInt(scrollT+(document.documentElement.clientHeight - oMenuArea.offsetHeight) / 2);
+      johnnyMove(oMenuArea,posMid);
+  }
+if(reachBottom() == true){
+            $("menu").className = "menuTop undis";
+        }else{
+            $("menu").className = "menuTop dis";
+        }
+  function dotChange(){
+    for (var i = 0; i < aArea.length; i++) {
+      aArea[i].index = i;
+      aDistance[i] = aArea[i].offsetTop;  
+     if(scrollT >= aDistance[i] ){
+        clearName();
+        aLi[aArea[i].index].className = "current";
+        num = aArea[i].index;       
+      }
+    };
+  }
+  dotChange();
+}
+})()
+</script>
+<script language="JavaScript" src="//www.05273.cn/core/count/{$id}/{$modelid}/"></script>
+<script src="//www.05273.cn/core/stats/{$catid}/" type="text/javascript"></script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

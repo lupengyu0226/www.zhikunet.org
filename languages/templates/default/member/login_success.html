@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>提示信息</title>
+<meta name="generator" content="phpwind 8.7" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<style type="text/css">
+img{ border:none}
+div{font:12px/18px "宋体",Verdana, Geneva, sans-serif}
+.text{ position:absolute; left:50%; top:50%; width:200px; margin-top:-30px; margin-left:-190px; color:#999}
+.icon{ position:absolute; top:50%; right:50%; margin-top:-30px; margin-right:-150px}
+.login{height:26px; margin-bottom:14px;width:123px;background:url({IMG_PATH}member/mbg.png) no-repeat}
+.login a{text-decoration: none;display:block; color:#377ABE;background-repeat:no-repeat; background-position:6px 5px;height:26px; padding-left:36px; line-height:26px}
+.login a:hover{text-decoration: none;}
+</style>
+</head>
+<body>
+<div class="text">{L('login_success_extend',array('login_success_text'=>$action_name))}</div>
+{$synloginstr}
+<script type="text/javascript">
+document.domain = "05273.cn";
+window.resizeTo(850, 520);
+setTimeout(function() {
+	window.opener.location = '{$forward}';
+	window.close();
+},3000);
+</script>
+</body>
+</html>

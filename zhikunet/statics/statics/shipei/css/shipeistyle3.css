@@ -1,0 +1,48 @@
+/* topBox */
+
+.topBox .main{display:inline;width:100%;border-right:1px dotted #ccc9bd;padding:0 0px 0 0px;}
+.topicBox .bd .tit{line-height:20px;font-size:14px;font-weight:bold;}
+.topicBox{padding:25px 0 20px 2px;background:url(//statics.05273.cn/statics/huati/img/lineS.png) repeat-y 0 0;margin-top:-25px;position:relative;zoom:1}
+.topicBox .hd h2{
+margin: 23px 0 10px;
+font-weight: 600;
+height: 60px;
+padding: 3px 0 2px;
+font-size: 1.125em;
+padding-left: 5px;
+border-top: 2px solid #aa9f93;
+text-align: left;
+background-image: url(//statics.05273.cn/statics/shipei/images/bbjj.png);
+background-repeat: repeat-x;
+background-position: left bottom;
+-webkit-background-size: 2.5px 2.5px;
+-moz-background-size: 2.5px 2.5px;
+-o-background-size: 2.5px 2.5px;
+background-size: 2.5px 2.5px;
+display: -webkit-box;
+-webkit-box-orient: horizontal;
+-webkit-box-pack: left;
+-webkit-box-align: center;
+display: -moz-box;
+-moz-box-orient: horizontal;
+-moz-box-pack: left;
+-moz-box-align: center;
+display: -o-box;
+-o-box-orient: horizontal;
+-o-box-pack: left;
+-o-box-align: center;
+display: -ms-box;
+-ms-box-orient: horizontal;
+-ms-box-pack: left;
+-ms-box-align: center;
+display: box;
+box-orient: horizontal;
+box-pack: left;
+box-align: center;
+color: #81786c;
+position: relative;
+}
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video {
+margin: 0;
+padding: 0;
+}

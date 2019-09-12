@@ -1,0 +1,63 @@
+{template 'member', 'header'}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<link rel="stylesheet" href="https://statics.05273.cn/statics/member/layui/css/layui.css"  media="all">
+<script src="https://statics.05273.cn/statics/member/layui/layui.js"></script>
+{if $gateway['gateway_type'] == 'redirect'}
+{redirect($gateway['gateway_url'])}
+{/if}
+<div id="bd">
+{template 'member', 'top'}
+  <div class="uc-bd wp mt40">
+  {template 'member', 'left'}
+     <div class="mn fr">
+      <div class="uc-wp">
+        <div class="hd">
+          <h2 class="fl">支付确认</h2>
+        </div>
+        <div class="bd mt20">
+          <div class="mt20">
+            <div class="content tal">
+              <table width="100%" cellspacing="0" class="table-list nHover">
+                <div class="layui site-demo">
+                  <div class="layui">
+                    <blockquote class="layui-elem-quote">您选择了微信扫码付款，请使用微信扫描下方二维码完成付款</blockquote>
+                    <div class="blockinfo layui-bg-green">支付单号：{$gateway['trade_no']}   充值金额：<font style="color:#F00; font-size:22px;font-family:Georgia,Arial; font-weight:700">{$gateway['total_fee']}</font> 元</div>
+                    <div class="layui-form-item">
+                    <div class="layui ecode-wrap" style="margin: 0 auto;">
+                      <div class="ecode-pic">
+                        <div data-model="qrcode" style="width:260px;height:260px;margin:0 auto;"></div>
+                      </div>
+                      <div class="ecode-text">
+                        请使用微信扫一扫<br />扫描二维码支付
+                      </div>
+                    </div>
+                  </div>
+              </table>
+              <div class="bk10 mt20"></div>
+             </div>
+          </div>
+        </div>
+      </div>
+<script src="https://statics.05273.cn/statics/member/js/jquery.qrcode.min.js"></script>
+<script type='text/javascript'>
+  var gateway = {json_encode($gateway)};
+  if (gateway.gateway_type == 'qrcode') {
+    $("[data-model='qrcode']").qrcode({
+      render: "table",
+      width: 260,
+      height: 260,
+      text: gateway.gateway_url
+    });
+  } else {
+    window.location.href = gateway.gateway_url;
+  }
+  setInterval("checkStatus()", 3000);
+  function checkStatus() {
+    $.getJSON('{U("pay/deposit/ajax_check")}', { order_sn: '{$gateway['order_sn']}'}, function (ret) {
+      if (ret.status == 1) {
+        location.href = ret.rel;
+      }
+    })
+  }
+</script>
+{template "member","footer"}

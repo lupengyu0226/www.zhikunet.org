@@ -1,0 +1,80 @@
+{template "member","header"}
+<script type="text/javascript" src="//statics.05273.cn/statics/js/member_common.js"></script>
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'account_manage_top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">基本资料</h2>
+                </div>
+                <div class="bd uc-data mt20">
+                    <a class="avt fl" href="member-account_manage_avatar.html&t=1" title="更换头像">
+                        <img src="{$avatar[180]}" alt="更换头像" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'">
+                        <span>更换头像</span>
+                    </a>
+                    <ul>
+                        <li class="nick">{$memberinfo['username']} {if $memberinfo['vip']}<img src="{IMG_PATH}icon/vip.gif">{/if} {if $memberinfo['from']}<img alt="已绑定{$memberinfo['from']}账户" border="0" src="{IMG_PATH}member/logo/{$memberinfo['from']}_16_16.png">{/if}</li>
+                        <li><a href="member-account_manage_upgrade.html&t=1">{$grouplist[$memberinfo[groupid]]['name']}</a> <a class="icon icon-identity identity-{$memberinfo['starnum']}" href="pays-init.html"></a></li>
+                    </ul>
+					<ul>
+					    <li>UID：{$memberinfo[userid]}</li>
+						<li>Email: {$memberinfo['email']}</li>
+						{get_memberavatar($memberinfo['userid'],1,90)}
+					</ul>
+                    <ul>
+                        <li>余额：<a class="total-money" href="pay-pay.html">{$memberinfo[amount]}</a></li>
+                        <li>积分：<a class="total-score" href="index.php?app=pay&controller=spend_list&view=init&starttime=&endtime=&type=2&dosubmit=1">{$memberinfo[point]}</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="member-account_manage_info.html&t=1"><i class="icon-schedule"></i>{L('modify').L('memberinfo')}</a></li>
+                    </ul>
+				</div>
+                <div class="bd mt20">
+				<table width="100%" cellspacing="0" class="table_form">
+					<tr>
+						<th width="150" style="text-align:right;">{L('username')}：</th>        
+						<td style="text-align:left;">{$memberinfo['username']}</td>
+						<td style="text-align:right;">(此账户为登录的用户名)</td>
+					</tr>
+					{if $memberinfo['vip']}
+					<tr>
+						<th width="150" style="text-align:right;">{L('VIP到期日')}：</th>        
+						<td style="text-align:left;">{format::date($memberinfo['overduedate'],1)}</td>
+					</tr>
+					{/if}
+					<tr>
+						<th width="150" style="text-align:right;">{L('regtime')}：</th>        
+						<td style="text-align:left;">{FORMAT::date($memberinfo['regdate'] ,1)}</td>
+					</tr>
+					<tr>
+						<th width="150" style="text-align:right;">{L('lastlogintime')}：</th>        
+						<td style="text-align:left;">{FORMAT::date($memberinfo['lastdate'] ,1)}</td>
+					</tr>
+					<tr>
+						<th width="150" style="text-align:right;">{L('regip')}：</th>        
+						<td style="text-align:left;">{$memberinfo['regip']}</td>
+					</tr>
+					<tr>
+						<th width="150" style="text-align:right;">{L('lastip')}：</th>        
+						<td style="text-align:left;">{$memberinfo['lastip']}</td>
+					</tr>
+					<tr>
+						<th width="150" style="text-align:right;">{L('mp')}：</th>        
+						<td style="text-align:left;"><strong>{if $memberinfo['mobile']}{substr($memberinfo['mobile'],0,3)}****{substr($memberinfo['mobile'],-4)}{/if}</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="{if $memberinfo['mobile']}更换手机{else}立即绑定手机{/if}" class="button" onclick="redirect('{PASSPORT_PATH}member-account_change_mobile.html')"></td>
+					</tr>
+					{loop $member_modelinfo $k $v}
+					<tr>
+						<th width="150" style="text-align:right;">{$k}：</th>        
+						<td style="text-align:left;">{$v}</td>
+					</tr>
+					{/loop}
+				</table>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

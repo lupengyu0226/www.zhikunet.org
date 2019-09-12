@@ -1,0 +1,297 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+body{
+	background-color:#E4FFD4;
+
+	}
+
+.lh28{
+	line-height:35px;}
+.fb{
+	font-weight:bold;
+	}
+.f_14{
+	font-size:14px;
+	color:#333px;
+	line-height:24px;}
+	
+
+.fc{
+	color:#286d00;
+	}
+.fc2{
+	color:#ff9600;
+	}
+.fc3{ color:#3d9d06;}
+.fw{
+	font-weight:bold;}
+.pl24{
+	padding-left:24px;
+	}
+.pt10{
+	padding-top:10px;
+	}
+.pr18{
+	padding-right:18px;
+	}
+.pl18{
+	padding-left:18px;
+	}
+
+
+a.more:link{ font-size:14px; color:#fff; text-decoration:none;
+line-height:28px; }
+a.more:visited{font-size:14px; color:#fff; text-decoration:none;
+line-height:28px;}
+a.more:hover{font-size:14px; color:#ff1200; text-decoration:underline;
+line-height:28px;}
+a.more:active{font-size:14px; color:#fff; text-decoration:none;
+line-height:28px;}
+
+
+
+
+a.more2:link{ font-size:14px; color:#333; text-decoration:none;
+line-height:25px; }
+a.more2:visited{font-size:14px; color:#333; text-decoration:none;
+line-height:25px;}
+a.more2:hover{font-size:14px; color:#ff1200; text-decoration:underline;
+line-height:25px;}
+a.more2:active{font-size:14px; color:#333; text-decoration:none;
+line-height:25px;}
+
+
+
+
+
+a.font14_2:link{ font-size:14px; color:#333; text-decoration:none;
+line-height:28px; }
+a.font14_2:visited{font-size:14px; color:#333; text-decoration:none;
+line-height:28px;}
+a.font14_2:hover{font-size:14px; color:#ff1200; text-decoration:underline;
+line-height:28px;}
+a.font14_2:active{font-size:14px; color:#333; text-decoration:none;
+line-height:28px;}
+
+
+
+
+
+
+
+/*Í·²¿*/
+
+#top_home{
+	background:url(https://statics.05273.cn/statics/images/wenming/top.png) no-repeat top center;
+	height:275px;
+	}
+
+
+
+/*µ¼º½*/	
+#menu{
+	height:37px;
+	background-color:#46B206;
+	text-align:center;
+}
+
+#menu div{
+	width:1000px;
+	margin:0px auto;
+	height:37px;
+	}
+	
+
+
+#way{
+	width:961px;
+	height:70px;
+	background-color:#FFF;
+	padding:19px 14px 28px 25px;
+	margin:0px auto;
+	}
+#way_top{
+	background:#F7F7F7 url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 28px -281px; 
+	width:850px;
+	height:96px;
+	padding:8px 10px 0px 100px;
+	margin-bottom:14px;
+	margin-right:14px;
+	font-size:14px;
+	color:#333;
+	line-height:25px;
+
+	}
+
+#way_bottom{
+	height:228px;
+	}
+
+
+#way_bottom_left{
+	width:313px;
+	height:228px;
+	margin-right:20px;
+	}
+#way_bottom_left img{
+	border:5px solid #E7E7E7;
+	}
+#way_bottom_left img:hover{
+	border:5px solid #fce251;
+	}	
+	
+	
+#wau_bottom_center{
+	width:354px;
+	height:223px;
+	margin-top:5px;
+	margin-right:18px;
+	}
+	
+.title{
+	height:29px;
+	background:#EFFFE0 url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 30px -417px;
+	margin-bottom:12px;
+	}
+	
+#wau_bottom_center ul li{
+	line-height:31px;
+	font-size:14px;
+	color:#333333;
+
+	}
+.title01{
+	width:972px;
+	height:35px;
+	background:#79C84B url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -492px;
+	margin:0px auto;
+	text-align: right;
+	padding-right:28px;
+	}
+	
+#yewu{
+	width:956px;
+	height:427px;
+	padding:23px 17px 33px 27px;
+	margin:0px auto;
+	background-color:#FFF;
+	color:#333;
+	}
+
+.yewu_left{
+	width:461px;
+	height:167px;
+	margin-right:17px;
+	}
+.yewu_left img{
+	display:block;
+	width:147px;
+	height:157px;
+	border:5px solid #E8E8E8;
+	margin-right:18px;
+	}
+
+
+.title02{
+	width:972px;
+	height:35px;
+	background:#79C84B url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -565px;
+	margin:0px auto;
+	text-align: right;
+	padding-right:28px;
+	}
+	
+.part03{
+	width:965px;
+	height:339px;
+	padding:10px 13px 26px 22px;
+	margin:0px auto;
+	background-color:#fff;
+	color:#333;
+	}
+.part04{
+	width:965px;
+	height:130px;
+	padding:10px 13px 26px 22px;
+	margin:0px auto;
+	background-color:#fff;
+	color:#333;
+	}
+.pic{
+	border:5px solid #E9E9E9;
+	}
+.part03_right{
+	background:url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -640px;
+	width:699px;
+	height:329px;
+	}
+	
+.part03_01{
+	width:900px;
+	height:128px;
+	padding:12px 10px 15px 58px;
+	}
+	
+.part03_02{
+	width:269px;
+	height:128px;
+	padding:12px 10px 15px 80px;
+	}
+.part03_03{
+	width:269px;
+	height:128px;
+	padding:22px 10px 15px 58px;
+	
+	}
+	
+.part03_04{
+	width:269px;
+	height:128px;
+	padding:22px 10px 15px 80px;
+	}
+
+.title03{
+	width:972px;
+	height:35px;
+	background:#79C84B url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -1046px;
+	margin:0px auto;
+	text-align: right;
+	padding-right:28px;
+	}
+
+.title04{
+	width:972px;
+	height:35px;
+	background:#79C84B url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -1082px;
+	margin:0px auto;
+	text-align: right;
+	padding-right:28px;
+	}
+.title05{
+	width:972px;
+	height:35px;
+	background:#79C84B url(https://statics.05273.cn/statics/images/wenming/01.png) no-repeat 0px -1118px;
+	margin:0px auto;
+	text-align: right;
+	padding-right:28px;
+	}
+	
+	
+#web{width:966px;
+margin:0px auto;
+padding:17px;
+background-color:#fff;
+color:#333;}
+
+
+
+
+table td{border:1px #c8c8c8 solid;}
+table{border-collapse:collapse; line-height:30px; text-align:center;}
+.tt{
+	background-color:#ededed; 
+	color:#333;}

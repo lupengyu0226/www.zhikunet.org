@@ -1,0 +1,157 @@
+/*reset*/
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin: 0; padding: 0; }
+body { font: 12px "\5B8B\4F53", "Arial Narrow", HELVETICA; color: #838383; background: #fff; -webkit-text-size-adjust: 100%; }
+li { list-style: none; }
+img { border: none; }
+a { color: #333; text-decoration: none; }
+a:hover { color: #c00; text-decoration: underline; }
+h1 { font-size: 16px; }
+h2, h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 12px; }
+.fl { float: left; }
+.fr { float: right; }
+.fyh { font-family: "\5fae\8f6f\96c5\9ed1", "\9ed1\4f53"; }
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix {  *zoom: 1;
+}
+.layout { margin: 0 auto; width: 1000px; overflow: hidden; }
+.opacity60 { background: rgba(0, 0, 0, 0.6);  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr="#99000000", endColorstr="#99000000");
+}
+:root .opacity60 { filter: none; background: rgba(0, 0, 0, 0.6); }
+
+.wrap{background: url(https://statics.05273.cn/zhuanti/2016moon/bg_wrap.png) 0 0 repeat;}
+.pageInner{background: url(https://statics.05273.cn/zhuanti/2016moon/bg_page.jpg) center 0 no-repeat;}
+.minPage{background: url(https://statics.05273.cn/zhuanti/2016moon/bg_page_min.jpg) center 0 no-repeat;}
+h1{display: none;}
+#banner{height: 590px;}
+#voteBox{margin-bottom: 35px;}
+#voteBox .hd{margin-bottom: 30px;height: 53px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_tit_vote.png) center 0 no-repeat; text-indent: -9999em;overflow: hidden;}
+/* 水平滚动 */
+.scroll_A{position:relative;}
+.scroll_A .inner{position:relative;width:100%;height:225px;overflow:hidden;}
+.scroll_A .split{width:398px;height:225px;float:left;padding-right: 1px; position: relative;}
+.scroll_A .split a:hover{text-decoration: none;}
+.scroll_A .split .num{font-size: 48px; color: #fff; position: absolute; left: 20px; top: 5px; font-family: Arial; font-weight: normal;}
+.scroll_A .split .name{font-size: 18px; color: #fff; position: absolute; left: 20px; bottom: 6px;}
+.scroll_A .split .mask{width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(https://statics.05273.cn/zhuanti/2016moon/bg_twC.png) 0 0 no-repeat;}
+.scroll_A .split .count{position: absolute; right: 30px;  top: 10px;font-size: 16px; font-family: Arial; color: #fff;}
+.scroll_A .split .piao{position: absolute; right: 10px;top: 8px; font-size: 14px; color: #fff;}
+.scroll_A .split .digg{position: absolute; right: 1px;bottom: 0; font-size: 14px; color: #fff; background:#1e676c; color: #fff; width: 98px; height: 30px; line-height: 30px; text-align: center;}
+.scroll_A .split .digg a{color: #fff;}
+.scroll_A .split .digg a:hover{text-decoration: none;}
+.scroll_A .btn{position:absolute;top:50%;margin-top:-48px;width:62px;height:97px;cursor:pointer; background:url(https://statics.05273.cn/zhuanti/2016moon/btn_scroll.png) no-repeat;}
+.scroll_A .prev{left:0; background-position: 0 0;}
+.scroll_A .prev:hover{background-position: 0 -94px;}
+.scroll_A .next{right:0; background-position: right 0;}
+.scroll_A .next:hover{background-position: right -94px;}
+
+.navBox{height: 135px;}
+.nav{width: 100%;height: 135px;background: url(https://statics.05273.cn/zhuanti/2016moon/bg_wrap.png) 0 0 repeat; z-index: 9999;}
+.nav .outer{width: 100%; height: 135px;background: url(https://statics.05273.cn/zhuanti/2016moon/bg_navbg.png) 0 25px repeat-x;}
+.nav .inner{width: 1000px; margin: 0 auto;}
+.logo{width: 279px; height: 135px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_logo.png) 0 0 no-repeat; float: left;}
+.navList{float: left; width: 720px; padding-top: 43px;}
+.navList li{float: left; height: 24px; line-height: 24px; padding:0 24px 0 14px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_nav.png) right center no-repeat;}
+.navList li a{color: #fff; font-size: 20px;}
+.navList li a:hover{color: #fffc00; text-decoration: none;}
+.navList li.last{padding-right: 0; background: none;}
+
+.jrywMod{ height: 845px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_jryw1.png) center 0 no-repeat;}
+.jrywMod .inner{width: 1000px; margin: 0 auto;}
+.jrywMod .pL{padding:25px 0 0 125px;width: 435px; overflow: hidden;}
+.hotNews h2{height: 70px; line-height: 70px; border-bottom: 1px dashed #d6d6d6; font-size:32px; margin-bottom: 15px;}
+.hotNews .info{line-height:24px; color: #777; text-indent: 2em; font-size: 14px; margin-bottom: 25px;}
+.hotNews .info a{color: #777;}
+.jrywMod .pL .dot{font-size: 18px; vertical-align: bottom;}
+.jrywMod .pL .dot li{padding-left: 14px; height: 46px; line-height: 46px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_dot.png) 1px 21px no-repeat;border-bottom: 1px dashed #d6d6d6;}
+.jrywMod .pL .dot li.last{border: none;}
+.jrywMod .pL .dot a{color: #494949;}
+
+.jrywMod .bd{height: 490px;}
+.jrywMod .pR{margin-top: 22px;width: 428px; height: 430px; overflow: hidden; position: relative;}
+.jrywMod .pR .masker{width: 428px; height: 430px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_mask_focus.png) 0 0 no-repeat; position: absolute; left: 0; top: 0;}
+/*焦点图*/
+.focus_A{width:430px;height:430px;position:relative;overflow:hidden;background: #fff;}
+.focus_A .focus_con .item{position:relative; width: 430px; height: 430px;}
+.focus_A .focus_con .item a:hover{text-decoration: none;}
+.focus_A .focus_con img{width:430px;height:430px;}
+.focus_A .shadow{position:absolute;left:0;bottom:0;text-indent:1em;color:#FFF;width:100%;height:100px; line-height: 80px; text-align: center; font-size: 18px; cursor: pointer;}
+.focus_A .focus_dot{position:absolute;bottom:25px;width: 100%; text-align: center;}
+.focus_A .focus_dot a{display:inline-block;width:12px;height:12px;background:url(https://statics.05273.cn/zhuanti/2016moon/bg_focus_dot.png) -15px -1px no-repeat;}
+.focus_A .focus_dot a:hover,
+.focus_A .focus_dot .current{background-position: 0 0;}
+
+.jrywMod .ft{height: 320px; position: relative; overflow: hidden;}
+.jrywMod .ft .more{display: block;font-size: 20px;margin: 50px 0 0 125px;}
+
+.twC{position: absolute; overflow: hidden;}
+.twC a,.twC a img{display: block;}
+.twC .shadow{position: absolute; left: 0; bottom: 0; width: 100%; height: 80px; line-height: 90px; background: url(https://statics.05273.cn/zhuanti/2016moon/mask.png) 0 -50px no-repeat; text-align: center; color: #fff;}
+.twC .masker{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+
+.twC1{width: 155px; height: 155px; left: 100px; top: 160px;}
+.twC1 .masker{background:url(https://statics.05273.cn/zhuanti/2016moon/bg_mask_v1.png) 0 0 no-repeat;}
+.twC2{width: 182px; height: 183px; left: 325px; top: 110px;}
+.twC2 .masker{background:url(https://statics.05273.cn/zhuanti/2016moon/bg_mask_v2.png) 0 0 no-repeat;}
+.twC3{width: 229px; height: 230px; left: 578px; top: 20px;}
+.twC3 .masker{background:url(https://statics.05273.cn/zhuanti/2016moon/bg_mask_v3.png) 0 0 no-repeat;}
+
+.adMod{margin:35px auto;}
+
+.dbsyMod .hd{margin-bottom: 26px;height: 73px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_hd_dbsy.png) center 0 no-repeat; text-indent: -9999em; overflow: hidden;}
+.dbsyMod .bd{border-top: 1px solid #dedede;border-bottom: 1px solid #dedede; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_dbsy.png) 0 0 repeat;}
+
+.dbsyMod .inner{padding-top: 48px;background:url(https://statics.05273.cn/zhuanti/2016moon/bg_line.png) 0 86px repeat-x; position: relative;}
+.dbsyMod .top{height: 267px;background:url(https://statics.05273.cn/zhuanti/2016moon/bg_swjwa.png) center 0 no-repeat;}
+.dbsyMod .cen{height: 240px;overflow: hidden; position: relative;border-bottom: 1px solid #dedede;}
+.dbsyMod .ppBox{width: 100%;height: 240px;background:url(https://statics.05273.cn/zhuanti/2016moon/img_pp.png) center 0 no-repeat; position: absolute; left: 0; top: 0;}
+.dbsyMod .btm{width: 1110px; height: 58px; margin: 0 auto;}
+.dbsyMod .btm span{float: left; padding-top: 10px; line-height: 20px;}
+.dbsyMod .btm span.no1{width: 180px; padding-left: 40px;}
+.dbsyMod .btm span.no2{width: 180px; padding-left: 70px;}
+.dbsyMod .btm span.no3{width: 160px; padding-left: 40px;}
+.dbsyMod .btm span.no4{width: 180px; padding-left: 90px;}
+.dbsyMod .btm span.no5{width: 150px; padding-left: 20px;}
+
+.linkBox{width: 1110px; height: 570px; position: absolute; left:50%; top: 48px; margin-left: -555px; overflow: hidden;}
+.linkBox a{float: left; width: 221px; height: 570px; text-indent: -999em; overflow: hidden; margin-right: 1px;}
+
+/*食色中秋*/
+.sszqMod{margin:50px 0;height:1060px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_sszq.png) center 60px no-repeat;}
+.sszqMod .inner{position: relative; width: 1050px; margin: 0 auto;}
+.sszqMod .yuebing{position: absolute; width: 182px; height: 184px;}
+.sszqMod a.no1{left: 412px; top: 0;}
+.sszqMod a.no2{left: 703px; top: 85px;}
+.sszqMod a.no3{left: 825px; top: 360px;}
+.sszqMod a.no4{left: 780px; top: 620px;}
+.sszqMod a.no5{left: 573px; top: 804px;}
+.sszqMod a.no6{left: 295px; top: 804px;}
+.sszqMod a.no7{left: 75px; top: 618px;}
+.sszqMod a.no8{left: 0; top: 365px;}
+.sszqMod a.no9{left: 127px; top: 95px;}
+.sszqMod .info{position: absolute; left: 290px; top: 415px; line-height: 36px; color: #626262; font-size: 14px; width: 450px;}
+.sszqMod .more{position: absolute;left: 440px; top:725px; font-size: 20px; color: #2f2f2f;}
+
+.jyzqMod .hd{height:75px; background:url(https://statics.05273.cn/zhuanti/2016moon/bg_hd_jyzq.jpg) center 0 no-repeat;}
+.jyzqMod .layout{background: #fff;}
+
+/*中秋去哪*/
+.zqznMod{width: 1000px; margin:0 auto; overflow: hidden;}
+.zqznMod .pL{width:428px;}
+.zqznMod .pR{width:570px;}
+.twP{position: relative; display: block; overflow: hidden; cursor: pointer;}
+.twP:hover{text-decoration: none;}
+.twP .shadow{position: absolute; left: 0; bottom: 0; width: 100%; height: 44px; line-height: 54px; color: #fff;font-size: 14px; text-align: center; overflow: hidden;}
+.twP img{display: block; width: 100%; height: 100%;}
+
+.twP1,.twP2{width: 428px; height: 216px;}
+.twP1{margin-bottom: 3px;}
+
+.zqznMod .pR .twP{float: left;}
+.twP3,.twP4{width:284px; height: 143px; margin-bottom: 2px;}
+.twP3{margin-right: 2px;}
+.twP5{width:335px; height: 118px; margin:0 2px 2px 0;}
+.twP6{width: 233px; height: 118px; margin-bottom: 2px;}
+.twP7{width: 335px; height: 170px; margin-right: 2px;}
+.twP8{width: 233px; height: 118px; margin-bottom: 2px;}
+.twP9{width: 233px; _width: 230px; height: 50px;}

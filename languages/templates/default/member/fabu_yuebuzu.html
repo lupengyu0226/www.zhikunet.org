@@ -1,0 +1,48 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{JS_PATH}admin_common.js"></script> 
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" /> 
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">我的消息</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_C=="deposit" && (ROUTE_A=="pay" || ROUTE_A=="pay_recharge")} class="active"{/if}><a class="btn" href="pay-pay.html">在线充值</a></li>
+                            <li{if ROUTE_C=="deposit" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pay-init.html">支付记录</a></li>
+                            <li{if ROUTE_C=="spend_list" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pays-init.html">消费记录</a></li>
+                            <li{if ROUTE_A=="change_credit"} class="active"{/if}><a class="btn" href="member-change_credit.html">购买积分</a></li>
+                        </ul>
+                    </div>
+                    <div class="list-view">
+
+                    <ul class="list mt10">
+                            <li>
+                                <dl>
+                                    <dt>
+                                      <font style="color:#F00; font-size:22px;">对不起，您的积分不足：</font>
+                                    </dt>
+                                    <dd>
+                                    <p>本站非常欢迎各大网友前来发布信息，但是为了防御垃圾信息的泛滥，特开启积分判断<br>当您的账户积分小余<font style="color:#F00;">100</font>的时候将无法发布信息</p>
+                                    <p>您可以发表评论进行赚取，或者选择左侧在线充值进行充值兑换！</p>
+                                    <p>您当前的余额为:<font style="color:#F00; font-size:22px;font-family:Georgia,Arial; font-weight:700">{$memberinfo[amount]}</font>元<br>您当前的积分为:<font style="color:#F00; font-size:22px;font-family:Georgia,Arial; font-weight:700">{$memberinfo[point]}</font></p>
+                                    <p>注：发布信息免费，并且注册的时候已经赠送5元，可以直接兑换50积分使用，如不够请自行充值！或者投稿到邮箱：news@05273.cn</p> 
+                                    </dd>
+                                </dl>
+                            </li>
+
+                            </ul>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

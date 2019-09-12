@@ -1,0 +1,13 @@
+{edi:content action="stats" num="15" image="1" order="inputtime DESC" page="$page"}
+ {loop $data $r}
+ <?php $space_userid = get_memberinfo_buyusername($r['username'], 'userid');?>
+ <?php $space_authors = zhuanlan_memberinfo($r['username'],'authors');?>
+ <?php $space_thumb = zhuanlan_memberinfo($r['username'],'thumb');?>
+  <a class="item" href="{S($r[url])}">
+    <h2>{$r['title']}</h2>
+    <div class="news-view">  {if $r['image']}<img class="news-thumb" src="{$r[image]}" />{/if}{str_cut($r[data][description],201,'..')}</div> 
+    <div class="news-left">作者:{$r['username']}</div>
+    <div class="news-info">{inputtime_zone($r[inputtime])} </div>
+    </a> 
+ {/loop}
+ {/edi}

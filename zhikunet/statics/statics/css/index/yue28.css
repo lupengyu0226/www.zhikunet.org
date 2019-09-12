@@ -1,0 +1,47 @@
+BODY {
+	FONT-FAMILY: "ËÎÌו"; COLOR: #333
+}
+
+#focus_pic {
+	POSITION: relative; PADDING-LEFT: 0px; WIDTH: 395px; PADDING-RIGHT: 23px; FLOAT: left; HEIGHT: 255px; PADDING-TOP: 0px
+}
+#focus_bigpic {
+	Z-INDEX: 1; BORDER-BOTTOM: #acacac 1px solid; POSITION: absolute; FILTER: progid:DXImageTransform.Microsoft.GradientWipe(duration=2,gradientSize=1,wipestyle=1,motion=forward); BORDER-LEFT: #acacac 1px solid; WIDTH: 395px; FLOAT: left; HEIGHT: 250px; BORDER-TOP: #acacac 1px solid; BORDER-RIGHT: #acacac 1px solid
+}
+
+#focus_tabs {
+	Z-INDEX: 9999; POSITION: absolute; WIDTH: 85px; HEIGHT: 255px; LEFT: 392px
+}
+#focus_tabsbg {
+	WIDTH: 85px; HEIGHT: 255px
+}
+#focus_tabsbg DIV {
+	LINE-HEIGHT: 8px; PADDING-LEFT: 8px; WIDTH: 85px; HEIGHT: 64px; COLOR: #888; PADDING-TOP: 0px
+}
+#focus_tabsbg DIV IMG {
+	WIDTH: 88px; HEIGHT: 58px; BORDER: #FFA200 1px solid;
+}
+#focus_txtbg {
+	Z-INDEX: 999; POSITION: absolute; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mat1.qq.com/ent/yue09/focus-txtbg.png', sizingMethod='scale'); PADDING-LEFT: 0px; WIDTH: 395px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; HEIGHT: 65px; TOP: 175px; PADDING-TOP: 12px; LEFT: 0px
+}
+#focus_txt {
+	Z-INDEX: 9999; POSITION: absolute; PADDING-LEFT: 5px; WIDTH: 390px; FLOAT: left; HEIGHT: 79px; TOP: 174px; PADDING-TOP: 6px; LEFT: 10px
+}
+#focus_txt .texts {
+	LINE-HEIGHT: 22px; TEXT-INDENT: 2em; WIDTH: 375px; FLOAT: left; COLOR: #dbdbdb
+}
+#focus_txt .texts A {
+	COLOR: #dbdbdb
+}
+#focus_txt .texts A:hover {
+	COLOR: #fff
+}
+#focus_txt .links {
+	LINE-HEIGHT: 26px; WIDTH: 365px; FLOAT: left; COLOR: #f7941c; MARGIN-LEFT: 0px; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+#focus_txt .links A {
+	COLOR: #f7941c
+}
+#focus_txt .links A:hover {
+	COLOR: #fdb812
+}

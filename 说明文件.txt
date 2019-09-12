@@ -1,0 +1,226 @@
+环境建议：centos6/7 + nginx +mysql
+
+建议安装 sphinx 索引系统 nginx 开启 ssi 服务
+
+导入数据库，做好数据库连接后
+
+后台账户：admin
+密码：phpcms
+
+更新栏目缓存
+
+文件目录结构
+根目录
+
+|  –  api  单独接口文件目录
+|  –  caches 缓存文件目录
+       |  – configs 系统配置文件目录
+       |  – caches_* 系统缓存目录
+       |  – posid SSI生成目录
+       |  – cron  计划任务 PID 目录
+|  –  languages  框架主目录
+       |  – languages 框架语言包目录
+       |  – libs 框架主类库、主函数库目录
+       |  – model 框架数据库模型目录
+       |  – modules 框架模块目录
+       |  – templates 框架系统模板目录
+|  –  shuyang_server  sso主目录
+|  –  statics  只存放了水印文件
+|  –  前端资源目录  系统附件包 建议独立站点并绑定 ststics.xxx.com 域名
+       |  – css 系统css包
+       |  – images 系统图片包
+       |  – js 系统js包
+|  –  uploadfile  网站附件目录 建议绑定 img.xxx.com 域名
+|  –  feitian_houtais  后台管理入口,可改名
+|  –  index.php  程序主入口
+|  –  crossdomain.xml  FLASH跨域传输文件
+|  –  shuyangcron.php 计划任务请求接口
+|  –  desktop.php  生成桌面图标
+|  –  Apsaras.html 跨域文件
+|  –  key.php 安全防御系统密钥生成器，用完删除
+
+主程序伪静态
+          
+                if ($host ~* ^www\.05273\.cn$)  {
+                rewrite ^(.*)/u/(.*)/(.*).html http://$2.shuyanghao.com/$3.html permanent;
+                rewrite ^(.*)/u/([^/]+)/$ http://$2.shuyanghao.com permanent;
+                rewrite ^(.*)/u/([^/]+) http://$2.shuyanghao.com permanent;
+                rewrite ^(.*)/u/$ http://www.shuyanghao.com permanent;
+                rewrite ^(.*)/u http://www.shuyanghao.com permanent;
+                rewrite "^/([^/]+)/([^/]+)/list_([0-9]{2,}).html" /index.php?app=content&controller=index&view=lists&catdir=$1/$2&page=$3 last;
+                rewrite "^/([^/]+)/list_([0-9]{2,}).html" /index.php?app=content&controller=index&view=lists&catdir=$1&page=$2 last;
+                rewrite ^(.*)/hot.html $1/index.php?app=hot&controller=index&view=init&page=1 last;
+                rewrite ^(.*)/hot/?$ $1/index.php?app=hot&controller=index&view=init&page=1 last;
+                rewrite ^(.*)/hot_(.+).html $1/index.php?app=hot&controller=index&view=init&page=$2 last;
+                rewrite ^(.*)/hot/(.+)-(.+)\.html $1/index.php?app=hot&controller=index&view=show&tag=$2&page=$3 last;
+                rewrite ^(.*)/hot/(.+)\.html $1/index.php?app=hot&controller=index&view=show&tag=$2&page=1 last;
+                rewrite ^(.*)/hot/(.+) $1/hot/$2.html permanent; 
+                rewrite ^(.*)/hot_(.+)/(.+) $1/hot/$3-$2.html permanent;
+                rewrite ^(.*)/hot_(.+)/(.+) $1/index.php?app=hot&tag=$3&page=$2 last;
+                rewrite ^(.*)/hots/(.+)  $1/hot/$2.html permanent;
+                rewrite ^(.*)/rss.shtml $1/index.php?app=content&controller=rss last;
+                rewrite ^(.*)/rss/rssid_(.+).xml $1/index.php?app=content&controller=rss&rssid=$2 last;
+                rewrite ^(.*)/zhufu/?$ $1/index.php?app=zhufu&controller=index last;
+                rewrite ^(.*)/zhufu/index.shtml $1/index.php?app=zhufu&controller=index last;
+                rewrite ^(.*)/zhufu/page_(.+).shtml $1/index.php?app=zhufu&controller=index&page=$2 last;
+                rewrite ^(.*)/zhufu/list.shtml $1/index.php?app=zhufu&controller=index&view=lists last;
+                rewrite ^(.*)/zhufu/list_(.+).shtml $1/index.php?app=zhufu&controller=index&view=lists&page=$2 last;
+                rewrite ^(.*)/zhufu/zhufu-(.+)\.shtml $1/index.php?app=zhufu&controller=index&view=show&id=$2 last;
+                rewrite ^(.*)/zhufu/zan-(.+)\.shtml $1/index.php?app=zhufu&controller=index&view=zf&id=$2 last;
+                rewrite ^(.*)/zhufu/post.shtml $1/index.php?app=zhufu&controller=index&view=post last;
+                rewrite ^(.*)/ad-(.+)$ $1/index.php?app=url&controller=index&view=show&aid=$2 last;
+                rewrite ^(.*)/([^/]+)/([^/]+)/xz_(.+)_(.+).html $1/index.php?app=content&controller=type&catdir=$2/$3&typeid=$4&page=$5 last;
+                rewrite ^(.*)/content_(.*)-([0-9]+).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&page=$3 last;
+                rewrite ^(.*)/pinglun_(.*)-([0-9]+).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&iframe=1&page=$3 last;
+                rewrite ^(.*)/newscontent_(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&hot=0 last;
+                rewrite ^(.*)/hotcontent_(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&hot=1 last;
+                rewrite ^(.*)/fnewscontent_(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&hot=0&iframe=1 last;
+                rewrite ^(.*)/fhotcontent_(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=content_$2&hot=1&iframe=1 last;
+                rewrite ^(.*)/newsspecial-(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=special-$2&hot=0 last;
+                rewrite ^(.*)/special-(.*)-([0-9]+).html $1/index.php?app=comment&controller=index&view=init&commentid=special-$2&page=$3 last;
+                rewrite ^(.*)/hotspecial-(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=special-$2&hot=1 last;
+                rewrite ^(.*)/fnewsspecial-(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=special-$2&hot=0&iframe=1 last;
+                rewrite ^(.*)/fhotspecial-(.*).html $1/index.php?app=comment&controller=index&view=init&commentid=special-$2&hot=1&iframe=1 last;
+                rewrite ^(.*)/darkroom.html $1/index.php?app=member&controller=darkroom last;
+                rewrite ^(.*)/darkroom_(.*).html $1/index.php?app=member&controller=darkroom&page=$2 last;
+                rewrite ^(.*)/rank/?(\w+)?/?(views|monthviews|weekviews|dayviews)?\.html?$ $1/index.php?app=content&controller=rank&catdir=$2&order=$3 last;
+                rewrite ^(.*)/rank/(\w+)/?$ $1/index.php?app=content&controller=rank&catdir=$2 last;
+                rewrite ^(.*)/rank/?$ $1/index.php?app=content&controller=rank  last;
+                rewrite ^(.*)/today.html $1/index.php?app=today last;
+                rewrite ^(.*)/weather/index.html $1/index.php?app=weather&view=init last;
+                rewrite ^(.*)/weather/cityaqi.html $1/index.php?app=weather&view=cityaqi last;
+                rewrite ^(.*)/weather/yztqcx.html $1/index.php?app=weather&view=yztqcx last;
+                rewrite ^(.*)/today_([0-9]+).html $1/index.php?app=today&page=$2 last;
+                rewrite ^(.*)/baoliao/submit.html $1/index.php?app=member&controller=baoliao&view=publish last;
+                rewrite ^(.*)/baoliao-([0-9]+)\.html $1/index.php?app=member&controller=baoliao&view=publish&catid=$2 last;
+                rewrite ^(.*)/core/count/([0-9]+)/([0-9]+)/?$ $1/index.php?app=api&controller=index&op=count&id=$2&modelid=$3 last;
+                rewrite ^(.*)/core/stats/([0-9]+)/?$ $1/index.php?app=api&controller=index&op=stats&catid=$2&edi=pc last;
+                rewrite ^(.*)/core/datum/([0-9]+)/?$ $1/index.php?app=api&controller=index&op=user&uid=$2 last;
+                rewrite ^(.*)/phone.shtml $1/index.php?app=phone&controller=index&view=init last;
+                rewrite ^(.*)/links-list.shtml $1/index.php?app=link&controller=index&view=list_type&type_id=0&siteid=1 last;
+                rewrite ^(.*)/links-reg.shtml $1/index.php?app=link&controller=index&view=register last;
+                rewrite ^(.*)/links.shtml $1/index.php?app=link&controller=index&view=init last;
+                rewrite ^(.*)/print/([0-9]+)/([0-9]+).print $1/index.php?app=content&controller=prints&catid=$2&id=$3 last;
+                rewrite ^(.*)/announce.shtml$ $1/index.php?app=announce last;
+                rewrite ^(.*)/announce-l([0-9]+).shtml $1/index.php?app=announce&page=$2 last;
+                rewrite ^(.*)/announce-s([0-9]+).shtml $1/index.php?app=announce&controller=index&view=show&aid=$2 last;
+                }
+passport 伪静态
+
+                if ($host ~* ^passport\.05273\.cn$)  {
+                rewrite ^/(login|register|logout|public_forget_password)\.(asp|php|html|htm|shtml)$ /index.php?app=member&controller=index&view=$1 last;
+                rewrite ^/index\.(asp|php|html|htm|shtm|shtml|aspx|jsp)?$ /index.php?app=member last;
+                rewrite ^(.*)/member-index.html $1/index.php?app=member&controller=index last;
+                rewrite ^(.*)/member-(.+)\.html $1/index.php?app=member&controller=index&view=$2 last;
+                rewrite ^(.*)/content-(.+)\.html $1/index.php?app=member&controller=content&view=$2 last;
+                rewrite ^(.*)/pays-(.+)\.html $1/index.php?app=pay&controller=spend_list&view=$2 last;
+                rewrite ^(.*)/pay-(.+)\.html $1/index.php?app=pay&controller=deposit&view=$2 last;
+                rewrite ^(.*)/message-(.+)\.html $1/index.php?app=message&controller=index&view=$2 last;
+                rewrite ^(.*)/post-([0-9]+)\.html $1/index.php?app=member&controller=content&view=publish&catid=$2 last;
+                rewrite ^(.*)/mp-(.+)-([0-9]+)\.html $1/index.php?app=zhuanlan&controller=member_index&view=$2&id=$3 last;
+                rewrite ^(.*)/api/pay_([a-zA-Z]+)_([a-zA-Z]+)\.shtml$  $1/sslapi/pay_$2_$3.php last;
+                rewrite ^(.*)/mp-(.+)\.html $1/index.php?app=zhuanlan&controller=member_index&view=$2 last;
+                rewrite ^/$ /index.php?app=member&controller=index&view=login last;
+                }
+手机站伪静态             
+                if ($host ~* ^wap\.05273\.cn$)  {
+                rewrite ^/index\.(asp|php|html|htm|shtm|shtml|aspx|jsp)?$ /index.php?app=mobile&controller=index&view=init last;
+                rewrite ^/$ /index.php?app=mobile&controller=index&view=init last;
+                rewrite ^(.*)/u/(.*)/(.*).html http://$2.m.shuyanghao.com/$3.html permanent;
+                rewrite ^(.*)/u/([^/]+)/$ http://$2.m.shuyanghao.com permanent;
+                rewrite ^(.*)/u/([^/]+) http://$2.m.shuyanghao.com permanent;
+                rewrite ^(.*)/u/$ http://m.shuyanghao.com permanent;
+                rewrite ^(.*)/u http://m.shuyanghao.com permanent;
+                rewrite ^(.*)/show-([0-9]+)-([0-9]+)-([0-9]+).html $1/index.php?app=mobile&controller=redirect&view=show&catid=$2&id=$3&page=$4 last;
+                rewrite ^(.*)/list-(.+)-(.+)\.html $1/index.php?app=mobile&controller=redirect&view=lists&catid=$2&page=$3 last;
+                rewrite ^(.*)/type-([0-9]+)-([0-9]+)-([0-9]+).html $1/index.php?app=mobile&controller=redirect&view=type&catid=$2&typeid=$3&page=$4 last;
+                rewrite ^(.*)/mip.html $1/index.php?app=mobile&controller=index&view=mipinit last;
+                rewrite ^(.*)/miplist-(.+)-(.+)\.html $1/index.php?app=mobile&controller=index&view=miplists&catid=$2&page=$3 last;
+                rewrite ^(.*)/mip-([0-9]+)-([0-9]+)-([0-9]+).html $1/index.php?app=mobile&controller=index&view=mip&catid=$2&id=$3&page=$4 last;
+                rewrite ^(.*)/waphot.html $1/index.php?app=mobile&controller=hot&siteid=1 last;
+                rewrite ^(.*)/waphot_(.+).html $1/index.php?app=mobile&controller=hot&page=$2 last;
+                rewrite ^(.*)/waphot/(.+)-(.+)\.html $1/index.php?app=mobile&controller=hot&tag=$2&page=$3 last;
+                rewrite ^(.*)/waphot/(.+)\.html $1/index.php?app=mobile&controller=hot&tag=$2 last;
+                rewrite ^(.*)/hot.html $1/index.php?app=mobile&controller=hot&siteid=1 last;
+                rewrite ^(.*)/hot_(.+).html $1/index.php?app=mobile&controller=hot&page=$2 last;
+                rewrite ^(.*)/hot/(.+)-(.+)\.html $1/index.php?app=mobile&controller=hot&tag=$2&page=$3 last;
+                rewrite ^(.*)/hot/(.+)\.html $1/index.php?app=mobile&controller=hot&tag=$2 last;
+                rewrite ^(.*)/mtoday.html $1/index.php?app=mobile&controller=today last;
+                rewrite ^(.*)/mtoday_([0-9]+).html $1/index.php?app=mobile&controller=today&page=$2 last;
+                rewrite ^(.*)/today.html $1/index.php?app=mobile&controller=today last;
+                rewrite ^(.*)/today_([0-9]+).html $1/index.php?app=mobile&controller=today&page=$2 last;
+                rewrite ^(.*)/weather.html $1/index.php?app=weather&view=mobile last;
+                #微信单内容
+                rewrite ^(.*)/weixin_([0-9]+).html $1/index.php?app=weixin&controller=index&view=init&id=$2 last;
+                rewrite ^(.*)/weixin_news_([0-9]+).html $1/index.php?app=weixin&controller=index&view=groupnews&id=$2 last;
+                #列表页2个目录
+                rewrite "^/([^/]+)/([^/]+)/list_([0-9]+).html" /index.php?app=mobile&controller=index&view=lists&catdir=$1/$2&page=$3 last;
+                rewrite "^/([^/]+)/([^/]+)/index.html" /index.php?app=mobile&controller=index&view=lists&catdir=$1/$2&page=1 last;
+                #列表页1个目录
+                rewrite "^/([^/]+)/list_([0-9]+).html" /index.php?app=mobile&controller=index&view=lists&catdir=$1&page=$2 last;
+                rewrite "^/([^/]+)/index.html" /index.php?app=mobile&controller=index&view=lists&catdir=$1&page=1 last;
+                #2个目录带日期的内容页
+                rewrite "^/([^/]+)/([^/]+)/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1/$2&tid=$3&id=$4&page=$5 last;
+                rewrite "^/([^/]+)/([^/]+)/([^/]+)/view_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1/$2&tid=$3&id=$4 last;
+                #2个目录不带日期的内容页
+                rewrite "^/([^/]+)/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1/$2&id=$3&page=$4 last;
+                rewrite "^/([^/]+)/([^/]+)/view_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1/$2&id=$3 last;
+                #1个目录的内容页
+                rewrite "^/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1&id=$2&page=$3 last;
+                rewrite "^/([^/]+)/view_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1&id=$2&page=1 last;
+                #话题专用内容页
+                rewrite "^/([^/]+)/huati_([0-9]+)_([0-9]+).html" /index.php?app=mobile&controller=index&view=show&catdir=$1&tid=$2&id=$3 last;
+                #rewrite ^(.*)/([^/]+)/([^/]+)/xz_(.+)_(.+).html $1/index.php?app=mobile&controller=type&catdir=$2/$3&typeid=$4&page=$5 last;
+                #乡镇专属页面
+                rewrite ^(.*)/([^/]+)/([^/]+)/xz_(.+)_(.+).html $1/index.php?app=mobile&controller=type&catdir=$2/$3&typeid=$4&page=$5 last;
+                }
+MIP 站伪静态
+                if ($host ~* ^mip\.05273\.cn$)  {
+                rewrite ^/index\.(asp|php|html|htm|shtm|shtml|aspx|jsp)?$ /index.php?app=mips&controller=index&view=init last;
+                rewrite ^/$ /index.php?app=mips&controller=index&view=init last;
+                rewrite ^(.*)/u/(.*)/(.*).html http://$2.m.shuyanghao.com/$3.html permanent;
+                rewrite ^(.*)/u/([^/]+)/$ http://$2.m.shuyanghao.com permanent;
+                rewrite ^(.*)/u/([^/]+) http://$2.m.shuyanghao.com permanent;
+                rewrite ^(.*)/u/$ http://m.shuyanghao.com permanent;
+                rewrite ^(.*)/u http://m.shuyanghao.com permanent;
+                rewrite ^(.*)/show-([0-9]+)-([0-9]+)-([0-9]+).html $1/index.php?app=mips&controller=redirect&view=show&catid=$2&id=$3&page=$4 last;
+                rewrite ^(.*)/list-(.+)-(.+)\.html $1/index.php?app=mips&controller=redirect&view=lists&catid=$2&page=$3 last;
+                rewrite ^(.*)/type-([0-9]+)-([0-9]+)-([0-9]+).html $1/index.php?app=mips&controller=redirect&view=type&catid=$2&typeid=$3&page=$4 last;
+                rewrite ^(.*)/hot.html $1/index.php?app=mips&controller=hot&siteid=1 last;
+                rewrite ^(.*)/hot_(.+).html $1/index.php?app=mips&controller=hot&page=$2 last;
+                rewrite ^(.*)/hot/(.+)-(.+)\.html $1/index.php?app=mips&controller=hot&tag=$2&page=$3 last;
+                rewrite ^(.*)/hot/(.+)\.html $1/index.php?app=mips&controller=hot&tag=$2 last;
+                rewrite ^(.*)/today.html $1/index.php?app=mips&controller=today last;
+                rewrite ^(.*)/today_([0-9]+).html $1/index.php?app=mips&controller=today&page=$2 last;
+                #列表页2个目录
+                rewrite "^/([^/]+)/([^/]+)/list_([0-9]+).html" /index.php?app=mips&controller=index&view=lists&catdir=$1/$2&page=$3 last;
+                rewrite "^/([^/]+)/([^/]+)/index.html" /index.php?app=mips&controller=index&view=lists&catdir=$1/$2&page=1 last;
+                #列表页1个目录
+                rewrite "^/([^/]+)/list_([0-9]+).html" /index.php?app=mips&controller=index&view=lists&catdir=$1&page=$2 last;
+                rewrite "^/([^/]+)/index.html" /index.php?app=mips&controller=index&view=lists&catdir=$1&page=1 last;
+                #2个目录带日期的内容页
+                rewrite "^/([^/]+)/([^/]+)/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1/$2&tid=$3&id=$4&page=$5 last;
+                rewrite "^/([^/]+)/([^/]+)/([^/]+)/view_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1/$2&tid=$3&id=$4 last;
+                #2个目录不带日期的内容页
+                rewrite "^/([^/]+)/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1/$2&id=$3&page=$4 last;
+                rewrite "^/([^/]+)/([^/]+)/view_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1/$2&id=$3 last;
+                #1个目录的内容页
+                rewrite "^/([^/]+)/view_([0-9]+)_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1&id=$2&page=$3 last;
+                rewrite "^/([^/]+)/view_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1&id=$2&page=1 last;
+                #话题专用内容页
+                rewrite "^/([^/]+)/huati_([0-9]+)_([0-9]+).html" /index.php?app=mips&controller=index&view=show&catdir=$1&tid=$2&id=$3 last;
+                #rewrite ^(.*)/([^/]+)/([^/]+)/xz_(.+)_(.+).html $1/index.php?app=mips&controller=type&catdir=$2/$3&typeid=$4&page=$5 last;
+                #乡镇专属页面
+                rewrite ^(.*)/([^/]+)/([^/]+)/xz_(.+)_(.+).html $1/index.php?app=mips&controller=type&catdir=$2/$3&typeid=$4&page=$5 last;
+                }
+API伪静态
+                if ($host ~* ^api\.05273\.cn$)  {
+                rewrite ^/index\.(asp|php|html|htm|shtm|shtml|aspx|jsp)?$ /index.php?app=api&controller=index last;
+                rewrite ^/favicon.ico /favicon.ico last;       
+                rewrite ^/crossdomain.xml /crossdomain.xml last;
+                rewrite ^/(.*).$ /index.php?app=api&controller=index last;           
+                }
+计划任务脚本：
+
+*/1 * * * *  www /usr/local/php/bin/php /home/www/shuyangwang/shuyangcron.php
+

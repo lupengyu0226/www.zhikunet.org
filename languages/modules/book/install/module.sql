@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('book', '留言板', 'book/', 0, '1.0', '', 'array (\n  ''is_check'' => ''1'',\n  ''enablecheckcode'' => ''0'',\n  ''telnotice'' => ''0'',\n  ''mailnotice'' => ''1'',\n)', 0, 0, '2012-12-14', '2012-12-14');

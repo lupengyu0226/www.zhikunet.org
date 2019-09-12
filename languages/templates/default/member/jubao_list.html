@@ -1,0 +1,35 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">举报列表</h2>
+                </div>
+                <div class="bd uc-wp-list">
+{if $jubaolist}
+					<ul class="live-list">
+{loop $jubaolist $k $v}
+                    	<li>
+                            <div class="s-title">
+                                <h3><a href="{$v['url']}" target="_blank" title="{$v['title']}">{$v['title']}</a></h3>
+                                <p class="live-teacher">{format::date($v['adddate'], 1)} | <?php echo $v['status']==0 ? L('status_0') : L('status_1')?></p>
+                                <p class="row">{str_cut($r[description],420,'...')}</p>
+                                <p><a class="fr" href="index.php?app=member&controller=index&view=jubao_view&id={$v['id']}">详细情况</a></p>
+                            </div>
+                        </li>
+{/loop}
+					</ul>
+                    <div class="pagenavi">{$pages}</div>
+{else}
+                	<div class="uc-empty">暂无投诉与举报，赶紧去看看<a href="{APP_PATH}" target="_blank">最新文章</a></div>
+{/if}
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

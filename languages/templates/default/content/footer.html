@@ -1,0 +1,36 @@
+
+<div id="footer">
+    <div id="footer-v0">
+        <div class="footer-container">
+            <div class="ali-pages">
+                <p id="copyright">智库联盟（北京）国际自然科学研究院&copy; 2010-{date('Y', SYS_TIME)} zhikunet.org 版权所有｜<a href="http://www.beian.miit.gov.cn/" rel="nofollow"  target="_blank" >京ICP备14011169号</a></p></br>
+				
+                <!--ul>
+				{edi:content action="category" catid="1" num="5" siteid="$siteid" order="listorder ASC"}
+									{loop $data $r}
+                    <li><a rel="nofollow" href="{$r[url]}" target="_self" title="{$r[catname]}">{$r[catname]}</a> |</li>
+                    
+					{/loop}
+								{/edi}
+                    <li><a href="{APP_PATH}" target="_self" title="网站导航">网站导航</a></li>
+                </ul-->
+            </div>
+            <div class="ali-group">
+                <dl>
+					{edi:content action="category" catid="1" num="10" siteid="$siteid" order="listorder ASC"}
+									{loop $data $r}
+                  	<dd>
+                        <a rel="nofollow" href="{$r[url]}" title="{$r[catname]}">{$r[catname]}</a>
+                        |
+                    </dd>                  	
+                  	{/loop}
+				{/edi}
+                </dl>
+				
+            </div>
+        </div>
+    </div>
+	
+
+</body>
+</html>

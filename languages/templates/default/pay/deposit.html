@@ -1,0 +1,126 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<link rel="stylesheet" href="https://statics.05273.cn/statics/member/layui/css/layui.css"  media="all">
+<script src="https://statics.05273.cn/statics/member/layui/layui.js"></script>
+{if isset($show_validator)}
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+{/if}
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">在线充值</h2>
+                </div>
+                <div class="bd mt20">
+                <div class="uc-nv">
+                    <ul class="nv">
+                        <li{if ROUTE_C=="deposit" && (ROUTE_A=="pay" || ROUTE_A=="pay_recharge")} class="active"{/if}><a class="btn" href="pay-pay.html">在线充值</a></li>
+                        <li{if ROUTE_C=="deposit" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pay-init.html">支付记录</a></li>
+                        <li{if ROUTE_C=="spend_list" && ROUTE_A=="init"} class="active"{/if}><a class="btn" href="pays-init.html">消费记录</a></li>
+                        <li{if ROUTE_A=="change_credit"} class="active"{/if}><a class="btn" href="member-change_credit.html">兑换积分</a></li>
+                    </ul>
+                </div>
+          <div class="content tal mt20">
+          <blockquote class="layui-elem-quote">1、您可以通过充值人民币，然后进行积分兑换的方式获取积分<BR>2、您可以通过回复评论来获取积分</blockquote>
+          <form name="myform" action="{PASSPORT_PATH}pay-pay_recharge.html" method="post" id="myform">
+          <table width="100%" cellspacing="0" class="table_form">
+              <tr>
+                 <th width="80">余额：</th>        
+                 <td style="padding:0 0 0 10px"><font style="color:#F00; font-size:22px;font-family:Georgia,Arial; font-weight:700">{$memberinfo['amount']}</font> 元</td>
+              </tr>
+               <tr>
+          	<th>充值金额：</th>
+          	<td><input name="info[price]" type="text" id="price" size="8" value="{if is_numeric($_GET['price'])}{$_GET['price']}{/if}" class="input-text">&nbsp;元<span id="msgid"></span></td>
+               </tr>
+            <tr>
+                 <th>充值方式：</th>
+                 <td>     
+
+                    <ul class='pay-method'>
+                    {if !is_weixin()}
+                                <li class='alipay active' paytype="7">
+                                  <div class='bottomright'>
+                                    <div class='triangle'></div>
+                                    <i class='fa fa-check'></i>
+                                  </div>
+                                </li>
+                    {if !is_mobile()}
+                                <li class='wxpay' paytype="12">
+                                  <div class='bottomright'>
+                                    <div class='triangle'></div>
+                                    <i class='fa fa-check'></i>
+                                  </div>
+                                </li>
+                    {/if}
+                    {else}
+                                <li class='wxpay active' paytype="14">
+                                  <div class='bottomright'>
+                                    <div class='triangle'></div>
+                                    <i class='fa fa-check'></i>
+                                  </div>
+                                </li>
+                    {/if}
+          </ul>
+          <input name="pay_type" id="pay_type" type="hidden"{if !is_weixin()} value="7"{else} value="14"{/if}>
+	   </td>
+     </tr>
+     <tr>
+       <th>验证码：</th>
+       <td><input name="code" type="text" id="code" size="10"  class="input-text"/> {form::checkcode('code_img','4','14',110,30)}</td>
+     </tr>
+     <tr>
+       <td></td>
+       <td colspan="2"><label>
+         <input type="submit" name="dosubmit" id="dosubmit" value="确 定" class="button"/>
+         </label></td>
+     </tr>
+   </table>
+   </form>
+   </div>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#price").formValidator({onshow:"请输入要充值的金额",onfocus:"充值金额不能为空"}).inputValidator({min:1,max:999,onerror:"充值金额不能为空"}).regexValidator({regexp:"^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){1,2})?$",onerror:"充值金额必须为整数或小数(保留两位小数)"});
+	$("#contactname").formValidator({onshow:"请输入姓名",onfocus:"姓名不能为空"}).inputValidator({min:1,max:999,onerror:"姓名不能为空"});
+	$("#code").formValidator({onshow:"请输入验证码",onfocus:"验证码不能为空"}).inputValidator({min:1,max:999,onerror:"验证码不能为空"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"app=pay&controller=deposit&view=public_checkcode",
+		datatype : "html",
+		async:'false',
+		success : function(data){	
+            if(data == 1)
+			{
+                return true;
+			}
+            else
+			{
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "验证码错误",
+		onwait : "验证中"
+	});
+})
+//-->
+</script>
+<script>
+/*** 切换支付方式 */
+$(".pay-method li").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+    $(this).children("input").trigger('click');
+    $("#pay_type").val($(this).attr("paytype"));
+});
+</script>
+{template "member","footer"}

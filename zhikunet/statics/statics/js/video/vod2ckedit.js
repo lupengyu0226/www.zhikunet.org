@@ -1,0 +1,3 @@
+function video_store_select(uploadid, name, textareaid, funcName, safe_edi) {
+	window.top.art.dialog({title:name,id:uploadid,iframe:'index.php?app=video&controller=video&view=video2content&safe_edi='+safe_edi,width:'565',height:'420'}, function(){ if(funcName) {funcName.apply(this,[uploadid,textareaid]);}else {submit_ckeditor(uploadid,textareaid);}}, function(){window.top.art.dialog({id:uploadid}).close()});
+}

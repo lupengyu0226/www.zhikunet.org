@@ -1,0 +1,50 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<script language="javascript" type="text/javascript" src="{JS_PATH}content_addtop.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">{L('select_site')}</h2>
+                </div>
+                <div class="bd mt20">
+                    <div class="content">
+			<form method="post" action="" id="myform" name="myform">
+				<table width="100%" cellspacing="0" class="table-list">
+				<script language="JavaScript">
+				<!--
+					function c_c(siteid) {
+						location.href='index.php?app=member&controller=content&view={ROUTE_A}&t=2&siteid='+siteid;
+					}
+				//-->
+				</script>
+				<thead>
+				<tr>
+				<th >{L('site_name')}</th>
+				<th>{L('site_info')}</th>
+				<th>{L('select')}</th>
+				</thead>
+				<tbody>
+					{loop $sitelist $k $v}
+					<tr>
+						<td width="200" align="right">{$v['name']}：</td> 
+						<td>{$v['description']}</td>
+						<td align="center"><input type="radio" value="{$v[siteid]}" onclick="c_c(this.value)"></td>
+					</tr>
+					{/loop}
+				</tbody>
+				</table>
+			</form>
+
+			</div>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

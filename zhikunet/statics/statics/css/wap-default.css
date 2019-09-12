@@ -1,0 +1,200 @@
+/* ============================================================ */
+/* section-title-wap */
+.section-title-b{
+background-color:#f3f3f3;
+}
+.section-title-wap .title-comment-wap .comment-wrap-b{
+color:#333;
+}
+
+.section-title-wap .title-comment-wap .comment-wrap-wap .wrap-number-wap .number-arrows-b{
+background-color:#ee542a;
+color: #ffffff;
+}
+
+.section-title-wap .title-user-wap .user-name-b{
+color:#333;
+}
+/* ============================================================ */
+/* section-cbox-wap */
+.section-cbox-b{
+background-color:#f3f3f3;
+}
+.section-cbox-wap .cbox-post-b{
+border:2px solid #ccd4d9;
+background-color:#fff;
+}
+.section-cbox-wap .cbox-post-wap .post-area-wap .area-text-b{
+border:0;
+color:#999;
+}
+/* cbox - prompt */
+.section-cbox-wap .cbox-post-wap .post-area-wap .area-prompt-b{
+background-color:#fef2e1;
+}
+.section-cbox-wap .cbox-post-wap .post-area-wap .area-prompt-wap span{
+color:#ee542a;
+}
+
+.section-cbox-wap .cbox-post-wap .post-action-b{
+border-top:1px solid #ccd4d9;
+background-color:#fafafa;
+}
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-function-wap .function-list-wap .list-upload-b{
+border-right:1px solid #ccd4d9;
+}
+
+/* uploading img */
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-function-wap .function-list-wap .list-upload-img-b{
+border-right:1px solid #ccd4d9;
+}
+
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-issue-wap .issue-btn-wap .btn-mutual-b{
+background-image:url("//statics.05273.cn/statics/images/wapb06.png");
+background-repeat:no-repeat;
+background-size:4.6875em auto;
+}
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-issue-wap .issue-btn-wap .btn-mutual-b:hover{
+background-image:url("//statics.05273.cn/statics/images/wapb07.png");
+background-repeat:no-repeat;
+background-size:4.6875em auto;
+}
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-issue-wap .issue-btn-e .btn-mutual-b,
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-issue-wap .issue-btn-e .btn-mutual-b:hover{
+background-image:url("//statics.05273.cn/statics/images/wapb08.png");
+background-repeat:no-repeat;
+background-size:4.6875em auto;
+}
+/* ============================================================ */
+/* section-list-wap */
+.section-list-wap .list-kinds-wap .kinds-title-b{
+color:#5788aa;
+border-bottom:2px solid #5788aa;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-b{
+border-bottom:1px solid #d9d9d9;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .floor-num-wap{
+color: #cdcdcd;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-header-wap .header-wrap-wap .wrap-msg-wap .msg-name-b{
+color:#333;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-header-wap .header-wrap-wap .wrap-msg-wap .msg-time-b{
+color:#b8b8b8;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-header-wap .header-praise-wap .praise-number-b{
+color:#b8b8b8;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-header-wap .header-praise-e .praise-number-b{
+color:#5788aa;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-cont-wap .cont-text-b{
+color:#333;
+}
+/* build floors */
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-b{
+border:1px solid #ccd4d9;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-wap .build-inner-wap{
+border:1px solid #fff;
+background-color:#f6f6f6;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-wap .build-inner-wap .comment-cont-wap .cont-title-wap .title-name-b{
+color:#333;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-wap .build-inner-wap .comment-cont-wap .cont-title-wap .title-floors-b{
+color:#b8b8b8;
+}
+/* middle floors */
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-wap .build-inner-wap .wrap-build-middle-b{
+border:1px solid #ccd4d9;
+border-top:0;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-build-wrap-wap .wrap-build-wap .build-inner-wap .wrap-build-middle-wap .middle-inner-b{
+border:1px solid #fff;
+border-top:0;
+}
+
+
+/* reply floor */
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-reply-b{
+background-color:#000;
+}
+.section-list-wap .list-kinds-wap .kinds-comment-wap .comment-reply-wap span{
+color:#fff;
+}
+/* ============================================================ */
+/* section-page-wap */
+.section-page-wap .page-count-wap .count-mutual-b{
+background-color:#5788aa;
+color:#fff;
+}
+.section-page-wap .page-count-wap .count-mutual-b:hover{
+background-color:#416a87;
+color:#ccd4d9;
+}
+.section-page-wap .page-count-e .count-loading-b{
+color:#a7b4bc;
+background-color:#f3f3f3;
+}
+/* ============================================================ */
+/* section-service-wap */
+.section-service-wap .service-jump-wap{
+background-color: transparent;
+}
+.section-service-wap .service-jump-wap .jump-text-b{
+color:#333;
+}
+/* ============================================================ */
+/* section-issuelogin-wap */
+.section-issuelogin-b{
+background-color:#fff;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-title-b{
+color:#000;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-user-b{
+border:2px solid #ccd4d9;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-user-wap .user-name-b{
+background-color:#f2f2f2;
+border-bottom:1px solid #ccd4d9;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-user-wap .user-name-wap .name-text-b{
+color:#333;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-user-wap .user-verify-wap .verify-text-b{
+border:0;
+color:#a7b4bc;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-submit-b a{
+background-color:#5788aa;
+color:#fff;
+}
+.section-issuelogin-wap .issue-wrap-wap .wrap-submit-b a:hover{
+background-color:#416a87;
+}
+.section-issuelogin-wap .login-wrap-b{
+border-top:1px solid #d9d9d9;
+}
+.section-issuelogin-wap .login-wrap-wap .wrap-title-b{
+color:#000;
+}
+
+
+/* add-20140723 Being */
+.section-cbox-wap .cbox-post-wap .post-action-wap .action-function-wap .function-list-wap .list-face-b{
+border-right:1px solid #CCD4D9;
+}
+.section-cbox-wap .face-box-wap{
+background-color:#fff;
+}
+.section-cbox-wap .face-box-wap .box-cont-wap{
+background-color:#fff;
+border:2px solid #ccd4d9;
+border-top:1px solid #ccd4d9;
+}
+.section-cbox-wap .face-box-wap .box-cont-wap .cont-list-wap li:hover{
+background-color:#f0f0f0;
+}

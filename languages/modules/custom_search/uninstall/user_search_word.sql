@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `shuyang_user_search_word`;

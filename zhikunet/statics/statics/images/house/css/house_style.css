@@ -1,0 +1,49 @@
+/* �������� */
+.ln24{ height: 24px; line-height: 24px;}
+#hd { margin-bottom: 10px;}
+/* �������� */
+.qtb {}
+.qtb li { float: left; margin-right: 4px; width: 80px; height: 32px; line-height: 32px; background: url(//statics.05273.cn/statics/images/house/qtb.png) repeat-x 0 -32px; text-align: center; }
+.qtb li a { display: block; }
+.qtb .a{ background: url(//statics.05273.cn/statics/images/house/qtb.png) repeat-x 0 0; font-weight: 700;}
+.qtb .a a { color: #FFF; }
+.qtb .y { float: right; width: auto; margin-right: 0; background: no-repeat; }
+.qtb .y .pg { display: none; }
+.qtb .y span strong { color: #FE5B10; }
+.newcgi { overflow:hidden; color: #666; background: #FFF; }
+.newcgi ul { overflow: hidden; _height: 1%; clear: both; }
+.newcgi li { line-height: 30px; border-bottom: 1px dashed #DDD; width: 100%; font-size:14px; }
+.newcgi li .num { font-size: 18px; }
+.newcgi .li2 { float: left; width: 49%; height: 30px;overflow:hidden; }
+.newcgi .li2 span{color:#999;margin-right:5px;}
+.newcgi .tel { float: left; margin: 20px 0 10px 0; padding: 0 0 0 116px; width: auto; height: 38px; line-height: 38px; background: url(//statics.05273.cn/statics/images/house/tel.gif) no-repeat 0 0; font-size: 18px; color: #333; white-space:nowrap; }
+.newcgi .tel em { float: left; padding-right: 20px; background: url(//statics.05273.cn/statics/images/house/tel.gif) no-repeat 100% 0;  }
+.newcgi .tel a{ font-weight: 700; color: #C00; }
+.newcgi .intermediary { float: left; margin-bottom: 10px; padding-left: 10px; border: 1px solid #FCDD93; width: 250px; height: 26px; line-height: 26px; background-color: #FFFBF3; clear: both;}
+.newcgi .y em{color:#049;font-size:14px;}
+#titlebanner { background:#D1E3F1; border: 1px solid #ACD2E9; position:relative;}
+.titlec { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 12px; background:#FFF;margin:10px 15px 10px;padding:10px;}
+#titlebanner span.y{position:absolute;right:30px;bottom:15px;}
+#titlebanner span.y em{font-size:14px;}
+#titlebanner h5 {display: inline-block; float: left; margin: 0 0 0 54px; padding: 0 0 0 5px;font-weight:400;height:}
+#titlebanner h5 span{ border-color: #CFCFCF; border-style: solid solid none none; border-width: 1px 1px 0 0; display: inline-block;line-height: 17px;padding: 3px 4px 2px;}
+#titlebanner h1 span { display: inline-block; position: relative;}
+.hostatus{ font-size: 12px; position: absolute; right: -46px; top: -5px;text-align:center;color:#FFF;width:36px;height:23px;}
+.line { line-height: 30px; padding-left:25px; font-weight:700; font-size:14px;}
+.center { text-align:center;}
+/* ¥��ҳͼƬչʾ */
+.newpic {background: none repeat scroll 0 0 #F4F4F4;border: 1px solid #CCCCCC;width: 664px; text-align: center; vertical-align: middle; padding: 1px;}
+.newpic img {max-width:664px; max-height:466px;}
+/* ¥��չʾҳ��ͼ */
+.h_map {border: 1px solid #CCCCCC;width: 664px; text-align: center; vertical-align: middle; padding: 1px;}
+.map {background: none repeat scroll 0 0 #F7F7F7; border: 1px solid #C7CCD3;border-top:none; width: 942px;min-height: 260px; padding: 8px;}
+.map_container { height: 400px;}
+/* �н��ŵ� */
+.ag_header { height:139px; background: transparent url(//statics.05273.cn/statics/images/house/fcbanner.jpg) no-repeat 0 0; margin-bottom:10px; border-bottom:3px solid #235994 }
+.ag_name{height:108px;position:relative;}
+.ag_name h1{ font:bold 24px Arial,"Microsoft YaHei";color:#000; letter-spacing:1px;left:60px;top:30px; position:absolute;text-shadow:0 1px 2px #fff;}
+.ag_name .tj { position:absolute;left:60px;top:60px;}
+/*¥��ҳ���� mn*/
+.detailbox{clear: both;height: 247px;line-height: 22px;margin-top: 10px;overflow: auto;width: 680px;}
+.dinfo {padding:0px 0px 20px 10px;float:right;width:470px;}
+.dinfo h3{border-bottom: 1px dashed #ACD2E9;font-size:14px;padding-bottom:3px;}

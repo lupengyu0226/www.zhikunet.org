@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('fanghu', '攻击日志', 'fanghu/', 0, '1.0', '攻击日志', '', 0, 0, '2013-07-17', '2020-07-17');

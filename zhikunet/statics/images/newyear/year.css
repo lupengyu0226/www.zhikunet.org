@@ -1,0 +1,77 @@
+@charset "utf-8";
+html,body{width:100%;height:100%;}
+body{margin:0;background:#e10231 url(https://statics.05273.cn/images/newyear/bg2.gif) 0 0 repeat-x;font-size:14px;color:#c8bbce;font-family:"微软雅黑";position:relative}
+input,select,textarea{outline:none;font-family:"微软雅黑"}
+*{padding:0;margin:0}
+ul li{list-style:none}
+img{border:none;vertical-align:middle}
+i,em{font-style:normal}
+a{color:#c8bbce;text-decoration:none;}
+a:hover{color:#c8bbce45c;text-decoration:none;}
+a.fc00{color:#c00}
+a.fff45c{color:#c8bbce45c}
+.ff00{color:#f00}
+.f999{color:#999}
+.f06c{color:#06c}
+.fff45c{color:#c8bbce45c}
+.ffff{color:#c8bbce}
+.px12{font-size:12px}
+.px16{font-size:16px}
+.px20{font-size:20px}
+.px30{font-size:30px}
+.px32{font-size:32px}
+.red{color:#ef1e6f}
+.arial{font-family:Arial, Helvetica, sans-serif}
+.l{float:left}
+.r{float:right}
+.clear{clear:both;height:0;line-height:0;font-size:0}
+.clearfix{zoom:1}
+.clearfix:after{content:"";height:0;clear:both;display:block}
+
+.yeardiv{width:100%;height:100%;background:url(https://statics.05273.cn/images/newyear/bg.png);_background:none}
+.container{width:984px;margin:0 auto;}
+.year-top{height:128px;position:relative}
+.year-top .div1{width:131px;height:100px;background:url(https://statics.05273.cn/images/newyear/topbg1.png) 0 0 no-repeat;position:absolute;left:94px;top:0;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/topbg1.png' ,sizingMethod='crop');}
+.year-top .div2{width:311px;height:100px;background:url(https://statics.05273.cn/images/newyear/topbg2.png) 0 0 no-repeat;position:absolute;left:225px;top:15px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/topbg2.png' ,sizingMethod='crop');}
+.year-top .div3{_width:256px;_height:74px;_position:absolute;_left:550px;_top:20px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/zi4.png' ,sizingMethod='crop');}
+.year-top .txt{width:75px;height:75px;position:absolute;top:26px;opacity:0;_display:none}
+.year-top .txt1{background:url(https://statics.05273.cn/images/newyear/gong.png) 0 0 no-repeat;right:360px;z-index:0}
+.year-top .txt2{background:url(https://statics.05273.cn/images/newyear/he.png) 0 0 no-repeat;right:300px;z-index:1}
+.year-top .txt3{background:url(https://statics.05273.cn/images/newyear/xin.png) 0 0 no-repeat;right:240px;z-index:2}
+.year-top .txt4{background:url(https://statics.05273.cn/images/newyear/chun.png) 0 0 no-repeat;right:180px;z-index:3}
+.year-top .back{width:121px;height:45px;background:url(https://statics.05273.cn/images/newyear/back.png) 0 0 no-repeat;float:right;margin-top:72px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png' ,sizingMethod='crop');}
+#yanhuadiv .yanhua{width:140px;height:132px;background:url(https://statics.05273.cn/images/newyear/yanhua.png) 0 0 no-repeat;position:absolute;opacity:1;}
+#yanhuadiv{width:100%;height:100%;position:fixed;left:0;top:0;overflow:hidden}
+
+.xinzhi{position:relative}
+.xinzhi .xz-top{height:121px;background:url(https://statics.05273.cn/images/newyear/xz1.jpg) 0 0 no-repeat}
+.xinzhi .xz-cen{background:url(https://statics.05273.cn/images/newyear/xz2.jpg) 0 0 repeat-y;min-height:400px;_height:400px;padding:20px 28px 50px;overflow:hidden;zoom:1}
+.xinzhi .xz-cen .l{width:610px;margin-right:40px;margin-left:100px;color:#d07612;font-size:18px;line-height:42px;display:inline}
+.xinzhi .xz-cen .l .content{background:url(https://statics.05273.cn/images/newyear/bg3.png) 0 0 repeat-y;_background:url(https://statics.05273.cn/images/newyear/bg3.gif) 0 0 repeat-y;text-indent:2em}
+.xinzhi .xz-cen .l .from{text-align:right}
+embed{position:relative;z-index:10}
+.video-tit{font-size:18px;color:#ac6a00;text-align:center}
+/*.xinzhi .xz-cen .txtopa{opacity:0}*/
+
+
+.xinzhi .xz-cen .r{width:150px;padding-top:50px}
+.xinzhi .xz-cen .ewm{position:relative;width:150px;height:150px;}
+.xinzhi .xz-cen .opa{position:absolute;width:150px;height:150px;left:0;top:0;background:#fff;opacity:0.5;filter:alpha(opacity:50);z-index:0}
+.xinzhi .xz-cen .img{position:absolute;width:120px;height:120px;left:15px;top:15px;z-index:1}
+.xinzhi .xz-cen .img img{width:120px;height:120px;}
+.xinzhi .xz-cen .ewm-bot{color:#333;font-size:12px;text-align:center;padding-top:10px}
+
+.xinzhi .xz-bot{height:82px;background:url(https://statics.05273.cn/images/newyear/xz3.jpg) 0 0 no-repeat}
+.xinzhi .tu1{position:absolute;width:333px;height:180px;background:url(https://statics.05273.cn/images/newyear/hua.png) 0 0 no-repeat;left:0;top:-300px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/hua.png' ,sizingMethod='crop');}
+.xinzhi .tu2{position:absolute;width:249px;height:100px;background:url(https://statics.05273.cn/images/newyear/yang.png) 0 0 no-repeat;right:120px;top:40px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/yang.png' ,sizingMethod='crop');}
+.xinzhi .tu3{position:absolute;width:168px;height:169px;background:url(https://statics.05273.cn/images/newyear/yang2.png) 0 0 no-repeat;right:30px;bottom:30px;_background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/yang2.png' ,sizingMethod='crop');_bottom:200px}
+
+.footer{color:#c18644;font-weight:bold;padding:20px 0}
+.footer p{height:1px;line-height:0;font-size:0;background:#c18644}

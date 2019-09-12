@@ -1,0 +1,179 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+EM {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+BODY {
+	FONT-FAMILY: simsun,arial,helvetica,clean,sans-serif; BACKGROUND: url(body_bj.gif) #DADADA repeat-y center 50%; FONT-SIZE: 12px
+}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.clear {
+	CLEAR: both
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.h_infoNav {
+	MARGIN: 0px auto; WIDTH: 100%; BACKGROUND: url(n_10.gif) repeat-x 50% bottom; HEIGHT: 32px
+}
+.h_masthead {
+	POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 10px; WIDTH: 978px; PADDING-RIGHT: 0px; BACKGROUND: url(n_10.gif) repeat-x 50% bottom; HEIGHT: 32px; PADDING-TOP: 0px
+}
+.h_masthead P {
+	FLOAT: left; PADDING-TOP: 10px
+}
+.h_infoNav .h_s01 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; BACKGROUND: url(n_12.gif) no-repeat left center; PADDING-TOP: 3px; _padding: 2px 10px 0
+}
+.h_infoNav .h_s02 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 12px; PADDING-RIGHT: 23px; BACKGROUND: url(n_13.gif) no-repeat left center; PADDING-TOP: 3px; _padding: 2px 23px 0 12px
+}
+.h_infoNav .h_set {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; FLOAT: right; PADDING-TOP: 10px
+}
+.h_set .cGray A {
+	PADDING-LEFT: 3px
+}
+.h_set .cRed {
+	PADDING-LEFT: 10px; COLOR: #666
+}
+.h_mainNav {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 970px; PADDING-RIGHT: 0px; FONT-FAMILY: ËÎÌו; HEIGHT: 29px; COLOR: #ddd; PADDING-TOP: 8px
+}
+.h_mainNav SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 19px; PADDING-RIGHT: 0px; BACKGROUND: url(n_11.gif) no-repeat 0px 0px; FLOAT: right; HEIGHT: 13px; PADDING-TOP: 1px
+}
+.h_mainNav UL {
+	WIDTH: 900px; FLOAT: left; PADDING-TOP: 2px
+}
+.h_mainNav LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 9px; PADDING-RIGHT: 6px; BACKGROUND: url(line.gif) no-repeat left center; FLOAT: left; PADDING-TOP: 0px
+}
+.h_mainNav .cRed {
+	COLOR: #ba2636
+}
+.cRed A:link {
+	COLOR: #ba2636
+}
+.cRed A:visited {
+	COLOR: #ba2636
+}
+.cRed A:hover {
+	COLOR: #ba2636
+}
+.cRed A:active {
+	COLOR: #ba2636
+}
+.cDGray {
+	COLOR: #2b2b2b
+}
+.cDGray A:link {
+	COLOR: #2b2b2b
+}
+.cDGray A:visited {
+	COLOR: #2b2b2b
+}
+.cDGray A:hover {
+	COLOR: #2b2b2b
+}
+.cDGray A:active {
+	COLOR: #2b2b2b
+}
+.pic1000 {
+	MARGIN: -3px auto 0px; WIDTH: 980px; OVERFLOW: hidden
+}
+.space10 {
+	LINE-HEIGHT: 0; HEIGHT: 10px; CLEAR: both; FONT-SIZE: 0px
+}
+.space11 {
+	LINE-HEIGHT: 0; HEIGHT: 11235px; CLEAR: both; FONT-SIZE: 0px; BORDER-BOTTOM: #ff0000 1px solid
+}
+.focus2 {
+	BORDER-BOTTOM: #ddd 1px solid; MARGIN: 3px auto 0px; WIDTH: 980px; BACKGROUND: #fff; HEIGHT: 76px
+}
+.focus2 .item {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; WIDTH: 302px; PADDING-RIGHT: 6px; FLOAT: left; PADDING-TOP: 0px
+}
+.focus2 .item IMG {
+	BORDER-RIGHT-WIDTH: 0px; WIDTH: 100px; DISPLAY: inline; FLOAT: left; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 73px; BORDER-LEFT-WIDTH: 0px; MARGIN-RIGHT: 15px
+}
+.focus2 .item em {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 10px; 
+}
+.focus2 .item em A:link {
+	COLOR: #BA2636
+}
+.focus2 .item em A:visited {
+	COLOR: #BA2636
+}
+.focus2 .item em A:hover {
+	COLOR: #BA2636
+}
+.focus2 .item em A:active {
+	COLOR: #BA2636
+}
+.focus2 .item P {
+	LINE-HEIGHT: 18px; COLOR: #666
+}
+
+
+
+
+.chNavBar {
+	POSITION: relative; MARGIN: 0px auto; WIDTH: 980px; BACKGROUND: url(chNavbar_bg.png) #6c6c6c no-repeat 0px 0px; HEIGHT: 32px
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.clearfix {
+	DISPLAY: inline-block
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}
+.chNav2 {
+	MARGIN-TOP: 8px; PADDING-left: 150px; FLOAT: left; HEIGHT: 20px
+}
+.chNav2 A {
+	LINE-HEIGHT: 16px; COLOR: #666666; FONT-SIZE: 12px
+}
+.chNav2 A:hover {
+	COLOR: #AF0706; TEXT-DECORATION: underline
+}
+
+.chNav {
+	MARGIN-TOP: 8px; PADDING-RIGHT: 4px; FLOAT: right; HEIGHT: 20px
+}
+.chNav LI {
+	PADDING-RIGHT: 8px; FLOAT: left
+}
+.chNav LI A {
+	LINE-HEIGHT: 16px; COLOR: #666666; FONT-SIZE: 14px
+}
+.chNav LI A:hover {
+	COLOR: #AF0706; TEXT-DECORATION: underline
+}

@@ -1,0 +1,62 @@
+    <!-- 版权 -->
+        	<div id="copyright" class="copyright">
+		<div class="layout">
+			<a href="https://www.05273.cn/about/aboutus/" target="_blank">关于我们</a> |  <a href="https://www.05273.cn/about/contactus/" target="_blank">联系方式</a> |  <a href="https://www.05273.cn/about/copyright/" target="_blank">版权声明</a> |  <a href="https://www.05273.cn/about/adsen/" target="_blank">广告投放</a> |  <a href="https://www.05273.cn/about/partners/" target="_blank">合作伙伴</a> |  <a href="https://www.05273.cn/about/weixin/" target="_blank">微信平台</a> |  <a href="https://www.05273.cn/about/job/" target="_blank">诚聘英才</a> |  <a href="https://www.05273.cn/index.php?app=link" target="_blank">友情链接</a>
+|  <a href="https://www.05273.cn/sitemap.html" target="_blank">网站地图</a>
+|  <a href="https://www.05273.cn/rss/" target="_blank">RSS订阅</a>
+|  <a href="https://wap.05273.cn/" target="_blank">手机站</a>
+		</div>
+  	<div class="en">Copyright &copy; 2007-2019 05273.cn All Rights Reserved.  </div>
+    	<div>
+		 苏ICP备18031647号-1 <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32132202000115" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//statics.05273.cn/images/gab.png" style="float:left;"/>苏公网安备 32132202000115号</a> <a href="https://www.05273.cn/special/wenming/" target="_blank">文明建网自律公约</a> <a href="https://www.05273.cn/special/jubao/" target="_blank">举报</a>
+		</div>
+	</div>
+
+
+    <script type="text/javascript">  
+        Qfast.add('fx',{path:"http://pic.05273.cn/statics/css/2014style/js/plusfx1.0.min.js",type:"js"});
+        Qfast.add('widgets',{path:"http://pic.05273.cn/statics/css/2014style/js/Terminator2.2.min.js",type:"js",requires:['fx']});
+
+Qfast(false,'widgets',function(){
+        K.tabs({id:'foucs',conId:"focusimg",tabId:"focusbtn",tabTn:"a",conCn:'.con',auto:1,effect:'fade',eType:'click',pageBt:true,interval:3000})
+		K.tabs({id: 'tab',tabId: "cardBtn1",tabCn:'.tabBtn',conId: "cardBody1",conCn: '.tabBody',eType: 'mouseover', auto: 0,current: 0,interval: 3000})
+    })
+
+        //微资讯
+jQuery(".shList dl").bind("mouseover",function(){
+    jQuery(this).parent().find("dl").removeClass("selected");
+    jQuery(this).siblings('dl').find('a').eq(0).removeClass('blue');
+    jQuery(this).addClass("selected");
+    jQuery(this).find('span').eq(1).show();
+    jQuery(this).find('a').eq(0).addClass('blue');
+});
+jQuery(".shList dl").bind("mouseover",function(){
+    if(jQuery(this).hasClass("selected")){
+        jQuery(this).addClass("hover");
+    }
+});
+jQuery(".shList dl").bind("mouseout",function(){
+    if(jQuery(this).hasClass("hover")){
+        jQuery(this).removeClass("hover");
+        jQuery(this).find('span').eq(1).hide();
+    }
+    if(jQuery(this).hasClass('selected')){
+        jQuery(this).find('a').eq(0).addClass('blue');
+        jQuery(this).siblings('dl').find('a').removeClass('blue');
+    }
+});
+
+    </script>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7c6dc3238ba997d3854da80efd951702";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>

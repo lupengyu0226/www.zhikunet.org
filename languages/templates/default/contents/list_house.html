@@ -1,0 +1,164 @@
+{template "content","headermoxing_list"}
+<style>
+/*楼盘list*/
+.loupanUL{}
+.loupanUL:after{content:'\0020';display:block;clear:both;height:0;}
+.loupanItem{clear:both;float:left;width:819px;padding:14px 0 12px 10px;border-bottom:1px dotted #d1d1d1;z-index:10;}
+.houselist ul{margin-left: 14px;margin-right: 24px; padding: 14px 0;}
+	.loupanItem .i_pic{position:relative;width:200px;height:120px; float:left;}
+		.loupanItem .i_pic img{vertical-align:middle;}
+		.loupanItem .i_pic:hover img{border-color:#ba2636;}
+		.icon_xinpan{width:48px;height:48px;position:absolute;}
+		.icon_xinpan span{display:none;}
+		
+	.i_title{width:310px;float:left;padding-left:10px;padding-top:5px;}
+		.descBody{width:315px; float:left;}
+		.descBody h3{float:left; height:auto;line-height:18px; font-size:16px; overflow:hidden; padding-bottom:10px;}
+		.descBody h3 a{text-decoration:none;font-weight: bold}
+		.descBody p{color:#444;line-height:22px;padding-left:12px;clear:both;}
+	.i_r{width:90px;float:right;border:1px solid #E2E2E2;overflow:hidden;}
+		.i_jiage{font-size:16px;display:block;color: white;text-align: center; background: #399CEA;font-weight:700}
+		.i_jjshow { font-size:16px;color:#FF0000;text-align: center; padding-top:6px; padding-bottom:6px;}
+		.c_phone {color: #BA2636}
+	.i_tptj,.i_zxzx{width:100%;height:22px;line-height:22px;text-indent:20px;}
+	.i_zxzx{background-position:-201px -112px;}
+	.i_tptj span,.i_zxzx span{color:#cc0000}
+	.aHover{background:#FBFBFB;}
+		.aHover .titleRow h3 A{color:#ba2636;}
+		.loupanItem:hover {background:#F1F1F1;}
+		
+	.ct_w690 .loupanItem{width:690px;}
+	.ct_w690 .i_title{width:320px;float:left;}
+	
+.paixu{clear:both;background:#f7f7f7;height:25px;*zoom:1;}
+	.l_px_fyxx,.l_px_dj,.l_px_mj,.l_px_zj,.l_px_cz,.l_px_80,.l_px_92{color:#999;float:left;_display:inline;height:14px;line-height:14px;text-align:center;border-right:1px solid #d8d8d8;margin-top:7px;overflow:hidden;}
+	.l_px_fyxx a,.l_px_dj a,.l_px_mj a,.l_px_zj a, .l_px_cz a{color:#999;text-decoration:none;}
+	.l_px_fyxx{width:435px;}
+	.l_px_dj{width:130px;}
+	.l_px_mj{width:92px;}
+	.l_px_zj{width:130px;border:none;}
+	.l_px_cz{width:60px;}
+	.l_px_80{width:80px;}
+	.l_px_92{width:92px;}
+	.l_select{width:23px;float:left;padding-left:7px;padding-top:44px;color:#999;}
+	
+.fullList{clear:both;width:950px;margin:0 auto;*zoom:1;}
+	.fullList .paixu{border-top:1px solid #F3850C;}
+	.fullList .paixu .l_select{width:60px;padding-top:2px;}
+	.fullList .paixu .l_px_fyxx{width:556px;border-right:1px solid #d8d8d8;}
+	.fullList .paixu .l_px_cz{border-left:1px solid #d8d8d8;border-right:none;}
+	.fullList .paixu .l_px_dj{width:68px;}
+	.fullList .paixu .l_px_mj{width:104px;}
+	.fullList .paixu .l_px_zj{width:90px;}
+	.fullList .loupanItem{width:950px;height:116px;}
+		.fullList .loupanItem .i_title{width:475px;}
+		.fullList .loupanItem .i_mianji{width:104px;}
+		.fullList .loupanItem .i_zongjia{width:90px;}
+		.fullList .loupanItem .i_cz{width:58px;text-align:center;padding-top:46px;}
+		.fullList .pageBar{padding-top:24px;margin-bottom:15px;}
+		.fullList .pageBar .listCompare{width:130px;border:none;padding:0;margin-top:-3px;height:24px;overflow:hidden;}
+		.fullList .pageBar .list_compBtn{width:90px;}		
+		
+	.ct_w690 .loupanItem{width:690px;}
+	.ct_w690 .i_title{width:328px;float:left;}
+	</style>
+  <!--楼盘list-->
+<div id="pagebody_extbg" class="y_tagbox">
+	<div class="tag_dh">
+    <a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表
+    </div>
+
+<div class="y_tagleft">
+<div class="box_l col_590">
+<div class="global_model">
+       <div class="mod houselist"> 
+		{edi:content action="lists" catid="60" num="10" order="id DESC" page="$page" moreinfo="1"}
+<ul class="loupanUL addaHover fix">
+         {loop $data $k $v}
+		   
+                                                <li class="loupanItem">
+                    <div class="i_pic">
+                        <div class="icon_xinpan"><span>新盘</span></div>
+                        <A href="{$v['url']}" target="_blank"><IMG alt="{str_cut($v[title],40,'')}" src="{thumb($v['thumb'],200,120)}" width="200" height="120" /></A>
+                    </div>
+                    <div class="i_title">
+                        <div class="descBody">
+                        	<h3>楼盘名称：<A href="{$v['url']}" target="_blank" title="{str_cut($v[title],40,'')}"><strong>{str_cut($v[title],40,'')}</strong></A> [{$v['house_quyu']}]<img src="//statics.05273.cn/statics/images/house/{$v['house_zhuangtai']}w.gif"/></h3>
+                            <P>开 发 商：<em class="c_3e">{$v['kaifashang']}</em></P>
+                            <P>售楼热线：<em class="f14 fb c_phone">{$v['dianhua']}</em></P>
+                            <P>售楼地址：<em class="c_3e">{$v['xiangmudizhi']}</em></P>
+                           
+                        </div>
+                    </div>
+                    <div class="i_r">
+                        <div class="i_jiage">
+                            当前均价
+                        </div>                        
+                        <div class="i_jjshow">
+                            <strong>{$v['jiage']}</strong>元/㎡
+                        </div>
+                       
+                    </div>
+                </li>
+
+
+            
+
+            
+
+            {if $n%5==0}
+
+            <li class="bk20 hr"></li>
+
+            {/if}
+
+            {/loop}
+
+          </ul>
+
+          {/edi} </div> </div>
+<div id="pages" class="text-c">{$pages}</div>
+</div>
+<div class="clear"></div>
+</div><!--column end-->
+<div class="y_tagright">
+            <div class="m_right02">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+            	<h2>广告</h2>
+                <ul>
+<!--#include virtual="/caches/posid/quanju250.html"-->
+				</ul>
+            </div>
+            <div class="clear"></div>
+    <div class="m_right01">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+            	<h2>频道总排行</h2>
+                <ul>
+    	{edi:content action="lists" catid="$catid" num="10" order="id DESC" page="$page" moreinfo="1"}
+				{loop $data $r}
+					
+						<li><span class="box_r">{date('m-d',$r[inputtime])}</span><a href="{$r[url]}" target="_blank">{str_cut($r[title],48,'')}</a></li>
+				{/loop}
+				</ul>
+            {/edi}
+            </div>
+            <div class="clear"></div>
+            <div class="m_right01">
+            	<div class="h02_left"></div>
+                <div class="h02_right"></div>
+                <!--月度评论热点-->
+
+            	<h2>频道本月排行</h2>
+                <ul>
+				{loop $data $r}
+					
+						<li><span class="box_r">{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],48,'')}</a></li>					
+				{/loop}
+            </ul>
+            {/edi}
+            </div>
+
+</div>
+{template "content","footer"}

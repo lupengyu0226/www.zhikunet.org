@@ -1,0 +1,120 @@
+{template "content","header"}
+{template "content","header_top"}
+{template "content","header_logo"}
+{template "content","header_nav"}
+
+<!--START:当前位置-->
+<div class="crumb">
+<div class="breadcrumb"><a href="">首页</a>{if $catid} &gt; <a href="{$CATEGORYS[$catid][url]}">{$CATEGORYS[$catid][catname]}</a>{/if} &gt; 排行榜</div>
+</div>
+<!--END:当前位置-->
+
+<!--START:主区域-->
+<div class="row left-nav-ct clearfix">
+<!--START:左边导航-->
+<div class="left-nav">
+<ul>
+<li {if $catid==0}class="current"{/if}><span class="letter"><a href="{APP_PATH}rank/">全站</a></span></li>
+{loop $CATEGORYS $cat}
+{if $cat[parentid]==0&&$cat[parentid]==0&&$cat[type]!=1}
+<li {if $catid==$cat[catid] }class="current"{/if}><span class="letter"><a href="{APP_PATH}rank/{$cat[catdir]}/">{$cat[catname]}</a></span></li>
+{/if}
+{/loop}
+</ul>
+<span class="left-nav-bom"></span>
+</div>
+<!--END:左边导航-->
+<!--START:右边列-->
+<div class="col-840 clearfix">
+{if $catid==0}
+{php $i=1;}
+{loop $CATEGORYS $cat}
+{if $cat[parentid]==0&&$cat[parentid]==0&&$cat[type]!=1}
+<span class="blank10"></span>
+<div class="area area-nobd">
+  <div class="hd">
+    <h2><a href="{$cat[url]}">{$cat[catname]}</a></h2>
+    <a href="{APP_PATH}rank/{$cat[catdir]}/" class="fr font12">排行TOP100</a></div>
+</div>
+<div class="widthbg clearfix">
+<div class="rank-panel rank-panel-left">
+  <div class="hd">
+    <h3>点击榜</h3>
+    <ul id="rank-panel-click-{$i}">
+      <li class="current">24小时点击排行</li>
+      <li>本周点击排行</li>
+      <li>本月点击排行</li>
+    </ul>
+  </div>
+  <div class="bd" id="rank-panel-click-{$i}-body">
+    <div class="rhd"><span class="fl">标题</span><span class="linum">点击数</span></div>
+    <ul class="list rank-list">
+      {edi:content action="hits" catid="$cat[catid]" num="10" order="dayviews DESC" }
+      {loop $data $r}
+      <li><span class="ranknum{if $n>3} rankred{/if}">{$n}</span><a target="_blank" href="{$r[url]}">{$r[title]}</a><span class="linum">{$r[dayviews]}</span></li>
+      {/loop}
+      {/edi}
+    </ul>
+    <ul class="list rank-list" style="display:none;">
+      {edi:content action="hits" catid="$cat[catid]" num="10" order="weekviews DESC" }
+      {loop $data $r}
+      <li><span class="ranknum{if $n>3} rankred{/if}">{$n}</span><a target="_blank" href="{$r[url]}">{$r[title]}</a><span class="linum">{$r[weekviews]}</span></li>
+      {/loop}
+      {/edi}
+    </ul>
+    <ul class="list rank-list" style="display:none;">
+      {edi:content action="hits" catid="$cat[catid]" num="10" order="monthviews DESC" }
+      {loop $data $r}
+      <li><span class="ranknum{if $n>3} rankred{/if}">{$n}</span><a target="_blank" href="{$r[url]}">{$r[title]}</a><span class="linum">{$r[monthviews]}</span></li>
+      {/loop}
+      {/edi}
+    </ul>
+    <script language="javascript">inittab('rank-panel-click-{$i}')</script> 
+  </div>
+</div>
+<div class="rank-panel">
+  <div class="hd">
+    <h3>最新更新</h3>
+  </div>
+  <div class="bd" id="rank-panel-comment-{$i}-body">
+    <div class="rhd"><span class="fl">标题</span></div>
+    <ul class="list rank-list">
+    {edi:content action="lists" catid="$cat[catid]" num="10" order="id DESC" }
+        {loop $data $r}
+      <li><span class="ranknum{if $n>3} rankred{/if}">{$n}</span><a target="_blank" href="{$r[url]}">{$r[title]}</a></li>
+        {/loop}
+     {/edi}
+    </ul>
+  </div>
+</div>
+</div>
+{php $i++;}
+{/if}
+{/loop}
+{php unset($i);}
+{else}
+<div class="list-top100">
+<div class="tbar">
+<h1>{$CATEGORYS[$catid][catname]} 点击<strong class="cred">TOP100</strong></h1>
+<div>
+<a href="{APP_PATH}rank/{$CATEGORYS[$catid][catdir]}/dayviews.html" {if $order=='dayviews'}class="current"{/if}>日</a>
+<a href="{APP_PATH}rank/{$CATEGORYS[$catid][catdir]}/weekviews.html" {if $order=='weekviews'}class="current"{/if}>周</a>
+<a href="{APP_PATH}rank/{$CATEGORYS[$catid][catdir]}/monthviews.html" {if $order=='monthviews'}class="current"{/if}>月</a>
+<a href="{APP_PATH}rank/{$CATEGORYS[$catid][catdir]}/views.html" {if $order=='views'}class="current"{/if}>全部</a>
+<span class="last"></span>
+</div>
+</div>
+<ul>
+  {php $orders="$order DESC";}
+  {edi:content action="hits" catid="$catid" num="100" order="$orders" }
+    {loop $data $r}
+      <li><span class="rnum{if $n<=3} red{/if}">{$n}</span><a target="_blank" href="{$CATEGORYS[$r[catid]][url]}" class="list-channel-name">[{$CATEGORYS[$r[catid]][catname]}]</a> <a target="_blank" href="{$r[url]}">{$r[title]}</a><span class="date">{date('Y-m-d H:i:s',$r[inputtime])}</span><span class="click-num">{$r[$order]}</span><span class="cmt-num"></span></li>      
+      
+    {/loop}
+      {/edi}
+</ul>
+</div>
+{/if}
+</div>
+</div>
+{template "content","footer"}

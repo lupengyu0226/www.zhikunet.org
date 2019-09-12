@@ -1,0 +1,92 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" src="{JS_PATH}admin_common.js"></script> 
+<link href="{CSS_PATH}dialog.css" rel="stylesheet" type="text/css" /> 
+<script language="javascript" type="text/javascript" src="{JS_PATH}dialog.js"></script>
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">全部消息</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="init"} class="active"{/if}><a class="btn" href="message-init.html">全部消息</a></li>
+                            <li{if ROUTE_A=="inbox"} class="active"{/if}><a class="btn" href="message-inbox.html">收件箱</a></li>
+                            <li{if ROUTE_A=="outbox"} class="active"{/if}><a class="btn" href="message-outbox.html">发件箱</a></li>
+                            <li{if ROUTE_A=="group"} class="active"{/if}><a class="btn" href="message-group.html">系统消息</a></li>
+                            <li{if ROUTE_A=="send"} class="active"{/if}><a class="btn" href="message-send.html">发送短消息</a></li>
+                        </ul>
+                    </div>
+                    <div class="list-view">
+                    {if $infos}
+                    <form name="myform" id="myform" action="{PASSPORT_PATH}index.php?app=message&controller=index&view=delete" method="post" onsubmit="checkuid();return false;">
+                                            <ul class="list mt10">
+                    {loop $infos $info} 
+                    {php $userid = get_memberinfo_buyusername($info['send_from_id'],'userid')}
+                    {php $nickname = get_memberinfo_buyusername($info['send_from_id'],'nickname')}
+                    {php $user_pic = get_memberavatar($userid,1,90);}
+                            <li>
+                                <div class="check">
+                                    <input class="message-key" type="checkbox" name="messageid[]" value="{$info['messageid']}">
+                                </div>
+                                <a class="avt" href="{PASSPORT_PATH}index.php?app=message&controller=index&view=read&messageid={$info['messageid']}" title="{$info['send_from_id']}">
+                                    <img src="{$user_pic}" alt="{$info['send_from_id']}" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'">
+                                </a>
+                                <dl>
+                                    <dt>
+                                        <span class="fr">{date('Y-m-d H:i:s',$info['message_time'])}</span>{$info['send_from_id']}：
+                                        <a href="{PASSPORT_PATH}index.php?app=message&controller=index&view=read&messageid={$info['messageid']}">{$info['subject']}{if $info['status']!=2 && $info['reply_num']!=0} ({$info['reply_num']}){/if}</a>
+                                {if $info['status']==1}
+                                      <span class="unread">未读</span>
+                                {/if}
+                                            </dt>
+                                            <dd>
+                                                {str_cut($info['content'],160,'...')}
+                                                <a class="ml20" href="{PASSPORT_PATH}index.php?app=message&controller=index&view=read&messageid={$info['messageid']}">查看详细 &gt;</a>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                {/loop}
+                                    </ul>
+                                    <div class="mt20" style="padding-left:10px;">
+                                        <a href="javascript:void(0);" onClick="javascript:$('input[type=checkbox]').prop('checked', true)">全选</a>/<a href="javascript:void(0);" onClick="javascript:$('input[type=checkbox]').prop('checked', false)">取消</a> &nbsp;
+                                        <input name="submit" type="submit" class="button" value="删除选中" onClick="return confirm('确认要删除 『 选中 』 吗？')">
+                                    </div>
+                                    <div class="pagenavi">{$pages}</div>
+                                </form>
+                                {else}
+                                    <div class="bd">
+                                        <div class="uc-empty" style=" line-height:100px; text-align:left; padding-left:20px;">暂无信息...</div>
+                                    </div>
+                                {/if}
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+function read(id, name) {
+	window.top.art.dialog({id:'sell_all'}).close();
+	window.top.art.dialog({title:'查看详情'+name+' ',id:'edit',iframe:'?app=message&controller=index&view=read&messageid='+id,width:'700',height:'450'}, function(){var d = window.top.art.dialog({id:'see_all'}).data.iframe;var form = d.document.getElementById('dosubmit');form.click();return false;}, function(){window.top.art.dialog({id:'see_all'}).close()});
+}
+function checkuid() {
+	var ids='';
+	$("input[name='messageid[]']:checked").each(function(i, n){
+		ids += $(n).val() + ',';
+	});
+	if(ids=='') {
+		window.top.art.dialog({content:'请选择再执行操作',lock:true,width:'200',height:'50',time:1.5},function(){});
+		return false;
+	} else {
+		myform.submit();
+	}
+}
+
+</script>
+{template "member","footer"}

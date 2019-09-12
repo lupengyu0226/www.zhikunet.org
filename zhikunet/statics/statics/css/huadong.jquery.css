@@ -1,0 +1,59 @@
+/*****************/
+/** huadong CSS **/
+/*****************/
+#huadong {
+	padding:5px;
+	border:1px solid #F4F4F4;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+#huadong .clr{clear:both}
+
+#huadong #bgSlider {
+	width:345px;
+	height:35px;
+	background:transparent url('//statics.05273.cn/statics/images/huadong/sprites.png') no-repeat 0 -35px;
+	float:left
+}
+#huadong #Slider.on {
+	width:58px;
+	height:34px;
+	background:transparent url('//statics.05273.cn/statics/images/huadong/sprites.png') no-repeat -33px 0;
+	cursor:e-resize;
+	transition: left 0s;
+    -webkit-transition: left 0s;
+}
+#huadong #Slider {
+	width:58px;
+	height:34px;
+	background:transparent url('//statics.05273.cn/statics/images/huadong/sprites.png') no-repeat -33px 0;
+	cursor:e-resize;
+	transition: left 1s;
+    -webkit-transition: left .5s;
+}
+
+#huadong #Icons {
+	float:left;
+	width:16px;
+	height:22px;
+	background:transparent url('//statics.05273.cn/statics/images/huadong/sprites.png') no-repeat 0 0;
+	margin-top:7px;
+	margin-left:10px;
+}
+
+#huadong #TxtStatus {
+	width:202px;
+	margin-top:7px;
+	text-align:center;
+	font-family:Verdana;
+	font-size:14px;
+	float:left
+}
+
+/** States **/
+#huadong .dropSuccess {
+	color:#568E2F
+}
+#huadong .dropError {
+	color:#FF0000
+}

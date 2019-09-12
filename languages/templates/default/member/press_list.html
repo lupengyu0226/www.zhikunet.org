@@ -1,0 +1,42 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">我的提交</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="account_press"} class="active"{/if}><a class="btn" href="member-account_press.html">提交稿件</a></li>
+                            <li{if ROUTE_A=="press"} class="active"{/if}><a class="btn" href="member-press.html">我的提交</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bd uc-wp-list">
+                {if $presslist}
+                <ul class="live-list">
+                {loop $presslist $k $v}
+                    	<li>
+                            <div class="s-title">
+                                <h3>{$v[title]}</h3>
+                                <p class="live-teacher">提交时间：{format::date($v['addtime'], 1)} | <a href="{$v[url]}" target="_blank">查看</a> | <font style="color:#F00; font-size:12px;font-family:Georgia,Arial; font-weight:700"><?php if ($v['passed']==0) {echo "正在处理中";} elseif ($v['passed']==1) {echo "已经处理";}?></font></p>
+                                <p>{if $v['passed']==0}<a class="fr" href="index.php?app=member&controller=index&view=press&id={$v['id']}">{L('delete')}</a>{/if}</p>
+                            </div>
+                        </li>
+                     {/loop}
+					</ul>
+                    <div class="pagenavi">{$pages}</div>
+                     {else}
+                	<div class="uc-empty">暂无稿件请求，您可以去<a href="member-account_press.html">提交稿件请求</a></div>
+                 {/if}
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

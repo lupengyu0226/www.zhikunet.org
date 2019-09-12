@@ -1,0 +1,153 @@
+{template "weather","header"}
+<div class="page" style="background-image: url(//statics.05273.cn/statics/images/weather/nothing_baitian.jpg);">
+    <!-- header -->
+    <div class="header">
+        <!-- layout -->
+        <div class="layout yh">
+            <!-- logo -->
+            <div class="tx-logo">
+                <h1><a href="index.html"></a></h1>
+            </div>
+            <!-- /logo -->
+            <!-- mod-today -->
+            <div class="mod-today">
+                <div class="hd cf">
+                    <!-- 实况天气 -->
+                    <div id="cur-box" class="cur-box fl">
+                        <dl class="cur-name cf">
+                            <dt class="fl posr">
+                                <h2 class="city yh f30"></h2>
+                                <i class="posa line-r"></i>
+                            </dt>
+                            <dd class="fl l18">
+                                <p><span class="full-date"></span></p>
+                                <p><span class="sk-date"></span></p>
+                            </dd>
+                        </dl>
+                        <dl class="cur-info yh cf">
+                            <dt class="fl">
+                                <div class="big-ico"></div>
+                            </dt>
+                            <dd class="fl tq">
+                                <div class="w-wd f20"></div>
+                                <div class="w-sd f16"></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!-- /实况天气 -->
+
+                    <!-- 搜索 -->
+                    <div class="sidebar posr yh f14 fr">
+                        <dl class="search-box">
+                            <dt>
+                                <ul class="stab-hd cf">
+                                    <li class="current">城市天气</li>
+                                </ul>
+                            </dt>
+                            <dd class="cf posr">
+                                <input type="text" id="wSearch" class="searchTxt" value="输入地名、拼音均可" />
+                                <a href="javascript:;" class="wSearchBtn" id="wSearchBtn" target="_blank">查询</a>
+                                <i class="posa line-t"></i>
+                                <i class="posa line-r"></i>
+                                <i class="posa line-b"></i>
+                                <i class="posa line-l"></i>
+                            </dd>
+                        </dl>
+                        <div id="videob-box" class="video-box posa">
+                        <script type="text/javascript">
+                            /*382*185 创建于 2018/4/9*/
+                            var cpro_id = "u3410384";
+                        </script>
+                        <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script>
+                        </div>
+                        <!-- 推荐城市列表 -->
+                        <ul id="suggest-box" class="suggest-box posa"></ul>
+                        <div id="city-box" class="city-box posa">
+                            <ul class="city-list cf">
+                                <li><a href="?icity=01010101" name="北京市">北京</a></li>
+                                <li><a href="?icity=01012601" name="上海市">上海</a></li>
+                                <li><a href="?icity=01013307" name="昆明市">昆明</a></li>
+                                <li><a href="?icity=01013401" name="杭州市">杭州</a></li>
+                                <li><a href="?icity=01010704" name="广州市">广州</a></li>
+                                <li><a href="?icity=01012703" name="成都市">成都</a></li>
+                                <li><a href="?icity=01012507" name="西安市">西安</a></li>
+                                <li><a href="?icity=01011704" name="南京市">南京</a></li>
+                                <li><a href="?icity=01010715" name="深圳市">深圳</a></li>
+                                <li><a href="?icity=01010401" name="重庆市">重庆</a></li>
+                                <li><a href="?icity=01011502" name="长沙市">长沙</a></li>
+                                <li><a href="?icity=01011912" name="沈阳市">沈阳</a></li>
+                                <li><a href="?icity=01010508" name="厦门市">厦门</a></li>
+                                <li><a href="?icity=01011410" name="武汉市">武汉</a></li>
+                                <li><a href="?icity=01011008" name="海口市">海口</a></li>
+                                <li><a href="?icity=01013213" name="乌鲁木齐">乌鲁木齐</a></li>
+                                <li><a href="?icity=01012310" name="青岛市">青岛</a></li>
+                                <li><a href="?icity=01011904" name="大连市">大连</a></li>
+                                <li><a href="?icity=01011303" name="哈尔滨市">哈尔滨</a></li>
+                                <li><a href="?icity=01011014" name="三亚市">三亚</a></li>
+                                <li><a href="?icity=01011603" name="长春市">长春</a></li>
+                                <li><a href="?icity=01010811" name="南宁市">南宁</a></li>
+                                <li><a href="?icity=01010903" name="贵阳市">贵阳</a></li>
+                                <li><a href="?icity=01010501" name="福州市">福州</a></li>
+                                <li><a href="?icity=01011216" name="郑州市">郑州</a></li>
+                                <li><a href="?icity=01012305" name="济南市">济南</a></li>
+                                <li><a href="?icity=01010806" name="桂林市">桂林</a></li>
+                                <li><a href="?icity=01012901" name="天津市">天津</a></li>
+                                <li><a href="?icity=01012408" name="太原市">太原</a></li>
+                                <li><a href="?icity=01011806" name="南昌市">南昌</a></li>
+                                <li><a href="?icity=01013003" name="拉萨市">拉萨</a></li>
+                                <li><a href="?icity=01012207" name="西宁市">西宁</a></li>
+                                <li><a href="?icity=01013101" name="香港">香港</a></li>
+                                <li><a href="?icity=01010301" name="澳门">澳门</a></li>
+                                <li><a href="?icity=0101170701" name="沭阳县">沭阳</a></li>
+                            </ul>
+                        </div>
+                        <!-- 推荐城市列表 -->
+                    </div>
+                    <!-- /搜索 -->
+                </div>
+                <div class="bd">
+                    <!-- 48h天气 -->
+                    <dl id="h48-tab" class="h48-tab posr">
+                        <dt class="cf">
+                            <h2 class="fl yh f16">
+                                <span>48小时预报</span>
+                                <i class="posa line-t"></i>
+                                <i class="posa line-r"></i>
+                                <i class="posa line-l"></i>
+                            </h2>
+                            <h2 class="fl yh f16">
+                                <a class="week-link" href="javascript:;">一周预报</a>
+                                <i class="posa line-t"></i>
+                                <i class="posa line-r"></i>
+                            </h2>
+                        </dt>
+                        <dd class="wlist wlist-1 cf f14">
+                            <div class="item"><div class="item-inner"><div class="i-day"></div><div class="small-ico"></div><div class="i-weather"><span class="i-state f18"></span>&nbsp;<span class="i-wind f14"></span></div><div class="i-wd"></div></div><i class="posa line-r"></i></div>
+                            <div class="item"><div class="item-inner"><div class="i-day"></div><div class="small-ico"></div><div class="i-weather"><span class="i-state f18"></span>&nbsp;<span class="i-wind f14"></span></div><div class="i-wd"></div></div><i class="posa line-r"></i></div>
+                            <div class="item"><div class="item-inner"><div class="i-day"></div><div class="small-ico"></div><div class="i-weather"><span class="i-state f18"></span>&nbsp;<span class="i-wind f14"></span></div><div class="i-wd"></div></div><i class="posa line-r"></i></div>
+                            <div class="item"><div class="item-inner"><div class="i-day"></div><div class="small-ico"></div><div class="i-weather"><span class="i-state f18"></span>&nbsp;<span class="i-wind f14"></span></div><div class="i-wd"></div></div><i class="posa line-r"></i></div>
+
+                            <i class="posa line-t"></i>
+                        </dd>
+                        <dd class="tab-hz f14">合作：中国天气网&nbsp;PM25.in</dd>
+                    </dl>
+                    <!-- /48h天气 -->
+                </div>
+            </div>
+            <!-- /mod-today -->
+
+        </div>
+        <!-- /layout -->
+    </div><div></div>
+    <!-- /header -->
+    
+    <!-- main -->
+    <div class="main">
+        <!-- layout -->
+        <div class="layout">
+           <!--#include virtual="/caches/posid/tianqizixun.html"--> 
+        </div>
+        <!-- /layout -->
+    </div>
+    <!-- /main -->
+{template "weather","footer"}

@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('mobile', '移动门户', 'mobile/', 0, '3.0', '移动门户', '', 0, 0, '2015-11-08', '2015-11-08');

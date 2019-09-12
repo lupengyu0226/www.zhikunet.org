@@ -1,0 +1,111 @@
+{template "mips","header_show"}
+                {php $commentid=id_encode('content_'.$catid,$id,$siteid)}
+                {edi:comment action="get_comment" commentid="$commentid"}
+                {php $comment = $data;}
+                {/edi}
+                <div class="submenushow">
+                  <div class="title">
+                    <div class="subnavshow"><a href="https://mip.05273.cn">首页</a> &gt; {mip_pos($catid)} 正文</div>
+                  </div>
+                </div>   
+                <div class="mip-article-content">
+                    <!-- mip-article-content Start -->
+                    <div class="mip-article">
+                        <h2>{$title}</h2>
+                        <div class="articleInfo clearfix">
+                            <span class="fl gray">
+                                {$inputtime}&nbsp;&nbsp;{if $copyfrom}来源：{$copyfrom}{/if}
+                            </span>
+                            <a href="https://mip.05273.cn/index.php?app=mobile&amp;controller=index&amp;view=comment_list&amp;commentid={$commentid}"><span class="comments fr"><i class="icono-comment"></i>{if $comment[total]}{$comment[total]}{else}0{/if}</span></a>
+                        </div>                                
+                        <div class="articleTxt">
+                       {if $apivideo} <mip-video poster="{if $thumb}{$thumb}{else}//statics.05273.cn/images/mip/mipvideo.jpg{/if}" controls layout="responsive" width="640" height="380" src="https://api.05273.cn/wap.php?url={$apivideo}"></mip-video>{/if}
+                        {if $thumb} <mip-img src="{$thumb}"></mip-img>{/if}
+                        <p>本人所在地：{$suozaidi}</p>
+                        <p>征友城市：{$chengshi}</p>
+                        <p>性别：{$xingbie}</p>
+                        <p>年龄：{$nianling}</p>
+                        <p>身高(厘米)：{$shengao}</p>
+                        <p>学历：{$xueli}</p>
+                        <p>月薪：{$yuexin}</p>
+                        <p>婚史：{$hunshi}</p>
+                        <p>有无子女：{$zinv}</p>
+                        <p>职业：{$zhiye}</p>
+                        <p>是否有住房：{$zhufang}</p>
+                        <p>是否有车：{$che}</p>
+                        <p>民族：{$minzu}</p>
+                        <p>星座：{$xingzuo}</p>
+                        <p>宗教信仰：{$zongjiao}</p>
+                        {trim_mip($content)}
+                        </div>
+                    {if $pages}
+                        <div id="pages" class="text-c">{$pages}</div>
+                    {/if}
+                    </div>
+                    <div class="mip-share-container">
+                        <h3>分享</h3>
+                            <mip-share 
+                                title="{$title}" 
+                                content="{$description}" 
+                                icon="{if $thumb}{$thumb}{else}https://statics.05273.cn/images/weixinpl.png{/if}" 
+                                wechatAPI="//api.05273.cn/index.php?op=gettoken"
+                                layout="responsive"
+                                width="220"
+                                height="60">
+                            </mip-share>
+                    </div>
+                    <!-- mip-article-content End -->
+                </div>
+                <div class="mip-section">
+                    <div class="list">
+                        <ul class="relatedlist">
+                            <li class="imgBar">{if $previous_page[id]}<mip-link class="linkBar" href="{is_mips($previous_page[url])}"><h4><span>上一篇:</span>{$previous_page[title]}{/if} </h4></mip-link> </li>
+                            <li class="imgBar">{if $next_page[id]}<mip-link class="linkBar"  href="{is_mips($next_page[url])}"><h4><span>下一篇:</span>{$next_page[title]}{/if} </h4></mip-link> </li>
+                        </ul>
+                    </div>
+                </div>
+                   <div class="mip-section">
+                      <div class="mip-title"><h3 class="bluetit">我要评论</h3></div>
+                      <div class="content">
+                      <ul class="commentlist">
+                      {edi:comment action="lists" commentid="$commentid" siteid="$siteid" hot="$hot" num="4"}  
+                        {loop $data $r} 
+                                  <li><h3 class="meta">{if $r[userid]}{get_nickname($r[userid])}{else}{$r[username]}{/if}<time>{inputtime_zone($r[creat_at])}</time></h3><p class="content">{trim_mip($r[content])}</p></li>
+                        {/loop}
+                      {/edi}
+                      </ul>
+                      </div>
+                      <div class="list-footer-wrapper-wap">
+                          <a href="https://mip.05273.cn/index.php?app=mobile&amp;controller=index&amp;view=comment_list&amp;commentid={id_encode('content_'.$catid,$id,$siteid)}">            
+                              <span node-type="post-cmt" class="up-to-cbox"><span class="up-to-cbox-ico"></span><span class="up-to-cbox-text">我来说两句</span></span>
+                                      <div class="cy-logo"></div>
+                         </a>
+                      </div>
+                  </div>
+                <div class="mip-section">
+                    <div class="mip-title"><h3 class="bluetit">相关新闻</h3></div>
+                    <div class="list">
+                        <ul class="articleBar">
+                        {edi:mobile action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+                        {if $data}
+                        {loop $data $r}
+                        <li class="imgBar">
+                        <mip-link class="clearfix linkBar"  href="{is_mips($r[url])}">
+                        {if $r[thumb]}<div class="imgInfo">
+                            <span><mip-img src="{thumb($r[thumb], 180, 135)}" alt="{$r[title]}" title="{$r[title]}"></mip-img></span>
+                        </div>{/if}
+                         <h4>{$r[title]}</h4>
+                        </mip-link>       
+                        </li>
+                        {/loop}
+                        {/if}
+                        {/edi}
+                        </ul>
+                    </div>
+                </div>
+                <div class="tags">
+                    <ul class="clearfix">
+                    {loop $keywords $keyword}<li><a href='https://wap.05273.cn/hot/{urlencode($keyword)}.html'><span>{$keyword}</span></a></li>{/loop}
+                    </ul>
+                </div>
+{template "mips","footer_pinglun"}

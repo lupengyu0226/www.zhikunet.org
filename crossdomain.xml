@@ -1,0 +1,5 @@
+﻿<?xml version="1.0"?>
+<cross-domain-policy>
+    <allow-access-from domain="*.05273.cn" />
+    <allow-access-from domain="*.05273.com.cn" />
+</cross-domain-policy>

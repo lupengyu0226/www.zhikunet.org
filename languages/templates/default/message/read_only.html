@@ -1,0 +1,69 @@
+{template "member","header"}
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">与  {$infos['send_from_id']} 的短消息记录</h2>
+                </div>
+                <div class="bd uc-msg mt20">
+                    <div class="uc-nv">
+                        <ul class="nv">
+                            <li{if ROUTE_A=="init"} class="active"{/if}><a class="btn" href="message-init.html">全部消息</a></li>
+                            <li{if ROUTE_A=="inbox"} class="active"{/if}><a class="btn" href="message-inbox.html">收件箱</a></li>
+                            <li{if ROUTE_A=="outbox"} class="active"{/if}><a class="btn" href="message-outbox.html">发件箱</a></li>
+                            <li{if ROUTE_A=="group"} class="active"{/if}><a class="btn" href="message-group.html">系统消息</a></li>
+                            <li{if ROUTE_A=="send"} class="active"{/if}><a class="btn" href="message-send.html">发送短消息</a></li>
+                        </ul>
+                    </div>
+                    <div class="list-view">
+                        <ul class="list mt10">
+{php $userid = get_memberinfo_buyusername($infos['send_from_id'],'userid')}
+{php $nickname = get_memberinfo_buyusername($infos['send_from_id'],'nickname')}
+{php $user_pic = get_memberavatar($userid,1,90);}
+                            <li style="border-bottom:0px none;">
+                                <a class="avt" href="javascript:void(0);" style="cursor:default;" title="{$nickname}">
+                                    <img src="{$user_pic}" alt="{$infos['send_from_id']}" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'">
+                                </a>
+                                <dl>
+                                    <dt>
+                                        <span class="fr">{date('Y-m-d H:i:s',$infos['message_time'])}</span>{$infos['send_from_id']}：
+                                        <a href="javascript:void(0);" style="cursor:default;">{$infos['subject']}</a>
+                                    </dt>
+                                    <dd>{$infos['content']}</dd>
+                                </dl>
+                            </li>
+                        </ul>
+{if $reply_infos}
+                        <ul class="list mt10">
+{loop $reply_infos $info} 
+{php $userid = get_memberinfo_buyusername($info['send_from_id'],'userid')}
+{php $nickname = get_memberinfo_buyusername($info['send_from_id'],'username')}
+{php $user_pic = get_memberavatar($userid,1,90);}
+                            <li>
+                                <a class="avt" href="javascript:void(0);" style="cursor:default;" title="{$nickname}">
+                                    <img src="{$user_pic}" alt="{php echo $nickname ? $nickname : $info['send_from_id'];}" onerror="this.src='https://account.05273.cn/statics/images/member/nophoto.gif'">
+                                </a>
+                                <dl>
+                                    <dt>
+                                        <span class="fr">{date('Y-m-d H:i:s',$info['message_time'])}</span>{php echo $nickname ? $nickname : $info['send_from_id'];}：
+                                        <a href="{PASSPORT_PATH}index.php?app=message&controller=index&view=read&messageid={$info['messageid']}">{$info['subject']}{if $info['status']!=2 && $info['reply_num']!=0} ({$info['reply_num']}){/if}</a>
+                                    </dt>
+                                    <dd>
+                                        {$info['content']}
+                                    </dd>
+                                </dl>
+                            </li>
+{/loop}
+                        </ul>
+{/if}
+                	</div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

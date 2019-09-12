@@ -1,0 +1,14 @@
+{edi:content action="lists" catid="$catid" siteid="$siteid" order="updatetime DESC" num="20"}
+{php $category=array()}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+    {php $category["category"]=array("catid"=>$catid,"name"=>$CATEGORYS[$catid][catname],"description"=>$CATEGORYS[$catid][description],"pic"=>trim_weapp($CATEGORYS[$catid][image]));}
+{loop $data $k=>$r}
+    {php $category["news"][]=array("catid"=>$r[catid],"id"=>$r[id],"title"=>$r[title],"description"=>trim_indent($r[description]),"catname"=>$CATEGORYS[$r[catid]][catname],"pic"=>trim_weapp($r[thumb]),"pubdate"=>inputtime_zone($r[updatetime]));}
+{/loop}
+{/edi}
+{edi:content action="lists" catid="$catid" thumb="1" order="id DESC" num="5"}
+{loop $data $v}
+ {php $category["hots"][]=array("catid"=>$v[catid],"id"=>$v[id],"title"=>$v[title],"description"=>trim_indent($v[description]),"pic"=>trim_weapp($v[thumb]));}
+{/loop}
+{/edi}
+{php echo json_encode($category)}

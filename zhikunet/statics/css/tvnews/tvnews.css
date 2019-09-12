@@ -1,0 +1,83 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select{margin:0;padding:0}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline; color: #1c94d2;}
+em{font-style:normal}
+li{list-style:none}
+fieldset, img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+h1,h2,h3,h4,h5,h6{font-size: 100%; font-weight: normal;}
+.layout:after, .hd:after, .bd:after, .cf:after,ul:after{content:"";display:table;clear:both}
+.layout, .hd, .bd, .clr,ul{*zoom:1}
+.layout {width: 1200px;margin: 0 auto;}
+.fl {float:left}
+.fr {float:right}
+.main{ width:892px; float:left;_width:673px}
+.sider{ width:305px; float:right}
+.list{ position:relative; width:895px;_width:876px}
+.list ul { padding-bottom:70px; width:895px;_width:876px}
+.list ul li{float:left;margin:0 15px 25px 0;position:relative; width:418px}
+.list ul li h2{background:url(//statics.05273.cn/images/tvnews/hg_bg.png) 0 0 no-repeat; height:30px;font-size:17px;color:#FFF;padding-left: 10px;line-height: 30px;}
+.list ul li img{}
+.list ul li p{font-size:17px;font-weight:bold;margin-top:10px; line-height:18px}
+.list ul li p a{color:#888888}
+.list ul li p a:hover{color:#096e9a}
+.list ul li a:hover em.s{display: block;cursor: pointer;}
+.list ul li em.s{display: none;position: absolute;top: 30px;right: 0px;width: 413px;height: 196px;background: url(//statics.05273.cn/images/tvnews/smlpic_bg.png) no-repeat;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//statics.05273.cn/images/tvnews/smlpic_bg.png');
+_background-image: none;}
+.sider .fans .hd{ background:url(//statics.05273.cn/images/tvnews/fans_hd.png) no-repeat; height:32px}
+.sider .fans .bd{ border:1px solid #f74756; padding-bottom:15px;margin-bottom:23px; background:#FFF}
+.sider .fans .bd .cover{ margin:13px 0 0 13px}
+.sider .fans .bd .cover img{ float:left; margin: 8px 15px 0 0}
+.sider .fans .bd .cover p{ float:left; font-size:12px; color:#666666; width:195px}
+.sider .fans .bd .cover p strong{ font-size:14px}
+.sider .fans .bd span{ font-size:18px; color:#f74756; font-weight:bold; margin:20px 0 0 42px; display:block}
+.sider .club .hd{ background:url(//statics.05273.cn/images/tvnews/club_hd.png) no-repeat; height:32px}
+.sider .club .bd{ border:1px solid #1c94d2; padding-bottom:20px;margin-bottom:23px; background:#FFF}
+.sider .club .bd img{ margin:23px 0 13px 20px}
+.sider .club .bd ul{ background:url(//statics.05273.cn/images/tvnews/ul_bg.png) no-repeat; padding-left:44px; margin-left:20px;}
+.sider .club .bd ul li{ font-size:15px; color:#666666; line-height: 30px; padding-bottom: 8px;}
+.sider .fuli .hd{ background:url(//statics.05273.cn/images/tvnews/fuli_hd.png) no-repeat; height:32px}
+.sider .fuli .bd{ border:1px solid #ec6941; padding:15px 15px 40px 15px;margin-bottom:23px; background:#FFF;}
+.sider .fuli .bd img{ width:278px; height:144px}
+.sider .fuli .bd h3{ font-size:18px; color:#ec6941; line-height:48px;}
+.sider .fuli .bd p{ font-size:14px; color:#666666; line-height:22px}
+.sider .mail .hd{ background:url(//statics.05273.cn/images/tvnews/mail_hd.png) no-repeat; height:32px}
+.sider .mail .bd{ border:1px solid #666666; padding:25px 0 0 13px;margin-bottom:23px; background:#FFF; width:295px; height:80px}
+.sider .mail .bd img{ width:60px; height:49px; float:left}
+.sider .mail .bd .info{ float:left; margin-left:12px}
+.sider .mail .bd h3{ font-size:18px; color:#434343; line-height:22px;}
+.sider .mail .bd p{ font-size:14px; color:#666666; line-height:28px}
+#listZone{}      
+#listZone ul li{}
+.Q-tpWrap .spic{ margin-top: 28px}
+.Q-tpWrap a:hover img{opacity:0.8;filter: alpha(opacity=80)}
+.Q-tpWrap .pic img{width:400px;height:170px; padding:8px; background:#FFF; border:1px solid #d2d2d2}
+.Q-tpWrap .f20{}
+.Q-tpWrap .f20 span{ position:absolute; left:0; top: 0; background: url(//statics.05273.cn/images/tvnews/pic_hd.png) 0 0 no-repeat;height: 30px;width:90px;font-size: 17px;color: #FFF;line-height: 30px;text-align: center;text-indent: -8px;}
+.Q-tpWrap .f20 a{display:block;font-size: 18px;color: #434343;margin-top: 10px;line-height: 20px;text-align: center; height:20px; overflow: hidden;} 
+.Q-tpWrap .f20 a:hover{color:#1c94d2;text-decoration: none;}
+.Q-tpWrap .intro{position:absolute;bottom:20px;left:20px;color:#797979;font-weight:bold}
+.Q-tpWrap .time{}
+.Q-tpWrap .time{ color:#888; text-align:right;}
+.shareTo{ background:url(//statics.05273.cn/images/tvnews/bgs.png) 10px -358px no-repeat; border-left:1px solid #888; cursor:pointer; float:right; height:14px;width: 107px; line-height:14px; margin-bottom:15px; margin-left:8px; position:relative; width:50px;}
+.shareTo .share{ background:#fff; display:none; overflow:hidden; position:absolute; right:26px; top:-8px; width:185px;}
+.shareTo .share a{ background:url(//statics.05273.cn/images/tvnews/bgs.png) no-repeat; display:inline-block; float:left; margin-right:5px; height:24px; line-height:994px; overflow:hidden; width:24px;}
+.shareTo .share .sharewb{ background-position:0 0;}
+.shareTo .share .shareqzone{ background-position:-29px 0;}
+.shareTo .share .sharewx{ background-position:-58px 0;}
+.shareTo .share .sharesina{ background-position:-87px 0;}
+.shareTo .share .sharerenren{ background-position:-116px 0;}
+.shareTo .share .shareqqemail{ background-position:-145px 0;}
+.shareTo .share .sharekaixin{ background-position:-174px 0;}
+.shareTo .shareBtn{height:14px;}
+.shareTo .sharelist{ border:1px solid #e1e1e1; border-right:none; float:left; height:24px; padding:4px 0 4px 5px; width:174px;}
+.shareTo .shareBg{ background:url(//statics.05273.cn/images/tvnews/tips.png) right center no-repeat; float:left; height:34px; width:5px;}
+#pages { padding:14px 0 10px; font-family:宋体 }
+#pages a { display:inline-block; height:22px; line-height:22px; background:#F3F3F3; border:1px solid #e3e3e3; text-align:center; color:#333; padding:0 10px}
+#pages a.a1 {width:56px; padding:0 }
+#pages a:hover { background:#f1f1f1; color:#000; text-decoration:none }
+#pages span { display:inline-block; height:22px; line-height:22px; background:#5a85b2; border:1px solid #5a85b2; color:#fff; text-align:center;padding:0 10px}
+.page .noPage { display:inline-block; width:56px; height:22px; line-height:22px; border:1px solid #e3e3e3; text-align:center; color:#a4a4a4; }
+.foot{ background:#1c94d2; padding:15px 0 10px}

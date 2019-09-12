@@ -1,0 +1,23 @@
+{template "content","header_page"}
+<div class=about-content>
+<div class=about-contentl>
+{edi:content action="category" catid="1" num="10" siteid="$siteid" order="listorder ASC"}
+{loop $data $cid}
+<div><a class="about-contentlm"  href="{$cid[url]}">{$cid[catname]}</a></div>
+{/loop}
+{/edi}
+<div class=about-contentline></div></div>
+<div class=about-contentr>
+<div class=about-contentrtop>本网动态</div>
+{edi:content action="lists" catid="$catid" num="20" order="id DESC" page="$page"}
+<ul> 
+{loop $data $r}
+<li><a target="_blank" href="{$r[url]}">{$r[title]}</a><span>{date('Y-m-d',$r[inputtime])}</span></li>
+{/loop}
+</ul>
+{/edi}
+<div id="pages" class="text-c">{$pages}</div>
+<div class=about-clear></div>
+</div></div>
+<div class=about-clear></div>
+{template "content","footer"}

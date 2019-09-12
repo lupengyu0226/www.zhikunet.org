@@ -1,0 +1,14 @@
+{edi:content action="lists" catid="$catid" siteid="$siteid" order="id DESC" page="$page"}
+{php $category=array()}
+    {php $category["site"]=array("name"=>"沭阳网","seotitle"=>"精华版","title"=>"沭阳网");}
+    {php $category["category"]=array("catid"=>$catid,"name"=>$CATEGORYS[$catid][catname],"description"=>$r[description],"pic"=>'https://img.05273.cn/images/videobg.jpg');}
+{loop $data $k=>$r}
+    {php $category["news"][]=array("catid"=>$r[catid],"id"=>$r[id],"title"=>$r[title],"description"=>$r[description],"catname"=>$CATEGORYS[$r[catid]][catname],"pic"=>'https://img.05273.cn/images/videobg.jpg',"pubdate"=>inputtime_zone($r[inputtime]));}
+{/loop}
+{/edi}
+{edi:content action="position" posid="5" catid="16" thumb="1" order="id DESC" num="5"}
+{loop $data $v}
+ {php $category["hots"][]=array("catid"=>$v[catid],"id"=>$v[id],"title"=>$v[title],"description"=>trim_indent($v[description]),"pic"=>'https://img.05273.cn/images/videobg.jpg');}
+{/loop}
+{/edi}
+{php echo json_encode($category)}

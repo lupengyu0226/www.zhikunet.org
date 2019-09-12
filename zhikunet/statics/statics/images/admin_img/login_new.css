@@ -1,0 +1,23 @@
+html {overflow-y: hidden;}
+.login-msg-icon {display: none !important;}
+.login-success .oasicon-succes, .login-error .oasicon-tip {display: inline !important;}
+.login-panel {margin-top: -380px;margin-left: -512px;height: 680px;min-width: 1024px;text-align: center;margin-left: -572px;}
+.login-panel .login-hd {float: left;display: inline-block;margin: 0;width: 680px;height: 100%;background: url("//statics.zhikunet.org/statics/images/admin_img/yq_02.png") no-repeat;}
+.login-panel .login-hd i.logo {position: relative;top: 50%;margin-top: -108px;width: 270px;height: 217px;background: url("//statics.zhikunet.org/statics/images/admin_img/yq_05.png") no-repeat;}
+.login-panel .login-input-panel {float: right;display: inline-block;position: relative;top: 50%;margin-top: -130px;height: 370px;width: 339px;}
+.login-panel .login-input-panel .login-frm-bd {height: auto;}
+.login-panel .login-input-panel .login-frm-bd .input-wrap {float: none;margin-right: 0;margin-bottom: 20px;height: 40px;}
+.login-panel .login-input-panel input[type="text"], .login-panel .login-input-panel input[type="password"] {width: 295px;}
+.login-panel .login-input-panel .login-frm-ft {border: none;padding: 0;width: 100%;margin-bottom: 10px;}
+.login-panel .login-input-panel .login-frm-ft .login-content-wrap {width: 100%;}
+.login-panel .login-input-panel .login-frm-ft .login-pattern-switch {float: left;margin-left: 3px;}
+.login-panel .login-input-panel .login-frm-ft .password-search {float: right;}
+.login-panel .login-input-panel .login-frm-bd .loginBtn {display: inline-block;position: relative;top: 0;right: 0;margin: 0;width: 294px;height: 60px;background: url("//statics.zhikunet.org/statics/images/admin_img/yq_14.png") no-repeat;border:none;}
+.login-panel .login-input-panel .login-frm-bd .loginBtn:hover, .login-panel .login-input-panel .login-frm-bd .loginBtn:active {background: url("//statics.zhikunet.org/statics/images/admin_img/yq_14.png") no-repeat;outline:medium;border:none;}
+.login-panel .login-input-panel.kpi-login .login-type-pki {position: relative;}
+.login-panel .login-input-panel .login-frm-bd .login-msg {padding-top: 140px;}
+.login-panel .login-ft .ft-bg {display:none;}
+.yzm{position:absolute; background:url(//statics.zhikunet.org/statics/images/admin_img/login_ts140x89.gif) no-repeat; width:140px; height:89px;right:56px;top:-96px; text-align:center; font-size:12px; display:none;z-index: 6}
+.yzm a:link,.yzm a:visited{color:#036;text-decoration:none;}
+.yzm a:hover{color:#C30;}
+.yzm img{cursor:pointer; margin:4px auto 7px; width:130px; height:50px; border:1px solid #fff;z-index: 5;}

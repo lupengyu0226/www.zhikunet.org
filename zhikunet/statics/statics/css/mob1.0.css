@@ -1,0 +1,76 @@
+@charset "utf-8";
+@import url(Global.css);
+/* CSS Document */
+.mid{float:right; margin-left:5px; width:340px;height:300px; overflow:hidden;border:#b2bdc5 solid 1px; padding:8px 8px 8px 10px; padding-top:10px}
+.mid h2{font-size:20px; text-align:center;line-height:31px; height:31px; overflow:hidden}
+.mid_text{width:98%; height:40px; padding-bottom:10px; text-align:left; border-bottom:#ccc dashed 1px}
+.mid li{background:url(../images/bg/dian.gif) no-repeat 3px 8px; width:90%; padding-left:10px; white-space:nowrap; overflow:hidden; margin-right:10px; line-height:18px; height:20px; text-align:left}
+.mid_text_h{text-align:left; width:100%; padding-top:5px; padding-bottom:5px; border-bottom:#ccc dashed 1px}
+.mid_text_h0{text-align:left; width:100%; padding-top:5px; padding-bottom:5px}
+.right{float:right; width:200px}
+.right01{float:right; position:relative; width:190px; height:240px;padding:5px; padding-top:1px; border:#b2bdc5 solid 1px; border-top:none; background:url(../images/bg/h_bg.gif) repeat-x}
+.news_top_caption { padding-top:2px;height:20px; overflow:hidden; width:100%; margin-left:-1px;line-height:20px; }
+		.news_top_caption li { float:left }
+		.news_top_caption li em { padding:0 5px; cursor:pointer; font-weight:700; font-style:normal }
+		.news_top_caption .current { background:#FFF; border-left:1px solid #DEDEDE; border-right:1px solid #DEDEDE; color:#0954A6; } 
+	.news_top_cotent { padding:6px 5px; }
+		.news_top_cotent li { height:23px; text-align:left; overflow:hidden; padding-left:10px; background:url(../images/icon_li.gif) no-repeat 0 8px; line-height:23px; color:#9A9A9A; }
+		.news_top_cotent li .box_r { padding-left:6px; }
+		.news_top_cotent .normal { display:none; }
+.right02{height:218px}
+.right02 li{float:left; padding:0px 5px; white-space:nowrap}
+.right01_1 .seleced{line-height:20px; font-weight:bold; padding-top:1px;_padding-top:2px}
+.biaoqian{ width:100%; padding-top:10px; height:182px; overflow:hidden}
+.biaoqian li{float:left; padding:0px 3px; white-space:nowrap; line-height:20px; height:20px}
+.news_dh{position:relative; width:100%; height:25px; line-height:25px; padding-bottom:5px}
+.news_dh00{position:relative; width:960px; margin:0px auto; height:25px; line-height:25px; padding-bottom:5px}
+.news_left{float:left; width:689px}
+
+.news_t:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}  
+.news_t{ float:left;border:#b2bdc5 solid 1px; width:100%;background:url(../images/bg/line.gif) repeat-y 516px}
+.newsleft_01{ width:460px; padding:10px 10px 10px 15px;_padding:10px 10px 10px 5px; float:left}
+.newsleft_01 li{background:url(../images/bg/dian.gif) no-repeat 5px 14px; width:100%; font-size:14px; padding-left:15px; line-height:30px; border-bottom:#ccc dashed 1px}
+.fenye{padding-top:10px}
+.newsleft_02{float:right; width:168px;padding:10px 0px;text-align:center}
+.newsleft_02 img{width:150px; height:100px; clear:both}
+.newsleft_02 p{line-height:25px}
+.newsleft h2{margin:0px; line-height:35px; height:35px; font-size:16px}
+.newsleft_data{height:25px; line-height:20px; width:95%; text-align:center; padding-top:10px}
+.newsleft_text{padding:10px; text-indent:24px; line-height:20px; text-align:left}
+
+.newsright{float:right; width:260px;}
+.m_right{float:right; width:262px; overflow:hidden}
+.m_right01{float:right; position:relative; width:250px; height:250px;padding:5px; padding-top:1px; border:#b2bdc5 solid 1px; border-top:none; background:url(../images/bg/h_bg.gif) repeat-x}
+.m_right01 h2{text-align:left; line-height:25px; padding-left:15px; color:#fff}
+.m_right01 ul{background:url(../images/bg/number.gif) no-repeat 5px 8px; height:220px;padding-top:5px}
+.m_right01 li{padding-left:25px; line-height:22px; height:22px; text-align:left}
+.m_right02{float:right; position:relative; width:250px;padding:5px; padding-top:1px; border:#b2bdc5 solid 1px; border-top:none; background:url(../images/bg/h_bg.gif) repeat-x}
+.m_right02 h2{text-align:left; line-height:25px; padding-left:15px; color:#fff}
+.m_right02 li{ float:left; padding-left:22px; width:60px; text-align:left;line-height:20px; background:url(../images/bg/dian1.gif) no-repeat 10px 8px; white-space:nowrap}
+.m_right02 ul{background:url(../images/bg/number.gif) no-repeat 5px 8px; height:250px;padding-top:5px}
+/*新闻阅读*/
+.newsbox:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}  
+.newsbox{background:url(../images/bg/goto_bg.gif) no-repeat 675px 20px; width:960px;margin:0px auto}
+.news_dh{line-height:25px; width:100%; text-align:left; float:left}
+.newsleft{float:left; width:671px;border:#ccc solid 1px;padding-bottom:10px;}
+.newsleft_list{float:left; width:670px; overflow:hidden;   text-align:left; border:#ccc solid 1px}
+.newsleft h2{margin:0px; line-height:35px; height:35px; font-size:16px; text-align:center}
+.newsleft_data{height:25px; line-height:20px; width:95%; text-align:center; padding-top:10px}
+.newsleft_text{padding:10px; text-indent:24px; line-height:20px; text-align:left}
+.news_right01{float:right; position:relative; width:240px; height:250px;padding:5px; padding-top:1px; border:#b2bdc5 solid 1px; border-top:none; background:url(../images/bg/h_bg.gif) repeat-x}
+.news_right01 h2{text-align:left; line-height:25px; padding-left:15px; color:#fff}
+.news_right01 ul{background:url(../images/bg/number.gif) no-repeat 5px 8px; height:220px;padding-top:5px}
+.news_right01 li{padding-left:25px; line-height:22px; height:22px; text-align:left}
+.mvleft_02{ width:650px; padding:20px 10px 10px 10px}
+.mvleft_02 li{float:left; width:162px; text-align:center; height:180px}
+.mvleft_02 li img{width:120px; height:90px; padding:2px; border:#ccc solid 1px}
+	.blogcomment_caption { padding:15px 0; text-align:center; }
+	.blogcomment_caption h1 { padding:0 0 5px; color:#056BB5; font-size:16px; }
+	.blogcomment_caption p { color:#999; }
+.blog_comment { color:#999;}/*styling for the article/blog(del) comment*/
+	.blog_comment h4{ padding:0 12px 8px; color:#333; font-size:14px;}
+	.blog_comment .comment_list { overflow:hidden; margin-bottom:8px; padding:0 12px; }
+	.blog_comment .comment_list_caption { height:25px; color:#333;overflow:hidden; margin-bottom:8px; padding:0 12px; background:#b2bdc5; line-height:25px; }
+	.blog_comment .comment_list_caption a, .blog_comment .comment_list_caption .box_r { color:#056BB5; } { color:#056BB5; }
+	.blog_comment .blog_scoresnum { color:#333; }
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="//statics.05273.cn">
+<link rel="dns-prefetch" href="//upload.05273.cn">
+<link rel="dns-prefetch" href="//account.05273.cn">
+<link rel="dns-prefetch" href="//img.05273.cn">
+<link rel="dns-prefetch" href="//wap.05273.cn">
+<link rel="dns-prefetch" href="//www.05273.cn">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="applicable-device"content="mobile">
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}"> 
+<link rel="stylesheet" type="text/css" href="http://statics.05273.cn/statics/shipei/css/mobile.css">
+<script type="text/javascript">
+    try{
+        if(/Macintosh|Mac_PowerPC|Windows NT|Windows XP/i.test(navigator.userAgent)){
+          window.location.href="http://www.05273.cn/index.php?app=search";
+        }
+    }catch(e){};
+</script>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: 'Ubuntu', arial, Tahoma, sans-serif;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: rgb(250, 250, 250);
+	background-image: none;
+	background-origin: padding-box;
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: auto auto;
+}
+.header {
+	height: 50px;
+	width: 100%;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	z-index: 99;
+	top: 0;
+	left: 0;
+}
+.header.logo{
+    position: relative;
+    background-image: url(http://statics.05273.cn/statics/shipei/images/logo.png);
+}
+.header .pc {
+	width: 66px;
+	text-align:center;
+	height: 36px;
+	line-height:36px;
+	position: absolute;
+	top:5px;
+	right:5px;
+}
+.header .pc a {
+	text-decoration:none;
+	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
+	font-size:14px;
+}
+.main {
+	padding: 0px 5px 10px 5px;
+}
+.item {
+	position:relative;
+	display: block;
+	padding:15px 10px 25px 10px;
+	border-bottom: 1px solid #eee;
+	color: #666;
+	line-height: 2em;
+	overflow: hidden;
+	text-decoration: none;
+}
+a.item:hover {
+	background: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+}
+.item-on {
+	background: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+}
+.item h2 {
+	font-size: 18px;
+	color: #000;
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
+}
+.item-on h2 {
+	color: #01a100;
+}
+.news-view {
+}
+.news-view .news-thumb {
+	float: left;
+	width: 120px;
+	height: 90px;
+	border:1px solid #eee;
+	padding: 1px;
+	margin: 0 10px 10px 0;
+}
+.item .news-info {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 12px;
+	color: #999;
+}
+
+</style>
+</head>
+<body>
+<DIV id=out>
+<div class="global">
+  <div class="header">
+    <h1 class="logo logonews"><a href="http://wap.05273.cn/">沭阳网</a></h1>
+    <span class="gochannels"></span> </div>
+  <!-- header/E --> 
+  <!-- channels/S -->
+  <div class="channels">
+{template "mobile","top"}
+  </div>
+  <!-- channels/E -->
+  
+  <div class="main">
+{loop $data $i $r} 
+  <a class="item" href="{show_url($r[catid],$r[id])}">
+    <h2>{$r[title]}{if $r['posids']}<img src="{IMG_PATH}icon/small_elite.gif">{/if}</h2>
+    <div class="news-view">  {if $r['thumb']}<img class="news-thumb" src="{$r['thumb']}" />{/if}{$r[description]}</div>
+    <div class="news-info"> {inputtime_zone($r[inputtime])} </div>
+    </a>  
+{/loop}
+{if empty($data)}<div id="pages" class="text-c">未找到结果</div>{/if}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/edi}
+	 </div>
+  <!-- footnav/S -->
+  <div class="footnav">
+    <ul>
+{template "mobile","dibu"}
+    </ul>
+  </div>
+  <!-- footnav/E --> 
+  <!-- footer/S -->
+  <div class="footer">
+    <div class="links"><a href="http://www.05273.cn/?mobile" >电脑版</a>
+	<script src="http://statics.05273.cn/statics/js/??jquery.js?v=20140509" type="text/javascript"></script>
+	<form id="page_loginForm">
+   <a href="index.php?app=waplogin&controller=index&view=login&forward=http://wap.05273.cn/index.php?controller=search">登录</a> <a href="index.php?app=waplogin&controller=index&view=register">注册</a>
+  </form>
+	<script type="text/javascript">Login.isLogin('http://www.05273.cn/index.php?app=waplogin&controller=index&view=top_mini','page_loginForm','page');</script>
+	</div>
+    <div class="copyright"> Copyright &copy; 2007 - 2015 沭阳网. All Rights Reserved </div>
+    <div class="gotop"></div>
+<div style="display:none"><script src='http://w.cnzz.com/q_stat.php?id=1000299001&amp;l=3' language='JavaScript'></script></div>
+  </div>
+  <!-- footer/E --> 
+  
+</div>
+
+<div class="imageslider"></div>
+<script type="text/javascript" src="http://statics.05273.cn/statics/shipei/js/zepto.min.js"></script> 
+<script type="text/javascript" src="http://statics.05273.cn/statics/shipei/js/article.v1.0.js"></script> 
+<script type="text/javascript">
+$("a.item").live({
+    mouseenter: function(){
+        $(this).addClass("item-on");
+    },
+    mouseleave: function(){
+        $(this).removeClass("item-on");
+    }
+});
+</script>
+<div style="display:none">
+<script src='http://w.cnzz.com/q_stat.php?id=1000299001&amp;l=3' language='JavaScript'></script>
+</div>
+{$mori}
+</body>
+</html>

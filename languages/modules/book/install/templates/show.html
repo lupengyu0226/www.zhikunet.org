@@ -1,0 +1,84 @@
+{template "content","header"}
+<!--main-->
+<link href="{CSS_PATH}sty.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><link href="{CSS_PATH}ielt9.css" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="{CSS_PATH}table_form.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{JS_PATH}jquery.tools.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<div class="tmp_bd clr">
+<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> &gt; </span><a href="{APP_PATH}index.php?app=book&controller=index">留言板</a> &gt; 留言详情</div>
+  <div class="lyt_1">
+    <div class="brd showpg">
+      <div class="topct">
+      	<div class="t_box">
+              <div class="clr">
+                <span class="time">{date('Y-m-d H:i:s',$infos[addtime])}</span>
+                <h5><a title="{$infos[title]}" href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$infos[siteid]}&id={$infos[id]}">{$infos[title]}</a></h5>
+              </div>
+              <p>{$infos[content]}</p>
+            </div>
+      </div>
+	  {loop $reply $c}
+	  {if $c[role] == 1}
+      <div class="ptxt xs">
+        <div class="spr spr_sj"></div>
+        <p>{$c[reply]} <span class="time">{date('Y-m-d H:i:s',$c[addtime])}</span> </p>
+      </div>
+	  {else}
+      <div class="ptxt">
+        <div class="spr spr_sj"></div>
+        <p>{$c[reply]}<span class="time">{date('Y-m-d H:i:s',$c[addtime])}</span> </p>
+      </div>
+	  {/if}
+	  {/loop}
+	  {loop $my_book $c}
+	  {if $username != '' && $username == $c['username'] && $n==1}
+	  <div class="hfbox">
+      		<ul class="clr iptuli xd">
+              <li>
+              <form action="{APP_PATH}index.php?app=book&controller=index&view=reply&id={$id}" method="post">
+			  <input type="hidden" name="role" value="1">
+			  <input name="dosubmit" type="submit" class="tj_btns"/>
+              <label class="lynr">内&nbsp;容</label><textarea name="reply" cols="" rows="5"></textarea>
+			  </form>
+              </li>
+          </ul>
+      </div>
+	  {/if}
+	 {/loop}
+    </div>
+  </div>
+  <div class="lyt_2">
+  	<a href="{APP_PATH}index.php?app=book&controller=index&view=add" title="我要留言" class="ly_btn">我要留言</a>
+<div class="box">
+      <div class="nav">
+        <h5>我的留言</h5>
+      </div>
+      <ul class="list">
+	  {if $username != ''}
+	  {loop $my_book $c}
+        <li><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$siteid}&id={$c[id]}" title="{$c[title]}">{$c[title]}</a></li>
+	  {/loop}
+	  {else}
+		<li>登陆后可查看留言</li>
+	  {/if}
+      </ul>
+    </div>
+<div class="bk10"></div>
+<div class="box">
+	<div class="nav">
+		<h5>热门留言</h5>
+	</div>
+	<ul class="list">
+	{pc:book action="hot" num="10" order="ID desc" return="data"}
+	{loop $data $c}
+		<li><a href="{APP_PATH}index.php?app=book&controller=index&view=show&siteid={$c[siteid]}&id={$c[id]}" title="{$c[title]}">{$c[title]}</a></li>
+	{/loop}
+	{/pc}
+	</ul>
+</div>
+  </div>
+</div>
+<!--main_end-->
+{template "content","footer"}

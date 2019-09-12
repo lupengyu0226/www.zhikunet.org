@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('ssi', 'SSI标签', 'ssi/', 0, '1.0', 'ssi标签向导', '', 0, 0, '2012-9-23', '2012-9-23');

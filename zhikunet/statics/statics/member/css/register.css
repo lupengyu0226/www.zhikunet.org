@@ -1,0 +1,71 @@
+.fr{float: right;}.fl{float: left;}
+.ml5{margin-left: 5px;}.ml10{margin-left: 10px;}.ml20{margin-left: 20px;}
+.mr5{margin-right: 5px;}.mr10{margin-right: 10px;}.mr20{margin-right: 20px;}.mr30{margin-right: 30px;}.mr40{margin-right: 40px;}
+.mt5{margin-top: 5px;}.mt10{margin-top: 10px;}.mt20{margin-top: 20px;}.mt30{margin-top: 30px;}.mt40{margin-top: 40px;}.mt110{margin-top: 110px;}.mt160{margin-top:130px;}
+.mb5{margin-bottom: 10px;}.mb10{margin-bottom: 10px;}.mb20{margin-bottom: 20px;}.mb30{margin-bottom: 30px;}.mb40{margin-bottom: 40px;}
+.pt110{padding-top: 110px;}
+.cl{*zoom: 1;}
+.cl:after{clear: both; content: "."; display: block; height: 0; font-size: 0; visibility: hidden; overflow: hidden;}
+.hide, .xs-hide{display: none;}
+.hidden{visibility: hidden;}
+/* login start */
+.tac, .text-center{text-align: center;}
+.xs-member-bg{background-color: #f1faff;}
+.xs-member input[type=checkbox]{margin-top: 3px;}
+.xs-member.xs-member-wp{padding: 10px 39px 12px; width: 680px; background: white; border: 1px solid #d9e1e5; border-radius: 3px; box-shadow: 1px 1px 1px #d9e1e5;margin: auto}
+.xs-member .hd h2{line-height: 56px; font-size: 18px; border-bottom: 1px solid #d9e1e5;}
+.xs-member .tab-hd{margin: 0 auto; width: 100%;}
+.xs-member .tab-hd li{float: left; width: 50%;}
+.xs-member .tab-hd a{display: inline-block; padding-top: 18px; padding-bottom: 18px; width: 100%; line-height: 20px; text-align: center; border-bottom: 1px solid #d9e1e5; font-size: 18px; color: #424451;}
+.xs-member .tab-hd a:hover{color: #016672;}
+.xs-member .tab-hd .xs-active a{padding-bottom: 16px; border-bottom: 3px solid #016672; color: #016672; cursor: default;}
+.xs-member .xs-member-form .btn-success, .xs-member .xs-member-form .btn-primary{padding: 0; width: 100%; line-height: 48px; text-align: center; border: none; font-size: 18px;}
+.xs-member .xs-member-form .pl8{padding-left: 8px;}
+.xs-member .form-group{position: relative;}
+.xs-member .form-group label{position: absolute; left: 9px; top: 10px; font-size: 18px; color: #d9e1e5;}
+.xs-member .form-group input{padding: 9px 9px 9px 34px; *padding: 11px 9px 11px 36px; width:93%; line-height: 20px; border: 1px solid #d9e1e5; border-radius: 3px; outline: none;}
+.xs-member .form-group input.input-focus{ border-color:#999;}
+.xs-member .form-group input.input-code,.xs-member .form-group input#code{width: 152px;}
+.xs-member .form-group .verify-code-img{width: 110px; height: 40px; cursor: pointer;}
+.xs-member .form-group input::-webkit-input-placeholder{color: #bec7d9;}
+.xs-member .form-group input:-moz-placeholder{color: #bec7d9;}
+.xs-member .form-group input:-moz-placeholder{color: #bec7d9;}
+.xs-member .form-group input:-ms-input-placeholder{color: #bec7d9;}
+.xs-member .form-group .help-block{text-indent: 10px; min-height: 24px; line-height: 24px; font-size: 12px;}
+.xs-member .form-group .onShow,.xs-member .form-group .onError,.xs-member .form-group .onFocus,.xs-member .form-group .onCorrect{ color:#016672; font-size: 12px; line-height: 24px; text-indent: 10px; min-height: 24px;}
+.xs-member .form-group .onCorrect{ color:#090;}
+.xs-member .form-group .onFocus{ color:#F60;}
+.xs-member .form-group .onError{ color:#F00;}
+.xs-member .form-group .icon-id{width: 18px; height: 18px; line-height: 18px; border-radius: 5px; background-color: #d9e1e5; color: white; font-size: 10px;}
+.xs-member .form-group.has-error label, .xs-member .form-group.has-error .help-block{color: #db8a83;}
+.xs-member .form-group.has-error input{background: #fae5e5; border-color: #db8a83; color: #db8a83;}
+.xs-member .form-group.has-error input::-webkit-input-placeholder{color: #db8a83;}
+.xs-member .form-group.has-error input:-moz-placeholder{color: #db8a83;}
+.xs-member .form-group.has-error input:-moz-placeholder{color: #db8a83;}
+.xs-member .form-group.has-error input:-ms-input-placeholder{color: #db8a83;}
+.xs-member .oauth-wp{padding-top: 12px; border-top: 1px solid #d9e1e5;}
+.xs-member .oauth-wp a{display: inline-block; margin-right: 8px; width: 30px; height: 30px; line-height: 30px; text-align: center; color: white; background-image: url('../images/bind.png'); background-size:25px auto; background-repeat:no-repeat; vertical-align:middle;}
+.xs-member .oauth-wp a.icon-qq{background-position: 2px -6px;}
+.xs-member .oauth-wp a.icon-wx{background-position: 3px -92px;}
+.xs-member .oauth-wp a.icon-wb{background-position: 2px -49px;}
+.xs-member .oauth-wp a.icon-qq:hover, .xs-member .oauth-wp a.icon-wx:hover, .xs-member .oauth-wp a.icon-wb:hover{ opacity:0.7;filter:alpha(opacity=70);}
+.xs-member .oauth-wp  span.social{ vertical-align:middle;}
+#hd .wp, #bd .wp, #ft .wp, .nav-fixed .wp{width: 100%; *zoom: 1;}
+#hd .wp:after, #bd .wp:after, #ft .wp:after, .nav-fixed .wp:after{clear: both; content: "."; display: block; height: 0; overflow: hidden; visibility: hidden; font-size: 0;}
+/* end login */
+/* register */
+.btn{display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; cursor: pointer; background-image: none;border: 1px solid #2189c3;; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.428571429; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+.btn-sms{padding: 0; width: 108px; line-height: 38px; text-align: center; border-color: #40ab54; color: #40ab54; font-size: 13px;}
+.btn-sms:hover{background-color: #40ab54; color: white;}
+
+/*sns_login_container*/
+.sns_login_container{}
+.sns_login_list{margin:0px auto;width:180px; overflow:hidden;}
+.sns_login_list li{float:left}
+.sns_login_list li a{display:block;font-size:12px;line-height:20px;width:60px;color:#999;text-align:center}
+.sns_login_list li a:hover{color:#016672;}
+.sns_login_list li .icon{display:block;height:40px;width:40px;border-radius: 50%;margin:0 auto}
+.sns_login_list .sinaweibo .icon{background:url(../images/icon_weibo.png) no-repeat center top}
+.sns_login_list .qq .icon{background:url(../images/icon_qq.png) no-repeat center top}
+.sns_login_list .baidu .icon{background:url(../images/icon_baidu.png) no-repeat center top}
+.sns_login_list .weixin .icon{background:url(../images/icon_weixin.png) no-repeat center top}

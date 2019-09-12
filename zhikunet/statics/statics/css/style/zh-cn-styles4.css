@@ -1,0 +1,17 @@
+.header {background: #3c86c5 url(img4/hdbg.gif) no-repeat right top;border-bottom: 5px solid #fb9337;}
+.header .logo{background-image: url(img4/logo.png)}
+.header .nav li, .header .nav li a{background-image: url(img4/nav_bg.png)}
+.header .nav li.tab_web a, .header .nav li.tab_web a span{background-image: url(img4/site.png);}
+.fav-help a{ background:none; height:auto; padding:0; margin:0 20px 0 0}
+.cut_line span{color:#9fc7e8}
+#Skin .s1{background-position:0 -66px}
+#Skin .s4{background-position:-14px 0px;}
+.headermenu li a:hover { 
+	background: url(img4/bghover4.png) no-repeat center bottom; -moz-box-shadow: inset 0 0px 0 #4f627e; 
+	-webkit-box-shadow: inset 0 0px 0 #4f627e; box-shadow: inset 0 0px 0 #4f627e;
+}
+.headermenu li.on { border-left: 0; border-right: 0px solid #394962;  }
+.headermenu li.on a { 
+	background: url(img4/arrow-active4.png) no-repeat center bottom; -moz-box-shadow: inset 0 0px 0 #4f627e; 
+	-webkit-box-shadow: inset 0 0px 0 #4f627e; box-shadow: inset 0 0px 0 #4f627e; }
+.headermenu li.on a span { opacity: 1; } 

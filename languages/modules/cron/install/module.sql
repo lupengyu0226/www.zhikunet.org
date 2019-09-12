@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('cron', '计划任务', 'cron/', 0, '1.0', '计划任务', '', 0, 0, '2014-10-25', '2014-10-25');

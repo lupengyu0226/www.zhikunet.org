@@ -1,0 +1,125 @@
+@charset "GBK";
+
+
+.page_content{width:100%;margin:0 auto!important;line-height:18px;padding:0;color:#ccc;min-height:100px;}
+.header,.header h1, .header h5, .header h5 a,#module_level,#customNavbar{display:none;}
+.wrapper{margin:0 auto;width:100%;min-height:100px;}
+.box{padding:0;margin:0;}
+.box .footing{height:0;}
+.clear{clear:both;}
+
+.commentArea{border:none;color:#eee;padding:16px;margin-bottom:30px;}
+.commentArea .commenttitle a{color:#b95a49;}
+.commentArea .caption{height:40px;border:none;padding-bottom:0px;margin-bottom:0px;}
+.commentArea .caption h2{color:#111;font-size:24px;font-family: Î¢ÈíÑÅºÚ,ºÚÌå; text-align:left;width:180px;overflow:hidden;left:0;top:0; line-height:28px;position:absolute;font-weight:normal;}
+.commentArea .caption #commentCount{display:none;}
+.commentArea .comments{padding:0 0 16px 0;}
+.commentArea .comment{border-bottom:#ccc 1px dotted;}
+.commentArea .commentBody{width:90%;}
+.commentArea textarea{width:100%;background:#eee;border:#999 1px solid;color:#333;margin-bottom:4px;}
+.commentpost{padding:0 2px 16px 0;}
+.commentArea .comment .commenttitle a{color:#333;}
+.commentArea .comment .commenttitle .m_sedText {color:#666;}
+.pagebar a{color:#222!important;}
+.pagebarCurrent{color:#eee!important;}
+
+body{background:#9b9a9a url(http://i1.tdimg.com/b/20130426/co45.jpg) left top repeat!important;!important;}
+.main_col{width:100%;float:none!important;padding:0;}
+.main_col .box{width:1010px;margin:0 auto;}
+.main_col .heading{border:none;}
+.main_col .footing{margin-bottom:30px;}
+.main_col .heading h2{color:#000;}
+.side_col{margin:0 auto!important;width:1000px;padding:20px 0;float:none!important;}
+
+.yij{width:100%;clear:both;padding:4px 0 0px 0;height:27px;overflow:hidden;}
+#ZONE_FORWOAD .share{height:40px;padding:0px;width:960px;margin:0 auto!important;}
+#ZONE_FORWOAD .key fix{height:40px;padding:0px;}
+#ZONE_FORWOAD{color:#666; font-size:14px;font:Î¢ÈíÑÅºÚ,ËÎÌå; line-height:18px;top:0;position:left;margin-left:60px;}
+#ZONE_FORWOAD .share dt{color:#666;line-height:30px!important;*line-height:34px!important;*line-height:32px;display:inline;font-family:Î¢ÈíÑÅºÚ,ËÎÌå;}
+#ZONE_FORWOAD .share a{color:#666;font-family:Î¢ÈíÑÅºÚ,ËÎÌå;}
+
+#module_self_0{width:100%;margin:0 auto!important;overflow:hidden;position:relative;padding-top:0px;background:url(http://i2.tdimg.com/b/20130426/co46.jpg) left top repeat!important;border-bottom:#ccc 1px solid;}
+.xd_top{position:relative;width:100%;}
+
+/*¶¥±ê*/
+.xd_th{background:url(http://i3.tdimg.com/b/20130426/co52.jpg) left top repeat-x!important;height:352px;width:100%;}
+.xd_th img{margin:0 auto!important;}
+
+/*ÄÚÈÝ*/
+.xd_tc{width:1020px;margin:0 auto!important;height:790px;position:relative;background:#fff;}
+/*ÄÚÈÝÁ´½Ó*/
+.xd_tlk{position:relative;width:980px;overflow:hidden;margin:0 auto!important;}
+.xd_tlk ul{width:980px;}
+.xd_tlk ul li{width:490px;height:373px;float:left;position:relative;overflow:hidden;}
+
+.xd_tcc{width:1020px;margin:0 auto!important;position:relative;background:#fff;}
+/* css_user_setting start */
+
+body {
+		color: none;
+			background-color: none;
+			background-image: $strutil.washCssUrl($data.UserSetting.page_bg_image);
+	}
+
+.page_content a {
+	color: none;
+}
+
+.header {
+		background-color: none;
+			background-image: $strutil.washCssUrl($data.UserSetting.head_bg_image);
+	}
+	.header h1 {
+		color: none;
+	}
+	.header h5,
+	.header h5 a {
+		color: none;
+	}
+
+.nav {
+	background-color: #000000;
+}
+	.nav a {
+		color: #ffffff;
+	}
+.main_col .box,
+.single_col .box{
+	background-color: none; 
+}
+
+	.main_col .box .heading h2,
+	.main_col .box .heading h2 a,
+	.single_col .box .heading h2,
+	.single_col .box .heading h2 a {
+		color: none;
+	}
+
+	.main_col .box,
+	.single_col .box {
+		color: none;
+	}
+
+	.main_col .box a,
+	.single_col .box a {
+		color: none;
+	}
+
+.side_col .box{
+	background-color: none; 
+}
+
+	.side_col .box .heading h2,
+	.side_col .box .heading h2 a,
+	.side_col .box .caption h2 {
+		color: none;
+	}
+
+	.side_col .box {
+		color: none;
+	}
+
+	.side_col .box a {
+		color: none;
+	}
+

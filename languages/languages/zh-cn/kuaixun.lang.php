@@ -1,0 +1,32 @@
+<?php
+$LANG['kuaixun'] 						=	'快讯推送';
+$LANG['kuaixun_add'] 						=	'添加快讯';
+$LANG['kuaixun_name'] 						= 	'内容标题';
+$LANG['url'] 						        = 	'内容网址';
+$LANG['typeid'] 						= 	'所属类型';
+$LANG['status'] 						= 	'状 态';
+$LANG['kuaixun_type_listorder'] 				=	'排序权值';
+$LANG['elite']						 	= 	'推 荐';
+$LANG['passed'] 						= 	'批 准';
+$LANG['input_not_space'] 					=	'输入内容请勿带空格';
+$LANG['remove_all_selected']					=	'删除选中';
+$LANG['sitename_noempty']					=	'标题不能为空';
+$LANG['siteurl_not_empty']					=	'网址不能为空';
+$LANG['add_success']						=	'提交成功,正在返回!';
+$LANG['kuaixun_exit']						=	'快讯不存在';
+$LANG['all_kuaixuntype']					=	'所有类型';
+$LANG['all']							=	'全部';
+$LANG['before_select_operations']		                =	'请选择再执行操作';
+$LANG['yes']							=	'是';
+$LANG['no']							=	'否';
+$LANG['kuaixun_list'] 						= 	'快讯列表';
+$LANG['pass_check']						=	'通过审核';
+$LANG['pass_or_not']					        =	'是否通过审核';
+$LANG['audit']							=	'审核';
+$LANG['passed']							=	'通过';
+$LANG['move_success']						=	'移动成功';
+$LANG['application_or_not']					=	'是否允许申请';
+$LANG['code_or_not']						=	'是否开启验证码';
+$LANG['choose_true_type']					=	'请选择正确的类型！';
+$LANG['kuaixun_onerror']			   		=	'你的输入网址不正确，请输入以http://开头的网址！';
+?>

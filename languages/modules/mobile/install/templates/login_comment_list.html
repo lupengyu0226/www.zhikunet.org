@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="dns-prefetch" href="//statics.05273.cn">
+<link rel="dns-prefetch" href="//upload.05273.cn">
+<link rel="dns-prefetch" href="//account.05273.cn">
+<link rel="dns-prefetch" href="//img.05273.cn">
+<link rel="dns-prefetch" href="//wap.05273.cn">
+<link rel="dns-prefetch" href="//www.05273.cn">
+		<title>我的评论 - 沭阳网手机版会员中心</title>
+    	<meta name="author" content="wap.05073.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="http://statics.05273.cn/waplogin/css/base2013.css?v=20130806100001" charset="gbk"/>
+		<link rel="stylesheet" type="text/css" href="http://statics.05273.cn/waplogin/css/favorite.css?v=2" charset="gbk"/>	
+		<link rel="apple-touch-icon-precomposed" href="http://statics.05273.cn/statics/mobile/img/weblogo.png"/>
+		
+		
+        
+	</head>
+<body id="body">
+<a name="top"></a>
+<header>
+			<div class="new-header">
+        	<a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+							<h2>我的评论</h2>
+			            <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span></span></a>
+    	</div>
+		<div class="new-jd-tab" style="display:none" id="jdkey">
+        	<div class="new-tbl-type">
+                <a href="http://wap.05273.cn/" class="new-tbl-cell">
+                	<span class="icon">首页</span>
+					<p style="color:#6e6e6e;">首页</p>
+                </a>
+                <a href="http://wap.05273.cn/index.php?controller=search" class="new-tbl-cell">
+                	<span class="icon2">搜索</span>
+					<p style="color:#6e6e6e;">搜索</p>
+                </a>
+                <a href="http://www.05273.cn/index.php?app=waplogin&controller=index&view=comment" id="html5_cart" class="new-tbl-cell">
+                	<span class="icon3">我的评论</span>
+					<p style="color:#6e6e6e;">我的评论</p>
+                </a>
+                <a href="http://www.05273.cn/index.php?app=waplogin&controller=index" class="new-tbl-cell">
+                	<span class="icon4">我的帐号</span>
+					<p style="color:#6e6e6e;">我的帐号</p>
+                </a>
+            </div>
+        </div>
+	</header>
+<div class="new-ct">
+	<div class="new-addr">   
+	    	<ul class="new-mu_l2w">
+			{loop $commentlist $k $v}
+                                         {php $v=preg_replace("/<(i?div.*?)>(.*?)<(\/i?div.*?)>/si","",$v);}
+                                         {php $v=preg_replace("/<(i?span.*?)>(.*?)<(\/i?div.*?)>/si","",$v);}
+                                         {php $v=preg_replace("/<(i?span.*?)>(.*?)<(\/i?span.*?)>/si","",$v);}
+										 {php $v=preg_replace("/content_(.*?)/si","",$v);}
+	            <li class="new-mu_l2">
+        	<p class="new-tit new-p-re">
+				<span class="new-txt">评论内容</span>
+				                 <span  class="new-txt-rd2 new-option-r" >{format::date($v['creat_at'], 1)}</span> 
+							</p>
+            <span class="new-mu_l2a new-p-re">
+                <span class="new-mu_l2cw">{$v[content]}</span>     
+				 				<div class="new-addr-btn">
+                	<a href='http://wap.05273.cn/show-{$v[commentid]}.html'>访问</a><span class="new-addr-bar">|
+					</span><a href="index.php?app=waplogin&controller=index&view=comment&id={$v['id']}">{L('delete')}</a>
+                </div>
+				            </span>
+        </li>
+		{/loop}
+               </ul>
+			   <div id="pages">{$pages}</div>
+	        <a  href='http://wap.05273.cn/' class="new-abtn-type new-mg-tb30">更多新闻</a>
+    </div>
+</div>
+<div id="autoLoginHeight"></div>
+
+{template 'mobile', 'login_footer'}
+</body>
+</html>

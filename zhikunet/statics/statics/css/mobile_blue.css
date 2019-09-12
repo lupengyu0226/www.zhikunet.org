@@ -1,0 +1,15 @@
+.ib, .ib-li li, .ib-a a, .ib-span span,.btn,.btn input,.photo-hot li,.Article-Tool a ,.photo-list li,.photo-channel .photo-slide .change i,.photo-channel .tool .auto,.photo-channel .tool .up,.photo-channel .tool .next,.photo-cat .content h5 span.blue a,.submit{display:inline-block;zoom:1;*display:inline;}
+/*内容页组图*/
+.big-pica{ text-align:center; padding:10px 0; border:1px solid #ededed; background-color:#fafcfe; position: relative}
+.big-pica #big-pica{display:table-cell;vertical-align:middle;*display:block; overflow:hidden; *font-size:325px;width:500px; height:100%}
+.big-pica .max{ position:absolute; bottom:0px; right:0px;background: #FFF url(../images/feitian/max.png) no-repeat 5px center; z-index:101; padding:5px 5px 5px 20px}
+#endSelecta{top:120px;left:85px;position:absolute;width:220px;height:150px;border:1px solid #8a8a8a;display:none;z-index:200;}
+#endSelecta .bga{height:100%;width:100%;background:#000;filter:Alpha(Opacity=50);opacity:0.5;}
+#endSelecta .E_Conta{position:absolute;top:55px;left:0px;color:#fff;font-size:14px;}
+#endSelecta .E_Conta p{padding:4px 0;zoom:1;overflow:hidden;color:#fff;}
+/*图片内容*/
+.photo-channel #Article .tool{ position:relative; height:35px;text-align:center;margin:0 auto; padding-top:6px}
+.photo-channel #Article .tool .auto,.photo-channel .tool .up,.photo-channel .tool .next{background: url(../images/feitian/up-next.png) no-repeat; height:27px; width:31px;margin-right:10px; overflow:hidden; line-height:27px}
+.photo-channel #Article .tool .auto span,.photo-channel .tool .up span,.photo-channel .tool .next span{ visibility:hidden}
+.photo-channel #Article .tool .auto{background-position: -39px top;}
+.photo-channel #Article .tool .next{background-position: -78px top;}

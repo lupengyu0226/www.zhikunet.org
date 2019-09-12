@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>沭阳网_提示信息</title>
+<script type="text/javaScript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<script language="JavaScript" src="//statics.05273.cn/statics/js/admin_common.js"></script>
+<link href="https://statics.05273.cn/statics/css/tanmumsg.css" rel="stylesheet" />
+</head>
+<body>
+<div class="wrap">
+  <div id="error_tips">
+    <h2>沭阳网提示</h2>
+    <div class="error_cont">
+      <ul>
+        <li>{$msg}</li>
+      </ul>
+      <div class="error_return">
+{if $url_forward=='goback' || $url_forward==''}
+	<a href="javascript:history.back();" >[点这里返回上一页]</a>
+	{elseif $url_forward=="close"}
+	<input type="button" name="close" value=" 关闭 " onClick="window.close();">
+	{elseif $url_forward=="blank"}
+	{elseif $url_forward}
+		    如果你的浏览器没有自动跳转，<a href="{remove_xss($url_forward)}">请点击这里</a>
+			<script language="javascript">setTimeout("redirect('{strip_tags($url_forward)}');",{$ms});</script> 
+			{/if}
+			{if $dialog}<script style="text/javascript">window.top.location.reload();window.top.art.dialog({id:"{$dialog}"}).close();</script>{/if}</div>
+    </div>
+  </div>
+</div>
+<script style="text/javascript">
+	function close_dialog() {
+		window.top.location.reload();window.top.art.dialog({id:"<?php echo $dialog?>"}).close();
+	}
+</script>
+</body>
+</html>

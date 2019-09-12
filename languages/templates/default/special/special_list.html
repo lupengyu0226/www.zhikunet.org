@@ -1,0 +1,20 @@
+{template "content","headerzhuanti"}
+<!--main-->
+<div class="main photo-channel">
+<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > 专题首页</div>
+<div class="bk10"></div>
+{edi:special action="lists" siteid="$siteid" listorder="3" page="$page" num="10"}
+		<ul class="photo-list picbig">
+	{loop $data $r}
+			<li>
+			<div class="img-wrap">
+			<a href="{$r[url]}"><img src="{$r[thumb]}" width="150" height="112" alt="{$r[title]}"/></a>
+			</div>
+			<span style="color:{$r[style]}">{str_cut($r[title],28)}</span>
+			</li>
+			{/loop}
+		</ul>
+		<div id="pages" class="text-c">{$pages}</div>
+	{/edi}
+    </div>
+</div>{template "content","footer"}

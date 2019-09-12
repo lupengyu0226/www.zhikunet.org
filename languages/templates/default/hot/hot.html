@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{$tag}_ITAG_{$SEO['site_title']}</title>
+<meta name="keywords" content="{$tag}">
+<meta name="description" content="{if $v['content']}{$v['content']}{else}{$tag}{/if}">
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/statics/css/ver1.0.css" />
+<link rel="stylesheet" type="text/css" href="https://statics.05273.cn/statics/css/show.css" />
+<script src="//statics.05273.cn/statics/js/jquery.js?v={JS_VERSION}" type="text/javascript"></script>
+<script type="text/javascript">
+     if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                window.location.href="https://wap.05273.cn/hot/{urlencode($tag)}.html";
+            }catch(e){}
+        }
+    }
+</script>
+{if $v['die']==1}
+<style>
+body{filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter:grayscale(1);}
+</style>
+{/if}
+</head>
+<body>
+<div id="top">
+<div class="nav" id="nav" style="top: 0px; position: static; ">
+<div class="nav-Article-shuyang clearfix" accesskey="2" title="" tabindex="0">
+	<ul class="clearfix">
+  <li><a href="https://www.05273.cn" target="_blank" title="沭阳网">首页</a></li>
+   <li><a href="https://www.05273.cn/daodu/">导读</a></li> 
+   <li><a href="https://www.05273.cn/news/">新闻</a></li> 
+   <li><a href="https://www.05273.cn/video/">宽频</a></li> 
+   <li><a href="https://www.05273.cn/tvnews/">电视</a></li> 
+   <li><a href="https://www.05273.cn/auto/">汽车</a></li> 
+   <li><a href="https://www.05273.cn/photo/">美景</a></li> 
+   <li><a href="https://www.05273.cn/house/">房产</a></li> 
+   <li><a href="https://www.05273.cn/huati/">话题</a></li> 
+   <li id="moreNav">
+				  <a class="moreLink"><span class="moreNav1" id="moreNav1">更多</span></a>
+				  <div class="navmenu" id="navmenu">
+					   <a href="https://www.05273.cn/jingqu/">景区</a>
+					   <a  href="https://www.05273.cn/shuyang/">沭阳话</a> 
+					   <a href="https://www.05273.cn/canying/">餐饮</a>
+					   <a href="https://www.05273.cn/bianmin/">便民</a> 
+					   <a href="https://www.05273.cn/fushi/">服饰</a>
+					   <a href="https://www.05273.cn/binguan/">酒店</a>
+					   <a href="https://www.05273.cn/hr/">人才</a> 
+					   <a href="https://www.05273.cn/yellow/">黄页</a>
+					   <a href="https://www.05273.cn/pc/">电脑</a> 
+					   <a href="https://www.05273.cn/love/">交友</a> 
+					   <a href="https://www.05273.cn/sitemap.html" target="_blank">全部频道</a>
+					</div>
+				 </li> 
+	</ul>
+
+</div>
+<div class="shuyanglogin">
+<ul><li>
+ <form class="login-form" id="page_loginForm"  action="//www.05273.cn/index.php?app=member&controller=index&view=login" method="post" onsubmit="return Login.check(this)">
+    <input type="hidden" name="logintype" value="page" />
+    <input type="hidden" name="forward" id="forward"  value="https://www.05273.cn"/>
+	用户名: <input type="text" id="username" name="username" size="15" class="int"> 
+	密&nbsp;&nbsp;码: <input type="password" id="password" name="password" size="15" class="int"> 
+	<input type="submit" name="dosubmit" id="dosubmit" class="input_bn" value=" ">
+     <a href="https://passport.05273.cn/member-register.html" target="_blank">注册账号</a>
+  </form>
+<script type="text/javascript">Login.isLogin('//www.05273.cn/index.php?app=member&controller=index&view=top_mini','page_loginForm','page');</script>
+<script type="text/javascript">
+
+		//function ob(a,b){
+		var Omore = document.getElementById('moreNav');
+		var OList = document.getElementById('navmenu');
+		var omoreNav = document.getElementById('moreNav1');
+    Omore.onmouseover = function(){ 
+		   OList.style.display = 'block';
+       omoreNav.className = 'moreNav2';
+		 }
+		
+		Omore.onmouseout = function() {
+		  OList.style.display = 'none';
+			omoreNav.className = 'moreNav1';
+			 } 
+		//}
+
+	 // ob('moreNav','navmenu')
+
+	</script>
+</div>
+</div>
+<div class="hot-is"></div>
+<style>
+/*内容通用样式*/
+#con{ padding:20px 0;}
+.mainbody {width:1000px; margin:0 auto 0 auto;}
+.mainbody .f_main { width:1000px;  height:340px; background:#f8f8f8;}
+.mainbody .f_main .fl {width:780px; float:left;}
+.mainbody .f_main .fl img{ width:780px; height:340px;}
+.mainbody .f_main .rt {width:219px; float:right;}
+.mainbody .main { width:780px; float:left; margin:10px 0;}
+.mainbody .sub {width:220px; float:right; margin:20px 0;}
+.mainbody .main .news {width:770px; float:left; margin:10px 0;}
+.mainbody .main .news .no-cont {color:#999;}
+.mainbody .main .news .news-list { width:760px;}
+.news .navt { height:42px; border-bottom:1px solid #cecece;}
+.news .navt span{float:left;}
+.news .navt a { position:relative; bottom:-1px; height:42px; width:98px; display:block; font: normal 20px/42px "微软雅黑"; color:#0064b2; text-align:center; float:left;}
+.news .navt a:hover {background:#acacac; color:#FFF; text-decoration:none;}
+.news .navt .act {background:url(//statics.05273.cn/statics/images/tag/po_icon.png) center bottom no-repeat #0363af; color:#FFF;}
+.news .navt .act:hover{background:url(//statics.05273.cn/statics/images/tag/po_icon.png) center bottom no-repeat #0363af; color:#FFF;}
+.mainbody .main .news .news-list { width:760px;}
+.mainbody .main .news .pic-list { width:760px; padding-top:10px;}
+.art-li{padding:25px 0;border-bottom:1px dashed #cecece; zoom:1; position:relative}
+.art-li:after {clear:both; height:0; overflow:hidden; display:block; visibility:hidden; content:"."; }
+.art-li:hover { background:#f4f4f4;}
+.art-li img{float:left; display:block;  border:1px solid #ccc; margin-right:15px; margin-top:3px;  width:178px; height:118px; }
+.art-li .img:hover img{ border-color:#919191;}
+.art-li h3{ font: bold 18px/25px Microsoft Yahei,simhei,"宋体"; margin-bottom:8px; height:25px; overflow:hidden; color:#333;}
+.art-li a.txt{font: 14px/24px simsun; color:#666; display:block; text-decoration:none;min-height:65px; height:auto!important; height:65px;}
+.art-li .info{ color:#999; height:24px;}
+.art-li .info .time em a{ font-style:normal; color:#0064b0;}
+.art-li .info .time { width:250px; float:left;}
+#pages { padding:14px 0 10px; font-family:宋体 }
+#pages a { display:inline-block; height:22px; line-height:22px; background:#fff; border:0px solid #ffa200; text-align:center; color:#333; padding:0 10px}
+#pages a.a1 {width:56px; padding:0 }
+#pages a:hover { background:#f1f1f1; color:#000; text-decoration:none }
+#pages span { display:inline-block; height:22px; line-height:22px; background:#5a85b2; border:1px solid #5a85b2; color:#fff; text-align:center;padding:0 10px}
+.page .noPage { display:inline-block; width:56px; height:22px; line-height:22px; border:1px solid #e3e3e3; text-align:center; color:#a4a4a4; }
+/*标签名称*/
+.location{height:48px; padding:20px 0;}
+.location .tag {width:480px; float:left;}
+.location .tag img {float:left;}
+.location .tag {line-height:22px; width: } 
+.location .tag h1{ font: normal 34px/42px "微软雅黑","黑体"; _font-family:"黑体"; float:left; padding:0 10px 0 0; margin-left:10px; display:inline; color:#0064b2;}
+.location .share {width:480px; float:right; padding-top:18px;}
+.location .share .bshare-custom{float:right;}
+.location .share span.last{width:150px; font-size:12px; line-height:28px; text-align:center; color:#919191; float:right;}
+/*标签名称 END*/
+/*名词解释*/
+.mainbody .f_main .fl .fouse {width:780ox; height:338px ;float:left;}
+.mainbody .f_main .fl .share {height:30px;}
+.mainbody .f_main .rt{padding:12px 0 10px 0;}
+.mainbody .f_main .rt .con { width:190px; height:312px; margin:auto; overflow:hidden;}
+.mainbody .f_main .rt .con p { font-size:14px; line-height:25px; color:#4c4c4c; text-indent:2em;}
+.mainbody .f_main .rt .con em { font: normal 26px/30px "微软雅黑","黑体"; _font-family:"黑体"; color:#0064b2;}
+/*名词解释 END*/
+.mainbody .sub .tag { width:210px; float:right;}
+.mainbody .sub .tag .hd {height:42px; border-bottom:1px solid #cecece; }
+.mainbody .sub .tag .hd h3 {font: normal 20px/42px "微软雅黑","黑体"; _font-family:"黑体"; float:left; width:160px;}
+.mainbody .sub .tag .hd .more {line-height:42px; float:right;}
+.mainbody .sub .tag .bd { padding-top:5px; overflow:hidden;}
+/*tags*/
+.hot-is{ margin:35px 0;}
+.hot-tags{ margin:10px 0;}
+.hot-tags a {font-size:14px; color:#666; display:block; float:left; text-decoration:none; height:30px; line-height:30px; white-space:nowrap; float:left;}
+.hot-tags a:hover { text-decoration:none;}
+.hot-tags a.act{color:white; background:#0061ae; border:1px solid #025aa0; text-decoration:none;}
+.tag .hot-tie {float: left;
+  width:50px;
+  text-align: center;
+  color: #666;
+  padding-left: 6px;
+  height:30px; line-height:30px;
+  background:url(//statics.05273.cn/statics/images/tag/tages_icon.png) left center no-repeat #f6f6f6;}
+/*评论*/
+.art-li .dis { width:740px; font: normal 12px/24px "微软雅黑","黑体"; _font-family:"黑体";
+margin-top:10px; padding-top:20px;}
+.art-li .dis .con .time {color:#999; padding-left:5px;}
+.art-li .dis .con .id{color:#999; font-weight: bold; text-decoration:none;}
+.art-li .dis .con .tt{color:#999; overflow:hidden; text-decoration:none; }
+.art-li .dis .con { width:740px; margin-bottom:10px; color:#999; background:url(//statics.05273.cn/statics/images/tag/pinlun.png) 0 5px no-repeat; padding-left:20px;}
+.art-li .dis .con a{color:#999; font-weight: bold; text-decoration:none;}
+/*20130613*/
+.mb15{ margin-bottom:15px;}
+.wrapper{ width:1000px; margin:0 auto; }
+.wrapper .f_main { width:1000px;  height:340px; background:#f8f8f8;}
+.wrapper .f_main .fl {width:780px; float:left;}
+.wrapper .f_main .rt {width:219px; float:right;}
+.allmain {background:url(time_bg.png) center 0 repeat-y; }
+.mainbody {position:relative; }
+.allmain {background:url(//statics.05273.cn/statics/images/tag/time_bg.png) center 0 repeat-y; }
+.white {background:#FFF; position:absolute; left:-23px; width:10px; height:60px;}
+.date {font: bold 22px/32px Microsoft Yahei,simhei,"宋体"; color:#ccc; position:absolute; left:-188px; top:-35px; width:140px;text-align:right; padding-right:30px;background:url(//statics.05273.cn/statics/images/tag/time_icon.png) right 5px no-repeat;}
+.hidden{ display:none}
+.art2-li {border-bottom:1px solid #cecece; margin-bottom:20px; position:relative;}
+</style>
+<!--频道通用导航 END-->
+<div class="mainbody">
+<div class="location">
+<div class="tag"><a href="https://www.05273.cn/hot.html" target="_blank">
+<img src="//statics.05273.cn/statics/images/tag/tage_logo.png" class="f-img" alt="沭阳网iTAG 新闻iTAG 新闻关键字 iTAG聚合 内容聚合 关键字聚合"/></a><h1>{$tag}</h1>
+</div>
+</div></div>
+<div class="allmain">
+<div class="mainbody clearfix">
+<div class="white"></div>
+<!--主内容-->
+{if $v['thumb']}<div class="f_main"><div class="fl"><img src="{$v['thumb']}" alt="{$tag}"></div><div class="rt"><div class="con"><p>{$v['content']}</p></div></div></div>{/if}
+<div class="main">
+<div class="news">
+<div class="navt mb15">
+<a class="act" >列 表</a>
+</div>
+<div class="news-list">
+{loop $tagdata $r}
+<div class="art-li  art2-li">
+<div class="date">{inputtime_zone($r[updatetime])}</div>
+<h3>[<a href="{if strpos($CATEGORYS[$r[catid]][url],'http://')===false}{$siteurl}{$CATEGORYS[$r[catid]][url]}{else}{$CATEGORYS[$r[catid]][url]}{/if}">{$CATEGORYS[$r[catid]][catname]}</a>]<a href="{$r[url]}" target="_blank">{$r[title]}</a></h3>
+<div class="info clearfix"><div class="time"><span><em>Time</em> | </span><span>{date('Y-m-d H:i',$r[updatetime])}</span> | </div></div><a class="txt" href="{$r[url]}" target="_blank">{str_cut(hot_description($r[modelid],$r[contentid]),330)}</a></div>
+
+{/loop}</div>
+<div id="pages" class="text-c">{$pages}</div></div></div><!--主内容 end--><!--右栏-->
+<div class="sub">
+<div class="tag">
+<div class="hd"><h3>编辑推荐</h3></div>
+<div class="bd">
+{edi:content action="lists" catid="6" num="10" order="id DESC"}
+                {loop $data $r}
+                <div class="hot-tags clearfix"><a href="{$r[url]}" target="_blank">{$r[title]}</a></div>
+                {/loop}
+                {/edi}
+</div></div></div><!--右栏 END--></div></div>
+{template "hot","footer"}

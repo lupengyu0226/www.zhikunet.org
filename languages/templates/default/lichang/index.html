@@ -1,0 +1,17 @@
+﻿<ul class="voteU">
+{loop $setting $k $v}
+<li class="xuya{$k}o"><span>{$data[$v['fields']]}</span><input id="n{$k}" name="n" onclick="vote({$k})" type="button" value="{$v[name]}"></li>
+{/loop}
+</ul>
+<script type="text/javascript">
+function vote(id) {
+	$.getJSON('{APP_PATH}index.php?app=lichang&controller=index&view=post&id={$lichang_id}&k='+id+'&'+Math.random()+'&callback=?', function(data){
+		if(data.status==1)	{
+			$('.voteU').html(data.data);
+		}else {
+			alert(data.data);
+		}
+	})
+}
+
+</script>

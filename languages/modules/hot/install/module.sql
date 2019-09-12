@@ -1,0 +1,1 @@
+INSERT INTO `shuyang_module` (`module`, `name`, `url`, `iscore`, `version`, `description`, `setting`, `listorder`, `disabled`, `installdate`, `updatedate`) VALUES ('tags', 'tag标签', 'tags/', 0, '1.0', 'tag标签', '', 0, 0, '2011-04-23', '2011-04-23');

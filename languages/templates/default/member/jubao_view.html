@@ -1,0 +1,55 @@
+{template "member","header"}
+<script type="text/javascript" src="//statics.05273.cn/statics/js/member_common.js"></script>
+<link type="text/css" href="https://statics.05273.cn/statics/member/css/member.css" rel="stylesheet">
+<div id="bd">
+{template 'member', 'top'}
+    <div class="uc-bd wp mt40">
+{template 'member', 'left'}
+        <div class="mn fr">
+            <div class="uc-wp">
+                <div class="hd">
+                    <h2 class="fl">举报详情</h2>
+                </div>
+                <div class="bd mt20">
+				<table width="100%" cellspacing="0" class="table_form">
+				{loop $jubaolist $k $v}
+					<tr>
+						<th width="150" style="text-align:right;">{L('title')}：</th> 
+						<td style="text-align:left;"><a href="{$v['url']}" target="_blank">{$v['title']}</a></td>
+					</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('网址')}：</th> 
+					<td style="text-align:left;"><a href="{$v['url']}" target="_blank">{$v['url']}</a></td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('举报内容')}：</th> 
+					<td style="text-align:left;">{$v['content']}</td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('举报原因')}：</th> 
+					<td style="text-align:left;">{$v['type']}</td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('我的建议')}：</th> 
+					<td style="text-align:left;">{$v['jianyi']}</td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('是否处理')}：</th> 
+					<td style="text-align:left;"><?php echo $v['status']==0 ? L('status_0') : L('status_1')?></td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;">{L('举报时间')}：</th> 
+					<td style="text-align:left;">{format::date($v['adddate'], 1)}</td>
+				</tr>
+				<tr>
+					<th width="150" style="text-align:right;"></th> 
+					<td style="text-align:left;"><a href="member-jubao.html">返回列表</a></td>
+				</tr>
+				{/loop}
+				</table>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+{template "member","footer"}

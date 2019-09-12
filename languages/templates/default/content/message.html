@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="<?php echo CHARSET;?>">
+<title>沭阳网_提示信息</title>
+<style type="text/css">
+<!--
+*{padding:0; margin:0; font:12px/1.5 Microsoft Yahei;}
+a:link,a:visited{text-decoration:none;color:#000}
+a:hover,a:active{color:#ff6600;text-decoration: underline}
+.showMsg{background: #fff; zoom:1; width:450px;position:absolute;top:44%;left:50%;margin:-87px 0 0 -225px;border-radius: 2px;box-shadow: 1px 1px 50px rgba(0,0,0,.3);}
+.showMsg h5{padding: 17px 15px;color:#fff;background: #3B4658;font-size:14px;border-radius: 2px;}
+.showMsg .content{padding: 45px;line-height: 24px;word-break: break-all;overflow: hidden;font-size: 14px;overflow-x: hidden;overflow-y: auto;}
+.showMsg .bottom{padding: 10px;text-align: center;border-top: 1px solid #E9E7E7;}
+.showMsg .ok,.showMsg .guery{background: url(<?php echo IMG_PATH?>msg_img/msg_bg.png) no-repeat 0px -560px;}
+.showMsg .guery{background-position: left -460px;}
+-->
+</style>
+<script type="text/javaScript" src="//statics.05273.cn/statics/js/jquery.js"></script>
+<script language="JavaScript" src="//statics.05273.cn/statics/js/admin_common.js"></script>
+</head>
+<body>
+<div class="showMsg" style="text-align:center">
+	<h5>沭阳网 - 提示信息</h5>
+    <div class="content guery" style="display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;max-width:330px">{$msg}</div>
+    <div class="bottom">
+		{if $url_forward=='goback' || $url_forward==''}
+		<a href="javascript:history.back();" >[点这里返回上一页]</a>
+		{elseif $url_forward=="close"}
+		<input type="button" name="close" value=" 关闭 " onClick="window.close();">
+		{elseif $url_forward=="blank"}
+		{elseif $url_forward}
+		如果你的浏览器没有自动跳转，<a href="{remove_xss($url_forward)}">请点击这里</a>
+		<script language="javascript">setTimeout("redirect('{strip_tags($url_forward)}');",{$ms});</script> 
+		{/if}
+		{if $dialog}<script style="text/javascript">window.top.location.reload();window.top.art.dialog({id:"{$dialog}"}).close();</script>{/if}
+        </div>
+</div>
+<script style="text/javascript">
+	function close_dialog() {
+		window.top.right.location.reload();window.top.art.dialog({id:"<?php echo $dialog?>"}).close();
+	}
+</script>
+</body>
+</html>
