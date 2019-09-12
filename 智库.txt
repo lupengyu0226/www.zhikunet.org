@@ -1,0 +1,12 @@
+https://ww.zhikunet.org/login_services/
+admin
+Pass@w0rd
+FTP:203.171.237.22
+zhikunet@www
+XnNfzaxhRL
+
+
+Êý¾Ý¿â
+http://203.171.237.22:3306
+www_zhikunet
+LXyAaLzY6n6Ga4Tr
